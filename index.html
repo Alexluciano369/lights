@@ -15,26 +15,28 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Gutter Protection & Permanent Outdoor Lighting | South Jersey & Eastern PA" />
     <meta property="og:description" content="Premium maintenance-free gutter protection and permanent outdoor lighting solutions. Lifetime warranties. Serving South Jersey & Eastern Pennsylvania. Call 856-874-6640 for a free estimate." />
-    <meta property="og:url" content="https://yourwebsite.com" />
-    <meta property="og:image" content="https://yourwebsite.com/logo.jpg" />
+    <meta property="og:url" content="https://www.cleangutterslighting.com" />
+    <meta property="og:image" content="https://www.cleangutterslighting.com/logo.jpg" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content="CleanGutters Lighting Co." />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Gutter Protection & Permanent Outdoor Lighting | South Jersey & Eastern PA" />
     <meta name="twitter:description" content="Premium maintenance-free gutter protection and permanent outdoor lighting solutions. Lifetime warranties. Call 856-874-6640." />
-    <meta name="twitter:image" content="https://yourwebsite.com/logo.jpg" />
+    <meta name="twitter:image" content="https://www.cleangutterslighting.com/logo.jpg" />
 
     <meta name="geo.region" content="US-NJ" />
     <meta name="geo.placename" content="Cherry Hill, New Jersey" />
     <meta name="geo.position" content="39.9346;-75.0307" />
     <meta name="ICBM" content="39.9346, -75.0307" />
 
-    <link rel="canonical" href="https://yourwebsite.com/" />
+    <link rel="canonical" href="https://www.cleangutterslighting.com/" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="icon" type="image/jpeg" href="/logo.jpg" />
+    <link rel="dns-prefetch" href="https://cpbexrtitabqgrcfucbm.supabase.co">
+    <link rel="preconnect" href="https://cpbexrtitabqgrcfucbm.supabase.co">
     <style>
       * {
         margin: 0;
@@ -578,7 +580,8 @@
       }
 
       .form-group input,
-      .form-group select {
+      .form-group select,
+      .form-group textarea {
         width: 100%;
         padding: 1rem;
         border: 2px solid #dee2e6;
@@ -586,13 +589,21 @@
         font-size: 1rem;
         font-family: inherit;
         transition: all 0.3s ease;
+        -webkit-appearance: none;
+        appearance: none;
       }
 
       .form-group input:focus,
-      .form-group select:focus {
+      .form-group select:focus,
+      .form-group textarea:focus {
         outline: none;
         border-color: #4db8ff;
         box-shadow: 0 0 0 4px rgba(77, 184, 255, 0.1);
+      }
+
+      .form-group textarea {
+        resize: vertical;
+        min-height: 100px;
       }
 
       .submit-button {
@@ -607,11 +618,18 @@
         cursor: pointer;
         transition: all 0.3s ease;
         box-shadow: 0 6px 20px rgba(77, 184, 255, 0.4);
+        min-height: 56px;
+        -webkit-tap-highlight-color: transparent;
       }
 
-      .submit-button:hover {
+      .submit-button:hover:not(:disabled) {
         transform: translateY(-2px);
         box-shadow: 0 8px 25px rgba(77, 184, 255, 0.6);
+      }
+
+      .submit-button:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
       }
 
       .footer {
@@ -1004,9 +1022,9 @@
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "CleanGutters Lighting Co.",
-      "image": "https://yourwebsite.com/logo.jpg",
-      "@id": "https://yourwebsite.com",
-      "url": "https://yourwebsite.com",
+      "image": "https://www.cleangutterslighting.com/logo.jpg",
+      "@id": "https://www.cleangutterslighting.com",
+      "url": "https://www.cleangutterslighting.com",
       "telephone": "856-874-6640",
       "priceRange": "$$",
       "address": {

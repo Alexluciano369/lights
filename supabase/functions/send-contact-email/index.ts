@@ -74,10 +74,10 @@ Submitted at: ${new Date().toLocaleString('en-US', { timeZone: 'America/New_York
             'Authorization': `Bearer ${resendApiKey}`
           },
           body: JSON.stringify({
-            from: 'CleanGutters <onboarding@resend.dev>',
+            from: 'CleanGutters Lighting Co. <noreply@cleangutterslighting.com>',
             to: ['cleangutters2008@gmail.com'],
             reply_to: formData.email,
-            subject: `New Contact: ${formData.service} - ${formData.name}`,
+            subject: `New Lead: ${formData.service} - ${formData.name}`,
             text: emailBody
           })
         });
