@@ -391,6 +391,61 @@
         line-height: 1.6;
       }
 
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+        margin-top: 3rem;
+      }
+
+      .gallery-item {
+        position: relative;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        transition: all 0.4s ease;
+        cursor: pointer;
+        aspect-ratio: 4/3;
+      }
+
+      .gallery-item:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 50px rgba(77, 184, 255, 0.3);
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+      }
+
+      .gallery-item:hover img {
+        transform: scale(1.1);
+      }
+
+      .gallery-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+        padding: 1.5rem;
+        color: #ffffff;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+      }
+
+      .gallery-item:hover .gallery-overlay {
+        opacity: 1;
+      }
+
+      .gallery-overlay h4 {
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin: 0;
+      }
+
       .warranty-section {
         background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
         padding: 4rem 2rem;
@@ -845,6 +900,41 @@
       <div class="warranty-section">
         <div class="warranty-badge">LIFETIME WARRANTY</div>
         <p class="warranty-text">Your investment is protected forever. We guarantee our gutter protection systems will never clog, sag, or fail. If any issue arises, we'll make it right—at no cost to you. That's our commitment to Cherry Hill's most discerning homeowners.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Our Premium Installations</h2>
+      <p class="section-subtitle">See the quality and craftsmanship of our gutter protection systems</p>
+
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="/Screenshot 2025-11-08 090336.png" alt="Gutter Protection Installation">
+          <div class="gallery-overlay">
+            <h4>Professional Installation</h4>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="/Screenshot 2025-11-08 090502.png" alt="Premium Gutter Guards">
+          <div class="gallery-overlay">
+            <h4>Premium Gutter Guards</h4>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="/Screenshot 2025-11-08 090615.png" alt="Quality Workmanship">
+          <div class="gallery-overlay">
+            <h4>Quality Workmanship</h4>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="/Screenshot 2025-11-08 090733.png" alt="Complete Protection">
+          <div class="gallery-overlay">
+            <h4>Complete Protection</h4>
+          </div>
+        </div>
       </div>
     </section>
 
