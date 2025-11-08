@@ -781,7 +781,106 @@
         font-weight: 600;
       }
 
+      .reviews-section {
+        background: #f8f9fa;
+        padding: 4rem 2rem;
+      }
+
+      .reviews-container {
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .reviews-header {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .reviews-header h2 {
+        font-size: 2.5rem;
+        color: #1e3a5f;
+        margin-bottom: 1rem;
+        font-weight: 800;
+      }
+
+      .reviews-stars {
+        color: #ffc107;
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .reviews-subtitle {
+        font-size: 1.1rem;
+        color: #666;
+      }
+
+      .reviews-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .review-card {
+        background: white;
+        border-radius: 12px;
+        padding: 2rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .review-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+      }
+
+      .review-header-content {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1rem;
+        align-items: center;
+      }
+
+      .review-photo {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #1e3a5f;
+      }
+
+      .review-info h3 {
+        font-size: 1.1rem;
+        color: #1e3a5f;
+        margin-bottom: 0.25rem;
+        font-weight: 700;
+      }
+
+      .review-location {
+        color: #666;
+        font-size: 0.85rem;
+      }
+
+      .review-stars-small {
+        color: #ffc107;
+        font-size: 1rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .review-text {
+        color: #333;
+        line-height: 1.7;
+        font-size: 0.95rem;
+      }
+
       @media (max-width: 768px) {
+        .reviews-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .reviews-header h2 {
+          font-size: 2rem;
+        }
         .floating-cta {
           bottom: 20px;
           right: 20px;
@@ -1001,7 +1100,6 @@
           <a href="/" class="nav-link">Home</a>
           <a href="/gutters.html" class="nav-link">Gutter Protection</a>
           <a href="/lighting.html" class="nav-link">Outdoor Lighting</a>
-          <a href="/reviews.html" class="nav-link">Reviews</a>
           <a href="/blog.html" class="nav-link">Blog</a>
         </nav>
         <div class="header-cta">
@@ -1100,6 +1198,89 @@
         <div class="stat">
           <span class="stat-number">15+</span>
           <span class="stat-label">Years of Excellence</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews-section">
+      <div class="reviews-container">
+        <div class="reviews-header">
+          <h2>What Our Customers Say</h2>
+          <div class="reviews-stars">★★★★★</div>
+          <p class="reviews-subtitle">5.0 rating from 100+ verified homeowners</p>
+        </div>
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div class="review-header-content">
+              <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Michael Thompson" class="review-photo">
+              <div class="review-info">
+                <h3>Michael Thompson</h3>
+                <p class="review-location">Cherry Hill, NJ</p>
+              </div>
+            </div>
+            <div class="review-stars-small">★★★★★</div>
+            <p class="review-text">Outstanding work! The GutterGlove system was installed professionally and has performed flawlessly through multiple storms. No more climbing ladders to clean gutters.</p>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header-content">
+              <img src="https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Sarah Rodriguez" class="review-photo">
+              <div class="review-info">
+                <h3>Sarah Rodriguez</h3>
+                <p class="review-location">Voorhees, NJ</p>
+              </div>
+            </div>
+            <div class="review-stars-small">★★★★★</div>
+            <p class="review-text">The permanent lighting has transformed our home! We can change colors for every season with just our phones. Installation was seamless, and the quality is exceptional.</p>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header-content">
+              <img src="https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg?auto=compress&cs=tinysrgb&w=200" alt="David Chen" class="review-photo">
+              <div class="review-info">
+                <h3>David Chen</h3>
+                <p class="review-location">Marlton, NJ</p>
+              </div>
+            </div>
+            <div class="review-stars-small">★★★★★</div>
+            <p class="review-text">Best home improvement decision we've made! The gutter guards have eliminated all maintenance, and during heavy rains, water flows perfectly. Five stars all around!</p>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header-content">
+              <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Jennifer Martinez" class="review-photo">
+              <div class="review-info">
+                <h3>Jennifer Martinez</h3>
+                <p class="review-location">Mount Laurel, NJ</p>
+              </div>
+            </div>
+            <div class="review-stars-small">★★★★★</div>
+            <p class="review-text">Exceptional service from start to finish! The permanent lighting looks amazing and the app control is so easy to use. My house looks like a showpiece now.</p>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header-content">
+              <img src="https://images.pexels.com/photos/1484794/pexels-photo-1484794.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Robert Wilson" class="review-photo">
+              <div class="review-info">
+                <h3>Robert Wilson</h3>
+                <p class="review-location">Haddonfield, NJ</p>
+              </div>
+            </div>
+            <div class="review-stars-small">★★★★★</div>
+            <p class="review-text">After years of dealing with clogged gutters, this system is a game-changer. The lifetime warranty gives us complete peace of mind. Highly recommend!</p>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header-content">
+              <img src="https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Emily Johnson" class="review-photo">
+              <div class="review-info">
+                <h3>Emily Johnson</h3>
+                <p class="review-location">Collingswood, NJ</p>
+              </div>
+            </div>
+            <div class="review-stars-small">★★★★★</div>
+            <p class="review-text">We love our new lighting system! Perfect for holidays, parties, or just everyday elegance. The technology is impressive and the team was fantastic to work with.</p>
+          </div>
         </div>
       </div>
     </section>
