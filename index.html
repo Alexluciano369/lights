@@ -1,0 +1,1091 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gutter Protection & Outdoor Lighting | South Jersey & Eastern PA | CleanGutters Lighting Co.</title>
+    <meta name="description" content="Premium maintenance-free gutter protection and permanent outdoor lighting solutions for South Jersey and Eastern Pennsylvania. GutterGlove & ShawTech systems with lifetime warranties. Call 856-874-6640 for a free estimate." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="/logo.jpg" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        line-height: 1.6;
+        color: #1a1a2e;
+        background: #ffffff;
+      }
+
+      .header {
+        position: sticky;
+        top: 0;
+        background: linear-gradient(135deg, #1e3a5f 0%, #2c5f8d 100%);
+        padding: 1rem 2rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+        transition: all 0.3s ease;
+      }
+
+      .header-content {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        text-decoration: none;
+      }
+
+      .logo-img {
+        height: 60px;
+        width: auto;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .logo-text {
+        color: #ffffff;
+        font-size: 1.25rem;
+        font-weight: 700;
+      }
+
+      .nav {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .nav-link {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: color 0.3s ease;
+        position: relative;
+      }
+
+      .nav-link:hover {
+        color: #4db8ff;
+      }
+
+      .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: #4db8ff;
+        transition: width 0.3s ease;
+      }
+
+      .nav-link:hover::after {
+        width: 100%;
+      }
+
+      .header-cta {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .phone-icon {
+        color: #ffffff;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        background: rgba(77, 184, 255, 0.2);
+        border-radius: 50%;
+        transition: all 0.3s ease;
+        border: 2px solid #4db8ff;
+      }
+
+      .phone-icon:hover {
+        background: #4db8ff;
+        transform: scale(1.1);
+        box-shadow: 0 4px 15px rgba(77, 184, 255, 0.4);
+      }
+
+      .phone-icon svg {
+        width: 22px;
+        height: 22px;
+      }
+
+      .cta-button {
+        background: linear-gradient(135deg, #4db8ff 0%, #00aaff 100%);
+        color: #1a1a2e;
+        padding: 0.75rem 1.75rem;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1rem;
+        box-shadow: 0 6px 20px rgba(77, 184, 255, 0.4);
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+      }
+
+      .cta-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(77, 184, 255, 0.6);
+      }
+
+      .hero {
+        position: relative;
+        min-height: 700px;
+        background: url('https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=1920') center/cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #ffffff;
+        padding: 4rem 2rem;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, rgba(30, 58, 95, 0.85) 0%, rgba(44, 95, 141, 0.75) 100%);
+        z-index: 1;
+      }
+
+      .hero-overlay {
+        display: none;
+      }
+
+      .hero-content {
+        max-width: 1100px;
+        animation: fadeInUp 1s ease;
+        position: relative;
+        z-index: 2;
+      }
+
+      .hero-badge {
+        display: inline-block;
+        background: rgba(77, 184, 255, 0.2);
+        border: 2px solid #4db8ff;
+        color: #4db8ff;
+        padding: 0.75rem 1.5rem;
+        border-radius: 50px;
+        font-size: 0.9rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .hero h1 {
+        font-size: 4rem;
+        font-weight: 800;
+        line-height: 1.15;
+        margin-bottom: 1.5rem;
+        text-shadow: 0 4px 30px rgba(0, 0, 0, 0.7);
+        background: linear-gradient(135deg, #ffffff 0%, #4db8ff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .hero-subtitle {
+        font-size: 1.4rem;
+        margin-bottom: 2rem;
+        color: #ffffff;
+        font-weight: 600;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        line-height: 1.6;
+      }
+
+      .hero-features {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+        margin-bottom: 2.5rem;
+      }
+
+      .hero-feature {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .hero-cta-group {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .cta-primary {
+        font-size: 1.25rem;
+        padding: 1.25rem 3rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .cta-secondary {
+        font-size: 1.25rem;
+        padding: 1.25rem 3rem;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        border: 2px solid #ffffff;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .cta-secondary:hover {
+        background: rgba(255, 255, 255, 0.25);
+        transform: translateY(-2px);
+      }
+
+      .section {
+        padding: 5rem 2rem;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .section-alt {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      }
+
+      .section-title {
+        font-size: 2.75rem;
+        font-weight: 800;
+        text-align: center;
+        margin-bottom: 1rem;
+        color: #1a1a2e;
+      }
+
+      .section-subtitle {
+        text-align: center;
+        font-size: 1.25rem;
+        color: #6c757d;
+        margin-bottom: 4rem;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .usp-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2.5rem;
+        margin-bottom: 4rem;
+      }
+
+      .usp-card {
+        background: #ffffff;
+        padding: 2.5rem;
+        border-radius: 24px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        transition: all 0.4s ease;
+        border: 2px solid transparent;
+      }
+
+      .usp-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 60px rgba(77, 184, 255, 0.2);
+        border-color: #4db8ff;
+      }
+
+      .usp-icon {
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(135deg, #4db8ff 0%, #00aaff 100%);
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+        font-size: 2rem;
+        box-shadow: 0 6px 20px rgba(77, 184, 255, 0.3);
+      }
+
+      .usp-card h3 {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+        color: #1a1a2e;
+        font-weight: 700;
+      }
+
+      .usp-card p {
+        color: #495057;
+        font-size: 1.0625rem;
+        line-height: 1.7;
+      }
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        gap: 3rem;
+        margin-top: 3rem;
+      }
+
+      .service-card {
+        background: #ffffff;
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+        transition: all 0.4s ease;
+        border: 2px solid transparent;
+      }
+
+      .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 25px 70px rgba(0, 0, 0, 0.15);
+        border-color: #4db8ff;
+      }
+
+      .service-image {
+        height: 300px;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .service-content {
+        padding: 2.5rem;
+      }
+
+      .service-content h3 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: #1a1a2e;
+        font-weight: 700;
+      }
+
+      .service-content p {
+        color: #495057;
+        font-size: 1.0625rem;
+        line-height: 1.8;
+        margin-bottom: 1.5rem;
+      }
+
+      .service-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: #1a1a2e;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1.125rem;
+        transition: all 0.3s ease;
+        padding: 0.75rem 1.5rem;
+        background: linear-gradient(135deg, #4db8ff 0%, #00aaff 100%);
+        border-radius: 50px;
+        box-shadow: 0 4px 15px rgba(77, 184, 255, 0.3);
+      }
+
+      .service-link:hover {
+        transform: translateX(5px);
+        box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
+      }
+
+      .social-proof {
+        text-align: center;
+        padding: 4rem 2rem;
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        color: #ffffff;
+      }
+
+      .social-proof h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: #4db8ff;
+        font-weight: 800;
+      }
+
+      .social-proof-stats {
+        display: flex;
+        justify-content: center;
+        gap: 4rem;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+      }
+
+      .stat {
+        text-align: center;
+      }
+
+      .stat-number {
+        font-size: 3rem;
+        font-weight: 800;
+        color: #4db8ff;
+        display: block;
+      }
+
+      .stat-label {
+        font-size: 1.125rem;
+        color: #ffffff;
+        margin-top: 0.5rem;
+      }
+
+      .form-section {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        padding: 5rem 2rem;
+      }
+
+      .form-container {
+        max-width: 700px;
+        margin: 0 auto;
+        background: #ffffff;
+        padding: 3rem;
+        border-radius: 24px;
+        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+      }
+
+      .form-container h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        color: #1a1a2e;
+        font-weight: 800;
+      }
+
+      .form-subtitle {
+        text-align: center;
+        color: #6c757d;
+        margin-bottom: 2.5rem;
+        font-size: 1.125rem;
+      }
+
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        color: #1a1a2e;
+      }
+
+      .form-group input,
+      .form-group select {
+        width: 100%;
+        padding: 1rem;
+        border: 2px solid #dee2e6;
+        border-radius: 12px;
+        font-size: 1rem;
+        font-family: inherit;
+        transition: all 0.3s ease;
+      }
+
+      .form-group input:focus,
+      .form-group select:focus {
+        outline: none;
+        border-color: #4db8ff;
+        box-shadow: 0 0 0 4px rgba(77, 184, 255, 0.1);
+      }
+
+      .submit-button {
+        width: 100%;
+        padding: 1.25rem;
+        background: linear-gradient(135deg, #4db8ff 0%, #00aaff 100%);
+        color: #1a1a2e;
+        border: none;
+        border-radius: 12px;
+        font-size: 1.125rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 6px 20px rgba(77, 184, 255, 0.4);
+      }
+
+      .submit-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(77, 184, 255, 0.6);
+      }
+
+      .footer {
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        color: #ffffff;
+        padding: 3rem 2rem 1.5rem;
+        text-align: center;
+      }
+
+      .footer-content {
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .footer-links {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 1.5rem;
+        flex-wrap: wrap;
+      }
+
+      .footer-link {
+        color: #ffffff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        font-weight: 500;
+      }
+
+      .footer-link:hover {
+        color: #4db8ff;
+      }
+
+      .floating-cta {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 9999;
+      }
+
+      .floating-bubble {
+        background: linear-gradient(135deg, #4db8ff 0%, #00aaff 100%);
+        color: #ffffff;
+        padding: 1rem 2rem;
+        border-radius: 50px;
+        font-size: 1.1rem;
+        font-weight: 700;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        box-shadow: 0 8px 30px rgba(77, 184, 255, 0.5);
+        transition: all 0.3s ease;
+        cursor: pointer;
+        border: none;
+        animation: floatBounce 3s ease-in-out infinite;
+      }
+
+      .floating-bubble:hover {
+        transform: translateY(-5px) scale(1.05);
+        box-shadow: 0 12px 40px rgba(77, 184, 255, 0.7);
+      }
+
+      @keyframes floatBounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+      }
+
+      .floating-bubble svg {
+        width: 24px;
+        height: 24px;
+      }
+
+      .modal-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 10000;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        animation: fadeIn 0.3s ease;
+      }
+
+      .modal-overlay.active {
+        display: flex;
+      }
+
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+
+      .modal-content {
+        background: #ffffff;
+        border-radius: 16px;
+        padding: 2.5rem;
+        max-width: 600px;
+        width: 100%;
+        max-height: 90vh;
+        overflow-y: auto;
+        position: relative;
+        animation: slideUp 0.3s ease;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      }
+
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .modal-close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        color: #666;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+      }
+
+      .modal-close:hover {
+        background: #f0f0f0;
+        color: #000;
+      }
+
+      .modal-title {
+        font-size: 2rem;
+        font-weight: 800;
+        margin-bottom: 0.5rem;
+        color: #1a1a2e;
+      }
+
+      .modal-subtitle {
+        font-size: 1.1rem;
+        color: #666;
+        margin-bottom: 2rem;
+      }
+
+      .thank-you-message {
+        display: none;
+        background: #d4edda;
+        color: #155724;
+        padding: 1.5rem;
+        border-radius: 12px;
+        margin-bottom: 1.5rem;
+        border: 2px solid #c3e6cb;
+        text-align: center;
+        font-weight: 600;
+      }
+
+      @media (max-width: 768px) {
+        .floating-cta {
+          bottom: 20px;
+          right: 20px;
+        }
+
+        .floating-bubble {
+          padding: 0.9rem 1.5rem;
+          font-size: 1rem;
+        }
+
+        .modal-content {
+          padding: 2rem 1.5rem;
+        }
+
+        .modal-title {
+          font-size: 1.75rem;
+        }
+
+        .hero h1 {
+          font-size: 2.25rem;
+        }
+
+        .hero-subtitle {
+          font-size: 1.125rem;
+        }
+
+        .section-title {
+          font-size: 2rem;
+        }
+
+        .services-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .nav {
+          width: 100%;
+          justify-content: center;
+        }
+
+        .header-cta {
+          width: 100%;
+          justify-content: center;
+        }
+
+        .social-proof-stats {
+          gap: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-content">
+        <a href="/" class="logo">
+          <img src="/logo.jpg" alt="Clean Gutters Lighting Company" class="logo-img" />
+          <span class="logo-text">CleanGutters Lighting Co.</span>
+        </a>
+        <nav class="nav">
+          <a href="/" class="nav-link">Home</a>
+          <a href="/gutters.html" class="nav-link">Gutter Protection</a>
+          <a href="/lighting.html" class="nav-link">Outdoor Lighting</a>
+        </nav>
+        <div class="header-cta">
+          <a href="tel:856-874-6640" class="phone-icon" title="Call us: 856-874-6640">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-badge">Serving South Jersey & Eastern Pennsylvania Since 2009</div>
+        <h1>GutterGlove® Protection & ShawTech Permanent Lighting</h1>
+        <p class="hero-subtitle">The Only Maintenance-Free Home Solutions You'll Ever Need | South Jersey & Eastern PA</p>
+        <div class="hero-features">
+          <span class="hero-feature">✓ Lifetime Warranty</span>
+          <span class="hero-feature">✓ Professional Installation</span>
+          <span class="hero-feature">✓ 500+ Happy Customers</span>
+        </div>
+        <div class="hero-cta-group">
+          <a href="#contact" class="cta-button cta-primary">Get Free Estimate</a>
+          <a href="tel:856-874-6640" class="cta-button cta-secondary">Call 856-874-6640</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">The CleanGutters Lighting Advantage</h2>
+      <p class="section-subtitle">Three pillars of exceptional home care that set us apart</p>
+
+      <div class="usp-grid">
+        <div class="usp-card">
+          <div class="usp-icon">🛡️</div>
+          <h3>Complete Peace of Mind</h3>
+          <p>Never worry about clogged gutters or seasonal lighting changes again. Our lifetime warranties and maintenance-free systems protect your investment and your time, so you can focus on what matters most.</p>
+        </div>
+
+        <div class="usp-card">
+          <div class="usp-icon">📈</div>
+          <h3>Enhanced Property Value</h3>
+          <p>Top-tier gutter protection and architectural lighting aren't just upgrades—they're strategic investments. Our premium solutions elevate curb appeal, prevent costly water damage, and distinguish your home in South Jersey's competitive market.</p>
+        </div>
+
+        <div class="usp-card">
+          <div class="usp-icon">🪜</div>
+          <h3>Never Climb a Ladder Again</h3>
+          <p>End the dangerous cycle of gutter cleaning and holiday light installation. Our systems are engineered for permanent, worry-free performance. One installation delivers decades of flawless functionality.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <h2 class="section-title">Our Premium Services</h2>
+      <p class="section-subtitle">World-class home protection and illumination solutions</p>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-image" style="background-image: url('https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?auto=compress&cs=tinysrgb&w=800');"></div>
+          <div class="service-content">
+            <h3>Elite Gutter Protection</h3>
+            <p>Experience the pinnacle of gutter technology with our top-of-the-line protection systems. Engineered to handle the heaviest rainfalls while keeping out leaves, debris, and pests, our solutions come with a lifetime no-clog guarantee. Protect your foundation, landscaping, and home value with maintenance-free gutters that perform flawlessly year after year.</p>
+            <a href="/gutters.html" class="service-link">
+              Explore Our Gutter Protection in Cherry Hill, NJ
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-image" style="background-image: url('https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800');"></div>
+          <div class="service-content">
+            <h3>Permanent Outdoor Lighting</h3>
+            <p>Transform your home into a stunning architectural masterpiece with our permanent under soffit lighting systems. Customize colors and patterns for every season, holiday, or mood—all from your smartphone. Enhance security, highlight your home's best features, and enjoy year-round elegance without the hassle of temporary installations.</p>
+            <a href="/lighting.html" class="service-link">
+              Discover Permanent Outdoor Lighting in South Jersey
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="social-proof">
+      <h2>Trusted by South Jersey's Finest Homes</h2>
+      <div class="social-proof-stats">
+        <div class="stat">
+          <span class="stat-number">500+</span>
+          <span class="stat-label">Happy Homeowners</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">5★</span>
+          <span class="stat-label">Average Rating</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">15+</span>
+          <span class="stat-label">Years of Excellence</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="form-section" id="contact">
+      <div class="form-container">
+        <h2>Get Your Free Estimate</h2>
+        <p class="form-subtitle">Join hundreds of satisfied homeowners in Cherry Hill and South Jersey</p>
+
+        <div id="thankYouMessage" class="thank-you-message">
+          Thank you for your inquiry! We'll contact you within 24 hours to schedule your free consultation.
+        </div>
+
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="service">Service of Interest *</label>
+            <select id="service" name="service" required>
+              <option value="">Please select a service</option>
+              <option value="gutter-protection">Gutter Protection</option>
+              <option value="outdoor-lighting">Permanent Outdoor Lighting</option>
+              <option value="both">Both Services</option>
+            </select>
+          </div>
+
+          <button type="submit" class="submit-button">Request Free Consultation</button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="/" class="footer-link">Home</a>
+          <a href="/gutters.html" class="footer-link">Gutter Protection Cherry Hill NJ</a>
+          <a href="/lighting.html" class="footer-link">Permanent Outdoor Lighting South Jersey</a>
+          <a href="tel:856-874-6640" class="footer-link">856-874-6640</a>
+        </div>
+        <p>&copy; 2024 CleanGutters Lighting Company. Proudly serving South Jersey and Eastern Pennsylvania including Cherry Hill, Philadelphia, Mount Laurel, Marlton, Voorhees, and surrounding areas.</p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('contactForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        const formData = new FormData(this);
+        const data = Object.fromEntries(formData);
+
+        try {
+          const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              ...data,
+              _replyto: 'cleangutters2008@gmail.com',
+              _subject: 'New Contact Form Submission from Website'
+            })
+          });
+
+          if (response.ok) {
+            const thankYouMessage = document.getElementById('thankYouMessage');
+            thankYouMessage.style.display = 'block';
+            this.reset();
+
+            setTimeout(() => {
+              thankYouMessage.style.display = 'none';
+            }, 10000);
+          }
+        } catch (error) {
+          alert('There was an error submitting the form. Please call us at 856-874-6640.');
+        }
+      });
+
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+    </script>
+
+    <!-- Floating CTA Bubble -->
+    <div class="floating-cta">
+      <button class="floating-bubble" onclick="openModal()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        Get Free Estimate
+      </button>
+    </div>
+
+    <!-- Modal Popup -->
+    <div class="modal-overlay" id="estimateModal" onclick="closeModalOnOutside(event)">
+      <div class="modal-content" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+        <h2 class="modal-title">Get Your Free Estimate</h2>
+        <p class="modal-subtitle">Join 500+ satisfied homeowners in South Jersey & Eastern PA</p>
+
+        <div id="modalThankYouMessage" class="thank-you-message">
+          Thank you! We'll contact you within 24 hours to schedule your free consultation.
+        </div>
+
+        <form id="modalContactForm">
+          <div class="form-group">
+            <label for="modalName">Full Name *</label>
+            <input type="text" id="modalName" name="name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="modalEmail">Email Address *</label>
+            <input type="email" id="modalEmail" name="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="modalPhone">Phone Number *</label>
+            <input type="tel" id="modalPhone" name="phone" required>
+          </div>
+
+          <div class="form-group">
+            <label for="modalAddress">Property Address</label>
+            <input type="text" id="modalAddress" name="address">
+          </div>
+
+          <div class="form-group">
+            <label for="modalService">Service Interest *</label>
+            <select id="modalService" name="service" required>
+              <option value="">Select a service...</option>
+              <option value="gutter-protection">GutterGlove Protection</option>
+              <option value="outdoor-lighting">ShawTech Outdoor Lighting</option>
+              <option value="both">Both Services</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="modalMessage">Additional Details</label>
+            <textarea id="modalMessage" name="message" rows="4" placeholder="Tell us about your project..."></textarea>
+          </div>
+
+          <button type="submit" class="submit-button">Request Free Estimate</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      function openModal() {
+        document.getElementById('estimateModal').classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeModal() {
+        document.getElementById('estimateModal').classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+
+      function closeModalOnOutside(event) {
+        if (event.target.id === 'estimateModal') {
+          closeModal();
+        }
+      }
+
+      // Modal form submission
+      document.getElementById('modalContactForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        const formData = new FormData(this);
+        const data = Object.fromEntries(formData);
+
+        try {
+          const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              ...data,
+              _replyto: 'cleangutters2008@gmail.com',
+              _subject: 'New Free Estimate Request from Website'
+            })
+          });
+
+          if (response.ok) {
+            document.getElementById('modalThankYouMessage').style.display = 'block';
+            this.style.display = 'none';
+            setTimeout(() => {
+              closeModal();
+              this.reset();
+              this.style.display = 'block';
+              document.getElementById('modalThankYouMessage').style.display = 'none';
+            }, 3000);
+          }
+        } catch (error) {
+          alert('There was an error submitting the form. Please call us at 856-874-6640.');
+        }
+      });
+
+      // Close modal with Escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          closeModal();
+        }
+      });
+    </script>
+  </body>
+</html>

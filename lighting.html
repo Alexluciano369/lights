@@ -1,0 +1,1160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShawTech Permanent LED Lighting | South Jersey & Eastern PA | CleanGutters Lighting Co.</title>
+    <meta name="description" content="ShawTech permanent RGB & RGBW LED lighting systems for South Jersey and Eastern Pennsylvania. Wi-Fi smartphone control, 35,000 hour lifespan. Starting at $9/ft. Serving Philadelphia, Cherry Hill, Mount Laurel. Call 856-874-6640." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="/logo.jpg" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        line-height: 1.6;
+        color: #1a1a2e;
+        background: #ffffff;
+      }
+
+      .header {
+        position: sticky;
+        top: 0;
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        padding: 1rem 2rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+        transition: all 0.3s ease;
+      }
+
+      .header-content {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        text-decoration: none;
+      }
+
+      .logo-img {
+        height: 60px;
+        width: auto;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .logo-text {
+        color: #ffffff;
+        font-size: 1.25rem;
+        font-weight: 700;
+      }
+
+      .nav {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .nav-link {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: color 0.3s ease;
+        position: relative;
+      }
+
+      .nav-link:hover {
+        color: #ffd700;
+      }
+
+      .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: #ffd700;
+        transition: width 0.3s ease;
+      }
+
+      .nav-link:hover::after {
+        width: 100%;
+      }
+
+      .header-cta {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .phone-icon {
+        color: #ffffff;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        background: rgba(77, 184, 255, 0.2);
+        border-radius: 50%;
+        transition: all 0.3s ease;
+        border: 2px solid #4db8ff;
+      }
+
+      .phone-icon:hover {
+        background: #4db8ff;
+        transform: scale(1.1);
+        box-shadow: 0 4px 15px rgba(77, 184, 255, 0.4);
+      }
+
+      .phone-icon svg {
+        width: 22px;
+        height: 22px;
+      }
+
+      .cta-button {
+        background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+        color: #1a1a2e;
+        padding: 0.75rem 1.75rem;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1rem;
+        box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+      }
+
+      .cta-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(255, 215, 0, 0.6);
+      }
+
+      .hero {
+        position: relative;
+        height: 550px;
+        background: linear-gradient(rgba(26, 26, 46, 0.7), rgba(26, 26, 46, 0.7)),
+                    url('https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1920') center/cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #ffffff;
+        padding: 2rem;
+      }
+
+      .hero-content {
+        max-width: 900px;
+        animation: fadeInUp 1s ease;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .hero h1 {
+        font-size: 3.25rem;
+        font-weight: 800;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+        text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+      }
+
+      .hero-subtitle {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+        color: #ffffff;
+        font-weight: 600;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        line-height: 1.6;
+      }
+
+      .hero-badge {
+        display: inline-block;
+        background: rgba(77, 184, 255, 0.2);
+        border: 2px solid #4db8ff;
+        color: #4db8ff;
+        padding: 0.75rem 1.5rem;
+        border-radius: 50px;
+        font-size: 0.9rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+      }
+
+      .hero-features {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+        margin-bottom: 2.5rem;
+      }
+
+      .hero-feature {
+        font-size: 1.05rem;
+        font-weight: 600;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .hero-cta-group {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .cta-primary {
+        font-size: 1.2rem;
+        padding: 1.2rem 2.75rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .cta-secondary {
+        font-size: 1.2rem;
+        padding: 1.2rem 2.75rem;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        border: 2px solid #ffffff;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .cta-secondary:hover {
+        background: rgba(255, 255, 255, 0.25);
+        transform: translateY(-2px);
+      }
+
+      .section {
+        padding: 5rem 2rem;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .section-alt {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      }
+
+      .section-dark {
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        color: #ffffff;
+      }
+
+      .section-title {
+        font-size: 2.75rem;
+        font-weight: 800;
+        text-align: center;
+        margin-bottom: 1rem;
+        color: #1a1a2e;
+      }
+
+      .section-dark .section-title {
+        color: #ffd700;
+      }
+
+      .section-subtitle {
+        text-align: center;
+        font-size: 1.25rem;
+        color: #6c757d;
+        margin-bottom: 4rem;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .section-dark .section-subtitle {
+        color: #ffffff;
+      }
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2.5rem;
+        margin-top: 3rem;
+      }
+
+      .feature-card {
+        background: #ffffff;
+        padding: 2.5rem;
+        border-radius: 24px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        transition: all 0.4s ease;
+        border: 2px solid transparent;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 60px rgba(255, 215, 0, 0.2);
+        border-color: #ffd700;
+      }
+
+      .feature-icon {
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+        font-size: 2rem;
+        box-shadow: 0 6px 20px rgba(255, 215, 0, 0.3);
+      }
+
+      .feature-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: #1a1a2e;
+        font-weight: 700;
+      }
+
+      .feature-card p {
+        color: #495057;
+        font-size: 1.0625rem;
+        line-height: 1.7;
+      }
+
+      .applications-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .application-card {
+        background: #ffffff;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        transition: all 0.4s ease;
+        border: 2px solid transparent;
+      }
+
+      .application-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 60px rgba(255, 215, 0, 0.2);
+        border-color: #ffd700;
+      }
+
+      .application-image {
+        height: 200px;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .application-content {
+        padding: 2rem;
+      }
+
+      .application-content h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+        color: #1a1a2e;
+        font-weight: 700;
+      }
+
+      .application-content p {
+        color: #495057;
+        line-height: 1.7;
+      }
+
+      .benefits-list {
+        max-width: 900px;
+        margin: 3rem auto 0;
+        display: grid;
+        gap: 1.5rem;
+      }
+
+      .benefit-item {
+        display: flex;
+        gap: 1.5rem;
+        align-items: flex-start;
+        background: #ffffff;
+        padding: 2rem;
+        border-radius: 20px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+        transition: all 0.3s ease;
+      }
+
+      .benefit-item:hover {
+        transform: translateX(10px);
+        box-shadow: 0 12px 40px rgba(255, 215, 0, 0.15);
+      }
+
+      .benefit-icon {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.75rem;
+        flex-shrink: 0;
+        box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+      }
+
+      .benefit-content h4 {
+        font-size: 1.375rem;
+        margin-bottom: 0.5rem;
+        color: #1a1a2e;
+        font-weight: 700;
+      }
+
+      .benefit-content p {
+        color: #495057;
+        line-height: 1.7;
+      }
+
+      .highlight-section {
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        padding: 4rem 2rem;
+        border-radius: 24px;
+        text-align: center;
+        margin: 3rem 0;
+        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+      }
+
+      .highlight-badge {
+        display: inline-block;
+        background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+        color: #1a1a2e;
+        padding: 1rem 2.5rem;
+        border-radius: 50px;
+        font-size: 1.5rem;
+        font-weight: 800;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+      }
+
+      .highlight-text {
+        color: #ffffff;
+        font-size: 1.25rem;
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 1.8;
+      }
+
+      .form-section {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        padding: 5rem 2rem;
+      }
+
+      .form-container {
+        max-width: 700px;
+        margin: 0 auto;
+        background: #ffffff;
+        padding: 3rem;
+        border-radius: 24px;
+        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+      }
+
+      .form-container h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        color: #1a1a2e;
+        font-weight: 800;
+      }
+
+      .form-subtitle {
+        text-align: center;
+        color: #6c757d;
+        margin-bottom: 2.5rem;
+        font-size: 1.125rem;
+      }
+
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        color: #1a1a2e;
+      }
+
+      .form-group input,
+      .form-group select {
+        width: 100%;
+        padding: 1rem;
+        border: 2px solid #dee2e6;
+        border-radius: 12px;
+        font-size: 1rem;
+        font-family: inherit;
+        transition: all 0.3s ease;
+      }
+
+      .form-group input:focus,
+      .form-group select:focus {
+        outline: none;
+        border-color: #ffd700;
+        box-shadow: 0 0 0 4px rgba(255, 215, 0, 0.1);
+      }
+
+      .submit-button {
+        width: 100%;
+        padding: 1.25rem;
+        background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+        color: #1a1a2e;
+        border: none;
+        border-radius: 12px;
+        font-size: 1.125rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+      }
+
+      .submit-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(255, 215, 0, 0.6);
+      }
+
+      .footer {
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        color: #ffffff;
+        padding: 3rem 2rem 1.5rem;
+        text-align: center;
+      }
+
+      .footer-content {
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .footer-links {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 1.5rem;
+        flex-wrap: wrap;
+      }
+
+      .footer-link {
+        color: #ffffff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        font-weight: 500;
+      }
+
+      .footer-link:hover {
+        color: #4db8ff;
+      }
+
+      .floating-cta {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 9999;
+      }
+
+      .floating-bubble {
+        background: linear-gradient(135deg, #4db8ff 0%, #00aaff 100%);
+        color: #ffffff;
+        padding: 1rem 2rem;
+        border-radius: 50px;
+        font-size: 1.1rem;
+        font-weight: 700;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        box-shadow: 0 8px 30px rgba(77, 184, 255, 0.5);
+        transition: all 0.3s ease;
+        cursor: pointer;
+        border: none;
+        animation: floatBounce 3s ease-in-out infinite;
+      }
+
+      .floating-bubble:hover {
+        transform: translateY(-5px) scale(1.05);
+        box-shadow: 0 12px 40px rgba(77, 184, 255, 0.7);
+      }
+
+      @keyframes floatBounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+      }
+
+      .floating-bubble svg {
+        width: 24px;
+        height: 24px;
+      }
+
+      .modal-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 10000;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        animation: fadeIn 0.3s ease;
+      }
+
+      .modal-overlay.active {
+        display: flex;
+      }
+
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+
+      .modal-content {
+        background: #ffffff;
+        border-radius: 16px;
+        padding: 2.5rem;
+        max-width: 600px;
+        width: 100%;
+        max-height: 90vh;
+        overflow-y: auto;
+        position: relative;
+        animation: slideUp 0.3s ease;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      }
+
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .modal-close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        color: #666;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+      }
+
+      .modal-close:hover {
+        background: #f0f0f0;
+        color: #000;
+      }
+
+      .modal-title {
+        font-size: 2rem;
+        font-weight: 800;
+        margin-bottom: 0.5rem;
+        color: #1a1a2e;
+      }
+
+      .modal-subtitle {
+        font-size: 1.1rem;
+        color: #666;
+        margin-bottom: 2rem;
+      }
+
+      .thank-you-message {
+        display: none;
+        background: #d4edda;
+        color: #155724;
+        padding: 1.5rem;
+        border-radius: 12px;
+        margin-bottom: 1.5rem;
+        border: 2px solid #c3e6cb;
+        text-align: center;
+        font-weight: 600;
+      }
+
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2.25rem;
+        }
+
+        .hero-subtitle {
+          font-size: 1.125rem;
+        }
+
+        .section-title {
+          font-size: 2rem;
+        }
+
+        .nav {
+          width: 100%;
+          justify-content: center;
+        }
+
+        .header-cta {
+          width: 100%;
+          justify-content: center;
+        }
+
+        .floating-cta {
+          bottom: 20px;
+          right: 20px;
+        }
+
+        .floating-bubble {
+          padding: 0.9rem 1.5rem;
+          font-size: 1rem;
+        }
+
+        .modal-content {
+          padding: 2rem 1.5rem;
+        }
+
+        .modal-title {
+          font-size: 1.75rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-content">
+        <a href="/" class="logo">
+          <img src="/logo.jpg" alt="Clean Gutters Lighting Company" class="logo-img" />
+          <span class="logo-text">CleanGutters Lighting Co.</span>
+        </a>
+        <nav class="nav">
+          <a href="/" class="nav-link">Home</a>
+          <a href="/gutters.html" class="nav-link">Gutter Protection</a>
+          <a href="/lighting.html" class="nav-link">Outdoor Lighting</a>
+        </nav>
+        <div class="header-cta">
+          <a href="tel:856-874-6640" class="phone-icon" title="Call us: 856-874-6640">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-badge">ShawTech RGB & RGBW LED Systems</div>
+        <h1>Permanent Outdoor Lighting | South Jersey & Eastern PA</h1>
+        <p class="hero-subtitle">Wi-Fi Smartphone Control | 35,000 Hour Lifespan | Millions of Colors | Starting at $9/Linear Foot</p>
+        <div class="hero-features">
+          <span class="hero-feature">✓ Weatherproof LEDs</span>
+          <span class="hero-feature">✓ App Control</span>
+          <span class="hero-feature">✓ Year-Round Use</span>
+        </div>
+        <div class="hero-cta-group">
+          <a href="#contact" class="cta-button cta-primary">Get Free Design</a>
+          <a href="tel:856-874-6640" class="cta-button cta-secondary">Call 856-874-6640</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Architectural Accent Lighting Excellence</h2>
+      <p class="section-subtitle">Transform your home into a stunning landmark with premium permanent outdoor lighting designed for year-round brilliance.</p>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🎨</div>
+          <h3>Unlimited Customization</h3>
+          <p>Control millions of colors and patterns from your smartphone. Celebrate holidays, match team colors, or create the perfect ambiance for any occasion—instantly.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📱</div>
+          <h3>Smart Control System</h3>
+          <p>Schedule lighting automatically, adjust brightness remotely, and save your favorite settings. Complete control at your fingertips with intuitive app integration.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🏗️</div>
+          <h3>Seamless Installation</h3>
+          <p>Our discreet under soffit mounting system integrates perfectly with your home's architecture. LED strips are virtually invisible during the day, spectacular at night.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Energy Efficient LEDs</h3>
+          <p>Commercial-grade LED technology delivers brilliant illumination while using a fraction of the energy of traditional lighting. Save money while enhancing beauty.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🌦️</div>
+          <h3>Weather Resistant</h3>
+          <p>Engineered to withstand South Jersey's harshest conditions—rain, snow, heat, and humidity. Rated for decades of flawless outdoor performance.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🛡️</div>
+          <h3>Permanent Solution</h3>
+          <p>Install once, enjoy forever. No more climbing ladders, storing decorations, or risking damage to your roof and gutters with seasonal installations.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <h2 class="section-title">Versatile Applications</h2>
+      <p class="section-subtitle">One system, infinite possibilities for enhancing your home</p>
+
+      <div class="applications-grid">
+        <div class="application-card">
+          <div class="application-image" style="background-image: url('https://images.pexels.com/photos/1115804/pexels-photo-1115804.jpeg?auto=compress&cs=tinysrgb&w=600');"></div>
+          <div class="application-content">
+            <h3>Holiday Lighting</h3>
+            <p>Red and green for Christmas, orange for Halloween, patriotic colors for Independence Day—all without ever touching a ladder.</p>
+          </div>
+        </div>
+
+        <div class="application-card">
+          <div class="application-image" style="background-image: url('https://images.pexels.com/photos/1643389/pexels-photo-1643389.jpeg?auto=compress&cs=tinysrgb&w=600');"></div>
+          <div class="application-content">
+            <h3>Security Lighting</h3>
+            <p>Deter intruders with bright, motion-activated perimeter lighting. Enhance safety while showcasing your home's architecture.</p>
+          </div>
+        </div>
+
+        <div class="application-card">
+          <div class="application-image" style="background-image: url('https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&w=600');"></div>
+          <div class="application-content">
+            <h3>Architectural Accent</h3>
+            <p>Highlight your home's unique features with elegant, sophisticated lighting that enhances curb appeal and property value.</p>
+          </div>
+        </div>
+
+        <div class="application-card">
+          <div class="application-image" style="background-image: url('https://images.pexels.com/photos/1571453/pexels-photo-1571453.jpeg?auto=compress&cs=tinysrgb&w=600');"></div>
+          <div class="application-content">
+            <h3>Entertainment Lighting</h3>
+            <p>Create the perfect atmosphere for outdoor gatherings, parties, and special events with dynamic, customizable lighting scenes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="highlight-section">
+        <div class="highlight-badge">YEAR-ROUND ELEGANCE</div>
+        <p class="highlight-text">Never climb a ladder again. Never store bulky decorations. Never compromise your home's beauty. Our permanent outdoor lighting systems deliver continuous sophistication with effortless seasonal customization—all controlled from the comfort of your home.</p>
+      </div>
+    </section>
+
+    <section class="section section-dark">
+      <h2 class="section-title">Why South Jersey Homeowners Choose Permanent Lighting</h2>
+      <p class="section-subtitle">The intelligent choice for modern, luxury home illumination</p>
+
+      <div class="benefits-list">
+        <div class="benefit-item">
+          <div class="benefit-icon">🏠</div>
+          <div class="benefit-content">
+            <h4>Enhanced Curb Appeal</h4>
+            <p>Professional-grade lighting transforms your home into the neighborhood showpiece. Elegant, sophisticated illumination that impresses year-round.</p>
+          </div>
+        </div>
+
+        <div class="benefit-item">
+          <div class="benefit-icon">💰</div>
+          <div class="benefit-content">
+            <h4>Long-Term Value</h4>
+            <p>Eliminate annual decoration costs, storage expenses, and installation fees. One investment delivers decades of beautiful lighting.</p>
+          </div>
+        </div>
+
+        <div class="benefit-item">
+          <div class="benefit-icon">🔒</div>
+          <div class="benefit-content">
+            <h4>Increased Security</h4>
+            <p>Well-lit homes deter criminal activity. Programmable security modes keep your property protected while you're away.</p>
+          </div>
+        </div>
+
+        <div class="benefit-item">
+          <div class="benefit-icon">⏱️</div>
+          <div class="benefit-content">
+            <h4>Time Savings</h4>
+            <p>Reclaim weekends spent stringing lights, climbing ladders, and untangling decorations. Change your display instantly with a tap.</p>
+          </div>
+        </div>
+
+        <div class="benefit-item">
+          <div class="benefit-icon">🌟</div>
+          <div class="benefit-content">
+            <h4>Safety First</h4>
+            <p>No more dangerous ladder climbing during harsh weather. No more damaged gutters or roof shingles from temporary installations.</p>
+          </div>
+        </div>
+
+        <div class="benefit-item">
+          <div class="benefit-icon">🎯</div>
+          <div class="benefit-content">
+            <h4>Perfect Every Time</h4>
+            <p>Professional installation ensures perfectly aligned, evenly spaced lighting that looks flawless from every angle, season after season.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="form-section" id="contact">
+      <div class="form-container">
+        <h2>Get Your Free Design Consultation</h2>
+        <p class="form-subtitle">Discover how permanent outdoor lighting can transform your South Jersey home</p>
+
+        <div id="thankYouMessage" class="thank-you-message">
+          Thank you! We'll contact you within 24 hours to schedule your free lighting design consultation.
+        </div>
+
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="service">Service of Interest *</label>
+            <select id="service" name="service" required>
+              <option value="">Please select a service</option>
+              <option value="gutter-protection">Gutter Protection</option>
+              <option value="outdoor-lighting" selected>Permanent Outdoor Lighting</option>
+              <option value="both">Both Services</option>
+            </select>
+          </div>
+
+          <button type="submit" class="submit-button">Request Free Design Consultation</button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="/" class="footer-link">Home</a>
+          <a href="/gutters.html" class="footer-link">Gutter Protection Cherry Hill NJ</a>
+          <a href="/lighting.html" class="footer-link">Permanent Outdoor Lighting South Jersey</a>
+          <a href="tel:856-874-6640" class="footer-link">856-874-6640</a>
+        </div>
+        <p>&copy; 2024 CleanGutters Lighting Company. Illuminating South Jersey and Eastern Pennsylvania including Cherry Hill, Philadelphia, Mount Laurel, Marlton, Voorhees, and surrounding areas with professional ShawTech permanent LED lighting.</p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('contactForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        const formData = new FormData(this);
+        const data = Object.fromEntries(formData);
+
+        try {
+          const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              ...data,
+              _replyto: 'cleangutters2008@gmail.com',
+              _subject: 'New ShawTech Lighting Contact Form Submission'
+            })
+          });
+
+          if (response.ok) {
+            const thankYouMessage = document.getElementById('thankYouMessage');
+            thankYouMessage.style.display = 'block';
+            this.reset();
+
+            setTimeout(() => {
+              thankYouMessage.style.display = 'none';
+            }, 10000);
+          }
+        } catch (error) {
+          alert('There was an error submitting the form. Please call us at 856-874-6640.');
+        }
+      });
+
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+    </script>
+
+    <!-- Floating CTA Bubble -->
+    <div class="floating-cta">
+      <button class="floating-bubble" onclick="openModal()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        Get Free Design
+      </button>
+    </div>
+
+    <!-- Modal Popup -->
+    <div class="modal-overlay" id="estimateModal" onclick="closeModalOnOutside(event)">
+      <div class="modal-content" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+        <h2 class="modal-title">Get Your Free Lighting Design</h2>
+        <p class="modal-subtitle">Join 500+ satisfied homeowners in South Jersey & Eastern PA</p>
+
+        <div id="modalThankYouMessage" class="thank-you-message">
+          Thank you! We'll contact you within 24 hours to schedule your free consultation.
+        </div>
+
+        <form id="modalContactForm">
+          <div class="form-group">
+            <label for="modalName">Full Name *</label>
+            <input type="text" id="modalName" name="name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="modalEmail">Email Address *</label>
+            <input type="email" id="modalEmail" name="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="modalPhone">Phone Number *</label>
+            <input type="tel" id="modalPhone" name="phone" required>
+          </div>
+
+          <div class="form-group">
+            <label for="modalAddress">Property Address</label>
+            <input type="text" id="modalAddress" name="address">
+          </div>
+
+          <div class="form-group">
+            <label for="modalService">Service Interest *</label>
+            <select id="modalService" name="service" required>
+              <option value="">Select a service...</option>
+              <option value="gutter-protection">GutterGlove Protection</option>
+              <option value="outdoor-lighting">ShawTech Outdoor Lighting</option>
+              <option value="both">Both Services</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="modalMessage">Additional Details</label>
+            <textarea id="modalMessage" name="message" rows="4" placeholder="Tell us about your lighting vision..."></textarea>
+          </div>
+
+          <button type="submit" class="submit-button">Request Free Design</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      function openModal() {
+        document.getElementById('estimateModal').classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeModal() {
+        document.getElementById('estimateModal').classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+
+      function closeModalOnOutside(event) {
+        if (event.target.id === 'estimateModal') {
+          closeModal();
+        }
+      }
+
+      // Modal form submission
+      document.getElementById('modalContactForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        const formData = new FormData(this);
+        const data = Object.fromEntries(formData);
+
+        try {
+          const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              ...data,
+              _replyto: 'cleangutters2008@gmail.com',
+              _subject: 'New ShawTech Lighting Design Request from Website'
+            })
+          });
+
+          if (response.ok) {
+            document.getElementById('modalThankYouMessage').style.display = 'block';
+            this.style.display = 'none';
+            setTimeout(() => {
+              closeModal();
+              this.reset();
+              this.style.display = 'block';
+              document.getElementById('modalThankYouMessage').style.display = 'none';
+            }, 3000);
+          }
+        } catch (error) {
+          alert('There was an error submitting the form. Please call us at 856-874-6640.');
+        }
+      });
+
+      // Close modal with Escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          closeModal();
+        }
+      });
+    </script>
+  </body>
+</html>
