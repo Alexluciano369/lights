@@ -1371,7 +1371,7 @@
             this.reset();
 
             setTimeout(() => {
-              window.close();
+              thankYouMessage.style.display = 'none';
             }, 3000);
           } else {
             throw new Error(result.error || 'Failed to send');
@@ -1510,6 +1510,8 @@
               this.style.display = 'block';
               document.getElementById('modalThankYouMessage').style.display = 'none';
             }, 3000);
+          } else {
+            throw new Error(result.error || 'Failed to send');
           }
         } catch (error) {
           alert('There was an error submitting the form. Please call us at 856-874-6640.');

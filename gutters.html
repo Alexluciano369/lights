@@ -1219,7 +1219,7 @@
             this.reset();
 
             setTimeout(() => {
-              window.close();
+              thankYouMessage.style.display = 'none';
             }, 3000);
           } else {
             throw new Error(result.error || 'Failed to send');
