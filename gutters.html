@@ -94,7 +94,8 @@
       }
 
       .nav-link:hover {
-        color: #4db8ff;
+        color: #ffd700;
+        text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
       }
 
       .nav-link::after {
@@ -104,7 +105,7 @@
         left: 0;
         width: 0;
         height: 2px;
-        background: #4db8ff;
+        background: #ffd700;
         transition: width 0.3s ease;
       }
 
@@ -134,9 +135,10 @@
       }
 
       .phone-icon:hover {
-        background: #4db8ff;
+        background: #ffd700;
+        color: #1a1a2e;
         transform: scale(1.1);
-        box-shadow: 0 4px 15px rgba(77, 184, 255, 0.4);
+        box-shadow: 0 0 20px rgba(255, 215, 0, 0.8), 0 0 40px rgba(255, 215, 0, 0.5);
       }
 
       .phone-icon svg {
@@ -191,7 +193,7 @@
 
       .cta-button:hover {
         transform: translateY(-2px);
-        box-shadow: 0 8px 25px rgba(255, 215, 0, 0.6);
+        box-shadow: 0 0 30px rgba(255, 215, 0, 0.8), 0 0 50px rgba(255, 215, 0, 0.5);
       }
 
       .hero {
@@ -366,7 +368,7 @@
 
       .feature-card:hover {
         transform: translateY(-8px);
-        box-shadow: 0 20px 60px rgba(255, 215, 0, 0.2);
+        box-shadow: 0 0 30px rgba(255, 215, 0, 0.4), 0 20px 60px rgba(255, 215, 0, 0.2);
         border-color: #ffd700;
       }
 
@@ -686,19 +688,25 @@
       }
 
       .footer-link:hover {
-        color: #4db8ff;
+        color: #ffd700;
+        text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
       }
 
       .floating-cta {
         position: fixed;
         bottom: 30px;
-        right: 30px;
+        right: -300px;
         z-index: 9999;
+        transition: right 0.4s ease;
+      }
+
+      .floating-cta.visible {
+        right: 30px;
       }
 
       .floating-bubble {
-        background: linear-gradient(135deg, #4db8ff 0%, #00aaff 100%);
-        color: #ffffff;
+        background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+        color: #1a1a2e;
         padding: 1rem 2rem;
         border-radius: 50px;
         font-size: 1.1rem;
@@ -707,7 +715,7 @@
         display: flex;
         align-items: center;
         gap: 0.75rem;
-        box-shadow: 0 8px 30px rgba(77, 184, 255, 0.5);
+        box-shadow: 0 8px 30px rgba(255, 215, 0, 0.5);
         transition: all 0.3s ease;
         cursor: pointer;
         border: none;
@@ -716,7 +724,7 @@
 
       .floating-bubble:hover {
         transform: translateY(-5px) scale(1.05);
-        box-shadow: 0 12px 40px rgba(77, 184, 255, 0.7);
+        box-shadow: 0 0 40px rgba(255, 215, 0, 0.9), 0 0 60px rgba(255, 215, 0, 0.6);
       }
 
       @keyframes floatBounce {
@@ -1400,6 +1408,17 @@
       document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
           closeModal();
+        }
+      });
+
+      // Floating CTA slide-in on scroll
+      const floatingCta = document.querySelector('.floating-cta');
+      let hasScrolled = false;
+
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 300 && !hasScrolled) {
+          floatingCta.classList.add('visible');
+          hasScrolled = true;
         }
       });
 
