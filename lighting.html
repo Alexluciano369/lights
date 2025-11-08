@@ -749,12 +749,41 @@
       }
 
       @media (max-width: 768px) {
+        .hero {
+          height: auto;
+          min-height: 600px;
+          padding: 3rem 1.5rem;
+        }
+
         .hero h1 {
           font-size: 2.25rem;
+          margin-bottom: 1rem;
         }
 
         .hero-subtitle {
           font-size: 1.125rem;
+          margin-bottom: 1.5rem;
+        }
+
+        .hero-badge {
+          margin-bottom: 1.5rem;
+        }
+
+        .hero-features {
+          margin-bottom: 2rem;
+          gap: 1rem;
+        }
+
+        .hero-cta-group {
+          gap: 1rem;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .cta-button {
+          width: 100%;
+          max-width: 300px;
+          padding: 1rem 1.5rem;
         }
 
         .section-title {
