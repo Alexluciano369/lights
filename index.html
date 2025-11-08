@@ -87,9 +87,22 @@
       }
 
       .logo-text {
-        color: #ffffff;
         font-size: 1.1rem;
         font-weight: 700;
+      }
+
+      .logo-text-clean {
+        background: linear-gradient(135deg, #4db8ff 0%, #ffffff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .logo-text-lighting {
+        background: linear-gradient(135deg, #ffd700 0%, #ffffff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
       }
 
       .nav {
@@ -1112,7 +1125,9 @@
         </button>
         <a href="/" class="logo">
           <img src="/logo.jpg" alt="Clean Gutters Lighting Company" class="logo-img" />
-          <span class="logo-text">CleanGutters Lighting Co.</span>
+          <span class="logo-text">
+            <span class="logo-text-clean">CleanGutters</span> <span class="logo-text-lighting">Lighting Co.</span>
+          </span>
         </a>
         <nav class="nav" id="mobileNav">
           <a href="/" class="nav-link">Home</a>
