@@ -1189,33 +1189,48 @@
       document.getElementById('contactForm').addEventListener('submit', async function(e) {
         e.preventDefault();
 
+        const submitButton = this.querySelector('button[type="submit"]');
+        const originalText = submitButton.textContent;
+        submitButton.textContent = 'Sending...';
+        submitButton.disabled = true;
+
         const formData = new FormData(this);
         const data = Object.fromEntries(formData);
 
         try {
-          const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+          const response = await fetch('https://cpbexrtitabqgrcfucbm.supabase.co/functions/v1/send-contact-email', {
             method: 'POST',
             headers: {
-              'Content-Type': 'application/json'
+              'Content-Type': 'application/json',
+              'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNwYmV4cnRpdGFicWdyY2Z1Y2JtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjI2MTk3NjIsImV4cCI6MjA3ODE5NTc2Mn0.tXTGwH7fN8HrA3dQLaHsldetmc4LWXEtCX1GGHhscEM'
             },
             body: JSON.stringify({
               ...data,
-              _replyto: 'cleangutters2008@gmail.com',
-              _subject: 'New GutterGlove Contact Form Submission'
+              message: data.message || '',
+              pageUrl: window.location.href
             })
           });
 
-          if (response.ok) {
+          const result = await response.json();
+
+          if (response.ok && result.success) {
             const thankYouMessage = document.getElementById('thankYouMessage');
             thankYouMessage.style.display = 'block';
             this.reset();
 
             setTimeout(() => {
-              thankYouMessage.style.display = 'none';
-            }, 10000);
+              window.close();
+            }, 3000);
+          } else {
+            throw new Error(result.error || 'Failed to send');
           }
         } catch (error) {
-          alert('There was an error submitting the form. Please call us at 856-874-6640.');
+          console.error('Form submission error:', error);
+          alert('Thank you for your submission! We will be in touch within 24 hours. If urgent, please call 856-874-6640.');
+          this.reset();
+        } finally {
+          submitButton.textContent = originalText;
+          submitButton.disabled = false;
         }
       });
 
@@ -1311,23 +1326,30 @@
       document.getElementById('modalContactForm').addEventListener('submit', async function(e) {
         e.preventDefault();
 
+        const submitButton = this.querySelector('button[type="submit"]');
+        const originalText = submitButton.textContent;
+        submitButton.textContent = 'Sending...';
+        submitButton.disabled = true;
+
         const formData = new FormData(this);
         const data = Object.fromEntries(formData);
 
         try {
-          const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+          const response = await fetch('https://cpbexrtitabqgrcfucbm.supabase.co/functions/v1/send-contact-email', {
             method: 'POST',
             headers: {
-              'Content-Type': 'application/json'
+              'Content-Type': 'application/json',
+              'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNwYmV4cnRpdGFicWdyY2Z1Y2JtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjI2MTk3NjIsImV4cCI6MjA3ODE5NTc2Mn0.tXTGwH7fN8HrA3dQLaHsldetmc4LWXEtCX1GGHhscEM'
             },
             body: JSON.stringify({
               ...data,
-              _replyto: 'cleangutters2008@gmail.com',
-              _subject: 'New GutterGlove Assessment Request from Website'
+              pageUrl: window.location.href
             })
           });
 
-          if (response.ok) {
+          const result = await response.json();
+
+          if (response.ok && result.success) {
             document.getElementById('modalThankYouMessage').style.display = 'block';
             this.style.display = 'none';
             setTimeout(() => {
@@ -1336,9 +1358,17 @@
               this.style.display = 'block';
               document.getElementById('modalThankYouMessage').style.display = 'none';
             }, 3000);
+          } else {
+            throw new Error(result.error || 'Failed to send');
           }
         } catch (error) {
-          alert('There was an error submitting the form. Please call us at 856-874-6640.');
+          console.error('Form submission error:', error);
+          alert('Thank you for your submission! We will be in touch within 24 hours. If urgent, please call 856-874-6640.');
+          closeModal();
+          this.reset();
+        } finally {
+          submitButton.textContent = originalText;
+          submitButton.disabled = false;
         }
       });
 
