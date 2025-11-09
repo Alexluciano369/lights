@@ -89,16 +89,11 @@
         position: sticky;
         top: 0;
         background: rgb(30, 58, 95);
+        backdrop-filter: blur(10px);
         padding: 0.5rem 2rem;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         z-index: 1000;
-      }
-
-      @media (min-width: 769px) {
-        .header {
-          backdrop-filter: blur(10px);
-          transition: all 0.3s ease;
-        }
+        transition: all 0.3s ease;
       }
 
       .header-content {
@@ -128,13 +123,7 @@
         height: 45px;
         width: 58px;
         border-radius: 6px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-      }
-
-      @media (min-width: 769px) {
-        .logo-img {
-          box-shadow: 0 0 20px rgba(255, 215, 0, 0.6), 0 0 40px rgba(255, 215, 0, 0.4), 0 2px 8px rgba(0, 0, 0, 0.2);
-        }
+        box-shadow: 0 0 20px rgba(255, 215, 0, 0.6), 0 0 40px rgba(255, 215, 0, 0.4), 0 2px 8px rgba(0, 0, 0, 0.2);
       }
 
       .logo-text {
@@ -143,29 +132,17 @@
       }
 
       .logo-text-clean {
-        color: #4db8ff;
+        background: linear-gradient(135deg, #4db8ff 0%, #ffffff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
       }
 
       .logo-text-lighting {
-        color: #ffd700;
-      }
-
-      @media (min-width: 769px) {
-        .logo-text-clean {
-          background: linear-gradient(135deg, #4db8ff 0%, #ffffff 100%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          background-clip: text;
-          color: transparent;
-        }
-
-        .logo-text-lighting {
-          background: linear-gradient(135deg, #ffd700 0%, #ffffff 100%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          background-clip: text;
-          color: transparent;
-        }
+        background: linear-gradient(135deg, #ffd700 0%, #ffffff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
       }
 
       .nav {
@@ -180,33 +157,28 @@
         text-decoration: none;
         font-weight: 600;
         font-size: 0.95rem;
+        transition: color 0.3s ease;
         position: relative;
       }
 
-      @media (min-width: 769px) {
-        .nav-link {
-          transition: color 0.3s ease;
-        }
+      .nav-link:hover {
+        color: #ffd700;
+        text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+      }
 
-        .nav-link:hover {
-          color: #ffd700;
-          text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
-        }
+      .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: #ffd700;
+        transition: width 0.3s ease;
+      }
 
-        .nav-link::after {
-          content: '';
-          position: absolute;
-          bottom: -4px;
-          left: 0;
-          width: 0;
-          height: 2px;
-          background: #ffd700;
-          transition: width 0.3s ease;
-        }
-
-        .nav-link:hover::after {
-          width: 100%;
-        }
+      .nav-link:hover::after {
+        width: 100%;
       }
 
       .header-cta {
@@ -226,20 +198,15 @@
         height: 44px;
         background: rgba(77, 184, 255, 0.2);
         border-radius: 50%;
+        transition: all 0.3s ease;
         border: 2px solid #4db8ff;
       }
 
-      @media (min-width: 769px) {
-        .phone-icon {
-          transition: all 0.3s ease;
-        }
-
-        .phone-icon:hover {
-          background: #ffd700;
-          color: #1a1a2e;
-          transform: scale(1.1);
-          box-shadow: 0 0 20px rgba(255, 215, 0, 0.8), 0 0 40px rgba(255, 215, 0, 0.5);
-        }
+      .phone-icon:hover {
+        background: #ffd700;
+        color: #1a1a2e;
+        transform: scale(1.1);
+        box-shadow: 0 0 20px rgba(255, 215, 0, 0.8), 0 0 40px rgba(255, 215, 0, 0.5);
       }
 
       .phone-icon svg {
@@ -256,23 +223,18 @@
         padding: 0.5rem 1rem;
         background: rgba(77, 184, 255, 0.2);
         border-radius: 25px;
+        transition: all 0.3s ease;
         border: 2px solid #4db8ff;
         margin-right: 0.75rem;
         font-weight: 600;
         font-size: 1rem;
       }
 
-      @media (min-width: 769px) {
-        .phone-number-display {
-          transition: all 0.3s ease;
-        }
-
-        .phone-number-display:hover {
-          background: #ffd700;
-          color: #1a1a2e;
-          transform: translateY(-2px);
-          box-shadow: 0 4px 20px rgba(255, 215, 0, 0.4);
-        }
+      .phone-number-display:hover {
+        background: #ffd700;
+        color: #1a1a2e;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 20px rgba(255, 215, 0, 0.4);
       }
 
       .phone-number-display svg {
