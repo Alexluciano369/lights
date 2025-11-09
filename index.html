@@ -16,7 +16,6 @@
 
     <title>Best Gutter Guards & Permanent LED Roofline Lighting | South Jersey & PA | CleanGutters Lighting Co.</title>
     <meta name="description" content="#1 rated gutter guard installation & permanent LED roofline lighting in South Jersey. GutterGlove gutter protection system & ShawTech LED lighting with lifetime warranties. Professional gutter solutions, seamless gutter guards, leaf guard installation, outdoor LED lighting systems. Serving Cherry Hill, Voorhees, Marlton, Mount Laurel, Haddonfield, Philadelphia. Call 856-874-6640 for free estimate." />
-    <meta name="keywords" content="gutter guards, gutter guard installation, best gutter guards, gutter protection system, seamless gutter guards, leaf guard, gutter solutions, micro mesh gutter guards, clog free gutters, gutter covers, gutter screens, rain gutter guards, permanent outdoor lighting, LED roofline lighting, permanent LED lighting, architectural lighting, RGB LED lights, permanent holiday lights, outdoor lighting systems, roofline LED lights, eave lighting, soffit lighting, year round lighting, GutterGlove, ShawTech lighting, Cherry Hill NJ, Voorhees NJ, Marlton NJ, Mount Laurel NJ, Haddonfield NJ, Philadelphia PA, South Jersey gutter guards, Eastern Pennsylvania, Camden County, Burlington County, maintenance free gutters, lifetime warranty, professional gutter installation" />
 
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Gutter Protection & Permanent Outdoor Lighting | South Jersey & Eastern PA" />
@@ -178,6 +177,37 @@
       .phone-icon svg {
         width: 22px;
         height: 22px;
+      }
+
+      .phone-number-display {
+        color: #ffffff;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+        background: rgba(77, 184, 255, 0.2);
+        border-radius: 25px;
+        transition: all 0.3s ease;
+        border: 2px solid #4db8ff;
+        margin-right: 0.75rem;
+        font-weight: 600;
+        font-size: 1rem;
+      }
+
+      .phone-number-display:hover {
+        background: #ffd700;
+        color: #1a1a2e;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 20px rgba(255, 215, 0, 0.4);
+      }
+
+      .phone-number-display svg {
+        flex-shrink: 0;
+      }
+
+      .phone-number-text {
+        white-space: nowrap;
       }
 
       .mobile-menu-toggle {
@@ -1016,6 +1046,18 @@
           font-size: 0.95rem;
         }
 
+        .phone-number-text {
+          display: none;
+        }
+
+        .phone-number-display {
+          padding: 0.5rem;
+          margin-right: 0.5rem;
+          width: 44px;
+          height: 44px;
+          border-radius: 50%;
+        }
+
         .logo-img {
           height: 38px;
         }
@@ -1241,11 +1283,12 @@
           <a href="/blog.html" class="nav-link">Blog</a>
         </nav>
         <div class="header-cta">
-          <a href="sms:8568746640" class="phone-icon" title="Text us: 856-874-6640" style="margin-right: 1rem;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+          <a href="tel:856-874-6640" class="phone-number-display">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span class="phone-number-text">856-874-6640</span>
           </a>
-          <a href="tel:856-874-6640" class="phone-icon" title="Call us: 856-874-6640">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <a href="sms:8568746640" class="phone-icon" title="Text us: 856-874-6640">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
           </a>
         </div>
       </div>
@@ -1274,19 +1317,19 @@
 
       <div class="usp-grid">
         <div class="usp-card">
-          <div class="usp-icon">🛡️</div>
+          <div class="usp-icon"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
           <h3>Complete Peace of Mind</h3>
           <p>Never worry about clogged gutters or seasonal lighting changes again. Our lifetime warranties and maintenance-free systems protect your investment and your time, so you can focus on what matters most.</p>
         </div>
 
         <div class="usp-card">
-          <div class="usp-icon">📈</div>
+          <div class="usp-icon"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg></div>
           <h3>Enhanced Property Value</h3>
           <p>Top-tier gutter protection and architectural lighting aren't just upgrades—they're strategic investments. Our premium solutions elevate curb appeal, prevent costly water damage, and distinguish your home in South Jersey's competitive market.</p>
         </div>
 
         <div class="usp-card">
-          <div class="usp-icon">🪜</div>
+          <div class="usp-icon"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v18H3z"></path><path d="M3 9h18"></path><path d="M9 21V9"></path></svg></div>
           <h3>Never Climb a Ladder Again</h3>
           <p>End the dangerous cycle of gutter cleaning and holiday light installation. Our systems are engineered for permanent, worry-free performance. One installation delivers decades of flawless functionality.</p>
         </div>
