@@ -50,7 +50,6 @@
 
     <link rel="canonical" href="https://www.cleangutterslighting.com/" />
     <link rel="preload" href="/hero-bg.webp" as="image" fetchpriority="high" media="(min-width: 769px)" type="image/webp">
-    <link rel="preload" href="/Gemini_Generated_Image_sl0deysl0deysl0d.png" as="image" fetchpriority="high" media="(min-width: 769px)">
     <link rel="preload" href="/logo2.png" as="image">
     <link rel="icon" type="image/png" href="/logo2.png" />
     <link rel="preconnect" href="https://cpbexrtitabqgrcfucbm.supabase.co">
@@ -66,6 +65,14 @@
         line-height: 1.6;
         color: #1a1a2e;
         background: #ffffff;
+        font-display: swap;
+        text-rendering: optimizeSpeed;
+      }
+
+      @media (min-width: 769px) {
+        body {
+          text-rendering: optimizeLegibility;
+        }
       }
 
       img {
@@ -315,6 +322,16 @@
         overflow: hidden;
       }
 
+      .hero-bg-picture {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        display: none;
+      }
+
       .hero-bg-image {
         position: absolute;
         top: 0;
@@ -323,7 +340,12 @@
         height: 100%;
         object-fit: cover;
         object-position: center top;
-        z-index: 0;
+      }
+
+      @media (min-width: 769px) {
+        .hero-bg-picture {
+          display: block;
+        }
       }
 
       @media (max-width: 768px) {
@@ -331,10 +353,6 @@
           min-height: 500px;
           padding: 3rem 1.5rem;
           background: linear-gradient(135deg, #1a1a2e 0%, #2c5f8d 50%, #1a1a2e 100%);
-        }
-
-        .hero-bg-image {
-          display: none;
         }
       }
 
@@ -362,9 +380,17 @@
 
       .hero-content {
         max-width: 1100px;
-        animation: fadeInUp 1s ease;
+        animation: fadeInUp 0.6s ease;
         position: relative;
         z-index: 2;
+        will-change: opacity, transform;
+      }
+
+      @media (max-width: 768px) {
+        .hero-content {
+          animation: none;
+          will-change: auto;
+        }
       }
 
       .hero-badge {
@@ -408,6 +434,20 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
+        contain: layout style paint;
+        content-visibility: auto;
+      }
+
+      @media (max-width: 768px) {
+        .hero h1 {
+          background: none;
+          -webkit-background-clip: unset;
+          -webkit-text-fill-color: unset;
+          background-clip: unset;
+          color: #ffffff;
+          text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+          font-size: 2rem;
+        }
       }
 
       .hero-subtitle {
@@ -1073,9 +1113,6 @@
           font-size: 1.75rem;
         }
 
-        .hero h1 {
-          font-size: 2.25rem;
-        }
 
         .hero-subtitle {
           font-size: 1.125rem;
@@ -1161,10 +1198,6 @@
           min-width: 49px;
         }
 
-        .hero h1 {
-          font-size: 2.25rem;
-          line-height: 1.2;
-        }
 
         .hero-subtitle {
           font-size: 1.125rem;
@@ -1449,9 +1482,9 @@
 
     <main>
     <section class="hero">
-      <picture>
+      <picture class="hero-bg-picture">
         <source srcset="/hero-bg.webp" type="image/webp" media="(min-width: 769px)">
-        <img src="/Gemini_Generated_Image_sl0deysl0deysl0d.png" alt="Professional gutter guard and LED lighting installation" class="hero-bg-image" fetchpriority="high" width="1920" height="700">
+        <img src="/hero-bg.webp" alt="" class="hero-bg-image" loading="eager" fetchpriority="high" width="1920" height="1080" aria-hidden="true">
       </picture>
       <div class="hero-content">
         <div class="hero-badge">Serving South Jersey & Eastern Pennsylvania Since 2009</div>
