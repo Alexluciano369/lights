@@ -51,7 +51,13 @@
         text-decoration: none;
       }
 
+      .logo picture {
+        display: block;
+        flex-shrink: 0;
+      }
+
       .logo-img {
+        display: block;
         height: 45px;
         width: 58px;
         border-radius: 6px;
@@ -428,9 +434,15 @@
           margin-right: 0.5rem;
         }
 
+        .logo picture {
+          flex-shrink: 0;
+        }
+
         .logo-img {
+          display: block;
           height: 38px;
           width: 49px;
+          min-width: 49px;
         }
 
         .header-cta {
