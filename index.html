@@ -416,7 +416,7 @@
 
       .usp-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
         gap: 2.5rem;
         margin-bottom: 4rem;
       }
@@ -464,7 +464,7 @@
 
       .services-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(31.25rem, 1fr));
         gap: 3rem;
         margin-top: 3rem;
       }
@@ -868,7 +868,7 @@
 
       .reviews-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
         gap: 2rem;
         margin-bottom: 2rem;
       }
@@ -1230,9 +1230,9 @@
         </button>
         <a href="/" class="logo">
           <img src="/logo2.png" alt="Clean Gutters Lighting Company" class="logo-img" width="45" height="45" />
-          <span class="logo-text">
+          <h1 class="logo-text">
             <span class="logo-text-clean">CleanGutters</span> <span class="logo-text-lighting">Lighting Co.</span>
-          </span>
+          </h1>
         </a>
         <nav class="nav" id="mobileNav">
           <a href="/" class="nav-link">Home</a>
@@ -1438,17 +1438,17 @@
         <form id="contactForm">
           <div class="form-group">
             <label for="name">Full Name *</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" autocomplete="name" required>
           </div>
 
           <div class="form-group">
             <label for="phone">Phone Number *</label>
-            <input type="tel" id="phone" name="phone" required>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" required>
           </div>
 
           <div class="form-group">
             <label for="email">Email Address *</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" autocomplete="email" required>
           </div>
 
           <div class="form-group">
@@ -1567,22 +1567,22 @@
         <form id="modalContactForm">
           <div class="form-group">
             <label for="modalName">Full Name *</label>
-            <input type="text" id="modalName" name="name" required>
+            <input type="text" id="modalName" name="name" autocomplete="name" required>
           </div>
 
           <div class="form-group">
             <label for="modalEmail">Email Address *</label>
-            <input type="email" id="modalEmail" name="email" required>
+            <input type="email" id="modalEmail" name="email" autocomplete="email" required>
           </div>
 
           <div class="form-group">
             <label for="modalPhone">Phone Number *</label>
-            <input type="tel" id="modalPhone" name="phone" required>
+            <input type="tel" id="modalPhone" name="phone" autocomplete="tel" required>
           </div>
 
           <div class="form-group">
             <label for="modalAddress">Property Address</label>
-            <input type="text" id="modalAddress" name="address">
+            <input type="text" id="modalAddress" name="address" autocomplete="street-address">
           </div>
 
           <div class="form-group">
