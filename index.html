@@ -38,7 +38,7 @@
     <meta name="ICBM" content="39.9346, -75.0307" />
 
     <link rel="canonical" href="https://www.cleangutterslighting.com/" />
-    <link rel="preload" href="/Gemini_Generated_Image_sl0deysl0deysl0d.png" as="image" fetchpriority="high">
+    <link rel="preload" href="/Gemini_Generated_Image_sl0deysl0deysl0d.png" as="image" fetchpriority="high" media="(min-width: 769px)">
     <link rel="preload" href="/logo2.png" as="image">
     <link rel="icon" type="image/png" href="/logo2.png" />
     <link rel="preconnect" href="https://cpbexrtitabqgrcfucbm.supabase.co">
@@ -96,7 +96,7 @@
 
       .logo-img {
         height: 45px;
-        width: auto;
+        width: 45px;
         border-radius: 6px;
         box-shadow: 0 0 20px rgba(255, 215, 0, 0.6), 0 0 40px rgba(255, 215, 0, 0.4), 0 2px 8px rgba(0, 0, 0, 0.2);
       }
@@ -305,6 +305,7 @@
           background-position: center center;
           background-size: cover;
           padding: 3rem 1.5rem;
+          background-image: linear-gradient(135deg, #1a1a2e 0%, #2c5f8d 50%, #1a1a2e 100%);
         }
       }
 
@@ -541,9 +542,18 @@
         will-change: transform;
       }
 
+      .desktop-only {
+        display: block;
+      }
+
       @media (max-width: 768px) {
+        .desktop-only {
+          display: none;
+        }
+
         .service-image {
-          height: 200px;
+          height: 0;
+          display: none;
         }
       }
 
@@ -1091,6 +1101,7 @@
 
         .logo-img {
           height: 38px;
+          width: 38px;
         }
 
         .hero h1 {
@@ -1387,7 +1398,7 @@
 
       <div class="services-grid">
         <div class="service-card">
-          <div class="service-image" style="background-image: url('/Screenshot 2025-11-08 090336 copy.png');"></div>
+          <div class="service-image desktop-only" style="background-image: url('/Screenshot 2025-11-08 090336 copy.png');"></div>
           <div class="service-content">
             <h3>Elite Gutter Protection</h3>
             <p>Experience the pinnacle of gutter technology with our top-of-the-line protection systems. Engineered to handle the heaviest rainfalls while keeping out leaves, debris, and pests, our solutions come with a lifetime no-clog guarantee. Protect your foundation, landscaping, and home value with maintenance-free gutters that perform flawlessly year after year.</p>
@@ -1399,7 +1410,7 @@
         </div>
 
         <div class="service-card">
-          <div class="service-image" style="background-image: url('/lighting1.png');"></div>
+          <div class="service-image desktop-only" style="background-image: url('/lighting1.png');"></div>
           <div class="service-content">
             <h3>Permanent Outdoor Lighting</h3>
             <p>Transform your home into a stunning architectural masterpiece with our permanent under soffit lighting systems. Customize colors and patterns for every season, holiday, or mood—all from your smartphone. Enhance security, highlight your home's best features, and enjoy year-round elegance without the hassle of temporary installations.</p>
