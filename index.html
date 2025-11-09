@@ -38,7 +38,8 @@
     <meta name="ICBM" content="39.9346, -75.0307" />
 
     <link rel="canonical" href="https://www.cleangutterslighting.com/" />
-    <link rel="preload" href="/logo2.png" as="image">
+    <link rel="preload" href="/hero-bg.webp" as="image" type="image/webp">
+    <link rel="preload" href="/logo-optimized.webp" as="image" type="image/webp">
     <link rel="preload" href="/Screenshot 2025-11-08 072203.png" as="image">
     <link rel="icon" type="image/png" href="/logo2.png" />
     <link rel="preconnect" href="https://cpbexrtitabqgrcfucbm.supabase.co">
@@ -288,7 +289,7 @@
       .hero {
         position: relative;
         min-height: 700px;
-        background: url('/Gemini_Generated_Image_sl0deysl0deysl0d.png') center top/cover no-repeat;
+        background: url('/hero-bg.webp') center top/cover no-repeat;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -297,6 +298,10 @@
         padding: 4rem 2rem;
         overflow: hidden;
         background-attachment: scroll;
+      }
+
+      .no-webp .hero {
+        background-image: url('/Gemini_Generated_Image_sl0deysl0deysl0d.png');
       }
 
       @media (max-width: 768px) {
@@ -1315,7 +1320,10 @@
           <span></span>
         </button>
         <a href="/" class="logo">
-          <img src="/logo2.png" alt="CleanGutters Lighting Co. Logo" class="logo-img" width="45" height="45" />
+          <picture>
+            <source srcset="/logo-optimized.webp" type="image/webp">
+            <img src="/logo2.png" alt="CleanGutters Lighting Co. Logo" class="logo-img" width="45" height="45" fetchpriority="high">
+          </picture>
           <h1 class="logo-text">
             <span class="logo-text-clean">CleanGutters</span> <span class="logo-text-lighting">Lighting Co.</span>
           </h1>
@@ -1387,7 +1395,7 @@
 
       <div class="services-grid">
         <div class="service-card">
-          <div class="service-image" style="background-image: url('/Screenshot 2025-11-08 090336 copy.png');" loading="lazy"></div>
+          <div class="service-image" style="background-image: url('/gutter-service.webp');" loading="lazy"></div>
           <div class="service-content">
             <h3>Elite Gutter Protection</h3>
             <p>Experience the pinnacle of gutter technology with our top-of-the-line protection systems. Engineered to handle the heaviest rainfalls while keeping out leaves, debris, and pests, our solutions come with a lifetime no-clog guarantee. Protect your foundation, landscaping, and home value with maintenance-free gutters that perform flawlessly year after year.</p>
@@ -1399,7 +1407,7 @@
         </div>
 
         <div class="service-card">
-          <div class="service-image" style="background-image: url('/lighting1.png');" loading="lazy"></div>
+          <div class="service-image" style="background-image: url('/lighting1.webp');" loading="lazy"></div>
           <div class="service-content">
             <h3>Permanent Outdoor Lighting</h3>
             <p>Transform your home into a stunning architectural masterpiece with our permanent under soffit lighting systems. Customize colors and patterns for every season, holiday, or mood—all from your smartphone. Enhance security, highlight your home's best features, and enjoy year-round elegance without the hassle of temporary installations.</p>
