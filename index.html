@@ -56,6 +56,16 @@
         background: #ffffff;
       }
 
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      svg {
+        max-width: 100%;
+        height: auto;
+      }
+
       .header {
         position: sticky;
         top: 0;
@@ -278,7 +288,7 @@
       .hero {
         position: relative;
         min-height: 700px;
-        background: url('/Gemini_Generated_Image_sl0deysl0deysl0d.png') center top/cover;
+        background: url('/Gemini_Generated_Image_sl0deysl0deysl0d.png') center top/cover no-repeat;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -286,12 +296,22 @@
         color: #ffffff;
         padding: 4rem 2rem;
         overflow: hidden;
+        background-attachment: scroll;
       }
 
       @media (max-width: 768px) {
         .hero {
-          background-image: url('/Gemini_Generated_Image_sl0deysl0deysl0d.png');
+          min-height: 500px;
+          background-position: center center;
           background-size: cover;
+          padding: 3rem 1.5rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .hero {
+          min-height: 450px;
+          padding: 2.5rem 1rem;
         }
       }
 
@@ -518,6 +538,13 @@
         height: 300px;
         background-size: cover;
         background-position: center;
+        will-change: transform;
+      }
+
+      @media (max-width: 768px) {
+        .service-image {
+          height: 200px;
+        }
       }
 
       .service-content {
@@ -1407,7 +1434,7 @@
         <div class="reviews-grid">
           <div class="review-card">
             <div class="review-header-content">
-              <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Michael Thompson" class="review-photo" loading="lazy" width="50" height="50">
+              <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=80&dpr=1" alt="Michael Thompson" class="review-photo" loading="lazy" width="50" height="50" decoding="async">
               <div class="review-info">
                 <h3>Michael Thompson</h3>
                 <p class="review-location">Cherry Hill, NJ</p>
@@ -1419,7 +1446,7 @@
 
           <div class="review-card">
             <div class="review-header-content">
-              <img src="https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Sarah Rodriguez" class="review-photo" loading="lazy" width="50" height="50">
+              <img src="https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=80&dpr=1" alt="Sarah Rodriguez" class="review-photo" loading="lazy" width="50" height="50" decoding="async">
               <div class="review-info">
                 <h3>Sarah Rodriguez</h3>
                 <p class="review-location">Voorhees, NJ</p>
@@ -1431,7 +1458,7 @@
 
           <div class="review-card">
             <div class="review-header-content">
-              <img src="https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg?auto=compress&cs=tinysrgb&w=200" alt="David Chen" class="review-photo" loading="lazy" width="50" height="50">
+              <img src="https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg?auto=compress&cs=tinysrgb&w=80&dpr=1" alt="David Chen" class="review-photo" loading="lazy" width="50" height="50" decoding="async">
               <div class="review-info">
                 <h3>David Chen</h3>
                 <p class="review-location">Marlton, NJ</p>
@@ -1443,7 +1470,7 @@
 
           <div class="review-card">
             <div class="review-header-content">
-              <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Jennifer Martinez" class="review-photo" loading="lazy" width="50" height="50">
+              <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=80&dpr=1" alt="Jennifer Martinez" class="review-photo" loading="lazy" width="50" height="50" decoding="async">
               <div class="review-info">
                 <h3>Jennifer Martinez</h3>
                 <p class="review-location">Mount Laurel, NJ</p>
@@ -1455,7 +1482,7 @@
 
           <div class="review-card">
             <div class="review-header-content">
-              <img src="https://images.pexels.com/photos/1484794/pexels-photo-1484794.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Robert Wilson" class="review-photo" loading="lazy" width="50" height="50">
+              <img src="https://images.pexels.com/photos/1484794/pexels-photo-1484794.jpeg?auto=compress&cs=tinysrgb&w=80&dpr=1" alt="Robert Wilson" class="review-photo" loading="lazy" width="50" height="50" decoding="async">
               <div class="review-info">
                 <h3>Robert Wilson</h3>
                 <p class="review-location">Haddonfield, NJ</p>
@@ -1467,7 +1494,7 @@
 
           <div class="review-card">
             <div class="review-header-content">
-              <img src="https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Emily Johnson" class="review-photo" loading="lazy" width="50" height="50">
+              <img src="https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg?auto=compress&cs=tinysrgb&w=80&dpr=1" alt="Emily Johnson" class="review-photo" loading="lazy" width="50" height="50" decoding="async">
               <div class="review-info">
                 <h3>Emily Johnson</h3>
                 <p class="review-location">Collingswood, NJ</p>
