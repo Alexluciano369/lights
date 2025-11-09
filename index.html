@@ -4,6 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
     <meta name="theme-color" content="#1e3a5f" />
+    <script>
+      (function() {
+        var webP = new Image();
+        webP.onload = webP.onerror = function() {
+          if (webP.height !== 2) {
+            document.documentElement.classList.add('no-webp');
+          }
+        };
+        webP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
+      })();
+    </script>
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -288,7 +299,7 @@
       .hero {
         position: relative;
         min-height: 700px;
-        background: url('/Gemini_Generated_Image_sl0deysl0deysl0d.png') center top/cover no-repeat;
+        background: url('/hero-bg.webp') center top/cover no-repeat;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -297,6 +308,10 @@
         padding: 4rem 2rem;
         overflow: hidden;
         background-attachment: scroll;
+      }
+
+      .no-webp .hero {
+        background-image: url('/Gemini_Generated_Image_sl0deysl0deysl0d.png');
       }
 
       @media (max-width: 768px) {
@@ -1326,7 +1341,10 @@
           <span></span>
         </button>
         <a href="/" class="logo">
-          <img src="/logo2.png" alt="CleanGutters Lighting Co. Logo" class="logo-img" width="58" height="45" />
+          <picture>
+            <source srcset="/logo-small.webp" type="image/webp">
+            <img src="/logo2.png" alt="CleanGutters Lighting Co. Logo" class="logo-img" width="58" height="45" />
+          </picture>
           <h1 class="logo-text">
             <span class="logo-text-clean">CleanGutters</span> <span class="logo-text-lighting">Lighting Co.</span>
           </h1>
@@ -1399,7 +1417,7 @@
 
       <div class="services-grid">
         <div class="service-card">
-          <div class="service-image desktop-only" style="background-image: url('/Screenshot 2025-11-08 090336 copy.png');"></div>
+          <div class="service-image desktop-only" style="background-image: url('/gutter-service.webp');"></div>
           <div class="service-content">
             <h3>Elite Gutter Protection</h3>
             <p>Experience the pinnacle of gutter technology with our top-of-the-line protection systems. Engineered to handle the heaviest rainfalls while keeping out leaves, debris, and pests, our solutions come with a lifetime no-clog guarantee. Protect your foundation, landscaping, and home value with maintenance-free gutters that perform flawlessly year after year.</p>
@@ -1411,7 +1429,7 @@
         </div>
 
         <div class="service-card">
-          <div class="service-image desktop-only" style="background-image: url('/lighting1.png');"></div>
+          <div class="service-image desktop-only" style="background-image: url('/lighting1.webp');"></div>
           <div class="service-content">
             <h3>Permanent Outdoor Lighting</h3>
             <p>Transform your home into a stunning architectural masterpiece with our permanent under soffit lighting systems. Customize colors and patterns for every season, holiday, or mood—all from your smartphone. Enhance security, highlight your home's best features, and enjoy year-round elegance without the hassle of temporary installations.</p>
