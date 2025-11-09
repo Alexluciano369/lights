@@ -1587,14 +1587,30 @@
 
       // Floating CTA slide-in on scroll
       const floatingCta = document.querySelector('.floating-cta');
-      let hasScrolled = false;
+      const footer = document.querySelector('.footer');
 
-      window.addEventListener('scroll', function() {
-        if (window.scrollY > 300 && !hasScrolled) {
-          floatingCta.classList.add('visible');
-          hasScrolled = true;
+      function updateFloatingCta() {
+        const scrollY = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight;
+        const footerTop = footer.offsetTop;
+        const distanceFromBottom = documentHeight - (scrollY + windowHeight);
+
+        // Show floating CTA after scrolling 300px
+        if (scrollY > 300) {
+          // Hide when reaching footer (approximately 200px before footer)
+          if (scrollY + windowHeight >= footerTop - 200) {
+            floatingCta.classList.remove('visible');
+          } else {
+            floatingCta.classList.add('visible');
+          }
+        } else {
+          floatingCta.classList.remove('visible');
         }
-      });
+      }
+
+      window.addEventListener('scroll', updateFloatingCta);
+      window.addEventListener('resize', updateFloatingCta);
 
       // Mobile menu functionality
       const mobileMenuToggle = document.getElementById('mobileMenuToggle');

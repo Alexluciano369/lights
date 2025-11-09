@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GutterGlove® Gutter Protection | South Jersey & Eastern PA | CleanGutters Lighting Co.</title>
     <meta name="description" content="GutterGlove premium gutter protection systems for South Jersey and Eastern Pennsylvania. Lifetime no-clog warranty, stainless steel micro-mesh, professional installation. Serving Philadelphia, Cherry Hill, Mount Laurel. Call 856-874-6640." />
+    <link rel="canonical" href="https://www.cleangutterslighting.com/gutters.html" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -1413,14 +1414,30 @@
 
       // Floating CTA slide-in on scroll
       const floatingCta = document.querySelector('.floating-cta');
-      let hasScrolled = false;
+      const footer = document.querySelector('.footer');
 
-      window.addEventListener('scroll', function() {
-        if (window.scrollY > 300 && !hasScrolled) {
-          floatingCta.classList.add('visible');
-          hasScrolled = true;
+      function updateFloatingCta() {
+        const scrollY = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight;
+        const footerTop = footer.offsetTop;
+        const distanceFromBottom = documentHeight - (scrollY + windowHeight);
+
+        // Show floating CTA after scrolling 300px
+        if (scrollY > 300) {
+          // Hide when reaching footer (approximately 200px before footer)
+          if (scrollY + windowHeight >= footerTop - 200) {
+            floatingCta.classList.remove('visible');
+          } else {
+            floatingCta.classList.add('visible');
+          }
+        } else {
+          floatingCta.classList.remove('visible');
         }
-      });
+      }
+
+      window.addEventListener('scroll', updateFloatingCta);
+      window.addEventListener('resize', updateFloatingCta);
 
       const mobileMenuToggle = document.getElementById('mobileMenuToggle');
       const mobileNav = document.getElementById('mobileNav');
