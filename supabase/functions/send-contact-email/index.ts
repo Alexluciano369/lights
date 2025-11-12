@@ -26,11 +26,45 @@ Deno.serve(async (req: Request) => {
 
   try {
     const formData: ContactFormData = await req.json();
-    
-    const supabase = createClient(
-      Deno.env.get('SUPABASE_URL') ?? '',
-      Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') ?? ''
-    );
+
+    // Validate required fields
+    if (!formData.name || !formData.email || !formData.phone || !formData.service) {
+      return new Response(
+        JSON.stringify({
+          success: false,
+          error: 'Missing required fields: name, email, phone, and service are required'
+        }),
+        {
+          status: 400,
+          headers: {
+            ...corsHeaders,
+            'Content-Type': 'application/json',
+          },
+        }
+      );
+    }
+
+    const supabaseUrl = Deno.env.get('SUPABASE_URL');
+    const supabaseKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY');
+
+    if (!supabaseUrl || !supabaseKey) {
+      console.error('Missing Supabase environment variables');
+      return new Response(
+        JSON.stringify({
+          success: false,
+          error: 'Server configuration error'
+        }),
+        {
+          status: 500,
+          headers: {
+            ...corsHeaders,
+            'Content-Type': 'application/json',
+          },
+        }
+      );
+    }
+
+    const supabase = createClient(supabaseUrl, supabaseKey);
 
     const { data, error: dbError } = await supabase
       .from('contact_submissions')
@@ -43,11 +77,23 @@ Deno.serve(async (req: Request) => {
         page_url: formData.pageUrl,
       })
       .select()
-      .single();
+      .maybeSingle();
 
-    if (dbError) {
+    if (dbError || !data) {
       console.error('Database error:', dbError);
-      throw new Error(`Failed to save submission: ${dbError.message}`);
+      return new Response(
+        JSON.stringify({
+          success: false,
+          error: `Failed to save submission: ${dbError?.message || 'No data returned'}`
+        }),
+        {
+          status: 500,
+          headers: {
+            ...corsHeaders,
+            'Content-Type': 'application/json',
+          },
+        }
+      );
     }
 
     const emailBody = `
@@ -83,10 +129,14 @@ Submitted at: ${new Date().toLocaleString('en-US', { timeZone: 'America/New_York
         });
 
         if (response.ok) {
-          await supabase
+          const { error: updateError } = await supabase
             .from('contact_submissions')
             .update({ emailed: true })
             .eq('id', data.id);
+
+          if (updateError) {
+            console.error('Failed to update email status:', updateError);
+          }
         } else {
           const errorText = await response.text();
           console.error('Resend API error:', errorText);
