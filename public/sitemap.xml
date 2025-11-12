@@ -5,15 +5,25 @@
   <!-- Homepage - Highest Priority -->
   <url>
     <loc>https://cleangutterslighting.com/</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://cleangutterslighting.com/logo2.png</image:loc>
+      <image:title>CleanGutters Lighting Company Logo</image:title>
+      <image:caption>South Jersey gutter guards and permanent outdoor lighting</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cleangutterslighting.com/hero-bg.webp</image:loc>
+      <image:title>Premium Home Services in South Jersey</image:title>
+      <image:caption>Gutter protection and outdoor lighting installation</image:caption>
+    </image:image>
   </url>
 
   <!-- Main Service Pages - High Priority -->
   <url>
     <loc>https://cleangutterslighting.com/gutters.html</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -21,22 +31,57 @@
       <image:title>GutterGlove Micro-Mesh Gutter Protection System</image:title>
       <image:caption>Premium gutter guard installation in South Jersey</image:caption>
     </image:image>
+    <image:image>
+      <image:loc>https://cleangutterslighting.com/gutter-service.webp</image:loc>
+      <image:title>Professional Gutter Guard Installation</image:title>
+      <image:caption>Lifetime warranty gutter protection services</image:caption>
+    </image:image>
   </url>
 
   <url>
     <loc>https://cleangutterslighting.com/lighting.html</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://cleangutterslighting.com/lighting1.png</image:loc>
-      <image:title>ShawTech Permanent LED Roofline Lighting</image:title>
+      <image:title>Oelo Permanent LED Roofline Lighting</image:title>
       <image:caption>Professional permanent outdoor lighting installation</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://cleangutterslighting.com/lighting.png</image:loc>
-      <image:title>Custom Color Permanent Lighting</image:title>
-      <image:caption>RGB RGBW LED lighting systems</image:caption>
+      <image:title>Oelo Acrylic and Metal Mounting Lights</image:title>
+      <image:caption>UL certified LED lighting systems with 100,000+ hour lifespan</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cleangutterslighting.com/lighting1.webp</image:loc>
+      <image:title>Custom Color Permanent Outdoor Lighting</image:title>
+      <image:caption>16+ million color options with app control</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cleangutterslighting.com/l2.png</image:loc>
+      <image:title>Holiday Lighting Displays</image:title>
+      <image:caption>Year-round permanent lighting solutions</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cleangutterslighting.com/1000001591.jpg</image:loc>
+      <image:title>Classic Christmas Red and White Holiday Lighting</image:title>
+      <image:caption>Traditional holiday colors on permanent LED system</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cleangutterslighting.com/1000001582.jpg</image:loc>
+      <image:title>Elegant White Accent Lighting Installation</image:title>
+      <image:caption>Sophisticated white lighting enhances architectural features year-round</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cleangutterslighting.com/1000001585.jpg</image:loc>
+      <image:title>Vibrant Color Pattern LED Lighting</image:title>
+      <image:caption>Dynamic color combinations for any celebration or special occasion</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cleangutterslighting.com/1000001594.jpg</image:loc>
+      <image:title>Full Spectrum RGB LED Lighting</image:title>
+      <image:caption>Showcase your home with millions of color options</image:caption>
     </image:image>
   </url>
 
@@ -65,84 +110,128 @@
   <!-- Blog and Content Pages -->
   <url>
     <loc>https://cleangutterslighting.com/blog.html</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
+  <!-- Gutter Guard Blog Articles -->
   <url>
     <loc>https://cleangutterslighting.com/why-gutter-guards-essential-south-jersey.html</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://cleangutterslighting.com/gg2.png</image:loc>
       <image:title>Why Gutter Guards Are Essential in South Jersey</image:title>
+      <image:caption>Protect your home with professional gutter protection</image:caption>
     </image:image>
   </url>
 
   <url>
+    <loc>https://cleangutterslighting.com/best-time-install-gutter-guards-south-jersey.html</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://cleangutterslighting.com/gutter-cleaning-cost-vs-gutter-guards-investment.html</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://cleangutterslighting.com/gutter-guards-prevent-foundation-damage.html</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://cleangutterslighting.com/gutter-maintenance-checklist-south-jersey-homeowners.html</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://cleangutterslighting.com/pine-needles-gutters-micro-mesh-solution.html</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://cleangutterslighting.com/prevent-ice-dams-gutter-guards-south-jersey.html</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Outdoor Lighting Blog Articles -->
+  <url>
     <loc>https://cleangutterslighting.com/permanent-lighting-holiday-transform.html</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://cleangutterslighting.com/lighting1.png</image:loc>
       <image:title>Transform Your Home with Permanent Holiday Lighting</image:title>
+      <image:caption>Oelo permanent outdoor lighting for every season</image:caption>
     </image:image>
+  </url>
+
+  <url>
+    <loc>https://cleangutterslighting.com/led-outdoor-lighting-energy-savings-guide.html</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://cleangutterslighting.com/outdoor-lighting-color-schemes-every-occasion.html</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://cleangutterslighting.com/outdoor-lighting-security-benefits-south-jersey.html</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://cleangutterslighting.com/permanent-outdoor-lighting-increase-home-value.html</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://cleangutterslighting.com/smart-home-outdoor-lighting-integration-guide.html</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <!-- Reviews Page -->
   <url>
     <loc>https://cleangutterslighting.com/reviews.html</loc>
-    <lastmod>2025-11-09</lastmod>
+    <lastmod>2025-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Additional Image Assets -->
+  <!-- Services Overview Page -->
   <url>
-    <loc>https://cleangutterslighting.com/</loc>
-    <image:image>
-      <image:loc>https://cleangutterslighting.com/logo2.png</image:loc>
-      <image:title>CleanGutters Lighting Company Logo</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://cleangutterslighting.com/l2.png</image:loc>
-      <image:title>Professional Outdoor Lighting Services</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://cleangutterslighting.com/Screenshot%202025-11-08%20072203.png</image:loc>
-      <image:title>Gutter Protection Installation Example</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://cleangutterslighting.com/Screenshot%202025-11-08%20073008.png</image:loc>
-      <image:title>Professional Gutter Guard System</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://cleangutterslighting.com/Screenshot%202025-11-08%20073149.png</image:loc>
-      <image:title>Seamless Gutter Protection</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://cleangutterslighting.com/Screenshot%202025-11-08%20090336.png</image:loc>
-      <image:title>LED Lighting Installation</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://cleangutterslighting.com/Screenshot%202025-11-08%20090502.png</image:loc>
-      <image:title>Permanent Holiday Lighting Display</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://cleangutterslighting.com/Screenshot%202025-11-08%20090543.png</image:loc>
-      <image:title>Custom Color LED Lighting</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://cleangutterslighting.com/Screenshot%202025-11-08%20090615.png</image:loc>
-      <image:title>Roofline LED Lighting System</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://cleangutterslighting.com/Screenshot%202025-11-08%20090733.png</image:loc>
-      <image:title>Professional Outdoor Lighting Installation</image:title>
-    </image:image>
+    <loc>https://cleangutterslighting.com/services.html</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
 </urlset>
