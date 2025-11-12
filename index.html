@@ -475,8 +475,18 @@
       .cta-primary {
         font-size: 1.25rem;
         padding: 1.25rem 3rem;
+        background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+        color: #1a1a2e;
         text-transform: uppercase;
         letter-spacing: 1px;
+        font-weight: 700;
+        box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+        border: none;
+      }
+
+      .cta-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 0 30px rgba(255, 215, 0, 0.8), 0 0 50px rgba(255, 215, 0, 0.5);
       }
 
       .cta-secondary {
@@ -488,11 +498,13 @@
         color: #ffffff;
         text-transform: uppercase;
         letter-spacing: 1px;
+        font-weight: 700;
       }
 
       .cta-secondary:hover {
         background: rgba(255, 255, 255, 0.25);
         transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
       }
 
       .section {
