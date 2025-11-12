@@ -5,7 +5,7 @@
   X-XSS-Protection: 1; mode=block
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: geolocation=(), microphone=(), camera=()
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://psai.azureedge.net; style-src 'self' 'unsafe-inline' https://psai.azureedge.net; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://cpbexrtitabqgrcfucbm.supabase.co https://psai.azureedge.net https://*.azureedge.net; frame-src https://psai.azureedge.net https://*.azureedge.net; object-src 'none'; base-uri 'self';
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://cpbexrtitabqgrcfucbm.supabase.co; frame-src 'none'; object-src 'none'; base-uri 'self';
 
 # Cache static assets
 /*.js

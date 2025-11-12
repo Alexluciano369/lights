@@ -312,13 +312,13 @@
 
       .hero {
         position: relative;
-        min-height: clamp(500px, 70vh, 700px);
+        min-height: 700px;
         display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
         color: #ffffff;
-        padding: clamp(2rem, 5vh, 4rem) clamp(1rem, 3vw, 2rem);
+        padding: 4rem 2rem;
         overflow: hidden;
       }
 
@@ -329,7 +329,7 @@
         width: 100%;
         height: 100%;
         z-index: 0;
-        display: block;
+        display: none;
       }
 
       .hero-bg-image {
@@ -340,6 +340,27 @@
         height: 100%;
         object-fit: cover;
         object-position: center top;
+      }
+
+      @media (min-width: 769px) {
+        .hero-bg-picture {
+          display: block;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero {
+          min-height: 500px;
+          padding: 3rem 1.5rem;
+          background: linear-gradient(135deg, #1a1a2e 0%, #2c5f8d 50%, #1a1a2e 100%);
+        }
+      }
+
+      @media (max-width: 480px) {
+        .hero {
+          min-height: 450px;
+          padding: 2.5rem 1rem;
+        }
       }
 
       .hero::before {
@@ -377,9 +398,9 @@
         background: rgba(77, 184, 255, 0.2);
         border: 2px solid #4db8ff;
         color: #4db8ff;
-        padding: clamp(0.5rem, 1.5vw, 0.75rem) clamp(1rem, 3vw, 1.5rem);
+        padding: 0.75rem 1.5rem;
         border-radius: 50px;
-        font-size: clamp(0.75rem, 1.5vw, 0.9rem);
+        font-size: 0.9rem;
         font-weight: 700;
         margin-bottom: 2rem;
         text-transform: uppercase;
@@ -404,7 +425,7 @@
       }
 
       .hero h1 {
-        font-size: clamp(1.75rem, 5vw, 4rem);
+        font-size: 4rem;
         font-weight: 800;
         line-height: 1.15;
         margin-bottom: 1.5rem;
@@ -417,8 +438,20 @@
         content-visibility: auto;
       }
 
+      @media (max-width: 768px) {
+        .hero h1 {
+          background: none;
+          -webkit-background-clip: unset;
+          -webkit-text-fill-color: unset;
+          background-clip: unset;
+          color: #ffffff;
+          text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+          font-size: 2rem;
+        }
+      }
+
       .hero-subtitle {
-        font-size: clamp(1rem, 2.5vw, 1.4rem);
+        font-size: 1.4rem;
         margin-bottom: 2rem;
         color: #ffffff;
         font-weight: 600;
@@ -435,7 +468,7 @@
       }
 
       .hero-feature {
-        font-size: clamp(0.9rem, 2vw, 1.1rem);
+        font-size: 1.1rem;
         font-weight: 600;
         color: #ffffff;
         display: flex;
@@ -451,15 +484,15 @@
       }
 
       .cta-primary {
-        font-size: clamp(1rem, 2.5vw, 1.25rem);
-        padding: clamp(1rem, 2.5vw, 1.25rem) clamp(2rem, 5vw, 3rem);
+        font-size: 1.25rem;
+        padding: 1.25rem 3rem;
         text-transform: uppercase;
         letter-spacing: 1px;
       }
 
       .cta-secondary {
-        font-size: clamp(1rem, 2.5vw, 1.25rem);
-        padding: clamp(1rem, 2.5vw, 1.25rem) clamp(2rem, 5vw, 3rem);
+        font-size: 1.25rem;
+        padding: 1.25rem 3rem;
         background: rgba(255, 255, 255, 0.15);
         backdrop-filter: blur(10px);
         border: 2px solid #ffffff;
@@ -1934,7 +1967,5 @@
         });
       });
     </script>
-
-    <script defer id='008d472f-e500-40c5-8192-96d683159beb' type='text/javascript'>var scr = document.createElement('script');scr.src='https://psai.azureedge.net/008d472f-e500-40c5-8192-96d683159beb.js?v='+Date.now();document.getElementsByTagName('body')[0].appendChild(scr);</script>
   </body>
 </html>
