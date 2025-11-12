@@ -486,6 +486,65 @@
         line-height: 1.7;
       }
 
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .gallery-card {
+        background: #ffffff;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        transition: all 0.4s ease;
+        border: 2px solid transparent;
+      }
+
+      .gallery-card:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 20px 60px rgba(255, 215, 0, 0.3);
+        border-color: #ffd700;
+      }
+
+      .gallery-image {
+        height: 300px;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .gallery-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+      }
+
+      .gallery-card:hover .gallery-image img {
+        transform: scale(1.1);
+      }
+
+      .gallery-caption {
+        padding: 1.5rem;
+        text-align: center;
+      }
+
+      .gallery-caption h3 {
+        font-size: 1.25rem;
+        color: #1a1a2e;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+
+      .gallery-caption p {
+        color: #6c757d;
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+
       .benefits-list {
         max-width: 900px;
         margin: 3rem auto 0;
@@ -1136,6 +1195,53 @@
           <div class="application-content">
             <h3>Entertainment Lighting</h3>
             <p>Create the perfect atmosphere for outdoor gatherings, parties, and special events with dynamic, customizable lighting scenes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Holiday Lighting Showcase</h2>
+      <p class="section-subtitle">Real installations from South Jersey homes – Transform your property for every season</p>
+
+      <div class="gallery-grid">
+        <div class="gallery-card">
+          <div class="gallery-image">
+            <img src="/1000001591.jpg" alt="Red and white Christmas holiday lighting on home exterior" loading="lazy" width="400" height="300">
+          </div>
+          <div class="gallery-caption">
+            <h3>Classic Christmas Display</h3>
+            <p>Traditional red and white holiday colors create a festive, welcoming atmosphere</p>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <div class="gallery-image">
+            <img src="/1000001582.jpg" alt="Multi-color permanent LED holiday lights installation" loading="lazy" width="400" height="300">
+          </div>
+          <div class="gallery-caption">
+            <h3>Vibrant Color Patterns</h3>
+            <p>Dynamic color combinations for any celebration or special occasion</p>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <div class="gallery-image">
+            <img src="/1000001585.jpg" alt="Elegant white permanent outdoor lighting on roofline" loading="lazy" width="400" height="300">
+          </div>
+          <div class="gallery-caption">
+            <h3>Elegant White Accents</h3>
+            <p>Sophisticated white lighting enhances architectural features year-round</p>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <div class="gallery-image">
+            <img src="/1000001594.jpg" alt="Colorful permanent RGB LED lighting installation" loading="lazy" width="400" height="300">
+          </div>
+          <div class="gallery-caption">
+            <h3>Full Spectrum Brilliance</h3>
+            <p>Showcase your home with millions of color options at your fingertips</p>
           </div>
         </div>
       </div>
