@@ -1225,25 +1225,32 @@
           width: 100%;
           gap: 1rem;
           align-items: stretch;
+          height: 144px;
         }
 
         .cta-button {
           width: 100%;
           text-align: center;
-          padding: 1rem 1.5rem;
           font-size: 1.05rem;
-          display: block;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           box-sizing: border-box;
+          height: 66px;
+          padding: 0 1.5rem;
         }
 
         .cta-primary,
         .cta-secondary {
           width: 100%;
-          padding: 1rem 1.5rem;
           font-size: 1.05rem;
-          display: block;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           text-align: center;
           box-sizing: border-box;
+          height: 66px;
+          padding: 0 1.5rem;
         }
 
         .header-cta {
@@ -1286,10 +1293,15 @@
           height: 42px;
         }
 
+        .hero-cta-group {
+          height: 148px;
+        }
+
         .cta-primary,
         .cta-secondary {
           font-size: 1rem;
-          padding: 1rem 1rem;
+          height: 68px;
+          padding: 0 1rem;
         }
       }
     </style>
@@ -1547,9 +1559,9 @@
           <span class="hero-feature">✓ Professional Installation</span>
           <span class="hero-feature">✓ 1,000+ Happy Homeowners</span>
         </div>
-        <div class="hero-cta-group" style="min-height: 144px;">
-          <a href="#contact" class="cta-button cta-primary" style="min-height: 66px;">Get Free Estimate</a>
-          <a href="tel:856-874-6640" class="cta-button cta-secondary" style="min-height: 66px;">Call 856-874-6640</a>
+        <div class="hero-cta-group">
+          <a href="#contact" class="cta-button cta-primary">Get Free Estimate</a>
+          <a href="tel:856-874-6640" class="cta-button cta-secondary">Call 856-874-6640</a>
         </div>
       </div>
     </section>
