@@ -310,6 +310,8 @@
         transition: all 0.3s ease;
         border: none;
         cursor: pointer;
+        display: inline-block;
+        box-sizing: border-box;
       }
 
       .cta-button:hover {
@@ -468,7 +470,6 @@
         gap: 1.5rem;
         justify-content: center;
         flex-wrap: wrap;
-        min-height: 60px;
       }
 
       .cta-primary {
@@ -1222,39 +1223,45 @@
         .hero-cta-group {
           flex-direction: column;
           width: 100%;
-          height: 140px;
           gap: 1rem;
           align-items: stretch;
-          contain: layout;
         }
 
         .cta-button {
           width: 100%;
           text-align: center;
-          padding: 0;
+          padding: 1rem 1.5rem;
           font-size: 1.05rem;
-          height: 64px;
-          line-height: 64px;
           display: block;
           box-sizing: border-box;
-          flex-shrink: 0;
         }
 
         .cta-primary,
         .cta-secondary {
           width: 100%;
-          height: 64px;
-          padding: 0;
+          padding: 1rem 1.5rem;
           font-size: 1.05rem;
-          line-height: 64px;
           display: block;
           text-align: center;
           box-sizing: border-box;
-          flex-shrink: 0;
         }
 
         .header-cta {
           gap: 0.5rem;
+        }
+      }
+
+      @media (min-width: 481px) and (max-width: 768px) {
+        .hero-cta-group {
+          flex-direction: row;
+        }
+
+        .cta-primary,
+        .cta-secondary {
+          width: auto;
+          padding: 1rem 2rem;
+          font-size: 1.1rem;
+          display: inline-block;
         }
 
         .social-proof-stats {
@@ -1277,6 +1284,12 @@
         .phone-icon {
           width: 42px;
           height: 42px;
+        }
+
+        .cta-primary,
+        .cta-secondary {
+          font-size: 1rem;
+          padding: 1rem 1rem;
         }
       }
     </style>
@@ -1534,9 +1547,9 @@
           <span class="hero-feature">✓ Professional Installation</span>
           <span class="hero-feature">✓ 1,000+ Happy Homeowners</span>
         </div>
-        <div class="hero-cta-group">
-          <a href="#contact" class="cta-button cta-primary">Get Free Estimate</a>
-          <a href="tel:856-874-6640" class="cta-button cta-secondary">Call 856-874-6640</a>
+        <div class="hero-cta-group" style="min-height: 144px;">
+          <a href="#contact" class="cta-button cta-primary" style="min-height: 66px;">Get Free Estimate</a>
+          <a href="tel:856-874-6640" class="cta-button cta-secondary" style="min-height: 66px;">Call 856-874-6640</a>
         </div>
       </div>
     </section>
