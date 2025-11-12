@@ -1221,22 +1221,22 @@
         }
 
         .hero-cta-group {
-          flex-direction: column;
+          flex-direction: column !important;
           width: 100%;
           gap: 1rem;
           align-items: stretch;
-          height: 144px;
+          height: 148px !important;
         }
 
         .cta-button {
           width: 100%;
           text-align: center;
           font-size: 1.05rem;
-          display: flex;
+          display: flex !important;
           align-items: center;
           justify-content: center;
           box-sizing: border-box;
-          height: 66px;
+          height: 68px !important;
           padding: 0 1.5rem;
         }
 
@@ -1244,12 +1244,12 @@
         .cta-secondary {
           width: 100%;
           font-size: 1.05rem;
-          display: flex;
+          display: flex !important;
           align-items: center;
           justify-content: center;
           text-align: center;
           box-sizing: border-box;
-          height: 66px;
+          height: 68px !important;
           padding: 0 1.5rem;
         }
 
@@ -1258,9 +1258,10 @@
         }
       }
 
-      @media (min-width: 481px) and (max-width: 768px) {
+      @media (min-width: 769px) {
         .hero-cta-group {
-          flex-direction: row;
+          flex-direction: row !important;
+          height: auto !important;
         }
 
         .cta-primary,
@@ -1269,6 +1270,7 @@
           padding: 1rem 2rem;
           font-size: 1.1rem;
           display: inline-block;
+          height: auto !important;
         }
 
         .social-proof-stats {
@@ -1570,9 +1572,9 @@
           <span class="hero-feature">✓ Professional Installation</span>
           <span class="hero-feature">✓ 1,000+ Happy Homeowners</span>
         </div>
-        <div class="hero-cta-group">
-          <a href="#contact" class="cta-button cta-primary">Get Free Estimate</a>
-          <a href="tel:856-874-6640" class="cta-button cta-secondary">Call 856-874-6640</a>
+        <div class="hero-cta-group" style="display: flex; flex-direction: column; gap: 1rem; height: 148px;">
+          <a href="#contact" class="cta-button cta-primary" style="height: 68px; display: flex; align-items: center; justify-content: center;">Get Free Estimate</a>
+          <a href="tel:856-874-6640" class="cta-button cta-secondary" style="height: 68px; display: flex; align-items: center; justify-content: center;">Call 856-874-6640</a>
         </div>
       </div>
     </section>
