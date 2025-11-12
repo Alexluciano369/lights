@@ -130,6 +130,8 @@
       .logo-text {
         font-size: 1.1rem;
         font-weight: 700;
+        line-height: 1.2;
+        display: inline-block;
       }
 
       .logo-text-clean {
@@ -137,6 +139,8 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
+        min-width: 130px;
+        height: 21px;
       }
 
       .logo-text-lighting {
@@ -144,6 +148,8 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
+        min-width: 105px;
+        height: 21px;
       }
 
       .nav {
@@ -1162,6 +1168,17 @@
 
         .logo-text {
           font-size: 0.95rem;
+          line-height: 1.2;
+        }
+
+        .logo-text-clean {
+          min-width: 115px;
+          height: 19px;
+        }
+
+        .logo-text-lighting {
+          min-width: 95px;
+          height: 19px;
         }
 
         .phone-number-display {
@@ -1205,34 +1222,35 @@
         .hero-cta-group {
           flex-direction: column;
           width: 100%;
-          height: 132px;
+          height: 140px;
           gap: 1rem;
           align-items: stretch;
+          contain: layout;
         }
 
         .cta-button {
           width: 100%;
           text-align: center;
-          padding: 1rem 1.5rem;
-          font-size: 1.1rem;
-          height: 56px;
-          line-height: 1.4;
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          padding: 0;
+          font-size: 1.05rem;
+          height: 64px;
+          line-height: 64px;
+          display: block;
+          box-sizing: border-box;
+          flex-shrink: 0;
         }
 
         .cta-primary,
         .cta-secondary {
           width: 100%;
-          height: 60px;
-          padding: 1rem 1.5rem;
+          height: 64px;
+          padding: 0;
           font-size: 1.05rem;
-          line-height: 1.4;
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          line-height: 64px;
+          display: block;
+          text-align: center;
           box-sizing: border-box;
+          flex-shrink: 0;
         }
 
         .header-cta {
