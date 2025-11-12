@@ -1,2 +1,7 @@
+# Redirect non-www to www (canonical URL structure)
+https://cleangutterslighting.com/* https://www.cleangutterslighting.com/:splat 301!
+http://cleangutterslighting.com/* https://www.cleangutterslighting.com/:splat 301!
+http://www.cleangutterslighting.com/* https://www.cleangutterslighting.com/:splat 301!
+
 # Block any requests to bolt.new
-/badge.js* https://cleangutterslighting.com/ 301!
+/badge.js* https://www.cleangutterslighting.com/ 301!
