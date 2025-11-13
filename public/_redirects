@@ -1,2 +1,1 @@
-# Redirect non-www to www
-https://cleangutterslighting.com/* https://www.cleangutterslighting.com/:splat 301!
+# Netlify redirects - empty file, no custom redirects
