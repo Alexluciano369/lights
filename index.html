@@ -467,12 +467,20 @@
       }
 
       .hero-cta-group {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(260px, auto));
         gap: 1.5rem;
         justify-content: center;
-        flex-wrap: wrap;
         align-items: center;
-        min-height: 80px;
+        height: 80px;
+      }
+
+      @media (max-width: 768px) {
+        .hero-cta-group {
+          grid-template-columns: 1fr;
+          height: 140px;
+          gap: 1rem;
+        }
       }
 
       .cta-primary {
@@ -481,11 +489,12 @@
         text-transform: uppercase;
         letter-spacing: 1px;
         white-space: nowrap;
-        display: inline-flex;
+        display: flex;
         align-items: center;
         justify-content: center;
-        width: auto;
-        min-width: 260px;
+        width: 100%;
+        height: 60px;
+        box-sizing: border-box;
       }
 
       .cta-secondary {
@@ -494,11 +503,13 @@
         background: rgba(255, 255, 255, 0.15);
         backdrop-filter: blur(10px);
         border: 2px solid #ffffff;
-        min-width: 260px;
+        width: 100%;
+        height: 60px;
         color: #ffffff;
         text-transform: uppercase;
         letter-spacing: 1px;
         white-space: nowrap;
+        box-sizing: border-box;
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -1233,13 +1244,6 @@
           line-height: 1.5;
         }
 
-        .hero-cta-group {
-          flex-direction: column;
-          width: 100%;
-          gap: 1rem;
-          align-items: center;
-          min-height: 140px;
-        }
 
         .cta-button {
           width: 100%;
@@ -1253,15 +1257,9 @@
 
         .cta-primary,
         .cta-secondary {
-          width: 100%;
-          max-width: 100%;
           padding: 1rem 1.5rem;
           font-size: 1rem;
-          display: flex;
-          text-align: center;
-          box-sizing: border-box;
-          white-space: normal;
-          min-height: 56px;
+          height: 56px;
         }
 
         .header-cta {
@@ -1271,9 +1269,8 @@
 
       @media (min-width: 481px) and (max-width: 768px) {
         .hero-cta-group {
-          flex-direction: row;
-          flex-wrap: wrap;
-          min-height: 80px;
+          grid-template-columns: repeat(2, 1fr);
+          height: 80px;
         }
 
         .cta-primary,
