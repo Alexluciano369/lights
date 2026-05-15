@@ -23,11 +23,8 @@ Disallow: /*.json
 Disallow: /*.config.js
 Disallow: /node_modules/
 
-# Sitemap location (primary)
-Sitemap: https://www.cleangutterslighting.com/sitemap.xml
+# Sitemap location
+Sitemap: https://cleangutterslighting.com/sitemap.xml
 
 # Host preference
-Host: https://www.cleangutterslighting.com
-
-# Crawl-delay (optional, only if needed)
-# Crawl-delay: 1
+Host: https://cleangutterslighting.com
