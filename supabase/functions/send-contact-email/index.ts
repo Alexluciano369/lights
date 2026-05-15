@@ -14,7 +14,10 @@ interface ContactFormData {
   service: string;
   message: string;
   pageUrl: string;
+  address?: string;
 }
+
+const WEBHOOK_URL = "https://aautomated-gutterleads.agents.runlobster.com/hooks/contact";
 
 Deno.serve(async (req: Request) => {
   if (req.method === "OPTIONS") {
@@ -96,6 +99,25 @@ Deno.serve(async (req: Request) => {
       );
     }
 
+    // Forward to webhook (fire-and-forget, non-blocking)
+    EdgeRuntime.waitUntil(
+      fetch(WEBHOOK_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          service: formData.service,
+          message: formData.message || '',
+          address: formData.address || '',
+          pageUrl: formData.pageUrl,
+          submittedAt: new Date().toISOString(),
+          submissionId: data.id,
+        }),
+      }).catch((err) => console.error('Webhook delivery error:', err))
+    );
+
     const emailBody = `
 New Contact Form Submission
 
@@ -110,7 +132,7 @@ Submitted at: ${new Date().toLocaleString('en-US', { timeZone: 'America/New_York
     `;
 
     const resendApiKey = Deno.env.get('RESEND_API_KEY');
-    
+
     if (resendApiKey) {
       try {
         const response = await fetch('https://api.resend.com/emails', {
@@ -147,10 +169,10 @@ Submitted at: ${new Date().toLocaleString('en-US', { timeZone: 'America/New_York
     }
 
     return new Response(
-      JSON.stringify({ 
-        success: true, 
-        message: 'Form submitted successfully', 
-        id: data.id 
+      JSON.stringify({
+        success: true,
+        message: 'Form submitted successfully',
+        id: data.id
       }),
       {
         status: 200,
@@ -163,9 +185,9 @@ Submitted at: ${new Date().toLocaleString('en-US', { timeZone: 'America/New_York
   } catch (error) {
     console.error('Error processing form:', error);
     return new Response(
-      JSON.stringify({ 
-        success: false, 
-        error: error instanceof Error ? error.message : 'Unknown error occurred' 
+      JSON.stringify({
+        success: false,
+        error: error instanceof Error ? error.message : 'Unknown error occurred'
       }),
       {
         status: 500,
