@@ -58,6 +58,8 @@ export default defineConfig({
         reviews: resolve(__dirname, 'reviews.html'),
         services: resolve(__dirname, 'services.html'),
         faq: resolve(__dirname, 'faq.html'),
+        privacy: resolve(__dirname, 'privacy.html'),
+        terms: resolve(__dirname, 'terms.html'),
         'permanent-lighting-holiday-transform': resolve(__dirname, 'permanent-lighting-holiday-transform.html'),
         'why-gutter-guards-essential-south-jersey': resolve(__dirname, 'why-gutter-guards-essential-south-jersey.html'),
         'prevent-ice-dams-gutter-guards-south-jersey': resolve(__dirname, 'prevent-ice-dams-gutter-guards-south-jersey.html'),
