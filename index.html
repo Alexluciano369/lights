@@ -1849,7 +1849,9 @@
           Thank you for your inquiry! We'll contact you within 24 hours to schedule your free consultation.
         </div>
 
-        <form id="contactForm">
+        <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact">
+          <p class="hidden" style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
           <div class="form-group">
             <label for="name">Full Name *</label>
             <input type="text" id="name" name="name" autocomplete="name" required>
@@ -1928,21 +1930,13 @@
         const data = Object.fromEntries(formData);
 
         try {
-          const response = await fetch('https://aautomated-gutterleads.agents.runlobster.com/hooks/contact', {
+          const response = await fetch('/', {
             method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-              ...data,
-              message: data.message || '',
-              pageUrl: window.location.href
-            })
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams(new FormData(this)).toString()
           });
 
-          const result = await response.json();
-
-          if (response.ok && result.success) {
+          if (response.ok) {
             const thankYouMessage = document.getElementById('thankYouMessage');
             thankYouMessage.style.display = 'block';
             this.reset();
@@ -1951,7 +1945,7 @@
               thankYouMessage.style.display = 'none';
             }, 3000);
           } else {
-            throw new Error(result.error || 'Failed to send');
+            throw new Error('Form submission failed');
           }
         } catch (error) {
           console.error('Form submission error:', error);
@@ -1993,7 +1987,9 @@
           Thank you! We'll contact you within 24 hours to schedule your free consultation.
         </div>
 
-        <form id="modalContactForm">
+        <form id="modalContactForm" name="estimate" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="estimate">
+          <p class="hidden" style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
           <div class="form-group">
             <label for="modalName">Full Name *</label>
             <input type="text" id="modalName" name="name" autocomplete="name" required>
@@ -2064,20 +2060,13 @@
         const data = Object.fromEntries(formData);
 
         try {
-          const response = await fetch('https://aautomated-gutterleads.agents.runlobster.com/hooks/contact', {
+          const response = await fetch('/', {
             method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-              ...data,
-              pageUrl: window.location.href
-            })
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams(new FormData(this)).toString()
           });
 
-          const result = await response.json();
-
-          if (response.ok && result.success) {
+          if (response.ok) {
             document.getElementById('modalThankYouMessage').style.display = 'block';
             this.style.display = 'none';
             setTimeout(() => {
@@ -2087,7 +2076,7 @@
               document.getElementById('modalThankYouMessage').style.display = 'none';
             }, 3000);
           } else {
-            throw new Error(result.error || 'Failed to send');
+            throw new Error('Form submission failed');
           }
         } catch (error) {
           alert('There was an error submitting the form. Please call us at 856-874-6640.');
