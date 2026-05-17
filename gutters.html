@@ -1467,7 +1467,7 @@
           const result = await response.json();
 
           if (response.ok && result.success) {
-            gtag('event', 'conversion', {'send_to': 'AW-18146670851/HZx0COTCwqocEIPygM1D'});
+            try { gtag('event', 'conversion', {'send_to': 'AW-18146670851/HZx0COTCwqocEIPygM1D'}); } catch(e) {}
             const thankYouMessage = document.getElementById('thankYouMessage');
             thankYouMessage.style.display = 'block';
             this.reset();
@@ -1608,7 +1608,7 @@
           const result = await response.json();
 
           if (response.ok && result.success) {
-            gtag('event', 'conversion', {'send_to': 'AW-18146670851/HZx0COTCwqocEIPygM1D'});
+            try { gtag('event', 'conversion', {'send_to': 'AW-18146670851/HZx0COTCwqocEIPygM1D'}); } catch(e) {}
             document.getElementById('modalThankYouMessage').style.display = 'block';
             this.style.display = 'none';
             setTimeout(() => {
