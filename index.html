@@ -1928,18 +1928,19 @@
         const data = Object.fromEntries(formData);
 
         try {
-          const response = await fetch('https://formsubmit.co/ajax/cleangutters2008@gmail.com', {
+          const response = await fetch('https://ccleangutters.agents.runlobster.com/hooks/contact', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-              ...data,
+              name: data.name || '',
+              email: data.email || '',
+              phone: data.phone || '',
+              service: data.service || '',
               message: data.message || '',
-              pageUrl: window.location.href,
-              _subject: 'New Lead from CleanGutters Website: ' + (data.name || 'Unknown'),
-              _captcha: 'false',
-              _template: 'table'
+              address: data.address || '',
+              pageUrl: window.location.href
             })
           });
 
@@ -2067,17 +2068,19 @@
         const data = Object.fromEntries(formData);
 
         try {
-          const response = await fetch('https://formsubmit.co/ajax/cleangutters2008@gmail.com', {
+          const response = await fetch('https://ccleangutters.agents.runlobster.com/hooks/contact', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-              ...data,
-              pageUrl: window.location.href,
-              _subject: 'New Estimate Request: ' + (data.name || 'Unknown'),
-              _captcha: 'false',
-              _template: 'table'
+              name: data.name || '',
+              email: data.email || '',
+              phone: data.phone || '',
+              service: data.service || '',
+              message: data.message || '',
+              address: data.address || '',
+              pageUrl: window.location.href
             })
           });
 
