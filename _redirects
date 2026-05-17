@@ -3,3 +3,4 @@
 /blog       /blog.html       200
 /services   /services.html   200
 /reviews    /reviews.html    200
+/service-areas/*  /service-areas/:splat.html  200
