@@ -4,4 +4,9 @@
 /services /services.html 200
 /reviews /reviews.html 200
 /blog /blog.html 200
+/faq /faq.html 200
+/privacy /privacy.html 200
+/terms /terms.html 200
+/gutters.html /gutters 301
+/lighting.html /lighting 301
 /* /404.html 404

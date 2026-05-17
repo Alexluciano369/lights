@@ -1,6 +1,11 @@
+/gutters.html  /gutters  301
+/lighting.html /lighting 301
 /gutters    /gutters.html    200
 /lighting   /lighting.html   200
 /blog       /blog.html       200
 /services   /services.html   200
 /reviews    /reviews.html    200
+/faq        /faq.html        200
+/privacy    /privacy.html    200
+/terms      /terms.html      200
 /service-areas/*  /service-areas/:splat.html  200
