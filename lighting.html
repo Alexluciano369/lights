@@ -3,11 +3,13 @@
   <head>
         <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-E7NG44429T"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18146670851"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-E7NG44429T');
+      gtag('config', 'AW-18146670851');
     </script>
 
     <meta charset="UTF-8" />
@@ -1492,6 +1494,7 @@
           const result = await response.json();
 
           if (response.ok && result.success) {
+            gtag('event', 'conversion', {'send_to': 'AW-18146670851/HZx0COTCwqocEIPygM1D'});
             const thankYouMessage = document.getElementById('thankYouMessage');
             thankYouMessage.style.display = 'block';
             this.reset();
@@ -1632,6 +1635,7 @@
           const result = await response.json();
 
           if (response.ok && result.success) {
+            gtag('event', 'conversion', {'send_to': 'AW-18146670851/HZx0COTCwqocEIPygM1D'});
             document.getElementById('modalThankYouMessage').style.display = 'block';
             this.style.display = 'none';
             setTimeout(() => {
