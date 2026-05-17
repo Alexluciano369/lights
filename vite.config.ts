@@ -2,6 +2,35 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
 import { ViteMinifyPlugin } from 'vite-plugin-minify';
+import fs from 'fs';
+import path from 'path';
+
+function copyPublicSafe(src: string, dest: string) {
+  try {
+    const entries = fs.readdirSync(src, { withFileTypes: true });
+    fs.mkdirSync(dest, { recursive: true });
+    for (const entry of entries) {
+      // skip files with spaces in name (known broken locked files)
+      if (entry.name.includes(' ')) continue;
+      const srcPath = path.join(src, entry.name);
+      const destPath = path.join(dest, entry.name);
+      try {
+        if (entry.isDirectory()) {
+          copyPublicSafe(srcPath, destPath);
+        } else {
+          fs.copyFileSync(srcPath, destPath);
+        }
+      } catch {
+        // skip any other unreadable files
+      }
+    }
+  } catch {
+    // skip unreadable dirs
+  }
+}
+
+const safePublicDir = resolve(__dirname, '.public-safe');
+copyPublicSafe(resolve(__dirname, 'public'), safePublicDir);
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -13,6 +42,7 @@ export default defineConfig({
       removeComments: true,
     }),
   ],
+  publicDir: safePublicDir,
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
