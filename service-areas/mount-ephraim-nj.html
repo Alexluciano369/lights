@@ -187,7 +187,197 @@
     footer p { margin-bottom: 0.5rem; font-size: 0.95rem; }
     footer a { color: var(--gold); text-decoration: none; }
     footer a:hover { text-decoration: underline; }
-  </style>
+
+      .form-section {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        padding: 5rem 2rem;
+      }
+      .form-container {
+        max-width: 700px;
+        margin: 0 auto;
+        background: #ffffff;
+        padding: 3rem;
+        border-radius: 24px;
+        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+      }
+      .form-container h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        color: #1a1a2e;
+        font-weight: 800;
+      }
+      .form-subtitle {
+        text-align: center;
+        color: #6c757d;
+        margin-bottom: 2.5rem;
+        font-size: 1.125rem;
+      }
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+      .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        color: #1a1a2e;
+      }
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        width: 100%;
+        padding: 1rem;
+        border: 2px solid #dee2e6;
+        border-radius: 12px;
+        font-size: 1rem;
+        font-family: inherit;
+        transition: all 0.3s ease;
+        -webkit-appearance: none;
+        appearance: none;
+      }
+      .form-group input:focus,
+      .form-group select:focus,
+      .form-group textarea:focus {
+        outline: none;
+        border-color: #ffd700;
+        box-shadow: 0 0 0 4px rgba(255, 215, 0, 0.1);
+      }
+      .form-group textarea {
+        resize: vertical;
+        min-height: 100px;
+      }
+      .submit-button {
+        width: 100%;
+        padding: 1.25rem;
+        background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+        color: #1a1a2e;
+        border: none;
+        border-radius: 12px;
+        font-size: 1.125rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+      }
+      .submit-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(255, 215, 0, 0.6);
+      }
+      .thank-you-message {
+        display: none;
+        background: #d4edda;
+        color: #155724;
+        padding: 1.5rem;
+        border-radius: 12px;
+        margin-bottom: 1.5rem;
+        border: 2px solid #c3e6cb;
+        text-align: center;
+        font-weight: 600;
+      }
+      .floating-cta {
+        position: fixed;
+        bottom: 30px;
+        right: -300px;
+        z-index: 9999;
+        transition: right 0.4s ease;
+      }
+      .floating-cta.visible {
+        right: 30px;
+      }
+      .floating-bubble {
+        background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+        color: #1a1a2e;
+        padding: 1rem 2rem;
+        border-radius: 50px;
+        font-size: 1.1rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        box-shadow: 0 8px 30px rgba(255, 215, 0, 0.5);
+        transition: all 0.3s ease;
+        cursor: pointer;
+        border: none;
+        animation: floatBounce 3s ease-in-out infinite;
+      }
+      .floating-bubble:hover {
+        transform: translateY(-5px) scale(1.05);
+        box-shadow: 0 0 40px rgba(255, 215, 0, 0.9), 0 0 60px rgba(255, 215, 0, 0.6);
+      }
+      @keyframes floatBounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+      }
+      .modal-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 10000;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        animation: fadeIn 0.3s ease;
+      }
+      .modal-overlay.active {
+        display: flex;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      .modal-content {
+        background: #ffffff;
+        border-radius: 16px;
+        padding: 2.5rem;
+        max-width: 600px;
+        width: 100%;
+        max-height: 90vh;
+        overflow-y: auto;
+        position: relative;
+        animation: slideUp 0.3s ease;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      }
+      @keyframes slideUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .modal-close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        color: #666;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+      }
+      .modal-close:hover {
+        background: #f0f0f0;
+        color: #000;
+      }
+      .modal-title {
+        font-size: 2rem;
+        font-weight: 800;
+        margin-bottom: 0.5rem;
+        color: #1a1a2e;
+      }
+      .modal-subtitle {
+        font-size: 1.1rem;
+        color: #666;
+        margin-bottom: 2rem;
+      }
+    </style>
 </head>
 <body>
 
@@ -333,6 +523,93 @@
       </ul>
     </div>
   </section>
+
+    <section class="form-section" id="contact">
+      <div class="form-container">
+        <h2>Get Your Free Estimate</h2>
+        <p class="form-subtitle">Discover how affordable maintenance-free gutters can be</p>
+        <div id="thankYouMessage" class="thank-you-message">
+          Thank you! We'll contact you within 24 hours to schedule your free gutter protection assessment.
+        </div>
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+          </div>
+          <div class="form-group">
+            <label for="service">Service of Interest *</label>
+            <select id="service" name="service" required>
+              <option value="">Please select a service</option>
+              <option value="gutter-protection" selected>Gutter Protection</option>
+              <option value="outdoor-lighting">Permanent Outdoor Lighting</option>
+              <option value="both">Both Services</option>
+            </select>
+          </div>
+          <button type="submit" class="submit-button">Request Free Assessment</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Floating CTA Bubble -->
+    <div class="floating-cta">
+      <button class="floating-bubble" onclick="openModal()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        Get Free Assessment
+      </button>
+    </div>
+
+    <!-- Modal Popup -->
+    <div class="modal-overlay" id="estimateModal" onclick="closeModalOnOutside(event)">
+      <div class="modal-content" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+        <h2 class="modal-title">Get Your Free Assessment</h2>
+        <p class="modal-subtitle">Join 500+ satisfied homeowners in South Jersey & Eastern PA</p>
+        <div id="modalThankYouMessage" class="thank-you-message">
+          Thank you! We'll contact you within 24 hours to schedule your free consultation.
+        </div>
+        <form id="modalContactForm">
+          <div class="form-group">
+            <label for="modalName">Full Name *</label>
+            <input type="text" id="modalName" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="modalEmail">Email Address *</label>
+            <input type="email" id="modalEmail" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="modalPhone">Phone Number *</label>
+            <input type="tel" id="modalPhone" name="phone" required>
+          </div>
+          <div class="form-group">
+            <label for="modalAddress">Property Address</label>
+            <input type="text" id="modalAddress" name="address">
+          </div>
+          <div class="form-group">
+            <label for="modalService">Service Interest *</label>
+            <select id="modalService" name="service" required>
+              <option value="">Select a service...</option>
+              <option value="gutter-protection">GutterGlove Protection</option>
+              <option value="outdoor-lighting">Oelo Outdoor Lighting</option>
+              <option value="both">Both Services</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="modalMessage">Additional Details</label>
+            <textarea id="modalMessage" name="message" rows="4" placeholder="Tell us about your project..."></textarea>
+          </div>
+          <button type="submit" class="submit-button">Request Free Assessment</button>
+        </form>
+      </div>
+    </div>
+
 <footer>
   <p><strong>CleanGutters Lighting Co.</strong> — Gutter Guards &amp; Permanent LED Lighting</p>
   <p>📞 <a href="tel:8568746640">(856) 874-6640</a> | ✉️ <a href="mailto:cleangutters2008@gmail.com">cleangutters2008@gmail.com</a></p>
@@ -423,5 +700,129 @@
   </script>
 </div>
 
+    <script>
+      document.getElementById('contactForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const submitButton = this.querySelector('button[type="submit"]');
+        const originalText = submitButton.textContent;
+        submitButton.textContent = 'Sending...';
+        submitButton.disabled = true;
+        const formData = new FormData(this);
+        const data = Object.fromEntries(formData);
+        try {
+          const response = await fetch('https://ccleangutters.agents.runlobster.com/hooks/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              name: data.name || '',
+              email: data.email || '',
+              phone: data.phone || '',
+              service: data.service || '',
+              message: data.message || '',
+              address: data.address || '',
+              pageUrl: window.location.href
+            })
+          });
+          const result = await response.json();
+          if (response.ok && result.success) {
+            try { gtag('event', 'conversion', {'send_to': 'AW-18146670851/HZx0COTCwqocEIPygM1D'}); } catch(e) {}
+            const thankYouMessage = document.getElementById('thankYouMessage');
+            thankYouMessage.style.display = 'block';
+            this.reset();
+            setTimeout(() => { thankYouMessage.style.display = 'none'; }, 3000);
+          } else {
+            throw new Error(result.error || 'Failed to send');
+          }
+        } catch (error) {
+          console.error('Form submission error:', error);
+          alert('Thank you for your submission! We will be in touch within 24 hours. If urgent, please call 856-874-6640.');
+          this.reset();
+        } finally {
+          submitButton.textContent = originalText;
+          submitButton.disabled = false;
+        }
+      });
+
+      function openModal() {
+        document.getElementById('estimateModal').classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeModal() {
+        document.getElementById('estimateModal').classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+      function closeModalOnOutside(event) {
+        if (event.target.id === 'estimateModal') { closeModal(); }
+      }
+
+      document.getElementById('modalContactForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const submitButton = this.querySelector('button[type="submit"]');
+        const originalText = submitButton.textContent;
+        submitButton.textContent = 'Sending...';
+        submitButton.disabled = true;
+        const formData = new FormData(this);
+        const data = Object.fromEntries(formData);
+        try {
+          const response = await fetch('https://ccleangutters.agents.runlobster.com/hooks/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              name: data.name || '',
+              email: data.email || '',
+              phone: data.phone || '',
+              service: data.service || '',
+              message: data.message || '',
+              address: data.address || '',
+              pageUrl: window.location.href
+            })
+          });
+          const result = await response.json();
+          if (response.ok && result.success) {
+            try { gtag('event', 'conversion', {'send_to': 'AW-18146670851/HZx0COTCwqocEIPygM1D'}); } catch(e) {}
+            document.getElementById('modalThankYouMessage').style.display = 'block';
+            this.style.display = 'none';
+            setTimeout(() => {
+              closeModal();
+              this.reset();
+              this.style.display = 'block';
+              document.getElementById('modalThankYouMessage').style.display = 'none';
+            }, 3000);
+          } else {
+            throw new Error(result.error || 'Failed to send');
+          }
+        } catch (error) {
+          console.error('Form submission error:', error);
+          alert('Thank you for your submission! We will be in touch within 24 hours. If urgent, please call 856-874-6640.');
+          closeModal();
+          this.reset();
+        } finally {
+          submitButton.textContent = originalText;
+          submitButton.disabled = false;
+        }
+      });
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') { closeModal(); }
+      });
+
+      const floatingCta = document.querySelector('.floating-cta');
+      const footer = document.querySelector('.footer');
+      function updateFloatingCta() {
+        const scrollY = window.scrollY;
+        const footerTop = footer.offsetTop;
+        if (scrollY > 300) {
+          if (scrollY + window.innerHeight >= footerTop - 200) {
+            floatingCta.classList.remove('visible');
+          } else {
+            floatingCta.classList.add('visible');
+          }
+        } else {
+          floatingCta.classList.remove('visible');
+        }
+      }
+      window.addEventListener('scroll', updateFloatingCta);
+      window.addEventListener('resize', updateFloatingCta);
+    </script>
 </body>
 </html>
