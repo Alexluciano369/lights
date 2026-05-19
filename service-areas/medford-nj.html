@@ -15,7 +15,7 @@
 (function(){
   var h=window.location.hostname;
   if(h!=='cleangutterslighting.com'&&h!=='www.cleangutterslighting.com')return;
-  var u='https://ccleangutters.agents.runlobster.com/api/analytics/track?p='+encodeURIComponent(window.location.pathname)+'&r='+encodeURIComponent(document.referrer||'')+'&w='+window.screen.width+'&t='+Date.now();
+  var u='https://ccleangutters.agents.runlobster.com/hooks/analytics/track?p='+encodeURIComponent(window.location.pathname)+'&r='+encodeURIComponent(document.referrer||'')+'&w='+window.screen.width+'&t='+Date.now();
   navigator.sendBeacon?navigator.sendBeacon(u):(new Image).src=u
 })();
 </script>
