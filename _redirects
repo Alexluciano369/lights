@@ -10,3 +10,9 @@
 /privacy    /privacy.html    200
 /terms      /terms.html      200
 /service-areas/*  /service-areas/:splat.html  200
+
+# Serve images from public/ directory
+/*.jpg      /public/:splat.jpg      200!
+/*.png      /public/:splat.png      200!
+/*.webp     /public/:splat.webp     200!
+/*.ico      /public/:splat.ico      200!
