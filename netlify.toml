@@ -1,6 +1,6 @@
 [build]
   command = "npx vite build"
-  publish = "."
+  publish = "dist"
 
 [[headers]]
   for = "/*.jpg"
