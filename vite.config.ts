@@ -82,6 +82,8 @@ export default defineConfig({
         'best-gutter-guards-pine-needles-nj': resolve(__dirname, 'best-gutter-guards-pine-needles-nj.html'),
         'outdoor-lighting-home-security-nj': resolve(__dirname, 'outdoor-lighting-home-security-nj.html'),
         'south-jersey-storm-season-gutter-prep': resolve(__dirname, 'south-jersey-storm-season-gutter-prep.html'),
+        'hurricane-season-gutter-guards-nj-2026': resolve(__dirname, 'hurricane-season-gutter-guards-nj-2026.html'),
+
         'service-areas/alloway-nj': resolve(__dirname, 'service-areas/alloway-nj.html'),
         'service-areas/atlantic-city-nj': resolve(__dirname, 'service-areas/atlantic-city-nj.html'),
         'service-areas/beachwood-nj': resolve(__dirname, 'service-areas/beachwood-nj.html'),
