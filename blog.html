@@ -1,13 +1,27 @@
 <!doctype html>
 <html lang="en">
   <head>
-        <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E7NG44429T"></script>
+        <!-- Google tag (gtag.js) — deferred until after page interactive -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-E7NG44429T');
+      (function(){
+        function loadGTM(){
+          var s1=document.createElement('script');
+          s1.async=true;
+          s1.src='https://www.googletagmanager.com/gtag/js?id=G-E7NG44429T';
+          document.head.appendChild(s1);
+          var s2=document.createElement('script');
+          s2.async=true;
+          s2.src='https://www.googletagmanager.com/gtag/js?id=AW-18146670851';
+          document.head.appendChild(s2);
+          gtag('config','G-E7NG44429T');
+          gtag('config','AW-18146670851');
+        }
+        if(document.readyState==='complete'){loadGTM();}
+        else{window.addEventListener('load',loadGTM,{once:true,passive:true});}
+      })();
     </script>
     <script>
 (function(){
@@ -20,7 +34,7 @@
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://ccleangutters.agents.runlobster.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://images.pexels.com; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://cpbexrtitabqgrcfucbm.supabase.co https://www.googletagmanager.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://ccleangutters.agents.runlobster.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://images.pexels.com https://www.google-analytics.com; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://cpbexrtitabqgrcfucbm.supabase.co https://www.googletagmanager.com https://www.google-analytics.com https://analytics.google.com https://ccleangutters.agents.runlobster.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;">
     <title>Home Improvement Blog | CleanGutters Lighting</title>
     <meta name="description" content="Expert advice on gutter protection, permanent LED lighting, and home maintenance for South Jersey & Eastern PA homeowners. Tips, comparisons, and guides from CleanGutters Lighting" />
     <link rel="canonical" href="https://cleangutterslighting.com/blog" />

@@ -1,15 +1,27 @@
 <!doctype html>
 <html lang="en" itemscope itemtype="https://schema.org/LocalBusiness">
   <head>
-        <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E7NG44429T"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18146670851"></script>
+        <!-- Google tag (gtag.js) — deferred until after page interactive -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-E7NG44429T');
-      gtag('config', 'AW-18146670851');
+      (function(){
+        function loadGTM(){
+          var s1=document.createElement('script');
+          s1.async=true;
+          s1.src='https://www.googletagmanager.com/gtag/js?id=G-E7NG44429T';
+          document.head.appendChild(s1);
+          var s2=document.createElement('script');
+          s2.async=true;
+          s2.src='https://www.googletagmanager.com/gtag/js?id=AW-18146670851';
+          document.head.appendChild(s2);
+          gtag('config','G-E7NG44429T');
+          gtag('config','AW-18146670851');
+        }
+        if(document.readyState==='complete'){loadGTM();}
+        else{window.addEventListener('load',loadGTM,{once:true,passive:true});}
+      })();
     </script>
     <script>
 (function(){
@@ -24,7 +36,7 @@
     <meta name="google-site-verification" content="f1f40aedca7a7466" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
     <meta name="theme-color" content="#1e3a5f" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://ccleangutters.agents.runlobster.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://images.pexels.com; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://cpbexrtitabqgrcfucbm.supabase.co https://www.googletagmanager.com https://ccleangutters.agents.runlobster.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://ccleangutters.agents.runlobster.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://images.pexels.com https://www.google-analytics.com; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://cpbexrtitabqgrcfucbm.supabase.co https://www.googletagmanager.com https://www.google-analytics.com https://analytics.google.com https://ccleangutters.agents.runlobster.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;">
     <script>
       (function() {
         var webP = new Image();
@@ -70,7 +82,8 @@
     <meta name="ICBM" content="39.9346, -75.0307" />
 
     <link rel="canonical" href="https://cleangutterslighting.com/" />
-    <link rel="preload" href="/hero.webp" as="image" fetchpriority="high">
+    <link rel="preload" href="/hero-mobile.webp" as="image" fetchpriority="high" media="(max-width: 768px)">
+    <link rel="preload" href="/hero.webp" as="image" fetchpriority="high" media="(min-width: 769px)">
     <link rel="preload" href="/logo.png" as="image">
     <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32" />
     <link rel="preconnect" href="https://cpbexrtitabqgrcfucbm.supabase.co">
@@ -395,9 +408,9 @@
       }
 
       .hero-badge {
-        background: rgba(77, 184, 255, 0.2);
-        border: 2px solid #4db8ff;
-        color: #4db8ff;
+        background: rgba(0, 0, 0, 0.55);
+        border: 2px solid #ffffff;
+        color: #ffffff;
         padding: 0.75rem 1.5rem;
         border-radius: 50px;
         font-size: 0.9rem;
@@ -1674,7 +1687,11 @@
     <main>
     <section class="hero">
       <picture class="hero-bg-picture">
-        <img src="/hero.webp" alt="Professional gutter guard installation and permanent LED roofline lighting by CleanGutters Lighting in South Jersey" class="hero-bg-image" loading="eager" fetchpriority="high" width="1920" height="1080">
+        <picture>
+          <source srcset="/hero-mobile.webp" media="(max-width: 768px)" type="image/webp">
+          <source srcset="/hero.webp" media="(min-width: 769px)" type="image/webp">
+          <img src="/hero.jpg" alt="Professional gutter guard installation and permanent LED roofline lighting by CleanGutters Lighting in South Jersey" class="hero-bg-image" loading="eager" fetchpriority="high" width="1920" height="1080" decoding="sync">
+        </picture>
       </picture>
       <div class="hero-content">
         <div class="hero-badge">Serving South Jersey & Eastern Pennsylvania Since 2009</div>
@@ -1989,7 +2006,7 @@
             throw new Error(result.error || 'Failed to send');
           }
         } catch (error) {
-          console.error('Form submission error:', error);
+          /* form error handled via alert — no console logging in production */
           alert('Thank you for your submission! We will be in touch within 24 hours. If urgent, please call 856-874-6640.');
           this.reset();
         } finally {
