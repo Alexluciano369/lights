@@ -326,6 +326,7 @@
     </script>
 </head>
 <body>
+    <a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999">Skip to main content</a>
     <header class="hero">
         <h1>Gutter Guards & Permanent LED Lighting in Medford, NJ</h1>
         <p>Protecting Medford's wooded properties from gutter debris and enhancing rooflines with permanent LED illumination since 2009.</p>
@@ -476,14 +477,14 @@
               <option value="both">Both Services</option>
             </select>
           </div>
-          <button type="submit" class="submit-button">Request Free Assessment</button>
+          <button type="submit" class="submit-button" aria-label="Submit form">Request Free Assessment</button>
         </form>
       </div>
     </section>
 
     <!-- Floating CTA Bubble -->
     <div class="floating-cta">
-      <button class="floating-bubble" onclick="openModal()">
+      <button class="floating-bubble" onclick="openModal()" aria-label="Open free estimate form" aria-haspopup="dialog">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
         Get Free Assessment
       </button>
@@ -492,7 +493,7 @@
     <!-- Modal Popup -->
     <div class="modal-overlay" id="estimateModal" onclick="closeModalOnOutside(event)">
       <div class="modal-content" onclick="event.stopPropagation()">
-        <button class="modal-close" onclick="closeModal()">&times;</button>
+        <button class="modal-close" onclick="closeModal()" aria-label="Close form">&times;</button>
         <h2 class="modal-title">Get Your Free Assessment</h2>
         <p class="modal-subtitle">Join 500+ satisfied homeowners in South Jersey & Eastern PA</p>
         <div id="modalThankYouMessage" class="thank-you-message">
@@ -528,7 +529,7 @@
             <label for="modalMessage">Additional Details</label>
             <textarea id="modalMessage" name="message" rows="4" placeholder="Tell us about your project..."></textarea>
           </div>
-          <button type="submit" class="submit-button">Request Free Assessment</button>
+          <button type="submit" class="submit-button" aria-label="Submit form">Request Free Assessment</button>
         </form>
       </div>
     </div>

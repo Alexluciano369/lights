@@ -1155,6 +1155,7 @@
     </script>
   </head>
   <body>
+    <a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999">Skip to main content</a>
     <div class="mobile-overlay" id="mobileOverlay"></div>
 
     <header class="header">
@@ -1192,7 +1193,7 @@
       </div>
     </header>
 
-    <main>
+    <main id="main-content">
       <div class="page-hero">
         <h1>Frequently Asked Questions</h1>
         <p>Real answers from South Jersey's trusted gutter protection and permanent lighting installer. Can't find what you're looking for? Call us at <a href="tel:856-874-6640">856-874-6640</a> for a free consultation.</p>
@@ -1497,7 +1498,7 @@
             </select>
           </div>
 
-          <button type="submit" class="submit-button">Request Free Consultation</button>
+          <button type="submit" class="submit-button" aria-label="Submit form">Request Free Consultation</button>
         </form>
       </div>
     </section>
@@ -1542,7 +1543,7 @@
 
     <!-- Floating CTA Bubble -->
     <div class="floating-cta">
-      <button class="floating-bubble" onclick="openModal()">
+      <button class="floating-bubble" onclick="openModal()" aria-label="Open free estimate form" aria-haspopup="dialog">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
         Get Free Estimate
       </button>
@@ -1595,7 +1596,7 @@
             <textarea id="modalMessage" name="message" rows="4" placeholder="Tell us about your project..."></textarea>
           </div>
 
-          <button type="submit" class="submit-button">Request Free Estimate</button>
+          <button type="submit" class="submit-button" aria-label="Submit form">Request Free Estimate</button>
         </form>
       </div>
     </div>

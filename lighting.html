@@ -45,7 +45,7 @@
     <meta property="og:title" content="Best Permanent LED Roofline Lighting | Oelo South Jersey & PA" />
     <meta property="og:description" content="#1 rated permanent outdoor LED lighting installation. Oelo Acrylic & Metal mounting systems with app control, 16M+ colors, UL certified. Professional installation in South Jersey & Eastern PA." />
     <meta property="og:url" content="https://cleangutterslighting.com/lighting" />
-    <meta property="og:image" content="https://cleangutterslighting.com/logo.png" />
+    <meta property="og:image" content="https://cleangutterslighting.com/hero-new.jpg" />
 
     <link rel="preload" href="/hero-lighting.jpg" as="image" fetchpriority="high">
     <link rel="preload" href="/logo.png" as="image">
@@ -1166,6 +1166,7 @@
 </script>
 </head>
   <body>
+    <a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999">Skip to main content</a>
     <header class="header">
       <div class="header-content">
         <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
@@ -1203,7 +1204,7 @@
       </div>
     </header>
 
-    <main>
+    <main id="main-content">
     <section class="hero">
       <div class="hero-content">
         <div class="hero-badge">Oelo Acrylic & Metal Mounting LED Systems</div>
@@ -1481,7 +1482,7 @@
             </select>
           </div>
 
-          <button type="submit" class="submit-button">Request Free Design Consultation</button>
+          <button type="submit" class="submit-button" aria-label="Submit Request Free Design Consultation">Request Free Design Consultation</button>
           <p style="font-size:0.75rem;color:#666;margin-top:0.5rem;line-height:1.4;text-align:center;">By submitting, you agree to our <a href="/privacy" style="color:#4a90d9;">Privacy Policy</a> and <a href="/terms" style="color:#4a90d9;">Terms of Service</a>. We'll contact you within 24 hours.</p>
         </form>
       </div>
@@ -1599,9 +1600,9 @@
     </div>
 
     <!-- Modal Popup -->
-    <div class="modal-overlay" id="estimateModal" onclick="closeModalOnOutside(event)">
+    <div class="modal-overlay" id="estimateModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" onclick="closeModalOnOutside(event)">
       <div class="modal-content" onclick="event.stopPropagation()">
-        <button class="modal-close" onclick="closeModal()">&times;</button>
+        <button class="modal-close" onclick="closeModal()" aria-label="Close form">&times;</button>
         <h2 class="modal-title">Get Your Free Lighting Design</h2>
         <p class="modal-subtitle">Join 500+ satisfied homeowners in South Jersey & Eastern PA</p>
 
@@ -1645,7 +1646,7 @@
             <textarea id="modalMessage" name="message" rows="4" placeholder="Tell us about your lighting vision..."></textarea>
           </div>
 
-          <button type="submit" class="submit-button">Request Free Design</button>
+          <button type="submit" class="submit-button" aria-label="Submit Request Free Design">Request Free Design</button>
           <p style="font-size:0.75rem;color:#666;margin-top:0.5rem;line-height:1.4;text-align:center;">By submitting, you agree to our <a href="/privacy" style="color:#4a90d9;">Privacy Policy</a> and <a href="/terms" style="color:#4a90d9;">Terms of Service</a>. We'll contact you within 24 hours.</p>
         </form>
       </div>

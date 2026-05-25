@@ -67,14 +67,16 @@
     <meta property="og:url" content="https://cleangutterslighting.com" />
     <meta property="og:email" content="cleangutters2008@gmail.com" />
     <meta property="fb:profile_id" content="61583698254672" />
-    <meta property="og:image" content="https://cleangutterslighting.com/logo.png" />
+    <meta property="og:image" content="https://cleangutterslighting.com/hero-new.jpg" />
+    <meta property="og:image:width" content="1920" />
+    <meta property="og:image:height" content="1080" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content="CleanGutters Lighting" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Gutter Protection & Permanent Outdoor Lighting | South Jersey & Eastern PA" />
     <meta name="twitter:description" content="Premium maintenance-free gutter protection and permanent outdoor lighting solutions. Lifetime warranties. Call 856-874-6640." />
-    <meta name="twitter:image" content="https://cleangutterslighting.com/logo.png" />
+    <meta name="twitter:image" content="https://cleangutterslighting.com/hero-new.jpg" />
 
     <meta name="geo.region" content="US-NJ" />
     <meta name="geo.placename" content="Cherry Hill, New Jersey" />
@@ -85,6 +87,10 @@
     <link rel="preload" href="/hero-new.jpg" as="image" fetchpriority="high">
     <link rel="preload" href="/logo.png" as="image">
     <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://cpbexrtitabqgrcfucbm.supabase.co">
     <link rel="preconnect" href="https://cpbexrtitabqgrcfucbm.supabase.co">
     <style>
       * {
@@ -1645,8 +1651,50 @@
       }
     }
     </script>
-  </head>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much do gutter guards cost in South Jersey?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "LeafBlaster Pro gutter guard installation typically costs $15-$30 per linear foot installed in South Jersey, depending on gutter condition and roof pitch. CleanGutters Lighting offers free estimates — call 856-874-6640."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is permanent LED roofline lighting?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Permanent LED roofline lighting (like Oelo) is a professional system of small LED fixtures installed permanently under your soffit. Unlike temporary holiday lights, they stay up year-round and can display any color. Controlled via app, they work for holidays, sports seasons, and everyday curb appeal."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do gutter guards really work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. LeafBlaster Pro uses surgical-grade stainless steel micro-mesh that blocks all debris including pine needles, shingle grit, and small seeds while allowing rainwater to flow freely. It comes with a lifetime no-clog warranty."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you serve Cherry Hill NJ and surrounding areas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. CleanGutters Lighting is based in Cherry Hill, NJ and serves 50+ cities across South Jersey, Eastern Pennsylvania, and Delaware including Voorhees, Moorestown, Haddonfield, Mount Laurel, Marlton, and Philadelphia."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
   <body>
+    <a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999">Skip to main content</a>
     <div class="mobile-overlay" id="mobileOverlay"></div>
     <header class="header">
       <div class="header-content">
@@ -1683,7 +1731,7 @@
       </div>
     </header>
 
-    <main>
+    <main id="main-content">
     <section class="hero">
       <picture class="hero-bg-picture">
         <img src="/hero-new.jpg" alt="Professional gutter guard installation and permanent LED roofline lighting by CleanGutters Lighting in South Jersey" class="hero-bg-image" loading="eager" fetchpriority="high" width="1920" height="1080" decoding="sync">
@@ -1896,7 +1944,7 @@
             </select>
           </div>
 
-          <button type="submit" class="submit-button">Request Free Consultation</button>
+          <button type="submit" class="submit-button" aria-label="Submit free consultation request">Request Free Consultation</button>
         </form>
       </div>
     </section>
@@ -2023,17 +2071,17 @@
 
     <!-- Floating CTA Bubble -->
     <div class="floating-cta">
-      <button class="floating-bubble" onclick="openModal()">
+      <button class="floating-bubble" onclick="openModal()" aria-label="Open free estimate form" aria-haspopup="dialog">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
         Get Free Estimate
       </button>
     </div>
 
     <!-- Modal Popup -->
-    <div class="modal-overlay" id="estimateModal" onclick="closeModalOnOutside(event)">
+    <div class="modal-overlay" id="estimateModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" onclick="closeModalOnOutside(event)">
       <div class="modal-content" onclick="event.stopPropagation()">
-        <button class="modal-close" onclick="closeModal()">&times;</button>
-        <h2 class="modal-title">Get Your Free Estimate</h2>
+        <button class="modal-close" onclick="closeModal()" aria-label="Close estimate form">&times;</button>
+        <h2 class="modal-title" id="modalTitle">Get Your Free Estimate</h2>
         <p class="modal-subtitle">Join 500+ satisfied homeowners in Cherry Hill, Voorhees, Mount Laurel, Moorestown, Philadelphia, Wilmington & beyond</p>
 
         <div id="modalThankYouMessage" class="thank-you-message">
@@ -2076,7 +2124,7 @@
             <textarea id="modalMessage" name="message" rows="4" placeholder="Tell us about your project..."></textarea>
           </div>
 
-          <button type="submit" class="submit-button">Request Free Estimate</button>
+          <button type="submit" class="submit-button" aria-label="Submit free estimate request">Request Free Estimate</button>
         </form>
       </div>
     </div>
