@@ -16,3 +16,10 @@
 /*.png      /public/:splat.png      200!
 /*.webp     /public/:splat.webp     200!
 /*.ico      /public/:splat.ico      200!
+
+# Fix 404: questions-to-ask typo → actual blog post
+/questions-to-ask-gutter-guard-installer-south-jersey  /questions-ask-gutter-guard-installer-south-jersey.html  301!
+/questions-to-ask-gutter-guard-installer-south-jersey.html  /questions-ask-gutter-guard-installer-south-jersey.html  301!
+
+# Fix 404: /service-areas/ directory listing → services page
+/service-areas/  /services  301!
