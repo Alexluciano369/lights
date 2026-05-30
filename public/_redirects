@@ -10,9 +10,11 @@
 /privacy    /privacy.html    200
 /terms      /terms.html      200
 /service-areas/  /services  301!
-/service-areas/*  /service-areas/:splat.html  200
 /questions-to-ask-gutter-guard-installer-south-jersey  /questions-ask-gutter-guard-installer-south-jersey.html  301!
 /questions-to-ask-gutter-guard-installer-south-jersey.html  /questions-ask-gutter-guard-installer-south-jersey.html  301!
+/questions-ask-gutter-guard-installer-south-jersey  /questions-ask-gutter-guard-installer-south-jersey.html  200
+/service-areas/*  /service-areas/:splat.html  200
+/blog/*  /blog/:splat.html  200
 /*.jpg      /public/:splat.jpg      200!
 /*.png      /public/:splat.png      200!
 /*.webp     /public/:splat.webp     200!
