@@ -84,6 +84,7 @@ export default defineConfig({
         'south-jersey-storm-season-gutter-prep': resolve(__dirname, 'south-jersey-storm-season-gutter-prep.html'),
         'hurricane-season-gutter-guards-nj-2026': resolve(__dirname, 'hurricane-season-gutter-guards-nj-2026.html'),
         'questions-ask-gutter-guard-installer-south-jersey': resolve(__dirname, 'questions-ask-gutter-guard-installer-south-jersey.html'),
+        'service-areas-hub': resolve(__dirname, 'service-areas.html'),
 
         'service-areas/alloway-nj': resolve(__dirname, 'service-areas/alloway-nj.html'),
         'service-areas/atlantic-city-nj': resolve(__dirname, 'service-areas/atlantic-city-nj.html'),
