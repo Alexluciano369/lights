@@ -1,20 +1,56 @@
-/index.html  /  301!
-/gutters.html  /gutters  301!
-/lighting.html /lighting 301!
-/gutters    /gutters.html    200
-/lighting   /lighting.html   200
-/blog       /blog.html       200
-/services   /services.html   200
-/reviews    /reviews.html    200
-/faq        /faq.html        200
-/privacy    /privacy.html    200
-/terms      /terms.html      200
-/service-areas/  /services  301!
-/questions-to-ask-gutter-guard-installer-south-jersey  /questions-ask-gutter-guard-installer-south-jersey.html  301!
-/questions-to-ask-gutter-guard-installer-south-jersey.html  /questions-ask-gutter-guard-installer-south-jersey.html  301!
-/questions-ask-gutter-guard-installer-south-jersey  /questions-ask-gutter-guard-installer-south-jersey.html  200
-/service-areas/*  /service-areas/:splat.html  200
-/blog/*  /blog/:splat.html  200
+# ============================================================
+# CleanGutters Lighting — URL canonicalization (clean URLs)
+# Strategy: clean URLs are canonical. .html 301-redirects to clean.
+# Netlify Pretty URLs auto-serves /foo from foo.html (no .html needed).
+# ============================================================
+
+# --- Core pages: .html -> clean (301) ---
+/index.html            /                  301!
+/gutters.html          /gutters           301!
+/lighting.html         /lighting          301!
+/blog.html             /blog              301!
+/services.html         /services          301!
+/reviews.html          /reviews           301!
+/faq.html              /faq               301!
+/privacy.html          /privacy           301!
+/terms.html            /terms             301!
+/service-areas.html    /service-areas     301!
+
+# --- Legacy/typo redirects ---
+/service-areas/        /services          301!
+/questions-to-ask-gutter-guard-installer-south-jersey      /questions-ask-gutter-guard-installer-south-jersey  301!
+/questions-to-ask-gutter-guard-installer-south-jersey.html /questions-ask-gutter-guard-installer-south-jersey  301!
+
+# --- City pages: .html -> clean (301) ---
+/service-areas/:city.html   /service-areas/:city   301!
+
+# --- Blog articles (root-level): .html -> clean (301) ---
+/best-gutter-guards-pine-needles-nj.html  /best-gutter-guards-pine-needles-nj  301!
+/best-time-install-gutter-guards-south-jersey.html  /best-time-install-gutter-guards-south-jersey  301!
+/gutter-cleaning-cost-vs-gutter-guards-investment.html  /gutter-cleaning-cost-vs-gutter-guards-investment  301!
+/gutter-guard-cost-cherry-hill-nj.html  /gutter-guard-cost-cherry-hill-nj  301!
+/gutter-guard-roi-south-jersey.html  /gutter-guard-roi-south-jersey  301!
+/gutter-guards-prevent-foundation-damage.html  /gutter-guards-prevent-foundation-damage  301!
+/gutter-maintenance-checklist-south-jersey-homeowners.html  /gutter-maintenance-checklist-south-jersey-homeowners  301!
+/gutterglove-vs-leaffilter.html  /gutterglove-vs-leaffilter  301!
+/hurricane-season-gutter-guards-nj-2026.html  /hurricane-season-gutter-guards-nj-2026  301!
+/led-outdoor-lighting-energy-savings-guide.html  /led-outdoor-lighting-energy-savings-guide  301!
+/oelo-vs-gemstone-vs-trimlight.html  /oelo-vs-gemstone-vs-trimlight  301!
+/outdoor-lighting-color-schemes-every-occasion.html  /outdoor-lighting-color-schemes-every-occasion  301!
+/outdoor-lighting-home-security-nj.html  /outdoor-lighting-home-security-nj  301!
+/outdoor-lighting-security-benefits-south-jersey.html  /outdoor-lighting-security-benefits-south-jersey  301!
+/permanent-lighting-holiday-transform.html  /permanent-lighting-holiday-transform  301!
+/permanent-lights-cost-south-jersey.html  /permanent-lights-cost-south-jersey  301!
+/permanent-lights-vs-christmas-lights.html  /permanent-lights-vs-christmas-lights  301!
+/permanent-outdoor-lighting-increase-home-value.html  /permanent-outdoor-lighting-increase-home-value  301!
+/pine-needles-gutters-micro-mesh-solution.html  /pine-needles-gutters-micro-mesh-solution  301!
+/prevent-ice-dams-gutter-guards-south-jersey.html  /prevent-ice-dams-gutter-guards-south-jersey  301!
+/questions-ask-gutter-guard-installer-south-jersey.html  /questions-ask-gutter-guard-installer-south-jersey  301!
+/smart-home-outdoor-lighting-integration-guide.html  /smart-home-outdoor-lighting-integration-guide  301!
+/south-jersey-storm-season-gutter-prep.html  /south-jersey-storm-season-gutter-prep  301!
+/why-gutter-guards-essential-south-jersey.html  /why-gutter-guards-essential-south-jersey  301!
+
+# --- Asset passthrough ---
 /*.jpg      /public/:splat.jpg      200!
 /*.png      /public/:splat.png      200!
 /*.webp     /public/:splat.webp     200!
