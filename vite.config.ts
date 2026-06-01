@@ -83,6 +83,7 @@ export default defineConfig({
         'outdoor-lighting-home-security-nj': resolve(__dirname, 'outdoor-lighting-home-security-nj.html'),
         'south-jersey-storm-season-gutter-prep': resolve(__dirname, 'south-jersey-storm-season-gutter-prep.html'),
         'hurricane-season-gutter-guards-nj-2026': resolve(__dirname, 'hurricane-season-gutter-guards-nj-2026.html'),
+        '5-signs-gutters-need-guards-summer-storms': resolve(__dirname, '5-signs-gutters-need-guards-summer-storms.html'),
         'questions-ask-gutter-guard-installer-south-jersey': resolve(__dirname, 'questions-ask-gutter-guard-installer-south-jersey.html'),
         'service-areas-hub': resolve(__dirname, 'service-areas.html'),
 
