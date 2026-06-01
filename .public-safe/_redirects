@@ -17,12 +17,74 @@
 /service-areas.html    /service-areas     301!
 
 # --- Legacy/typo redirects ---
-/service-areas/        /services          301!
 /questions-to-ask-gutter-guard-installer-south-jersey      /questions-ask-gutter-guard-installer-south-jersey  301!
 /questions-to-ask-gutter-guard-installer-south-jersey.html /questions-ask-gutter-guard-installer-south-jersey  301!
 
 # --- City pages: .html -> clean (301) ---
-/service-areas/:city.html   /service-areas/:city   301!
+/service-areas/alloway-nj.html  /service-areas/alloway-nj  301!
+/service-areas/atlantic-city-nj.html  /service-areas/atlantic-city-nj  301!
+/service-areas/beachwood-nj.html  /service-areas/beachwood-nj  301!
+/service-areas/bear-de.html  /service-areas/bear-de  301!
+/service-areas/bensalem-pa.html  /service-areas/bensalem-pa  301!
+/service-areas/brick-nj.html  /service-areas/brick-nj  301!
+/service-areas/brigantine-nj.html  /service-areas/brigantine-nj  301!
+/service-areas/bristol-pa.html  /service-areas/bristol-pa  301!
+/service-areas/bryn-mawr-pa.html  /service-areas/bryn-mawr-pa  301!
+/service-areas/burlington-nj.html  /service-areas/burlington-nj  301!
+/service-areas/camden-nj.html  /service-areas/camden-nj  301!
+/service-areas/cape-may-court-house-nj.html  /service-areas/cape-may-court-house-nj  301!
+/service-areas/cape-may-nj.html  /service-areas/cape-may-nj  301!
+/service-areas/carneys-point-nj.html  /service-areas/carneys-point-nj  301!
+/service-areas/cherry-hill-nj.html  /service-areas/cherry-hill-nj  301!
+/service-areas/chester-pa.html  /service-areas/chester-pa  301!
+/service-areas/collingswood-nj.html  /service-areas/collingswood-nj  301!
+/service-areas/downingtown-pa.html  /service-areas/downingtown-pa  301!
+/service-areas/doylestown-pa.html  /service-areas/doylestown-pa  301!
+/service-areas/egg-harbor-township-nj.html  /service-areas/egg-harbor-township-nj  301!
+/service-areas/exton-pa.html  /service-areas/exton-pa  301!
+/service-areas/florence-nj.html  /service-areas/florence-nj  301!
+/service-areas/freehold-nj.html  /service-areas/freehold-nj  301!
+/service-areas/glassboro-nj.html  /service-areas/glassboro-nj  301!
+/service-areas/haddonfield-nj.html  /service-areas/haddonfield-nj  301!
+/service-areas/hamilton-nj.html  /service-areas/hamilton-nj  301!
+/service-areas/hammonton-nj.html  /service-areas/hammonton-nj  301!
+/service-areas/howell-nj.html  /service-areas/howell-nj  301!
+/service-areas/jackson-nj.html  /service-areas/jackson-nj  301!
+/service-areas/king-of-prussia-pa.html  /service-areas/king-of-prussia-pa  301!
+/service-areas/lawrenceville-nj.html  /service-areas/lawrenceville-nj  301!
+/service-areas/levittown-pa.html  /service-areas/levittown-pa  301!
+/service-areas/manchester-township-nj.html  /service-areas/manchester-township-nj  301!
+/service-areas/marlton-nj.html  /service-areas/marlton-nj  301!
+/service-areas/mays-landing-nj.html  /service-areas/mays-landing-nj  301!
+/service-areas/medford-nj.html  /service-areas/medford-nj  301!
+/service-areas/media-pa.html  /service-areas/media-pa  301!
+/service-areas/middletown-de.html  /service-areas/middletown-de  301!
+/service-areas/moorestown-nj.html  /service-areas/moorestown-nj  301!
+/service-areas/mount-ephraim-nj.html  /service-areas/mount-ephraim-nj  301!
+/service-areas/mount-laurel-nj.html  /service-areas/mount-laurel-nj  301!
+/service-areas/mullica-hill-nj.html  /service-areas/mullica-hill-nj  301!
+/service-areas/new-castle-de.html  /service-areas/new-castle-de  301!
+/service-areas/newark-de.html  /service-areas/newark-de  301!
+/service-areas/norristown-pa.html  /service-areas/norristown-pa  301!
+/service-areas/ocean-city-nj.html  /service-areas/ocean-city-nj  301!
+/service-areas/paulsboro-nj.html  /service-areas/paulsboro-nj  301!
+/service-areas/pemberton-nj.html  /service-areas/pemberton-nj  301!
+/service-areas/pennsauken-nj.html  /service-areas/pennsauken-nj  301!
+/service-areas/philadelphia-pa.html  /service-areas/philadelphia-pa  301!
+/service-areas/princeton-nj.html  /service-areas/princeton-nj  301!
+/service-areas/salem-nj.html  /service-areas/salem-nj  301!
+/service-areas/sewell-nj.html  /service-areas/sewell-nj  301!
+/service-areas/springfield-pa.html  /service-areas/springfield-pa  301!
+/service-areas/toms-river-nj.html  /service-areas/toms-river-nj  301!
+/service-areas/trenton-nj.html  /service-areas/trenton-nj  301!
+/service-areas/upper-darby-pa.html  /service-areas/upper-darby-pa  301!
+/service-areas/voorhees-nj.html  /service-areas/voorhees-nj  301!
+/service-areas/west-chester-pa.html  /service-areas/west-chester-pa  301!
+/service-areas/wildwood-nj.html  /service-areas/wildwood-nj  301!
+/service-areas/willingboro-nj.html  /service-areas/willingboro-nj  301!
+/service-areas/willow-grove-pa.html  /service-areas/willow-grove-pa  301!
+/service-areas/wilmington-de.html  /service-areas/wilmington-de  301!
+/service-areas/woodbury-nj.html  /service-areas/woodbury-nj  301!
 
 # --- Blog articles (root-level): .html -> clean (301) ---
 /best-gutter-guards-pine-needles-nj.html  /best-gutter-guards-pine-needles-nj  301!
