@@ -1,6 +1,9 @@
 [build]
-  command = "npx vite build"
+  command = "npx vite build && node scripts/optimize-images.mjs"
   publish = "dist"
+
+[[plugins]]
+  package = "netlify-plugin-image-optim"
 
 [[headers]]
   for = "/*.jpg"
