@@ -1,22 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <!-- Google tag (gtag.js) — deferred until after page interactive -->
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+      gtag('js',new Date());
       (function(){
+        var loaded=false;
         function loadGTM(){
-          var s=document.createElement('script');
-          s.async=true;
+          if(loaded)return;loaded=true;
+          var s=document.createElement('script');s.async=true;
           s.src='https://www.googletagmanager.com/gtag/js?id=G-E7NG44429T';
           document.head.appendChild(s);
           gtag('config','G-E7NG44429T');
           gtag('config','AW-18146670851');
         }
-        if(document.readyState==='complete'){loadGTM();}
-        else{window.addEventListener('load',loadGTM,{once:true,passive:true});}
+        function schedule(){
+          if('requestIdleCallback' in window){requestIdleCallback(loadGTM,{timeout:3500});}
+          else{setTimeout(loadGTM,3500);}
+        }
+        var events=['scroll','click','touchstart','keydown'];
+        function onInteract(){
+          events.forEach(function(e){document.removeEventListener(e,onInteract,{passive:true,capture:true});});
+          loadGTM();
+        }
+        events.forEach(function(e){document.addEventListener(e,onInteract,{passive:true,capture:true,once:true});});
+        if(document.readyState==='complete'){schedule();}
+        else{window.addEventListener('load',schedule,{once:true});}
       })();
     </script>
     <script>
