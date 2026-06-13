@@ -85,6 +85,7 @@ export default defineConfig({
         'hurricane-season-gutter-guards-nj-2026': resolve(__dirname, 'hurricane-season-gutter-guards-nj-2026.html'),
         '5-signs-gutters-need-guards-summer-storms': resolve(__dirname, '5-signs-gutters-need-guards-summer-storms.html'),
         'questions-ask-gutter-guard-installer-south-jersey': resolve(__dirname, 'questions-ask-gutter-guard-installer-south-jersey.html'),
+        'ladder-safety-gutter-guards-permanent-lighting': resolve(__dirname, 'ladder-safety-gutter-guards-permanent-lighting.html'),
         'service-areas-hub': resolve(__dirname, 'service-areas.html'),
 
         'service-areas/alloway-nj': resolve(__dirname, 'service-areas/alloway-nj.html'),
