@@ -1,0 +1,1309 @@
+headersOrigin = "config"
+
+[functions]
+
+[functions."*"]
+
+[[plugins]]
+origin = "config"
+package = "netlify-plugin-image-optim"
+
+[plugins.inputs]
+
+[build]
+publish = "/home/node/.openclaw/workspace/lights-repo/dist"
+publishOrigin = "config"
+commandOrigin = "config"
+command = "npx vite build && node scripts/optimize-images.mjs"
+
+[build.environment]
+
+[build.processing]
+
+[build.processing.css]
+
+[build.processing.html]
+
+[build.processing.images]
+
+[build.processing.js]
+
+[build.services]
+
+[[headers]]
+for = "/*"
+
+[headers.values]
+X-Content-Type-Options = "nosniff"
+X-Frame-Options = "SAMEORIGIN"
+Referrer-Policy = "strict-origin-when-cross-origin"
+Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+Cross-Origin-Opener-Policy = "same-origin-allow-popups"
+Cross-Origin-Embedder-Policy = "unsafe-none"
+Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+[[headers]]
+for = "/*.jpg"
+
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+for = "/*.png"
+
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+for = "/*.webp"
+
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+[[redirects]]
+from = "/index.html"
+to = "/"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/gutters.html"
+to = "/gutters"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/lighting.html"
+to = "/lighting"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/blog.html"
+to = "/blog"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/services.html"
+to = "/services"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/reviews.html"
+to = "/reviews"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/faq.html"
+to = "/faq"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/privacy.html"
+to = "/privacy"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/terms.html"
+to = "/terms"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas.html"
+to = "/service-areas"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/questions-to-ask-gutter-guard-installer-south-jersey"
+to = "/questions-ask-gutter-guard-installer-south-jersey"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/questions-to-ask-gutter-guard-installer-south-jersey.html"
+to = "/questions-ask-gutter-guard-installer-south-jersey"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/alloway-nj.html"
+to = "/service-areas/alloway-nj"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/atlantic-city-nj.html"
+to = "/service-areas/atlantic-city-nj"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/beachwood-nj.html"
+to = "/service-areas/beachwood-nj"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/bear-de.html"
+to = "/service-areas/bear-de"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/bensalem-pa.html"
+to = "/service-areas/bensalem-pa"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/brick-nj.html"
+to = "/service-areas/brick-nj"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/brigantine-nj.html"
+to = "/service-areas/brigantine-nj"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/bristol-pa.html"
+to = "/service-areas/bristol-pa"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/bryn-mawr-pa.html"
+to = "/service-areas/bryn-mawr-pa"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/burlington-nj.html"
+to = "/service-areas/burlington-nj"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/camden-nj.html"
+to = "/service-areas/camden-nj"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/cape-may-court-house-nj.html"
+to = "/service-areas/cape-may-court-house-nj"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/cape-may-nj.html"
+to = "/service-areas/cape-may-nj"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/carneys-point-nj.html"
+to = "/service-areas/carneys-point-nj"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/cherry-hill-nj.html"
+to = "/service-areas/cherry-hill-nj"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/chester-pa.html"
+to = "/service-areas/chester-pa"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/collingswood-nj.html"
+to = "/service-areas/collingswood-nj"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/downingtown-pa.html"
+to = "/service-areas/downingtown-pa"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/doylestown-pa.html"
+to = "/service-areas/doylestown-pa"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/egg-harbor-township-nj.html"
+to = "/service-areas/egg-harbor-township-nj"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/exton-pa.html"
+to = "/service-areas/exton-pa"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/florence-nj.html"
+to = "/service-areas/florence-nj"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/freehold-nj.html"
+to = "/service-areas/freehold-nj"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/glassboro-nj.html"
+to = "/service-areas/glassboro-nj"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/haddonfield-nj.html"
+to = "/service-areas/haddonfield-nj"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/hamilton-nj.html"
+to = "/service-areas/hamilton-nj"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/hammonton-nj.html"
+to = "/service-areas/hammonton-nj"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/howell-nj.html"
+to = "/service-areas/howell-nj"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/jackson-nj.html"
+to = "/service-areas/jackson-nj"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/king-of-prussia-pa.html"
+to = "/service-areas/king-of-prussia-pa"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/lawrenceville-nj.html"
+to = "/service-areas/lawrenceville-nj"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/levittown-pa.html"
+to = "/service-areas/levittown-pa"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/manchester-township-nj.html"
+to = "/service-areas/manchester-township-nj"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/marlton-nj.html"
+to = "/service-areas/marlton-nj"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/mays-landing-nj.html"
+to = "/service-areas/mays-landing-nj"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/medford-nj.html"
+to = "/service-areas/medford-nj"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/media-pa.html"
+to = "/service-areas/media-pa"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/middletown-de.html"
+to = "/service-areas/middletown-de"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/moorestown-nj.html"
+to = "/service-areas/moorestown-nj"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/mount-ephraim-nj.html"
+to = "/service-areas/mount-ephraim-nj"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/mount-laurel-nj.html"
+to = "/service-areas/mount-laurel-nj"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/mullica-hill-nj.html"
+to = "/service-areas/mullica-hill-nj"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/new-castle-de.html"
+to = "/service-areas/new-castle-de"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/newark-de.html"
+to = "/service-areas/newark-de"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/norristown-pa.html"
+to = "/service-areas/norristown-pa"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/ocean-city-nj.html"
+to = "/service-areas/ocean-city-nj"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/paulsboro-nj.html"
+to = "/service-areas/paulsboro-nj"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/pemberton-nj.html"
+to = "/service-areas/pemberton-nj"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/pennsauken-nj.html"
+to = "/service-areas/pennsauken-nj"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/philadelphia-pa.html"
+to = "/service-areas/philadelphia-pa"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/princeton-nj.html"
+to = "/service-areas/princeton-nj"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/salem-nj.html"
+to = "/service-areas/salem-nj"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/sewell-nj.html"
+to = "/service-areas/sewell-nj"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/springfield-pa.html"
+to = "/service-areas/springfield-pa"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/toms-river-nj.html"
+to = "/service-areas/toms-river-nj"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/trenton-nj.html"
+to = "/service-areas/trenton-nj"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/upper-darby-pa.html"
+to = "/service-areas/upper-darby-pa"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/voorhees-nj.html"
+to = "/service-areas/voorhees-nj"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/west-chester-pa.html"
+to = "/service-areas/west-chester-pa"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/wildwood-nj.html"
+to = "/service-areas/wildwood-nj"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/willingboro-nj.html"
+to = "/service-areas/willingboro-nj"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/willow-grove-pa.html"
+to = "/service-areas/willow-grove-pa"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/wilmington-de.html"
+to = "/service-areas/wilmington-de"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/service-areas/woodbury-nj.html"
+to = "/service-areas/woodbury-nj"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/best-gutter-guards-pine-needles-nj.html"
+to = "/best-gutter-guards-pine-needles-nj"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/best-time-install-gutter-guards-south-jersey.html"
+to = "/best-time-install-gutter-guards-south-jersey"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/gutter-cleaning-cost-vs-gutter-guards-investment.html"
+to = "/gutter-cleaning-cost-vs-gutter-guards-investment"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/gutter-guard-cost-cherry-hill-nj.html"
+to = "/gutter-guard-cost-cherry-hill-nj"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/gutter-guard-roi-south-jersey.html"
+to = "/gutter-guard-roi-south-jersey"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/gutter-guards-prevent-foundation-damage.html"
+to = "/gutter-guards-prevent-foundation-damage"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/gutter-maintenance-checklist-south-jersey-homeowners.html"
+to = "/gutter-maintenance-checklist-south-jersey-homeowners"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/gutterglove-vs-leaffilter.html"
+to = "/gutterglove-vs-leaffilter"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/hurricane-season-gutter-guards-nj-2026.html"
+to = "/hurricane-season-gutter-guards-nj-2026"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/led-outdoor-lighting-energy-savings-guide.html"
+to = "/led-outdoor-lighting-energy-savings-guide"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/oelo-vs-gemstone-vs-trimlight.html"
+to = "/oelo-vs-gemstone-vs-trimlight"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/outdoor-lighting-color-schemes-every-occasion.html"
+to = "/outdoor-lighting-color-schemes-every-occasion"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/outdoor-lighting-home-security-nj.html"
+to = "/outdoor-lighting-home-security-nj"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/outdoor-lighting-security-benefits-south-jersey.html"
+to = "/outdoor-lighting-security-benefits-south-jersey"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/permanent-lighting-holiday-transform.html"
+to = "/permanent-lighting-holiday-transform"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/permanent-lights-cost-south-jersey.html"
+to = "/permanent-lights-cost-south-jersey"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/permanent-lights-vs-christmas-lights.html"
+to = "/permanent-lights-vs-christmas-lights"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/permanent-outdoor-lighting-increase-home-value.html"
+to = "/permanent-outdoor-lighting-increase-home-value"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/pine-needles-gutters-micro-mesh-solution.html"
+to = "/pine-needles-gutters-micro-mesh-solution"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/prevent-ice-dams-gutter-guards-south-jersey.html"
+to = "/prevent-ice-dams-gutter-guards-south-jersey"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/questions-ask-gutter-guard-installer-south-jersey.html"
+to = "/questions-ask-gutter-guard-installer-south-jersey"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/smart-home-outdoor-lighting-integration-guide.html"
+to = "/smart-home-outdoor-lighting-integration-guide"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/south-jersey-storm-season-gutter-prep.html"
+to = "/south-jersey-storm-season-gutter-prep"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/why-gutter-guards-essential-south-jersey.html"
+to = "/why-gutter-guards-essential-south-jersey"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/*.jpg"
+to = "/public/:splat.jpg"
+status = 200.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/*.png"
+to = "/public/:splat.png"
+status = 200.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/*.webp"
+to = "/public/:splat.webp"
+status = 200.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/*.ico"
+to = "/public/:splat.ico"
+status = 200.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]

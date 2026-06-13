@@ -19,7 +19,7 @@
         var events=['click','touchstart','keydown'];
         function onInteract(){events.forEach(function(e){document.removeEventListener(e,onInteract,{capture:true});});loadGTM();}
         events.forEach(function(e){document.addEventListener(e,onInteract,{once:true,capture:true});});
-        setTimeout(loadGTM,12000);
+        if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',loadGTM);}else{loadGTM();}setTimeout(loadGTM,2500);
       })();
     </script>
     <script>
@@ -303,6 +303,19 @@
         margin-bottom: 2rem;
       }
     </style>
+    <!-- funnel-fix-2026-06-13: phone-call conversion tracking -->
+    <script>
+    (function(){
+      function fireCall(){
+        try { gtag('event','phone_call_click',{'event_category':'engagement','event_label':'tel_link'}); } catch(e){}
+        try { gtag('event','conversion',{'send_to':'AW-18146670851/HZx0COTCwqocEIPygM1D','value':1.0,'currency':'USD'}); } catch(e){}
+      }
+      document.addEventListener('click', function(ev){
+        var a = ev.target && ev.target.closest ? ev.target.closest('a[href^="tel:"]') : null;
+        if(a){ fireCall(); }
+      }, true);
+    })();
+    </script>
 </head>
 <body>
     <a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999">Skip to main content</a>
