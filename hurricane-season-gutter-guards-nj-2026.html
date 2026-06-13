@@ -20,7 +20,7 @@
         var events=['click','touchstart','keydown'];
         function onInteract(){events.forEach(function(e){document.removeEventListener(e,onInteract,{capture:true});});loadGTM();}
         events.forEach(function(e){document.addEventListener(e,onInteract,{once:true,capture:true});});
-        if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',loadGTM);}else{loadGTM();}setTimeout(loadGTM,2500);
+        function whenIdle(){if('requestIdleCallback'in window){requestIdleCallback(loadGTM,{timeout:3500});}else{setTimeout(loadGTM,2000);}}if(document.readyState==='complete'){whenIdle();}else{window.addEventListener('load',whenIdle);}setTimeout(loadGTM,3500);
       })();
     </script>
     <script>
