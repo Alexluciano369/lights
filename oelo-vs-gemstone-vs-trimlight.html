@@ -10,7 +10,7 @@
         var loaded=false;
         function loadGTM(){
           if(loaded)return;loaded=true;
-          var s=document.createElement('script');s.async=true;
+          var s=document.createElement('script');s.defer=true;
           s.src='https://www.googletagmanager.com/gtag/js?id=G-E7NG44429T';
           document.head.appendChild(s);
           gtag('config','G-E7NG44429T');
