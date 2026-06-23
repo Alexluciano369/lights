@@ -646,6 +646,11 @@
     .nav-dropdown-item:hover { background: rgba(255,215,0,0.14); color: #ffd700; }
     .nav-dropdown-all { border-top: 1px solid rgba(255,255,255,0.1); margin-top: 0.35rem; color: #ffd700; }
     .nav-item-tag { background:#ffd200; color:#1a1a2e; font-size:0.72rem; font-weight:800; padding:0.1rem 0.45rem; border-radius:999px; }
+    .nav-highlight { color: #ffd700 !important; font-weight: 700; background: rgba(255, 215, 0, 0.08); border-left: 3px solid #ffd700; }
+    .nav-dropdown-toggle { width: 100%; text-align: left; background: none; border: none; font: inherit; cursor: pointer; display: flex; align-items: center; justify-content: space-between; color: #ffffff; font-weight: 600; }
+    .nav-dropdown-menu { padding-left: 1rem; margin-top: 0.25rem; }
+    .nav-dropdown-item { padding: 0.7rem 1rem; color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.95rem; border-radius: 6px; transition: background 0.2s ease; border-bottom: none; }
+    .nav-dropdown-item:hover { background: rgba(255,255,255,0.08); color: #ffffff; }
     .nav-caret { font-size: 0.7rem; }
     @media (max-width: 768px) {
       .nav-dropdown { display: block; width: 100%; }
@@ -807,9 +812,9 @@
           <a href="/" class="nav-link">Home</a>
           <a href="/gutters" class="nav-link">Gutter Protection</a>
           <a href="/lighting" class="nav-link">Outdoor Lighting</a>
-          <a href="/gutter-cleaning" class="nav-link" style="color:#ffd700;font-weight:700">Gutter Cleaning <span class="nav-item-tag">$99</span></a>
+          <a href="/gutter-cleaning" class="nav-link nav-highlight">Gutter Cleaning <span class="nav-item-tag">$99</span></a>
           <div class="nav-dropdown">
-            <a href="/gutter-services" class="nav-link nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">All Other Gutter Services <span class="nav-caret" aria-hidden="true">▾</span></a>
+            <button type="button" class="nav-link nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">All Other Gutter Services <span class="nav-caret" aria-hidden="true">▾</span></button>
             <div class="nav-dropdown-menu">
               <a href="/gutter-installation" class="nav-dropdown-item">New Gutter Installation</a>
               <a href="/gutter-repair" class="nav-dropdown-item">Gutter Repair</a>
@@ -1059,6 +1064,8 @@
 
       navLinks.forEach(link => {
         link.addEventListener('click', () => {
+          // Don't close menu if it's the dropdown toggle
+          if (link.classList.contains('nav-dropdown-toggle')) return;
           if (mobileNav.classList.contains('active')) {
             toggleMobileMenu();
           }
