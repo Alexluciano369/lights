@@ -89,7 +89,6 @@ export default defineConfig({
         'gutter-guards-mosquito-prevention-south-jersey': resolve(__dirname, 'gutter-guards-mosquito-prevention-south-jersey.html'),
         'gutter-services': resolve(__dirname, 'gutter-services.html'),
         'service-areas-hub': resolve(__dirname, 'service-areas.html'),
-        'gutter-services': resolve(__dirname, 'gutter-services.html'),
         'gutter-installation': resolve(__dirname, 'gutter-installation.html'),
         'gutter-cleaning': resolve(__dirname, 'gutter-cleaning.html'),
         'gutter-repair': resolve(__dirname, 'gutter-repair.html'),
