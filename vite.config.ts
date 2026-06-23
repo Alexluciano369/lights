@@ -87,6 +87,7 @@ export default defineConfig({
         'questions-ask-gutter-guard-installer-south-jersey': resolve(__dirname, 'questions-ask-gutter-guard-installer-south-jersey.html'),
         'ladder-safety-gutter-guards-permanent-lighting': resolve(__dirname, 'ladder-safety-gutter-guards-permanent-lighting.html'),
         'gutter-guards-mosquito-prevention-south-jersey': resolve(__dirname, 'gutter-guards-mosquito-prevention-south-jersey.html'),
+        'summer-backyard-led-lighting-south-jersey': resolve(__dirname, 'summer-backyard-led-lighting-south-jersey.html'),
         'gutter-cleaning-cost-south-jersey-2026': resolve(__dirname, 'gutter-cleaning-cost-south-jersey-2026.html'),
         'gutter-services': resolve(__dirname, 'gutter-services.html'),
         'service-areas-hub': resolve(__dirname, 'service-areas.html'),
