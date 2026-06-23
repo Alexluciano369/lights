@@ -34,8 +34,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://ccleangutters.agents.runlobster.com https://www.google-analytics.com https://bolt.new; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://images.pexels.com https://www.google-analytics.com; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://cpbexrtitabqgrcfucbm.supabase.co https://www.googletagmanager.com https://www.google-analytics.com https://analytics.google.com https://formsubmit.co; frame-src https://www.youtube.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;">
-    <title>Gutter Services South Jersey | Cleaning, Repair, Replacement, Downspouts, Fascia & Soffit</title>
-    <meta name="description" content="Complete gutter services in South Jersey & Eastern PA — cleaning from $99, repair, replacement, downspout installation, fascia & soffit repair. Free estimates. 856-874-6640." />
+    <title>Gutter Services South Jersey | Cleaning, Repair &amp; More</title>
+    <meta name="description" content="Complete gutter services in South Jersey &amp; Eastern PA: cleaning from $99, repair, replacement, downspouts, fascia &amp; soffit. Free estimates. 856-874-6640." />
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -174,7 +174,37 @@
         .phone-number-display { padding: 0.5rem; width: 44px; height: 44px; border-radius: 50%; }
         .phone-icon { width: 42px; height: 42px; }
       }
-    </style>
+        .nav-dropdown { position: relative; display: inline-block; }
+    .nav-dropdown-toggle { cursor: pointer; }
+    .nav-dropdown-menu {
+      position: absolute; top: 100%; left: 0; min-width: 240px;
+      background: #0d1b2a; border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 10px; padding: 0.5rem; box-shadow: 0 12px 32px rgba(0,0,0,0.35);
+      opacity: 0; visibility: hidden; transform: translateY(8px);
+      transition: opacity .2s ease, transform .2s ease, visibility .2s; z-index: 1200;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu,
+    .nav-dropdown:focus-within .nav-dropdown-menu,
+    .nav-dropdown.open .nav-dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+    .nav-dropdown-item {
+      display: flex; align-items: center; justify-content: space-between; gap: 0.75rem;
+      padding: 0.6rem 0.85rem; color: #fff; text-decoration: none; border-radius: 7px;
+      font-weight: 600; font-size: 0.92rem; white-space: nowrap;
+    }
+    .nav-dropdown-item:hover { background: rgba(255,215,0,0.14); color: #ffd700; }
+    .nav-dropdown-all { border-top: 1px solid rgba(255,255,255,0.1); margin-top: 0.35rem; color: #ffd700; }
+    .nav-item-tag { background:#ffd200; color:#1a1a2e; font-size:0.72rem; font-weight:800; padding:0.1rem 0.45rem; border-radius:999px; }
+    .nav-caret { font-size: 0.7rem; }
+    @media (max-width: 768px) {
+      .nav-dropdown { display: block; width: 100%; }
+      .nav-dropdown-menu {
+        position: static; opacity: 1; visibility: visible; transform: none;
+        background: transparent; border: none; box-shadow: none; padding: 0 0 0 0.75rem;
+        min-width: 0;
+      }
+      .nav-dropdown-item { border-bottom: 1px solid rgba(255,255,255,0.06); border-radius: 0; }
+    }
+</style>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -255,7 +285,19 @@
           <a href="/" class="nav-link">Home</a>
           <a href="/gutters" class="nav-link">Gutter Protection</a>
           <a href="/lighting" class="nav-link">Outdoor Lighting</a>
-          <a href="/gutter-services" class="nav-link" style="color:#ffd700;">All Gutter Services</a>
+          <div class="nav-dropdown">
+            <a href="/gutter-services" class="nav-link nav-dropdown-toggle" style="color:#ffd700;" aria-haspopup="true" aria-expanded="false">Gutter Services <span class="nav-caret" aria-hidden="true">▾</span></a>
+            <div class="nav-dropdown-menu">
+              <a href="/gutter-cleaning" class="nav-dropdown-item">Gutter Cleaning <span class="nav-item-tag">$99</span></a>
+              <a href="/gutter-installation" class="nav-dropdown-item">New Gutter Installation</a>
+              <a href="/gutter-repair" class="nav-dropdown-item">Gutter Repair</a>
+              <a href="/seamless-gutters" class="nav-dropdown-item">Seamless Gutters</a>
+              <a href="/downspout-services" class="nav-dropdown-item">Downspout Services</a>
+              <a href="/fascia-soffit-repair" class="nav-dropdown-item">Fascia &amp; Soffit Repair</a>
+              <a href="/same-day-gutter-service" class="nav-dropdown-item">Same-Day Service</a>
+              <a href="/gutter-services" class="nav-dropdown-item nav-dropdown-all">View All Services →</a>
+            </div>
+          </div>
           <a href="/reviews" class="nav-link">Reviews</a>
           <a href="/blog" class="nav-link">Blog</a>
           <a href="/faq" class="nav-link">FAQ</a>
@@ -523,6 +565,9 @@
           <a href="mailto:cleangutters2008@gmail.com" class="footer-link">cleangutters2008@gmail.com</a>
           <a href="/privacy" class="footer-link">Privacy Policy</a>
           <a href="/terms" class="footer-link">Terms of Service</a>
+        </div>
+        <div class="footer-services" style="margin-top:0.75rem;font-size:0.85rem;opacity:0.85;">
+          <strong style="color:#ffd700;">Gutter Services:</strong> <a href="/gutter-cleaning" class="footer-link">Cleaning</a> <span aria-hidden="true">·</span> <a href="/gutter-installation" class="footer-link">Installation</a> <span aria-hidden="true">·</span> <a href="/gutter-repair" class="footer-link">Repair</a> <span aria-hidden="true">·</span> <a href="/seamless-gutters" class="footer-link">Seamless</a> <span aria-hidden="true">·</span> <a href="/downspout-services" class="footer-link">Downspouts</a> <span aria-hidden="true">·</span> <a href="/fascia-soffit-repair" class="footer-link">Fascia &amp; Soffit</a> <span aria-hidden="true">·</span> <a href="/same-day-gutter-service" class="footer-link">Same-Day</a>
         </div>
         <div class="footer-service-areas">
           <p class="footer-areas-title"><strong>Serving 50+ Cities Across South Jersey, Eastern PA &amp; Delaware</strong></p>
