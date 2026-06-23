@@ -311,5 +311,18 @@
     <p>&#128222; <a href="tel:856-874-6640">856-874-6640</a> | &#9993;&#65039; <a href="mailto:cleangutters2008@gmail.com">cleangutters2008@gmail.com</a></p>
     <p style="margin-top:0.5rem"><a href="/privacy">Privacy Policy</a> &middot; <a href="/terms">Terms</a> &middot; <a href="/">Home</a></p>
   </footer>
+<script>
+      // Auto-select service based on current page
+      (function(){
+        var path = window.location.pathname.replace(/^\/+|\/+$/g, '');
+        var serviceMap = {"gutter-cleaning":"gutter-cleaning","gutter-installation":"gutter-installation","gutter-repair":"gutter-repair","seamless-gutters":"seamless-gutters","downspout-services":"downspouts","fascia-soffit-repair":"fascia-soffit","same-day-gutter-service":"gutter-protection"};
+        var val = serviceMap[path];
+        if(val){
+          var inline = document.getElementById('service');
+          var modal = document.getElementById('modalService');
+          if(inline) inline.value = val;
+          if(modal) modal.value = val;
+        }
+      })();</script>
 </body>
 </html>

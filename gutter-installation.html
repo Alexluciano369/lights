@@ -863,9 +863,14 @@
             <label for="modalService">Service Interest *</label>
             <select id="modalService" name="service" required>
               <option value="">Select a service...</option>
-              <option value="gutter-protection">GutterGlove Protection</option>
-              <option value="outdoor-lighting">Oelo Outdoor Lighting</option>
-              <option value="both">Both Services</option>
+              <option value="gutter-cleaning">Gutter Cleaning</option>
+              <option value="gutter-installation">New Gutter Installation</option>
+              <option value="gutter-repair">Gutter Repair</option>
+              <option value="downspouts">Downspout Services</option>
+              <option value="seamless-gutters">Seamless Gutters</option>
+              <option value="fascia-soffit">Fascia &amp; Soffit Repair</option>
+              <option value="gutter-protection">Gutter Guards / Protection</option>
+              <option value="outdoor-lighting">Permanent Outdoor Lighting</option>
             </select>
           </div>
 
@@ -1065,7 +1070,19 @@
         });
       })();
 
-    </script>
+    
+      // Auto-select service based on current page
+      (function(){
+        var path = window.location.pathname.replace(/^\/+|\/+$/g, '');
+        var serviceMap = {"gutter-cleaning":"gutter-cleaning","gutter-installation":"gutter-installation","gutter-repair":"gutter-repair","seamless-gutters":"seamless-gutters","downspout-services":"downspouts","fascia-soffit-repair":"fascia-soffit","same-day-gutter-service":"gutter-protection"};
+        var val = serviceMap[path];
+        if(val){
+          var inline = document.getElementById('service');
+          var modal = document.getElementById('modalService');
+          if(inline) inline.value = val;
+          if(modal) modal.value = val;
+        }
+      })();</script>
   </body>
 
 </html>

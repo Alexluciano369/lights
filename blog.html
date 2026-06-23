@@ -1090,5 +1090,18 @@
         }
       });
     </script>
-  </body>
+  <script>
+      // Auto-select service based on current page
+      (function(){
+        var path = window.location.pathname.replace(/^\/+|\/+$/g, '');
+        var serviceMap = {"gutter-cleaning":"gutter-cleaning","gutter-installation":"gutter-installation","gutter-repair":"gutter-repair","seamless-gutters":"seamless-gutters","downspout-services":"downspouts","fascia-soffit-repair":"fascia-soffit","same-day-gutter-service":"gutter-protection"};
+        var val = serviceMap[path];
+        if(val){
+          var inline = document.getElementById('service');
+          var modal = document.getElementById('modalService');
+          if(inline) inline.value = val;
+          if(modal) modal.value = val;
+        }
+      })();</script>
+</body>
 </html>
