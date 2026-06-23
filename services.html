@@ -558,14 +558,16 @@
         }
 
         .nav-cta {
-          background: linear-gradient(135deg, #4db8ff 0%, #00aaff 100%);
-          color: #ffffff !important;
+          background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+          color: #1a1a2e !important;
           font-weight: 700;
           text-align: center;
-          margin: 1rem;
+          margin: 0.5rem 0 1rem;
           padding: 1rem !important;
-          border-radius: 8px;
+          border-radius: 12px;
           border-bottom: none !important;
+          font-size: 1.1rem;
+          box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
         }
 
         .city-grid {
@@ -798,6 +800,9 @@
           </div>
         </a>
         <nav class="nav" id="mobileNav">
+          <button class="nav-close" id="navClose" aria-label="Close menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
           <a href="/#contact" class="nav-link nav-cta">Get Free Estimate</a>
           <a href="/" class="nav-link">Home</a>
           <a href="/gutters" class="nav-link">Gutter Protection</a>
@@ -1039,10 +1044,25 @@
     <script>
       const mobileMenuToggle = document.getElementById('mobileMenuToggle');
       const mobileNav = document.getElementById('mobileNav');
+      const mobileOverlay = document.getElementById('mobileOverlay');
+      const navLinks = document.querySelectorAll('.nav-link');
 
-      mobileMenuToggle.addEventListener('click', () => {
+      function toggleMobileMenu() {
         mobileMenuToggle.classList.toggle('active');
         mobileNav.classList.toggle('active');
+        mobileOverlay.classList.toggle('active');
+        document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+      }
+
+      mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+      mobileOverlay.addEventListener('click', toggleMobileMenu);
+
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          if (mobileNav.classList.contains('active')) {
+            toggleMobileMenu();
+          }
+        });
       });
       // Mobile dropdown toggle
       document.querySelectorAll('.nav-dropdown-toggle').forEach(function(btn){
@@ -1055,10 +1075,18 @@
         });
       });
 
-      document.addEventListener('click', (e) => {
-        if (!e.target.closest('.header-content')) {
-          mobileMenuToggle.classList.remove('active');
-          mobileNav.classList.remove('active');
+      const navClose = document.getElementById('navClose');
+      if (navClose) {
+        navClose.addEventListener('click', toggleMobileMenu);
+      }
+
+      // Highlight current page in mobile nav
+      document.querySelectorAll('.nav-link').forEach(function(link) {
+        var href = link.getAttribute('href');
+        var path = window.location.pathname;
+        if (href === path || (href === '/' && path === '/') ||
+            (href !== '/' && path.startsWith(href))) {
+          link.classList.add('active-page');
         }
       });
     </script>
