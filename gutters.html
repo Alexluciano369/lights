@@ -1293,17 +1293,16 @@
           <a href="/" class="nav-link">Home</a>
           <a href="/gutters" class="nav-link">Gutter Protection</a>
           <a href="/lighting" class="nav-link">Outdoor Lighting</a>
+          <a href="/gutter-cleaning" class="nav-link" style="color:#ffd700;font-weight:700">Gutter Cleaning <span class="nav-item-tag">$99</span></a>
           <div class="nav-dropdown">
-            <a href="/gutter-services" class="nav-link nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Gutter Services <span class="nav-caret" aria-hidden="true">▾</span></a>
+            <a href="/gutter-services" class="nav-link nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">All Other Gutter Services <span class="nav-caret" aria-hidden="true">▾</span></a>
             <div class="nav-dropdown-menu">
-              <a href="/gutter-cleaning" class="nav-dropdown-item">Gutter Cleaning <span class="nav-item-tag">$99</span></a>
               <a href="/gutter-installation" class="nav-dropdown-item">New Gutter Installation</a>
               <a href="/gutter-repair" class="nav-dropdown-item">Gutter Repair</a>
               <a href="/seamless-gutters" class="nav-dropdown-item">Seamless Gutters</a>
               <a href="/downspout-services" class="nav-dropdown-item">Downspout Services</a>
               <a href="/fascia-soffit-repair" class="nav-dropdown-item">Fascia &amp; Soffit Repair</a>
               <a href="/same-day-gutter-service" class="nav-dropdown-item">Same-Day Service</a>
-              <a href="/gutter-services" class="nav-dropdown-item nav-dropdown-all">View All Services →</a>
             </div>
           </div>
           <a href="/reviews" class="nav-link">Reviews</a>
@@ -2017,6 +2016,7 @@
         btn.addEventListener('click', function(e){
           if(window.innerWidth <= 768){
             e.preventDefault();
+            e.stopPropagation();
             this.closest('.nav-dropdown').classList.toggle('open');
           }
         });
