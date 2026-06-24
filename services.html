@@ -38,10 +38,11 @@
     <meta name="description" content="Complete gutter services in South Jersey & Eastern PA — cleaning from $99, repair, replacement, downspouts, fascia & soffit. Plus GutterGlove guards & Oelo LED lighting. Free estimates. 856-874-6640." />
     <meta name="keywords" content="gutter guard installation, permanent outdoor lighting, LED roofline lighting, gutter protection services, South Jersey, Eastern Pennsylvania, Cherry Hill, Philadelphia, professional installation" />
     <link rel="canonical" href="https://cleangutterslighting.com/services" />
-    <meta property="og:image" content="https://cleangutterslighting.com/hero-gutters.jpg" />
-    <meta property="og:image:width" content="1900" />
-    <meta property="og:image:height" content="1069" />
-    <meta property="og:image:alt" content="Micro-mesh gutter guard installation on a South Jersey home by CleanGutters Lighting" />
+    <link rel="preload" as="image" href="gutter-work/hero-installation-house.webp" type="image/webp" fetchpriority="high">
+    <meta property="og:image" content="https://cleangutterslighting.com/gutter-work/hero-installation-house.jpg" />
+    <meta property="og:image:width" content="1500" />
+    <meta property="og:image:height" content="1000" />
+    <meta property="og:image:alt" content="CleanGutters Lighting gutter and outdoor lighting service work in South Jersey" />
     <link rel="preload" href="inner-hero-bg.webp" as="image" type="image/webp" fetchpriority="high">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -236,12 +237,20 @@
 
       .hero {
         position: relative;
-        background: linear-gradient(rgba(26, 43, 76, 0.82), rgba(26, 43, 76, 0.82)),
-                    url('/inner-hero-bg.jpg') center/cover no-repeat;
+        background: #1a1a2e;
         color: white;
+        min-height: 420px;
         padding: 4rem 2rem;
         text-align: center;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
       }
+      .hero.hero-media::before { content:''; position:absolute; inset:0; background: linear-gradient(rgba(26, 43, 76, 0.70), rgba(26, 43, 76, 0.76)); z-index:1; }
+      .hero.hero-media picture, .hero.hero-media img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0; }
+      .hero.hero-media h1, .hero.hero-media .hero-subtitle { position:relative; z-index:2; }
 
       .hero h1 {
         font-size: 2.75rem;
@@ -308,10 +317,15 @@
 
       .service-card {
         background: #f8f9fa;
-        padding: 2rem;
+        padding: 0 0 2rem;
         border-radius: 12px;
         border-left: 4px solid #ffd700;
+        overflow: hidden;
+        box-shadow: 0 8px 26px rgba(0,0,0,0.08);
       }
+      .service-photo { width: 100%; height: 175px; overflow: hidden; background: #e9ecef; margin-bottom: 1.5rem; }
+      .service-photo picture, .service-photo img { display:block; width:100%; height:100%; object-fit:cover; }
+      .service-card h3, .service-card h4, .service-card p { padding-left: 2rem; padding-right: 2rem; }
 
       .service-card h4 {
         color: #1e3a5f;
@@ -841,7 +855,8 @@
     </header>
 
     <main id="main-content">
-    <section class="hero">
+    <section class="hero hero-media">
+      <picture><source srcset="gutter-work/hero-installation-house.webp" type="image/webp"><img src="gutter-work/hero-installation-house.jpg" alt="CleanGutters Lighting service work on a South Jersey home" loading="eager" fetchpriority="high" width="1500" height="1000" decoding="async"></picture>
       <h1>Gutter Guard & Permanent LED Lighting Installation Services | South Jersey & Eastern PA</h1>
       <p class="hero-subtitle">Certified LeafBlaster Pro by GutterGlove & Oelo Installation Experts Serving All of South Jersey and Eastern Pennsylvania</p>
     </section>
@@ -858,14 +873,17 @@
 
         <div class="service-grid">
           <div class="service-card">
+            <div class="service-photo"><picture><source srcset="install-closeup-2026.webp" type="image/webp"><img src="install-closeup-2026.jpg" alt="LeafBlaster Pro micro-mesh gutter guard installed on a South Jersey roofline" loading="lazy" width="800" height="600" decoding="async"></picture></div>
             <h3>LeafBlaster Pro Gutter Guard Installation</h3>
             <p>Lifetime no-clog warranty with our premium micro-mesh gutter guard system that handles heavy leaf loads and pine needles common in South Jersey.</p>
           </div>
           <div class="service-card">
+            <div class="service-photo"><picture><source srcset="hero-lighting.webp" type="image/webp"><img src="hero-lighting.jpg" alt="Permanent Oelo LED roofline lighting on a home" loading="lazy" width="800" height="600" decoding="async"></picture></div>
             <h3>Oelo LED Lighting</h3>
             <p>Permanent RGB/RGBW roofline lighting with WiFi control. Perfect for year-round architectural lighting and holiday displays.</p>
           </div>
           <div class="service-card">
+            <div class="service-photo"><picture><source srcset="gutter-work/hero-installation-house.webp" type="image/webp"><img src="gutter-work/hero-installation-house.jpg" alt="Fast gutter service work completed on a South Jersey home" loading="lazy" width="800" height="600" decoding="async"></picture></div>
             <h3>Emergency Service</h3>
             <p>Fast response for gutter emergencies and lighting repairs throughout South Jersey communities.</p>
           </div>
@@ -878,14 +896,17 @@
 
         <div class="service-grid">
           <div class="service-card">
+            <div class="service-photo"><picture><source srcset="gutter-work/seamless-gutter-run.webp" type="image/webp"><img src="gutter-work/seamless-gutter-run.jpg" alt="Long seamless gutter run for a larger property" loading="lazy" width="800" height="600" decoding="async"></picture></div>
             <h3>Commercial Solutions</h3>
             <p>Large-scale gutter protection and architectural lighting for commercial properties and multi-unit buildings.</p>
           </div>
           <div class="service-card">
+            <div class="service-photo"><picture><source srcset="gutter-work/install-corner-detail.webp" type="image/webp"><img src="gutter-work/install-corner-detail.jpg" alt="Careful roofline trim and gutter detail for specialty homes" loading="lazy" width="800" height="600" decoding="async"></picture></div>
             <h3>Historic Home Expertise</h3>
             <p>Specialized installations for historic properties throughout Philadelphia and the Main Line area.</p>
           </div>
           <div class="service-card">
+            <div class="service-photo"><picture><source srcset="hero-lighting.webp" type="image/webp"><img src="hero-lighting.jpg" alt="Custom permanent outdoor lighting design on a home" loading="lazy" width="800" height="600" decoding="async"></picture></div>
             <h3>Custom Designs</h3>
             <p>Tailored lighting designs that enhance your property's unique architectural features.</p>
           </div>
@@ -905,26 +926,32 @@
 
         <div class="service-grid">
           <div class="service-card">
+            <div class="service-photo"><picture><source srcset="gutter-work/cleaning-leaves-vs-clean.webp" type="image/webp"><img src="gutter-work/cleaning-leaves-vs-clean.jpg" alt="Gutter cleaning before and after debris removal" loading="lazy" width="800" height="600" decoding="async"></picture></div>
             <h3>🧹 Gutter Cleaning — From $99</h3>
             <p>Professional gutter cleaning to remove leaves, debris, and buildup. We flush downspouts, check for proper flow, and inspect for damage. Before &amp; after photos provided.</p>
           </div>
           <div class="service-card">
+            <div class="service-photo"><picture><source srcset="gutter-work/repair-damaged-gutter-before.webp" type="image/webp"><img src="gutter-work/repair-damaged-gutter-before.jpg" alt="Damaged gutter needing repair" loading="lazy" width="800" height="600" decoding="async"></picture></div>
             <h3>🔧 Gutter Repair</h3>
             <p>Leaking, sagging, or damaged gutters? We fix leaks, re-secure loose sections, correct pitch, and reseal seams. Same-day service available for urgent repairs.</p>
           </div>
           <div class="service-card">
+            <div class="service-photo"><picture><source srcset="gutter-work/install-full-house-after.webp" type="image/webp"><img src="gutter-work/install-full-house-after.jpg" alt="New seamless gutters installed on a full home" loading="lazy" width="800" height="600" decoding="async"></picture></div>
             <h3>🏠 Gutter Replacement</h3>
             <p>Complete gutter replacement with seamless aluminum gutters. Multiple colors, 5" and 6" sizes, full tear-off and disposal included. Workmanship warranty.</p>
           </div>
           <div class="service-card">
+            <div class="service-photo"><picture><source srcset="gutter-work/downspout-corner-garage.webp" type="image/webp"><img src="gutter-work/downspout-corner-garage.jpg" alt="Downspout installed on a garage corner" loading="lazy" width="800" height="600" decoding="async"></picture></div>
             <h3>🔽 Downspout Installation &amp; Repair</h3>
             <p>Proper downspout placement directs water away from your foundation. We install, replace, reroute, and add extensions or underground drainage connections.</p>
           </div>
           <div class="service-card">
+            <div class="service-photo"><picture><source srcset="gutter-work/hero-fascia-soffit.webp" type="image/webp"><img src="gutter-work/hero-fascia-soffit.jpg" alt="Fascia and soffit roofline repair detail" loading="lazy" width="800" height="600" decoding="async"></picture></div>
             <h3>🪵 Fascia Board Repair</h3>
             <p>Rotted or damaged fascia boards compromise your gutter system. We repair or replace fascia to restore structural integrity and curb appeal.</p>
           </div>
           <div class="service-card">
+            <div class="service-photo"><picture><source srcset="gutter-work/install-corner-detail.webp" type="image/webp"><img src="gutter-work/install-corner-detail.jpg" alt="Roofline trim and soffit detail by gutter corner" loading="lazy" width="800" height="600" decoding="async"></picture></div>
             <h3>🔨 Soffit Repair &amp; Replacement</h3>
             <p>Damaged soffit allows pests and moisture into your attic. We repair and replace soffit panels to seal your roofline and improve ventilation.</p>
           </div>
