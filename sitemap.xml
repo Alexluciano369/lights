@@ -28,4 +28,15 @@
     <ns0:changefreq>monthly</ns0:changefreq>
     <ns0:priority>0.7</ns0:priority>
   </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://cleangutterslighting.com/oelo-vs-diy-professional-install</ns0:loc>
+    <ns0:lastmod>2026-07-01</ns0:lastmod>
+    <ns0:changefreq>monthly</ns0:changefreq>
+    <ns0:priority>0.7</ns0:priority>
+    <ns1:image>
+      <ns1:loc>https://cleangutterslighting.com/oelo-vs-diy-professional-install-thumb.jpg</ns1:loc>
+      <ns1:title>Oelo vs DIY Permanent Lights: Why Professional Installation Wins</ns1:title>
+      <ns1:caption>Professional LED roofline lighting installation in South Jersey</ns1:caption>
+    </ns1:image>
+  </ns0:url>
 </ns0:urlset>

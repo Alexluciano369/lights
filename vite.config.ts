@@ -90,6 +90,7 @@ export default defineConfig({
         'summer-backyard-led-lighting-south-jersey': resolve(__dirname, 'summer-backyard-led-lighting-south-jersey.html'),
         'gutter-cleaning-cost-south-jersey-2026': resolve(__dirname, 'gutter-cleaning-cost-south-jersey-2026.html'),
         'july-best-time-install-gutter-guards-south-jersey': resolve(__dirname, 'july-best-time-install-gutter-guards-south-jersey.html'),
+        'oelo-vs-diy-professional-install': resolve(__dirname, 'oelo-vs-diy-professional-install.html'),
         'gutter-services': resolve(__dirname, 'gutter-services.html'),
         'service-areas-hub': resolve(__dirname, 'service-areas.html'),
         'gutter-installation': resolve(__dirname, 'gutter-installation.html'),
