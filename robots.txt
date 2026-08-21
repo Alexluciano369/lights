@@ -1,0 +1,31 @@
+# robots.txt for cleangutterslighting.com
+# Optimized for mobile-first indexing and local SEO
+
+User-agent: *
+Allow: /
+
+# Allow all major search engine crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Disallow admin and system files
+Disallow: /src/
+Disallow: /*.json
+Disallow: /*.config.js
+Disallow: /node_modules/
+
+# Sitemap locations
+Sitemap: https://cleangutterslighting.com/sitemap.xml
+Sitemap: https://cleangutterslighting.com/sitemap-local-pages.xml
+
+# Host preference
+Host: https://cleangutterslighting.com
