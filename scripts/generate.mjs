@@ -1,0 +1,632 @@
+import { mkdir, writeFile } from "node:fs/promises";
+import { existsSync } from "node:fs";
+import { dirname, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
+import { cities } from "../data/cities.mjs";
+import { services, serviceMap } from "../data/services.mjs";
+import { testimonials } from "../data/testimonials.mjs";
+
+const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
+const SITE = "https://cleangutterslighting.com";
+const PHONE = "856-874-6640";
+const PHONE_TEL = "8568746640";
+const EMAIL = "cleangutters2008@gmail.com";
+const BIZ_NAME = "CleanGutters Lighting";
+const BIZ_ADDR = { street: "Cherry Hill, NJ", city: "Cherry Hill", region: "NJ", postal: "08002", country: "US" };
+const BIZ_GEO = { lat: 39.9346, lng: -75.0307 };
+const AGG_RATING = { value: "4.9", count: "45" };
+const HOURS = [
+  { days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], open: "07:30", close: "18:00" },
+  { days: ["Saturday"], open: "08:00", close: "15:00" },
+];
+
+const esc = (s) =>
+  String(s ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+
+const interp = (tpl, ctx) =>
+  String(tpl ?? "").replace(/{{\s*(\w+)\s*}}/g, (_, k) => ctx[k] ?? "");
+
+async function write(rel, content) {
+  const abs = resolve(ROOT, rel);
+  await mkdir(dirname(abs), { recursive: true });
+  await writeFile(abs, content, "utf8");
+}
+
+function localBusinessSchema(city, canonical) {
+  const areaServed = cities.map((c) => ({
+    "@type": "City",
+    name: c.name,
+    address: { "@type": "PostalAddress", addressLocality: c.name, addressRegion: c.state, addressCountry: "US" },
+  }));
+  const openingHoursSpecification = HOURS.map((h) => ({
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: h.days,
+    opens: h.open,
+    closes: h.close,
+  }));
+  return {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "@id": SITE + "/#business",
+    name: BIZ_NAME,
+    url: SITE,
+    telephone: PHONE,
+    email: EMAIL,
+    priceRange: "$$",
+    image: SITE + "/logo.png",
+    logo: SITE + "/logo.png",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: BIZ_ADDR.street,
+      addressLocality: BIZ_ADDR.city,
+      addressRegion: BIZ_ADDR.region,
+      postalCode: BIZ_ADDR.postal,
+      addressCountry: BIZ_ADDR.country,
+    },
+    geo: { "@type": "GeoCoordinates", latitude: city ? city.lat : BIZ_GEO.lat, longitude: city ? city.lng : BIZ_GEO.lng },
+    openingHoursSpecification,
+    aggregateRating: { "@type": "AggregateRating", ratingValue: AGG_RATING.value, reviewCount: AGG_RATING.count },
+    areaServed,
+    sameAs: [],
+    ...(canonical ? { mainEntityOfPage: canonical } : {}),
+  };
+}
+
+function breadcrumbSchema(items) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((it, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: it.name,
+      item: it.item,
+    })),
+  };
+}
+
+function serviceSchema(service, city, canonical) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: `${service.name} in ${city.name}, ${city.state}`,
+    serviceType: service.shortName,
+    provider: { "@id": SITE + "/#business", "@type": "HomeAndConstructionBusiness", name: BIZ_NAME },
+    areaServed: {
+      "@type": "City",
+      name: city.name,
+      address: { "@type": "PostalAddress", addressLocality: city.name, addressRegion: city.state, addressCountry: "US" },
+    },
+    url: canonical,
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: `${service.shortName} offers in ${city.name}`,
+      itemListElement: services.map((s) => ({
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: s.shortName },
+        url: `${SITE}/locations/${city.slug}/${s.slug}`,
+      })),
+    },
+  };
+}
+
+function faqSchema(faqs, ctx) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: interp(f.q, ctx),
+      acceptedAnswer: { "@type": "Answer", text: interp(f.a, ctx) },
+    })),
+  };
+}
+
+const jsonLd = (obj) => `<script type="application/ld+json">${JSON.stringify(obj)}</script>`;
+
+function head({ title, description, canonical, ogImage, jsonLdBlocks, geo }) {
+  return `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#1e3a5f">
+<title>${esc(title)}</title>
+<meta name="description" content="${esc(description)}">
+<link rel="canonical" href="${esc(canonical)}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="${esc(title)}">
+<meta property="og:description" content="${esc(description)}">
+<meta property="og:url" content="${esc(canonical)}">
+<meta property="og:image" content="${esc(ogImage)}">
+<meta property="og:site_name" content="${esc(BIZ_NAME)}">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${esc(title)}">
+<meta name="twitter:description" content="${esc(description)}">
+<meta name="twitter:image" content="${esc(ogImage)}">
+${geo ? `<meta name="geo.region" content="US-${esc(geo.state)}">
+<meta name="geo.placename" content="${esc(geo.name)}, ${esc(geo.stateFull)}">
+<meta name="geo.position" content="${geo.lat};${geo.lng}">
+<meta name="ICBM" content="${geo.lat}, ${geo.lng}">` : ""}
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" as="image" href="/inner-hero-bg.webp">
+<link rel="stylesheet" href="/styles.css">
+${jsonLdBlocks.join("\n")}
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>`;
+}
+
+function header() {
+  return `<header class="site-header">
+<div class="bar">
+<a href="/" class="brand" aria-label="${esc(BIZ_NAME)} home">
+<picture><source srcset="/logo.webp" type="image/webp"><img src="/logo2.png" alt="${esc(BIZ_NAME)} logo" width="40" height="40"></picture>
+<span class="brand-name"><span class="clean">CleanGutters</span> <span class="lighting">Lighting</span></span>
+</a>
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">Menu</button>
+<nav id="primary-nav" class="primary-nav" aria-label="Primary">
+<a href="/">Home</a>
+<a href="/gutters">Gutter Protection</a>
+<a href="/lighting">Outdoor Lighting</a>
+<a href="/gutter-services">Services</a>
+<a href="/service-areas">Service Areas</a>
+<a href="/reviews">Reviews</a>
+<a href="/blog">Blog</a>
+</nav>
+<a href="tel:${PHONE_TEL}" class="header-cta" aria-label="Call ${PHONE}">Call ${PHONE}</a>
+</div>
+</header>`;
+}
+
+function breadcrumbs(items) {
+  return `<div class="container"><nav class="breadcrumbs" aria-label="Breadcrumb"><ol>${items
+    .map((it, i, arr) =>
+      i === arr.length - 1
+        ? `<li aria-current="page">${esc(it.name)}</li>`
+        : `<li><a href="${esc(it.href)}">${esc(it.name)}</a></li>`
+    )
+    .join("")}</ol></nav></div>`;
+}
+
+function reviewsFor(citySlug, serviceSlug) {
+  const city = testimonials.filter((t) => t.city.toLowerCase().startsWith(cities.find((c) => c.slug === citySlug).name.toLowerCase()));
+  const svc = serviceSlug ? testimonials.filter((t) => t.service === serviceSlug) : [];
+  const pool = [...city, ...svc, ...testimonials].filter((v, i, a) => a.indexOf(v) === i);
+  return pool.slice(0, 3);
+}
+
+function reviewGrid(list) {
+  return `<div class="review-grid">${list
+    .map(
+      (t) => `<article class="review"><div class="stars" aria-label="${t.rating} out of 5">${"\u2605".repeat(t.rating)}</div><p>"${esc(t.body)}"</p><p class="who"><strong>${esc(t.name)}</strong> &middot; ${esc(t.city)}</p></article>`
+    )
+    .join("")}</div>`;
+}
+
+function benefitGrid(list) {
+  return `<div class="benefits">${list
+    .map(
+      (b, i) => `<div class="benefit"><span class="icon" aria-hidden="true">${i + 1}</span><h3>${esc(b.title)}</h3><p>${esc(b.body)}</p></div>`
+    )
+    .join("")}</div>`;
+}
+
+function faqBlock(faqs, ctx) {
+  return `<div class="faq">${faqs
+    .map(
+      (f) => `<details><summary>${esc(interp(f.q, ctx))}</summary><p>${esc(interp(f.a, ctx))}</p></details>`
+    )
+    .join("")}</div>`;
+}
+
+function quoteForm({ city, service, heading = "Get your free estimate", sub = "Straight quote from the owner. No pressure, no upsell." }) {
+  const preSelectedService = service ? service.slug : "";
+  const cityFull = city ? `${city.name}, ${city.state}` : "";
+  return `<form class="quote-card" data-lead-form ${city ? `data-city="${esc(city.slug)}"` : ""} ${service ? `data-service="${esc(service.slug)}"` : ""} novalidate>
+<h2>${esc(heading)}</h2>
+<p class="sub">${esc(sub)}</p>
+<div class="form-row grid-2">
+<div class="form-field"><label for="lf-name">Your name</label><input id="lf-name" name="name" type="text" autocomplete="name" required></div>
+<div class="form-field"><label for="lf-phone">Phone</label><input id="lf-phone" name="phone" type="tel" autocomplete="tel" required></div>
+</div>
+<div class="form-row grid-2">
+<div class="form-field"><label for="lf-email">Email</label><input id="lf-email" name="email" type="email" autocomplete="email" required></div>
+<div class="form-field"><label for="lf-address">Address / city</label><input id="lf-address" name="address" type="text" autocomplete="street-address" value="${esc(cityFull)}"></div>
+</div>
+<div class="form-row">
+<div class="form-field"><label for="lf-service">Service</label>
+<select id="lf-service" name="service" required>
+<option value="">Select a service</option>
+${services
+  .map((s) => `<option value="${esc(s.slug)}" ${s.slug === preSelectedService ? "selected" : ""}>${esc(s.shortName)}</option>`)
+  .join("")}
+</select></div>
+</div>
+<div class="form-row">
+<div class="form-field"><label for="lf-message">Anything we should know?</label><textarea id="lf-message" name="message" rows="3" placeholder="Rooflines, timeline, questions..."></textarea></div>
+</div>
+<button class="btn btn-primary" type="submit" style="margin-top: 1rem; width: 100%;">Get my free estimate</button>
+<p class="form-status" role="status" aria-live="polite"></p>
+</form>`;
+}
+
+function footer() {
+  return `<footer class="footer">
+<div class="container">
+<div class="grid">
+<div>
+<h4>${esc(BIZ_NAME)}</h4>
+<p>Certified GutterGlove &amp; LeafBlaster Pro installer since 2009. Permanent Oelo LED roofline lighting. Serving South Jersey, Eastern Pennsylvania, and Delaware.</p>
+<p style="margin-top:0.75rem"><a href="tel:${PHONE_TEL}" style="color:#ffd700;font-weight:800">${PHONE}</a></p>
+<p><a href="mailto:${EMAIL}">${EMAIL}</a></p>
+</div>
+<div>
+<h4>Services</h4>
+<ul style="list-style:none;display:grid;gap:0.4rem">
+${services.map((s) => `<li><a href="/${s.slug === "permanent-outdoor-lighting" ? "lighting" : s.slug === "gutter-guards" ? "gutters" : s.slug}">${esc(s.shortName)}</a></li>`).join("")}
+</ul>
+</div>
+<div>
+<h4>Top Service Areas</h4>
+<ul style="list-style:none;display:grid;gap:0.4rem">
+${cities.slice(0, 8).map((c) => `<li><a href="/locations/${c.slug}">${esc(c.name)}, ${esc(c.state)}</a></li>`).join("")}
+<li><a href="/service-areas">View all</a></li>
+</ul>
+</div>
+<div>
+<h4>Company</h4>
+<ul style="list-style:none;display:grid;gap:0.4rem">
+<li><a href="/reviews">Reviews</a></li>
+<li><a href="/faq">FAQ</a></li>
+<li><a href="/blog">Blog</a></li>
+<li><a href="/privacy">Privacy</a></li>
+<li><a href="/terms">Terms</a></li>
+</ul>
+</div>
+</div>
+<div class="legal">
+<span>&copy; 2009&ndash;${new Date().getFullYear()} ${esc(BIZ_NAME)}. All rights reserved.</span>
+<span>Cherry Hill, NJ 08002 &middot; NJ HIC + PA HIC insured</span>
+</div>
+</div>
+</footer>
+<a href="tel:${PHONE_TEL}" class="sticky-call" aria-label="Call ${PHONE}">Call ${PHONE}</a>
+<script src="/js/lead-form.js" defer></script>
+</body></html>`;
+}
+
+function cityHub(city) {
+  const canonical = `${SITE}/locations/${city.slug}`;
+  const title = `Gutter Guards & Permanent Lighting in ${city.name}, ${city.state} | ${BIZ_NAME}`.slice(0, 60);
+  const description = `Certified LeafBlaster Pro gutter guards, seamless gutters, cleaning, and permanent LED lighting in ${city.name}, ${city.state}. Free estimate — call ${PHONE}.`;
+  const ogImage = `${SITE}/${city.hero}`;
+  const crumbs = [
+    { name: "Home", href: "/", item: `${SITE}/` },
+    { name: "Service Areas", href: "/service-areas", item: `${SITE}/service-areas` },
+    { name: `${city.name}, ${city.state}`, href: canonical, item: canonical },
+  ];
+  const faqs = [
+    { q: `What services does ${BIZ_NAME} offer in ${city.name}, ${city.state}?`, a: `We install LeafBlaster Pro micro-mesh gutter guards, seamless 5\" and 6\" aluminum gutters, permanent Oelo-style LED roofline lighting, and provide professional gutter cleaning and inspection throughout ${city.name} and surrounding neighborhoods.` },
+    { q: `Which ${city.name} neighborhoods do you serve?`, a: `We cover every ${city.name} neighborhood including ${city.neighborhoods.join(", ")} and the ${city.zips.join(", ")} zip codes.` },
+    { q: `Do you offer free estimates in ${city.name}?`, a: `Yes. Every quote in ${city.name}, ${city.state} is free, on-site, and delivered in writing before any work is scheduled. Call ${PHONE} or use the form on this page.` },
+    { q: `Are you insured to work in ${city.stateFull}?`, a: `Yes. We carry full general liability, workers' comp, and required ${city.stateFull} home-improvement contractor registration. Certificates available on request.` },
+    { q: `How quickly can you get to ${city.name}?`, a: `Most ${city.name} homes are scheduled within 3–7 business days. For gutter cleaning we can often send a crew the same day if you call before noon.` },
+  ];
+  const jsonLdBlocks = [
+    jsonLd(localBusinessSchema(city, canonical)),
+    jsonLd(breadcrumbSchema(crumbs.map((c) => ({ name: c.name, item: c.item })))),
+    jsonLd(faqSchema(faqs, { cityName: city.name, state: city.state })),
+  ];
+
+  const reviews = reviewsFor(city.slug, null);
+
+  const html =
+    head({ title, description, canonical, ogImage, jsonLdBlocks, geo: city }) +
+    header() +
+    breadcrumbs(crumbs.map((c) => ({ name: c.name, href: c.href }))) +
+    `<section class="hero"><div class="container">
+<div>
+<p class="eyebrow">Serving ${esc(city.name)}, ${esc(city.state)} since 2009</p>
+<h1>Gutter Guards, Seamless Gutters &amp; Permanent Lighting in ${esc(city.name)}, ${esc(city.state)}</h1>
+<p class="lead">${esc(city.climate)} We install the systems that stop the problem — micro-mesh gutter protection, oversized seamless gutters, permanent LED roofline lighting, and hand-cleaning done right.</p>
+<div class="badges">
+<span class="badge">Certified LeafBlaster Pro Installer</span>
+<span class="badge">Lifetime Workmanship Warranty</span>
+<span class="badge">4.9 &starf; from 45+ homeowners</span>
+</div>
+<div class="cta-row">
+<a href="#quote" class="btn btn-primary">Get free estimate</a>
+<a href="tel:${PHONE_TEL}" class="btn btn-outline">Call ${PHONE}</a>
+</div>
+</div>
+<div id="quote">${quoteForm({ city, service: null, heading: `Free estimate in ${city.name}`, sub: `Firm written quote. No pressure.` })}</div>
+</div></section>` +
+    `<section class="trust-strip"><div class="container row"><span><strong>Zip codes served:</strong> ${city.zips.map((z) => esc(z)).join(", ")}</span><span><strong>Neighborhoods:</strong> ${city.neighborhoods.slice(0, 4).map((n) => esc(n)).join(", ")}</span></div></section>` +
+    `<main id="main">
+<section class="section"><div class="container">
+<p class="eyebrow">Every service in ${esc(city.name)}</p>
+<h2>Choose your project</h2>
+<div class="service-grid">
+${services
+  .map(
+    (s) => `<article class="service-card"><h3>${esc(s.shortName)} in ${esc(city.name)}, ${esc(city.state)}</h3><p>${esc(s.tagline)}</p><a class="link" href="/locations/${city.slug}/${s.slug}">See ${esc(s.shortName)} details &rarr;</a></article>`
+  )
+  .join("")}
+</div>
+</div></section>
+
+<section class="section section-alt"><div class="container">
+<p class="eyebrow">${esc(city.name)} homeowners &middot; ${AGG_RATING.value} average</p>
+<h2>What ${esc(city.name)} neighbors say</h2>
+${reviewGrid(reviews)}
+</div></section>
+
+<section class="section"><div class="container">
+<p class="eyebrow">${esc(city.name)}, ${esc(city.state)} coverage</p>
+<h2>Neighborhoods &amp; zip codes we serve in ${esc(city.name)}</h2>
+<p style="max-width:70ch;margin-bottom:1rem">We route crews to ${esc(city.name)} multiple times per week. If your street isn't listed, call ${PHONE} — we still serve it.</p>
+<p style="font-weight:700;color:var(--brand-navy);margin-bottom:0.5rem">Neighborhoods:</p>
+<div class="chip-list" style="margin-bottom:1rem">${city.neighborhoods.map((n) => `<span class="chip">${esc(n)}</span>`).join("")}</div>
+<p style="font-weight:700;color:var(--brand-navy);margin-bottom:0.5rem">Zip codes:</p>
+<div class="zip-list">${city.zips.map((z) => `<span>${esc(z)}</span>`).join("")}</div>
+</div></section>
+
+<section class="section section-alt"><div class="container">
+<p class="eyebrow">${esc(city.name)} FAQ</p>
+<h2>Common questions from ${esc(city.name)} homeowners</h2>
+${faqBlock(faqs, { cityName: city.name, state: city.state })}
+</div></section>
+
+<section class="section"><div class="container split">
+<div>
+<h2>Ready for a firm quote in ${esc(city.name)}?</h2>
+<p>Every estimate is free, on-site, and delivered in writing before any work is scheduled. Fifteen years of jobs in ${esc(city.name)}, ${esc(city.stateFull)} — from ${esc(city.landmarks[0])} to ${esc(city.landmarks[city.landmarks.length - 1])}.</p>
+<div class="cta-row" style="margin-top:1rem">
+<a href="tel:${PHONE_TEL}" class="btn btn-primary">Call ${PHONE}</a>
+<a href="mailto:${EMAIL}" class="btn btn-outline" style="color:var(--brand-navy);border-color:var(--brand-navy)">Email us</a>
+</div>
+</div>
+<div>${quoteForm({ city, service: null, heading: `Book a ${city.name} estimate` })}</div>
+</div></section>
+</main>` +
+    footer();
+  return html;
+}
+
+function serviceCityPage(city, service) {
+  const canonical = `${SITE}/locations/${city.slug}/${service.slug}`;
+  const rawTitle = `${service.shortName} in ${city.name}, ${city.state} | ${BIZ_NAME}`;
+  const title = rawTitle.length > 60 ? `${service.shortName} in ${city.name}, ${city.state}` : rawTitle;
+  const description = `${service.tagline} Local ${city.name}, ${city.state} crews with lifetime workmanship warranty. Free written estimate — call ${PHONE}.`.slice(0, 160);
+  const ogImage = `${SITE}/${city.hero}`;
+  const crumbs = [
+    { name: "Home", href: "/", item: `${SITE}/` },
+    { name: "Service Areas", href: "/service-areas", item: `${SITE}/service-areas` },
+    { name: `${city.name}, ${city.state}`, href: `/locations/${city.slug}`, item: `${SITE}/locations/${city.slug}` },
+    { name: service.shortName, href: canonical, item: canonical },
+  ];
+  const ctx = { cityName: city.name, state: city.state, stateFull: city.stateFull };
+  const jsonLdBlocks = [
+    jsonLd(localBusinessSchema(city, canonical)),
+    jsonLd(serviceSchema(service, city, canonical)),
+    jsonLd(breadcrumbSchema(crumbs.map((c) => ({ name: c.name, item: c.item })))),
+    jsonLd(faqSchema(service.faqs, ctx)),
+  ];
+  const reviews = reviewsFor(city.slug, service.slug);
+  const otherServices = services.filter((s) => s.slug !== service.slug);
+
+  const html =
+    head({ title, description, canonical, ogImage, jsonLdBlocks, geo: city }) +
+    header() +
+    breadcrumbs(crumbs.map((c) => ({ name: c.name, href: c.href }))) +
+    `<section class="hero"><div class="container">
+<div>
+<p class="eyebrow">${esc(service.shortName)} &middot; ${esc(city.name)}, ${esc(city.state)}</p>
+<h1>Premium ${esc(service.name)} in ${esc(city.name)}, ${esc(city.state)}</h1>
+<p class="lead">${esc(service.heroPitch)} ${esc(city.climate)}</p>
+<div class="badges">
+<span class="badge">Certified installer</span>
+<span class="badge">Lifetime workmanship warranty</span>
+<span class="badge">${AGG_RATING.value} &starf; from ${AGG_RATING.count}+ homeowners</span>
+</div>
+<div class="cta-row">
+<a href="#quote" class="btn btn-primary">Get free estimate</a>
+<a href="tel:${PHONE_TEL}" class="btn btn-outline">Call ${PHONE}</a>
+</div>
+</div>
+<div id="quote">${quoteForm({ city, service, heading: `Free ${service.shortName} quote in ${city.name}` })}</div>
+</div></section>` +
+    `<section class="trust-strip"><div class="container row"><span><strong>Serving:</strong> ${esc(city.name)}, ${esc(city.state)} ${esc(city.zips[0])}</span><span><strong>Neighborhoods:</strong> ${city.neighborhoods.slice(0, 3).map((n) => esc(n)).join(", ")}</span><span><strong>Near:</strong> ${city.landmarks.slice(0, 2).map((n) => esc(n)).join(", ")}</span></div></section>` +
+    `<main id="main">
+<section class="section"><div class="container">
+<p class="eyebrow">Why ${esc(city.name)} homeowners choose us</p>
+<h2>${esc(service.shortName)} built for ${esc(city.stateFull)}</h2>
+${benefitGrid(service.benefits)}
+</div></section>
+
+<section class="section section-alt"><div class="container split">
+<div>
+<p class="eyebrow">Our ${esc(city.name)} process</p>
+<h2>How ${esc(service.shortName.toLowerCase())} works, step by step</h2>
+<ol style="margin-top:1rem;padding-left:1.25rem;display:grid;gap:0.6rem">
+${service.process.map((p) => `<li>${esc(p)}</li>`).join("")}
+</ol>
+<div class="cta-row" style="margin-top:1.5rem">
+<a href="tel:${PHONE_TEL}" class="btn btn-primary">Call ${PHONE}</a>
+<a href="#quote" class="btn btn-outline" style="color:var(--brand-navy);border-color:var(--brand-navy)">Get a written estimate</a>
+</div>
+</div>
+<div>
+<img src="/${city.hero}" alt="${esc(city.heroAlt)}" width="900" height="600" loading="lazy" decoding="async">
+</div>
+</div></section>
+
+<section class="section"><div class="container">
+<p class="eyebrow">${esc(city.name)}, ${esc(city.state)} reviews</p>
+<h2>${AGG_RATING.value}-star reviews from ${esc(city.name)} homeowners</h2>
+${reviewGrid(reviews)}
+</div></section>
+
+<section class="section section-alt"><div class="container">
+<p class="eyebrow">${esc(service.shortName)} FAQ</p>
+<h2>Everything ${esc(city.name)} homeowners ask us</h2>
+${faqBlock(service.faqs, ctx)}
+</div></section>
+
+<section class="section"><div class="container">
+<p class="eyebrow">Other ${esc(city.name)} services</p>
+<h2>Also serving ${esc(city.name)} with</h2>
+<div class="service-grid">
+${otherServices
+  .map(
+    (s) => `<article class="service-card"><h3>${esc(s.shortName)}</h3><p>${esc(s.tagline)}</p><a class="link" href="/locations/${city.slug}/${s.slug}">${esc(s.shortName)} in ${esc(city.name)} &rarr;</a></article>`
+  )
+  .join("")}
+</div>
+</div></section>
+
+<section class="section section-alt"><div class="container split">
+<div>
+<h2>Firm ${esc(service.shortName.toLowerCase())} quote in ${esc(city.name)}, ${esc(city.state)}</h2>
+<p>Every ${esc(service.shortName.toLowerCase())} estimate in ${esc(city.name)} is free and delivered in writing before any work starts. We cover every zip code from ${esc(city.zips[0])} to ${esc(city.zips[city.zips.length - 1])}, and every neighborhood from ${esc(city.neighborhoods[0])} to ${esc(city.neighborhoods[city.neighborhoods.length - 1])}.</p>
+<div class="cta-row" style="margin-top:1rem">
+<a href="tel:${PHONE_TEL}" class="btn btn-primary">Call ${PHONE}</a>
+<a href="mailto:${EMAIL}" class="btn btn-outline" style="color:var(--brand-navy);border-color:var(--brand-navy)">Email us</a>
+</div>
+</div>
+<div>${quoteForm({ city, service, heading: `Book my ${service.shortName} estimate` })}</div>
+</div></section>
+</main>` +
+    footer();
+  return html;
+}
+
+function locationsIndex() {
+  const canonical = `${SITE}/locations`;
+  const title = `Service Areas | ${BIZ_NAME}`;
+  const description = `Gutter guards, seamless gutters, cleaning, and permanent LED lighting across ${cities.length}+ priority cities in South Jersey, Eastern PA, and Delaware.`;
+  const crumbs = [
+    { name: "Home", href: "/", item: `${SITE}/` },
+    { name: "Locations", href: canonical, item: canonical },
+  ];
+  const jsonLdBlocks = [
+    jsonLd(localBusinessSchema(null, canonical)),
+    jsonLd(breadcrumbSchema(crumbs.map((c) => ({ name: c.name, item: c.item })))),
+  ];
+  const html =
+    head({ title, description, canonical, ogImage: `${SITE}/hero-friendly-gutter-protection.jpg`, jsonLdBlocks }) +
+    header() +
+    breadcrumbs(crumbs.map((c) => ({ name: c.name, href: c.href }))) +
+    `<section class="hero"><div class="container"><div>
+<p class="eyebrow">Priority service areas</p>
+<h1>Cities we serve across NJ, PA &amp; DE</h1>
+<p class="lead">Dedicated crews cover ${cities.length} priority cities and 60+ surrounding towns. Pick your city for local pricing, reviews, and a free written estimate.</p>
+<div class="cta-row"><a href="tel:${PHONE_TEL}" class="btn btn-primary">Call ${PHONE}</a><a href="/service-areas" class="btn btn-outline">All 60+ towns</a></div>
+</div><div>${quoteForm({ city: null, service: null, heading: "Not sure which city?", sub: "Tell us your address and we'll route the closest crew." })}</div></div></section>
+<main id="main"><section class="section"><div class="container">
+<h2>Choose your city</h2>
+<div class="service-grid">
+${cities
+  .map(
+    (c) => `<article class="service-card"><h3>${esc(c.name)}, ${esc(c.state)}</h3><p>${esc(c.zips.join(" &middot; "))}</p><a class="link" href="/locations/${c.slug}">Explore ${esc(c.name)} services &rarr;</a></article>`
+  )
+  .join("")}
+</div>
+</div></section></main>` +
+    footer();
+  return html;
+}
+
+function sitemapXml() {
+  const today = new Date().toISOString().slice(0, 10);
+  const urls = [];
+  const push = (loc, priority, changefreq = "weekly") =>
+    urls.push({ loc, lastmod: today, priority: priority.toFixed(2), changefreq });
+
+  push(SITE + "/", 1.0, "weekly");
+  push(SITE + "/gutters", 0.95);
+  push(SITE + "/lighting", 0.95);
+  push(SITE + "/gutter-services", 0.9);
+  push(SITE + "/services", 0.9);
+  push(SITE + "/gutter-cleaning", 0.9);
+  push(SITE + "/gutter-installation", 0.9);
+  push(SITE + "/gutter-repair", 0.85);
+  push(SITE + "/downspout-services", 0.85);
+  push(SITE + "/fascia-soffit-repair", 0.8);
+  push(SITE + "/seamless-gutters", 0.9);
+  push(SITE + "/same-day-gutter-service", 0.8);
+  push(SITE + "/reviews", 0.85);
+  push(SITE + "/faq", 0.8);
+  push(SITE + "/blog", 0.7);
+  push(SITE + "/service-areas", 0.85);
+  push(SITE + "/locations", 0.9);
+  push(SITE + "/privacy", 0.3);
+  push(SITE + "/terms", 0.3);
+
+  cities.forEach((c) => {
+    push(`${SITE}/locations/${c.slug}`, c.priority);
+    services.forEach((s) => push(`${SITE}/locations/${c.slug}/${s.slug}`, Math.min(0.95, c.priority)));
+  });
+
+  const existingCityFiles = [
+    "aberdeen-md","alloway-nj","atlantic-city-nj","beachwood-nj","bear-de","bensalem-pa","brick-nj","brigantine-nj","bristol-pa","bryn-mawr-pa","burlington-nj","camden-nj","cape-may-court-house-nj","cape-may-nj","carneys-point-nj","cherry-hill-nj","chester-pa","collingswood-nj","downingtown-pa","doylestown-pa","egg-harbor-township-nj","exton-pa","florence-nj","freehold-nj","glassboro-nj","haddonfield-nj","hamilton-nj","hammonton-nj","howell-nj","jackson-nj","king-of-prussia-pa","lawrenceville-nj","levittown-pa","manchester-township-nj","marlton-nj","mays-landing-nj","medford-nj","media-pa","middletown-de","moorestown-nj","mount-ephraim-nj","mount-laurel-nj","mullica-hill-nj","new-castle-de","newark-de","norristown-pa","ocean-city-nj","paulsboro-nj","pemberton-nj","pennsauken-nj","philadelphia-pa","princeton-nj","salem-nj","sewell-nj","springfield-pa","toms-river-nj","trenton-nj","upper-darby-pa","voorhees-nj","west-chester-pa","west-deptford-nj","wildwood-nj","willingboro-nj","willow-grove-pa","wilmington-de","woodbury-nj","yardley-pa",
+  ];
+  existingCityFiles.forEach((slug) => push(`${SITE}/service-areas/${slug}`, 0.75));
+
+  const blogSlugs = [
+    "4th-july-led-lighting-nj","5-signs-gutters-need-guards","best-gutter-guards-pine-needles-nj","best-time-gutter-guards-nj","gutter-cleaning-cost-south-jersey-2026","gutter-cleaning-vs-guards-cost","gutter-guard-cost-cherry-hill-nj","gutter-guard-installer-questions","gutter-guard-roi-south-jersey","gutter-guards-guide-south-jersey","gutter-guards-mosquito-prevention","gutter-guards-prevent-foundation-damage","gutter-maintenance-checklist-nj","gutterglove-vs-leaffilter","hurricane-season-gutter-guards-nj-2026","july-gutter-guard-install-nj","ladder-safety-gutters-lighting","led-outdoor-lighting-energy-savings-guide","oelo-lighting-color-themes","oelo-vs-diy-professional-install","oelo-vs-gemstone-vs-trimlight","outdoor-lighting-color-schemes","outdoor-lighting-security-nj","permanent-lighting-holiday-transform","permanent-lighting-home-value","permanent-lights-cost-south-jersey","permanent-lights-vs-christmas-lights","permanent-vs-traditional-lighting","pine-needles-gutters-micro-mesh-solution","prevent-ice-dams-gutter-guards","recent-gutter-guard-projects","smart-home-lighting-guide","south-jersey-storm-season-gutter-prep","summer-backyard-led-lighting","top-5-gutter-guard-mistakes-nj-homeowners","why-gutter-guards-essential-south-jersey",
+  ];
+  blogSlugs.forEach((slug) => push(`${SITE}/${slug}`, 0.55, "monthly"));
+
+  const body = urls
+    .map(
+      (u) => `<url><loc>${u.loc}</loc><lastmod>${u.lastmod}</lastmod><changefreq>${u.changefreq}</changefreq><priority>${u.priority}</priority></url>`
+    )
+    .join("\n");
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${body}
+</urlset>
+`;
+}
+
+function robotsTxt() {
+  return `User-agent: *
+Allow: /
+Disallow: /_restore/
+
+Sitemap: ${SITE}/sitemap.xml
+`;
+}
+
+async function run() {
+  let count = 0;
+  await write("locations/index.html", locationsIndex());
+  count++;
+  for (const city of cities) {
+    await write(`locations/${city.slug}/index.html`, cityHub(city));
+    count++;
+    for (const service of services) {
+      await write(`locations/${city.slug}/${service.slug}/index.html`, serviceCityPage(city, service));
+      count++;
+    }
+  }
+  await write("sitemap.xml", sitemapXml());
+  await write("robots.txt", robotsTxt());
+  console.log(`Generated ${count} pages plus sitemap.xml and robots.txt.`);
+}
+
+run().catch((err) => {
+  console.error(err);
+  process.exit(1);
+});
