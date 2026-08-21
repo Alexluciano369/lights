@@ -1,10 +1,16 @@
 export const services = [
   {
     slug: "gutter-guards",
-    name: "Gutter Guards & LeafBlaster Pro Micro-Mesh Protection",
+    name: "LeafBlaster Pro Micro-Mesh Gutter Guards",
     shortName: "Gutter Guards",
-    tagline: "Stop cleaning gutters forever with LeafBlaster Pro certified micro-mesh.",
-    keywordFocus: "gutter guards, LeafBlaster Pro, micro-mesh gutter protection",
+    tagline: "Top-rated gutter guard installation with LeafBlaster Pro micro-mesh — end gutter cleaning for good.",
+    keywordFocus: "gutter guards, gutter guard installation, gutter guards near me, LeafBlaster Pro micro-mesh gutter guards, permanent gutter guard solutions",
+    serviceTypes: [
+      "Gutter Guard Installation",
+      "Micro-Mesh Gutter Guards",
+      "Gutter Guards",
+      "LeafBlaster Pro Installation",
+    ],
     heroPitch:
       "Stainless-steel micro-mesh keeps every leaf, pine needle, shingle grit, and seed pod out of your gutters — while letting every drop of rainwater in.",
     benefits: [
