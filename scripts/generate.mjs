@@ -134,11 +134,26 @@ function faqSchema(faqs, ctx) {
 
 const jsonLd = (obj) => `<script type="application/ld+json">${JSON.stringify(obj)}</script>`;
 
+// Single source of truth for the site's Content-Security-Policy.
+// Every host listed here was taken from an exhaustive sweep of the resources the
+// site actually loads (analytics, fonts, stock imagery, the YouTube embed, the
+// lead database and the lead email relay). Nothing else may load.
+const CSP =
+  "default-src 'self'; " +
+  "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://ccleangutters.agents.runlobster.com https://bolt.new https://app.trysoro.com; " +
+  "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://app.trysoro.com; " +
+  "img-src 'self' data: blob: https://images.pexels.com https://cleangutterslighting-prod.netlify.app https://www.google-analytics.com https://www.googletagmanager.com https://img.youtube.com https://i.ytimg.com https://app.trysoro.com; " +
+  "font-src 'self' data: https://fonts.gstatic.com https://app.trysoro.com; " +
+  "connect-src 'self' https://cpbexrtitabqgrcfucbm.supabase.co https://formsubmit.co https://www.googletagmanager.com https://www.google-analytics.com https://analytics.google.com https://ccleangutters.agents.runlobster.com https://app.trysoro.com; " +
+  "frame-src https://www.youtube.com https://www.youtube-nocookie.com https://app.trysoro.com; " +
+  "object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests";
+
 function head({ title, description, canonical, ogImage, jsonLdBlocks, geo }) {
   return `<!doctype html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="${CSP}">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#1e3a5f">
 <title>${esc(title)}</title>
@@ -241,12 +256,12 @@ function quoteForm({ city, service, heading = "Get your free estimate", sub = "S
 <h2>${esc(heading)}</h2>
 <p class="sub">${esc(sub)}</p>
 <div class="form-row grid-2">
-<div class="form-field"><label for="lf-name">Your name</label><input id="lf-name" name="name" type="text" autocomplete="name" required></div>
-<div class="form-field"><label for="lf-phone">Phone</label><input id="lf-phone" name="phone" type="tel" autocomplete="tel" required></div>
+<div class="form-field"><label for="lf-name">Your name</label><input id="lf-name" name="name" type="text" autocomplete="name" maxlength="200" required></div>
+<div class="form-field"><label for="lf-phone">Phone</label><input id="lf-phone" name="phone" type="tel" autocomplete="tel" maxlength="50" required></div>
 </div>
 <div class="form-row grid-2">
-<div class="form-field"><label for="lf-email">Email</label><input id="lf-email" name="email" type="email" autocomplete="email" required></div>
-<div class="form-field"><label for="lf-address">Address / city</label><input id="lf-address" name="address" type="text" autocomplete="street-address" value="${esc(cityFull)}"></div>
+<div class="form-field"><label for="lf-email">Email</label><input id="lf-email" name="email" type="email" autocomplete="email" maxlength="320" required></div>
+<div class="form-field"><label for="lf-address">Address / city</label><input id="lf-address" name="address" type="text" autocomplete="street-address" maxlength="300" value="${esc(cityFull)}"></div>
 </div>
 <div class="form-row">
 <div class="form-field"><label for="lf-service">Service</label>
@@ -258,7 +273,7 @@ ${services
 </select></div>
 </div>
 <div class="form-row">
-<div class="form-field"><label for="lf-message">Anything we should know?</label><textarea id="lf-message" name="message" rows="3" placeholder="Rooflines, timeline, questions..."></textarea></div>
+<div class="form-field"><label for="lf-message">Anything we should know?</label><textarea id="lf-message" name="message" rows="3" maxlength="5000" placeholder="Rooflines, timeline, questions..."></textarea></div>
 </div>
 <button class="btn btn-primary" type="submit" style="margin-top: 1rem; width: 100%;">Get my free estimate</button>
 <p class="form-status" role="status" aria-live="polite"></p>

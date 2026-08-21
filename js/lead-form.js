@@ -44,17 +44,20 @@
       if (status) { status.className = "form-status"; status.textContent = ""; }
 
       var data = Object.fromEntries(new FormData(form).entries());
+      function cap(value, max) {
+        return String(value == null ? "" : value).slice(0, max);
+      }
       var payload = {
-        name: data.name || "",
-        email: data.email || "",
-        phone: data.phone || "",
-        address: data.address || "",
-        city: form.dataset.city || data.city || "",
-        service: data.service || form.dataset.service || "",
-        message: data.message || "",
-        page_url: window.location.href,
-        referrer: document.referrer || "",
-        user_agent: navigator.userAgent || "",
+        name: cap(data.name, 200),
+        email: cap(data.email, 320),
+        phone: cap(data.phone, 50),
+        address: cap(data.address, 300),
+        city: cap(form.dataset.city || data.city, 120),
+        service: cap(data.service || form.dataset.service, 100),
+        message: cap(data.message, 5000),
+        page_url: cap(window.location.href, 2000),
+        referrer: cap(document.referrer, 2000),
+        user_agent: cap(navigator.userAgent, 500),
       };
 
       Promise.allSettled([submitLead(payload), emailNotify(payload)])
