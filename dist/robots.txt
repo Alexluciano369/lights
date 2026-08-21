@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /_restore/
+
+Sitemap: https://cleangutterslighting.com/sitemap.xml
