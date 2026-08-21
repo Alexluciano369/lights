@@ -2,7 +2,7 @@ import { mkdir, writeFile, readdir, stat, copyFile, rm } from "node:fs/promises"
 import { existsSync } from "node:fs";
 import { dirname, resolve, join, relative } from "node:path";
 import { fileURLToPath } from "node:url";
-import { cities, REGION_NOTES } from "../data/cities.mjs";
+import { cities, REGION_NOTES, ECO_PROFILES } from "../data/cities.mjs";
 import { services, serviceMap } from "../data/services.mjs";
 import { testimonials } from "../data/testimonials.mjs";
 
@@ -414,6 +414,45 @@ ${cities.slice(0, 8).map((c) => `<li><a href="/locations/${c.slug}">${esc(c.name
 </body></html>`;
 }
 
+function ecoContext(city) {
+  const p = ECO_PROFILES[city.region] || ECO_PROFILES.wooded;
+  const ctx = {
+    cityName: city.name,
+    state: city.state,
+    stateFull: city.stateFull,
+    countyName: city.county || `the ${city.name} area`,
+  };
+  return `<section class="section"><div class="container">
+<p class="eyebrow">${esc(p.label)} &middot; ${esc(city.name)}, ${esc(city.state)}</p>
+<h2>Why ${esc(city.name)} Homes Face Unique Gutter Challenges</h2>
+${p.paragraphs.map((para) => `<p style="max-width:75ch;margin-bottom:0.9rem">${esc(interp(para, ctx))}</p>`).join("")}
+<div class="benefit-grid" style="margin-top:1.5rem">
+${p.features.map((f) => `<article class="benefit-card"><h3>${esc(interp(f.title, ctx))}</h3><p>${esc(interp(f.body, ctx))}</p></article>`).join("")}
+</div>
+<p style="max-width:75ch;margin-top:1.25rem;color:var(--brand-navy)"><strong>Recommended for ${esc(city.name)}:</strong> ${esc(interp(p.solution, ctx))} <a href="/gutter-guards" style="color:var(--brand-navy);font-weight:600;text-decoration:underline">LeafBlaster Pro Gutter Guard Installation in ${esc(city.name)} &rarr;</a></p>
+</div></section>`;
+}
+
+function localCityFaqs(city, service) {
+  const p = ECO_PROFILES[city.region] || ECO_PROFILES.wooded;
+  const stateCode = city.state;
+  const countyName = city.county || `the ${city.name} area`;
+  return [
+    {
+      q: `Why do standard gutter screens fail against ${city.name}'s tree canopy?`,
+      a: `${p.challenge} In ${city.name}, ${stateCode}, that is exactly why we install LeafBlaster Pro 316 stainless micro-mesh instead of a slotted screen or foam insert.`,
+    },
+    {
+      q: `How do freeze-thaw cycles and winter weather in ${countyName} affect micro-mesh guards?`,
+      a: `${countyName} sees repeated freeze-thaw cycles from December through March. Rigid 316 stainless micro-mesh, mounted on a powder-coated aluminum sub-frame, does not warp, sag, or crack under ice load — the reason we install LeafBlaster Pro exclusively on ${city.name} homes rather than pop-in plastic or foam inserts.`,
+    },
+    {
+      q: `Do you provide same-day estimates and installation in ${city.name}, ${stateCode}?`,
+      a: `Yes. Free written estimates in ${city.name}, ${stateCode} are typically delivered the same day you call, and gutter cleaning can often be scheduled the same day before noon. ${service ? `${service.shortName} installs` : "Gutter guard, seamless gutter, and permanent lighting installs"} in ${city.name} are usually booked within 3–7 business days. Call ${PHONE} to lock in a slot.`,
+    },
+  ];
+}
+
 function cityHub(city) {
   const canonical = `${SITE}/locations/${city.slug}`;
   const title = `Gutter Guards & Permanent Lighting in ${city.name}, ${city.state} | ${BIZ_NAME}`.slice(0, 60);
@@ -428,6 +467,7 @@ function cityHub(city) {
   const nearby = (city.nearbyTowns || []).slice(0, 4);
   const nearbyText = nearby.length ? nearby.join(", ") : "";
   const faqs = [
+    ...localCityFaqs(city, null),
     {
       q: `What services does ${BIZ_NAME} offer in ${city.name}, ${city.state}?`,
       a: `We install LeafBlaster Pro micro-mesh gutter guards, seamless 5\" and 6\" aluminum gutters, permanent Oelo-style LED roofline lighting, and provide professional gutter cleaning and inspection throughout ${city.name}${city.county ? ` and the broader ${city.county} area` : ""}.`,
@@ -437,20 +477,8 @@ function cityHub(city) {
       a: `We cover every ${city.name} neighborhood including ${city.neighborhoods.join(", ")} and the ${city.zips.join(", ")} zip codes${nearbyText ? `, and route the same crews through nearby ${nearbyText}` : ""}.`,
     },
     {
-      q: `What debris is worst for gutters in ${city.name}?`,
-      a: `${regionNote} That is exactly what our LeafBlaster Pro micro-mesh install is engineered to stop for ${city.name} homeowners.`,
-    },
-    {
-      q: `Do you offer free estimates in ${city.name}?`,
-      a: `Yes. Every quote in ${city.name}, ${city.state} is free, on-site, and delivered in writing before any work is scheduled. Call ${PHONE} or use the form on this page.`,
-    },
-    {
       q: `Are you insured to work in ${city.stateFull}?`,
       a: `Yes. We carry full general liability, workers' comp, and required ${city.stateFull} home-improvement contractor registration. Certificates available on request.`,
-    },
-    {
-      q: `How quickly can you get to ${city.name}?`,
-      a: `Most ${city.name} homes are scheduled within 3–7 business days. For gutter cleaning we can often send a crew the same day if you call before noon.`,
     },
   ];
   const jsonLdBlocks = [
@@ -484,12 +512,8 @@ function cityHub(city) {
 </div></section>` +
     `<section class="trust-strip"><div class="container row"><span><strong>${esc(city.county || "")}</strong>${city.county ? " &middot; " : ""}<strong>Zip codes served:</strong> ${city.zips.map((z) => esc(z)).join(", ")}</span><span><strong>Neighborhoods:</strong> ${city.neighborhoods.slice(0, 4).map((n) => esc(n)).join(", ")}</span>${nearbyText ? `<span><strong>Also near:</strong> ${esc(nearbyText)}</span>` : ""}</div></section>` +
     `<main id="main">
-<section class="section"><div class="container">
-<p class="eyebrow">Local context &middot; ${esc(city.name)}, ${esc(city.state)}</p>
-<h2>Why ${esc(city.name)} rooflines need the right protection</h2>
-<p style="max-width:75ch">${esc(regionNote)}</p>
-${nearbyText ? `<p style="max-width:75ch;margin-top:0.75rem">The same ${esc(city.name)} crew also services nearby <strong>${esc(nearbyText)}</strong>, so scheduling routes stay tight and quotes stay consistent across ${esc(city.county || city.stateFull)}.</p>` : ""}
-</div></section>
+${ecoContext(city)}
+${nearbyText ? `<section class="section"><div class="container"><p style="max-width:75ch">The same ${esc(city.name)} crew also services nearby <strong>${esc(nearbyText)}</strong>, so scheduling routes stay tight and quotes stay consistent across ${esc(city.county || city.stateFull)}.</p></div></section>` : ""}
 
 <section class="section section-alt"><div class="container">
 <p class="eyebrow">Every service in ${esc(city.name)}</p>
@@ -497,7 +521,7 @@ ${nearbyText ? `<p style="max-width:75ch;margin-top:0.75rem">The same ${esc(city
 <div class="service-grid">
 ${services
   .map(
-    (s) => `<article class="service-card"><h3>${esc(s.shortName)} in ${esc(city.name)}, ${esc(city.state)}</h3><p>${esc(s.tagline)}</p><a class="link" href="/locations/${city.slug}/${s.slug}">${esc(s.slug === "gutter-guards" ? `LeafBlaster Pro gutter guard installation in ${city.name}` : `${s.shortName} in ${city.name}`)} &rarr;</a></article>`
+    (s) => `<article class="service-card"><h3>${esc(s.shortName)} in ${esc(city.name)}, ${esc(city.state)}</h3><p>${esc(s.tagline)}</p><a class="link" href="/locations/${city.slug}/${s.slug}">${esc(s.slug === "gutter-guards" ? `LeafBlaster Pro Gutter Guard Installation in ${city.name}` : `${s.shortName} in ${city.name}`)} &rarr;</a></article>`
   )
   .join("")}
 </div>
@@ -562,20 +586,7 @@ function serviceCityPage(city, service) {
   const regionNote = REGION_NOTES[city.region] || REGION_NOTES.wooded;
   const nearby = (city.nearbyTowns || []).slice(0, 4);
   const nearbyText = nearby.length ? nearby.join(", ") : "";
-  const localFaqs = [
-    {
-      q: `Do you install ${service.shortName.toLowerCase()} throughout ${city.county || city.name}?`,
-      a: `Yes. Our ${city.name} crews cover every ${city.name} neighborhood — ${city.neighborhoods.slice(0, 4).join(", ")} — and the ${city.zips.join(", ")} zip codes${nearbyText ? `, plus nearby ${nearbyText}` : ""}.`,
-    },
-    {
-      q: `Why does ${city.name} need ${service.shortName.toLowerCase()} specifically?`,
-      a: `${regionNote}`,
-    },
-    {
-      q: `How fast can you start a ${service.shortName.toLowerCase()} project in ${city.name}?`,
-      a: `Most ${city.name} ${service.shortName.toLowerCase()} projects are scheduled within 3–7 business days after your free written estimate. Call ${PHONE} to lock in a date.`,
-    },
-  ];
+  const localFaqs = localCityFaqs(city, service);
   const combinedFaqs = [...service.faqs, ...localFaqs];
   const jsonLdBlocks = [
     jsonLd(localBusinessSchema(city, canonical)),
@@ -609,12 +620,8 @@ function serviceCityPage(city, service) {
 </div></section>` +
     `<section class="trust-strip"><div class="container row"><span><strong>${esc(city.county || city.stateFull)}</strong>${city.county ? ` &middot; ${esc(city.stateFull)}` : ""}</span><span><strong>Zip codes:</strong> ${city.zips.map((z) => esc(z)).join(", ")}</span><span><strong>Neighborhoods:</strong> ${city.neighborhoods.slice(0, 3).map((n) => esc(n)).join(", ")}</span>${nearbyText ? `<span><strong>Also near:</strong> ${esc(nearbyText)}</span>` : ""}</div></section>` +
     `<main id="main">
-<section class="section"><div class="container">
-<p class="eyebrow">${esc(city.name)} local context</p>
-<h2>Why ${esc(service.shortName.toLowerCase())} matters in ${esc(city.name)}, ${esc(city.state)}</h2>
-<p style="max-width:75ch">${esc(regionNote)}</p>
-${nearbyText ? `<p style="max-width:75ch;margin-top:0.75rem">The same ${esc(city.name)} crew routes through nearby <strong>${esc(nearbyText)}</strong> most weeks, so ${esc(city.county || city.stateFull)} homeowners get consistent pricing and scheduling.</p>` : ""}
-</div></section>
+${ecoContext(city)}
+${nearbyText ? `<section class="section"><div class="container"><p style="max-width:75ch">The same ${esc(city.name)} crew routes through nearby <strong>${esc(nearbyText)}</strong> most weeks, so ${esc(city.county || city.stateFull)} homeowners get consistent pricing and scheduling on ${esc(service.shortName.toLowerCase())} projects.</p></div></section>` : ""}
 
 <section class="section section-alt"><div class="container">
 <p class="eyebrow">Why ${esc(city.name)} homeowners choose us</p>
@@ -657,7 +664,7 @@ ${faqBlock(combinedFaqs, ctx)}
 <div class="service-grid">
 ${otherServices
   .map(
-    (s) => `<article class="service-card"><h3>${esc(s.shortName)}</h3><p>${esc(s.tagline)}</p><a class="link" href="/locations/${city.slug}/${s.slug}">${esc(s.slug === "gutter-guards" ? `LeafBlaster Pro gutter guard installation in ${city.name}` : `${s.shortName} in ${city.name}`)} &rarr;</a></article>`
+    (s) => `<article class="service-card"><h3>${esc(s.shortName)}</h3><p>${esc(s.tagline)}</p><a class="link" href="/locations/${city.slug}/${s.slug}">${esc(s.slug === "gutter-guards" ? `LeafBlaster Pro Gutter Guard Installation in ${city.name}` : `${s.shortName} in ${city.name}`)} &rarr;</a></article>`
   )
   .join("")}
 </div>

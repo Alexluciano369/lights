@@ -23,7 +23,7 @@ export const cities = [
     state: "NJ",
     stateFull: "New Jersey",
     county: "Camden County",
-    region: "wooded",
+    region: "historic",
     nearbyTowns: ["Cherry Hill", "Marlton", "Gibbsboro", "Berlin"],
     zips: ["08043"],
     neighborhoods: ["Sturbridge Lakes", "Signal Hill", "Alluvium", "Centennial", "Osage"],
@@ -41,7 +41,7 @@ export const cities = [
     state: "NJ",
     stateFull: "New Jersey",
     county: "Burlington County",
-    region: "wooded",
+    region: "historic",
     nearbyTowns: ["Marlton", "Moorestown", "Cherry Hill", "Medford"],
     zips: ["08054"],
     neighborhoods: ["Bridlewood", "Larchmont", "Rancocas Woods", "Ramblewood", "Holiday Village"],
@@ -149,7 +149,7 @@ export const cities = [
     state: "PA",
     stateFull: "Pennsylvania",
     county: "Bucks County",
-    region: "wooded",
+    region: "urban",
     nearbyTowns: ["Feasterville", "Trevose", "Bristol", "Levittown"],
     zips: ["19020"],
     neighborhoods: ["Andalusia", "Trevose", "Cornwells Heights", "Eddington"],
@@ -167,7 +167,7 @@ export const cities = [
     state: "DE",
     stateFull: "Delaware",
     county: "New Castle County",
-    region: "historic",
+    region: "urban",
     nearbyTowns: ["Hockessin", "Greenville", "Newark", "Claymont"],
     zips: ["19801", "19802", "19803", "19806", "19807"],
     neighborhoods: ["Trolley Square", "Greenville", "Hockessin", "Wawaset Park", "Highlands"],
@@ -231,3 +231,87 @@ export const REGION_NOTES = {
   wooded:
     "Modern developments backing to woodland belts see steady acorn, twig, and mixed-hardwood debris load, and older lots keep their original oaks and maples right over the roofline. Micro-mesh handles both without the seasonal ladder work.",
 };
+
+export const ECO_PROFILES = {
+  pinelands: {
+    label: "Pinelands & Heavily Wooded",
+    treeCanopy: "Pitch pine needles, cedar sap, oak catkins, and fine pine debris drift onto rooflines here almost every month of the year.",
+    challenge: "Acidic pitch pine needles slip straight through slotted screens and mat into the trough, holding moisture against the aluminum until the seams corrode and back-pitch to the fascia.",
+    solution: "LeafBlaster Pro surgical-grade 316 stainless steel micro-mesh blocks micro pine needles, sheds resin, and resists organic decay for the life of the roof.",
+    paragraphs: [
+      "{{cityName}} sits inside the pine-and-oak forest belt that defines this part of {{stateFull}}. Pitch pine needles, cedar sap, oak catkins, and fine pine grit drop steadily from spring through late winter, and standard slotted screens simply strain them into the trough instead of shedding them.",
+      "Once those needles pack in, water back-pitches behind the fascia and the aluminum trough starts to corrode from the inside — a specific failure mode we see on almost every un-guarded roof in {{cityName}}, {{state}}. Summer thunderstorms and the freeze-thaw pattern common to {{countyName}} then wedge that mat of debris in place until it lifts the drip edge.",
+      "The fix is not a bigger screen — it is a 316 stainless steel micro-mesh installed on a rigid, powder-coated aluminum frame. LeafBlaster Pro gutter guards keep every pine needle, catkin, and oak tassel on the roof surface where wind can sweep it off, and the marine-grade mesh does not rot, rust, or sag under wet debris.",
+    ],
+    features: [
+      { title: "Pine-needle proof", body: "Surgical-grade 316 stainless micro-mesh (50-micron aperture) is finer than a pitch-pine needle, so nothing bypasses the guard into the {{cityName}} trough." },
+      { title: "Resin & sap resistant", body: "Cedar sap and pine resin bead off the stainless mesh instead of gluing debris to the guard, keeping flow rates constant year after year." },
+      { title: "Frame that does not rot", body: "Powder-coated aluminum sub-frame carries the mesh above the trough, so packed pine debris cannot back up against the fascia in {{cityName}}, {{state}}." },
+    ],
+  },
+  wooded: {
+    label: "Pinelands & Heavily Wooded",
+    treeCanopy: "Mixed hardwood leaves, pine needles, acorns, twigs, and helicopter seeds from the woodland belts surrounding the neighborhood.",
+    challenge: "Heavy fall drops of oak leaves and acorns combine with pine needles to plug slotted screens and rot fascia and rafter tails within a single season.",
+    solution: "LeafBlaster Pro 316 stainless steel micro-mesh on a rigid aluminum frame keeps every leaf, needle, and acorn on the roof surface where wind carries it off.",
+    paragraphs: [
+      "{{cityName}} backs onto mature woodland — the mixed oak, maple, and pine belts common to {{countyName}} drop a constant load of leaves, acorns, twigs, and pine needles from March through December.",
+      "On homes with slotted screens or open gutters, that debris packs in every fall, water back-pitches behind the fascia, and rafter tails start to rot within two or three seasons. The freeze-thaw pattern in {{stateFull}} then splits the miters and lifts the drip edge on the north-facing runs.",
+      "A 316 stainless micro-mesh on a rigid, powder-coated frame is the only guard we install on wooded {{cityName}} lots. LeafBlaster Pro's mesh is finer than a pine needle and its frame carries the mesh above the trough, so debris blows off instead of matting in.",
+    ],
+    features: [
+      { title: "Handles heavy leaf load", body: "Rigid mesh withstands the weight of wet oak leaves and acorns without dishing or sagging into the {{cityName}} trough." },
+      { title: "Blocks pine needles", body: "50-micron 316 stainless aperture stops every pitch-pine and white-pine needle that reaches the roofline." },
+      { title: "Lifetime no-clog warranty", body: "Every LeafBlaster Pro install in {{cityName}} is backed by a manufacturer no-clog warranty and our own lifetime workmanship warranty." },
+    ],
+  },
+  historic: {
+    label: "Mature Suburban & Historic Tree Canopies",
+    treeCanopy: "Century-old oaks and silver maples, mature sycamore leaves, dense autumn drop, and heavy spring helicopter seed (samara) load.",
+    challenge: "Massive volume clogs cause water to overflow behind the fascia, rotting rafter tails, staining brick, and flooding basements at the drip line.",
+    solution: "High-flow micro-mesh systems engineered to move 100+ inches of hourly rainfall alongside heavy leaf loads, mounted low-profile to protect historic rooflines.",
+    paragraphs: [
+      "{{cityName}} is defined by its mature tree canopy — the century-old oaks, silver maples, and sycamores that line every street in {{countyName}}. That canopy is beautiful, but it drops an enormous volume of leaves, samaras (maple helicopters), and seed pods onto the roofline three seasons a year.",
+      "Un-guarded gutters in {{cityName}}, {{state}} fill in a single storm. Once water overflows the trough, it runs behind the fascia and down the exterior wall — the exact failure mode that rots rafter tails, stains brick, and floods finished basements. Homes with slate or cedar detailing lose even more when a low-quality guard is bolted onto the shingle.",
+      "Our fix is a high-flow LeafBlaster Pro micro-mesh system, mounted low-profile so it disappears behind the drip edge on historic {{cityName}} homes. The mesh moves 100+ inches of hourly rainfall while the marine-grade stainless keeps every oak leaf, samara, and pine tassel out of the trough for the life of the roof.",
+    ],
+    features: [
+      { title: "High-flow micro-mesh", body: "Engineered to move 100+ inches of hourly rainfall — the volume {{cityName}} thunderstorms actually drop on a mature roof." },
+      { title: "Low-profile mount", body: "Installs behind the drip edge, so it disappears on slate, cedar, and historic rooflines throughout {{cityName}}, {{state}}." },
+      { title: "Fascia protection", body: "Overflow behind the fascia is the #1 cause of rot in {{cityName}} — micro-mesh keeps water on the correct side of the drip edge." },
+    ],
+  },
+  shore: {
+    label: "Coastal & Shoreline",
+    treeCanopy: "Coastal winds, salt air, sea spray, sandy roof grit, and stunted scrub pine drop a fine, corrosive debris load onto every roof.",
+    challenge: "Salt-air corrosion eats through cheap aluminum screens and vinyl guards within a few seasons, and Nor'easter wind uplift tears fasteners out of the drip edge.",
+    solution: "Anodized aluminum support frames paired with 316 marine-grade stainless steel mesh — the only combination that resists saltwater corrosion and wind uplift.",
+    paragraphs: [
+      "{{cityName}} sits on the {{stateFull}} coast, where salt air, sea spray, and Nor'easter wind loads punish every exposed roofline in {{countyName}}. Sandy roof grit, wind-blown pine tassels from the scrub pine belt, and salt-laden humidity are the debris profile no inland guard is engineered for.",
+      "Cheap aluminum screens and vinyl inserts corrode inside two or three seasons here. Wind uplift then peels them off the drip edge in the first serious Nor'easter and the trough fills with sand, salt, and debris — often overflowing directly onto vinyl siding and pressure-treated deck framing.",
+      "On the shore we only install LeafBlaster Pro's 316 marine-grade stainless mesh on an anodized aluminum frame with stainless fasteners. That is the same alloy family used on marina hardware — it resists saltwater corrosion, wind uplift, and sand abrasion for the life of the roof in {{cityName}}, {{state}}.",
+    ],
+    features: [
+      { title: "Marine-grade 316 mesh", body: "Same alloy used on marina hardware — resists saltwater and salt-air corrosion for the life of the {{cityName}} roof." },
+      { title: "Wind uplift rated", body: "Anodized aluminum frame with stainless fasteners stays put through Nor'easter wind loads that peel cheap guards off the drip edge." },
+      { title: "Sand & grit shedding", body: "50-micron mesh sheds coastal sand and scrub-pine debris instead of straining it into the trough." },
+    ],
+  },
+  urban: {
+    label: "Urban & Riverfront Corridors",
+    treeCanopy: "Dense street-level maples and honey locust, roof grit from aging asphalt shingle, urban dust, and airborne debris from the {{cityName}} skyline.",
+    challenge: "High roof-grit runoff and tightly spaced party walls mean any overflow damages brick, mortar joints, and shared foundations before the homeowner ever sees it.",
+    solution: "Rigid micro-mesh filtration paired with a downspout flush prevents grit-driven clogs and back-ups inside tight rowhome drainage configurations.",
+    paragraphs: [
+      "{{cityName}} is an urban corridor — dense street trees, aging asphalt-shingle roofs, and rowhome architecture that funnels every drop of water into a narrow shared drainage plane. Roof grit runoff, urban dust, and street-level maple leaves are the exact debris profile that plugs downspouts.",
+      "On tightly spaced {{cityName}} rowhomes, the second a gutter overflows, water is spilling directly onto brick, mortar joints, and shared party-wall foundations. There is no yard buffer — every overflow event is immediate structural damage in {{countyName}}.",
+      "We install LeafBlaster Pro's rigid micro-mesh on top of a full downspout flush and re-hang the trough at correct pitch for the run. That combination stops grit-driven clogs at the guard, keeps the downspout clear, and protects the brick and foundations of {{cityName}}, {{state}} row-home blocks.",
+    ],
+    features: [
+      { title: "Rigid micro-mesh", body: "Filters roof grit and urban dust that plug standard screens and dead-flat downspouts in {{cityName}}." },
+      { title: "Downspout flush included", body: "Every install pairs the guard with a full downspout flush and re-pitch — the only way to keep tight rowhome drainage moving." },
+      { title: "Brick & foundation protection", body: "Stops overflow onto brick and shared party-wall foundations that define {{cityName}}, {{state}} rowhome blocks." },
+    ],
+  },
+};
+
