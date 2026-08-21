@@ -1,12 +1,57 @@
-import { mkdir, writeFile } from "node:fs/promises";
+import { mkdir, writeFile, readdir, stat, copyFile, rm } from "node:fs/promises";
 import { existsSync } from "node:fs";
-import { dirname, resolve } from "node:path";
+import { dirname, resolve, join, relative } from "node:path";
 import { fileURLToPath } from "node:url";
 import { cities } from "../data/cities.mjs";
 import { services, serviceMap } from "../data/services.mjs";
 import { testimonials } from "../data/testimonials.mjs";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
+const OUT = resolve(ROOT, "dist");
+
+const SKIP_TOP = new Set([
+  "dist",
+  "node_modules",
+  "scripts",
+  "data",
+  "supabase",
+  ".env",
+  ".env.example",
+  ".bolt",
+  ".git",
+  "package.json",
+  "package-lock.json",
+  "serve.json",
+  "README.md",
+]);
+
+async function copyTree(src, dst) {
+  const entries = await readdir(src, { withFileTypes: true });
+  await mkdir(dst, { recursive: true });
+  for (const entry of entries) {
+    const from = join(src, entry.name);
+    const to = join(dst, entry.name);
+    if (entry.isDirectory()) {
+      await copyTree(from, to);
+    } else if (entry.isFile()) {
+      await copyFile(from, to);
+    }
+  }
+}
+
+async function copyStaticAssets() {
+  const entries = await readdir(ROOT, { withFileTypes: true });
+  for (const entry of entries) {
+    if (SKIP_TOP.has(entry.name)) continue;
+    const from = join(ROOT, entry.name);
+    const to = join(OUT, entry.name);
+    if (entry.isDirectory()) {
+      await copyTree(from, to);
+    } else if (entry.isFile()) {
+      await copyFile(from, to);
+    }
+  }
+}
 const SITE = "https://cleangutterslighting.com";
 const PHONE = "856-874-6640";
 const PHONE_TEL = "8568746640";
@@ -32,7 +77,7 @@ const interp = (tpl, ctx) =>
   String(tpl ?? "").replace(/{{\s*(\w+)\s*}}/g, (_, k) => ctx[k] ?? "");
 
 async function write(rel, content) {
-  const abs = resolve(ROOT, rel);
+  const abs = resolve(OUT, rel);
   await mkdir(dirname(abs), { recursive: true });
   await writeFile(abs, content, "utf8");
 }
@@ -793,6 +838,10 @@ Sitemap: ${SITE}/sitemap.xml
 }
 
 async function run() {
+  if (existsSync(OUT)) await rm(OUT, { recursive: true, force: true });
+  await mkdir(OUT, { recursive: true });
+  await copyStaticAssets();
+
   let count = 0;
   await write("locations/index.html", locationsIndex());
   count++;
@@ -810,7 +859,7 @@ async function run() {
   }
   await write("sitemap.xml", sitemapXml());
   await write("robots.txt", robotsTxt());
-  console.log(`Generated ${count} pages plus sitemap.xml and robots.txt.`);
+  console.log(`Built dist/ with ${count} generated pages plus sitemap.xml and robots.txt.`);
 }
 
 run().catch((err) => {
