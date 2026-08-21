@@ -181,7 +181,7 @@ function header() {
 <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">Menu</button>
 <nav id="primary-nav" class="primary-nav" aria-label="Primary">
 <a href="/">Home</a>
-<a href="/gutter-guards">Gutter Guards</a>
+<a href="/gutters">Gutter Guards</a>
 <a href="/lighting">Outdoor Lighting</a>
 <a href="/gutter-services">Services</a>
 <a href="/service-areas">Service Areas</a>
@@ -278,7 +278,7 @@ function footer() {
 <div>
 <h4>Services</h4>
 <ul style="list-style:none;display:grid;gap:0.4rem">
-${services.map((s) => `<li><a href="/${s.slug === "permanent-outdoor-lighting" ? "lighting" : s.slug}">${esc(s.shortName)}</a></li>`).join("")}
+${services.map((s) => `<li><a href="/${s.slug === "permanent-outdoor-lighting" ? "lighting" : s.slug === "gutter-guards" ? "gutters" : s.slug}">${esc(s.shortName)}</a></li>`).join("")}
 </ul>
 </div>
 <div>
@@ -291,6 +291,7 @@ ${cities.slice(0, 8).map((c) => `<li><a href="/locations/${c.slug}">${esc(c.name
 <div>
 <h4>Company</h4>
 <ul style="list-style:none;display:grid;gap:0.4rem">
+<li><a href="/gutter-guards">Best Gutter Guards Near Me</a></li>
 <li><a href="/reviews">Reviews</a></li>
 <li><a href="/faq">FAQ</a></li>
 <li><a href="/blog">Blog</a></li>
