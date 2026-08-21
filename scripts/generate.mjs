@@ -735,6 +735,7 @@ function sitemapXml() {
   push(SITE + "/faq", 0.8);
   push(SITE + "/blog", 0.7);
   push(SITE + "/blog/gutter-guards-vs-cleaning-south-jersey", 0.8, "monthly");
+  push(SITE + "/blog/best-gutter-guards-south-jersey-guide", 0.9, "monthly");
   push(SITE + "/service-areas", 0.85);
   push(SITE + "/locations", 0.9);
   push(SITE + "/privacy", 0.3);
