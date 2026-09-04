@@ -106,9 +106,15 @@ const PHONE_INTL = "+1-856-874-6640";
 const EMAIL = "cleangutters2008@gmail.com";
 const FOUNDING_DATE = "2009";
 const BIZ_NAME = "CleanGutters Lighting";
-const BIZ_ADDR = { street: "Cherry Hill, NJ", city: "Cherry Hill", region: "NJ", postal: "08002", country: "US" };
+const BIZ_ADDR = { city: "Cherry Hill", region: "NJ", postal: "08002", country: "US" };
 const BIZ_GEO = { lat: 39.9346, lng: -75.0307 };
-const AGG_RATING = { value: "4.9", count: "45" };
+const AGG_RATING = { value: "5.0", count: "36" };
+const SOCIAL_PROFILES = [
+  "https://www.facebook.com/profile.php?id=61583698254672",
+  "https://www.instagram.com/cleangutterslighting/",
+  "https://www.youtube.com/channel/UCdbhqMl4A5IMt_QVyYfrdtg",
+  "https://www.tiktok.com/@cleangutterslighting",
+];
 const HOURS = [
   { days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], open: "07:30", close: "18:00" },
   { days: ["Saturday"], open: "08:00", close: "15:00" },
@@ -173,7 +179,6 @@ function localBusinessSchema(city, canonical) {
     logo: SITE + "/logo.png",
     address: {
       "@type": "PostalAddress",
-      streetAddress: BIZ_ADDR.street,
       addressLocality: BIZ_ADDR.city,
       addressRegion: BIZ_ADDR.region,
       postalCode: BIZ_ADDR.postal,
@@ -183,7 +188,7 @@ function localBusinessSchema(city, canonical) {
     openingHoursSpecification,
     aggregateRating: { "@type": "AggregateRating", ratingValue: AGG_RATING.value, reviewCount: AGG_RATING.count },
     areaServed,
-    sameAs: [],
+    sameAs: SOCIAL_PROFILES,
     ...(canonical ? { mainEntityOfPage: canonical } : {}),
   };
 }
