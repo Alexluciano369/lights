@@ -961,8 +961,6 @@ function sitemapXml() {
   push(SITE + "/blog/best-gutter-guards-south-jersey-guide", 0.9, "monthly");
   push(SITE + "/service-areas", 0.85);
   push(SITE + "/locations", 0.9);
-  push(SITE + "/privacy", 0.3);
-  push(SITE + "/terms", 0.3);
 
   cities.forEach((c) => {
     services.forEach((s) => push(`${SITE}/locations/${c.slug}/${s.slug}`, Math.min(0.95, c.priority)));
