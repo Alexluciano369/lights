@@ -1,4 +1,4 @@
-import { mkdir, writeFile, readdir, stat, copyFile, rm } from "node:fs/promises";
+import { mkdir, writeFile, readFile, readdir, stat, copyFile, rm } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import { dirname, resolve, join, relative } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -50,6 +50,52 @@ async function copyStaticAssets() {
     } else if (entry.isFile()) {
       await copyFile(from, to);
     }
+  }
+}
+
+function placeFromServiceAreaSlug(slug) {
+  const parts = slug.split("-");
+  const state = parts.pop().toUpperCase();
+  const smallWords = new Set(["of", "the"]);
+  const city = parts
+    .map((part, index) => smallWords.has(part) && index > 0 ? part : part.charAt(0).toUpperCase() + part.slice(1))
+    .join(" ");
+  return `${city}, ${state}`;
+}
+
+async function postProcessHtmlTree(dir) {
+  const entries = await readdir(dir, { withFileTypes: true });
+  for (const entry of entries) {
+    const abs = join(dir, entry.name);
+    if (entry.isDirectory()) {
+      await postProcessHtmlTree(abs);
+      continue;
+    }
+    if (!entry.isFile() || !entry.name.endsWith(".html")) continue;
+
+    let html = await readFile(abs, "utf8");
+    const rel = relative(OUT, abs).replaceAll("\\", "/");
+    const cityMatch = rel.match(/^service-areas\/([^/]+)\.html$/);
+
+    if (cityMatch) {
+      const place = placeFromServiceAreaSlug(cityMatch[1]);
+      const title = `Gutter Guards ${place} | Free Estimate`;
+      const description = `Owner-installed micro-mesh gutter guards in ${place}. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.`;
+      html = html.replace(/<title>[^<]*<\/title>/i, `<title>${title}</title>`);
+      html = html.replace(/<meta name="description" content="[^"]*">/i, `<meta name="description" content="${description}">`);
+      html = html.replace(/<meta property="og:title" content="[^"]*">/i, `<meta property="og:title" content="${title}">`);
+      html = html.replace(/<meta property="og:description" content="[^"]*">/i, `<meta property="og:description" content="${description}">`);
+    } else if (rel === "service-areas.html") {
+      const title = "Gutter Service Areas | NJ, PA, DE & MD";
+      const description = "Owner-installed gutter guards, cleaning, repair and permanent roofline lighting across South Jersey, Eastern PA, Delaware and Northeast Maryland.";
+      html = html.replace(/<title>[^<]*<\/title>/i, `<title>${title}</title>`);
+      html = html.replace(/<meta name="description" content="[^"]*">/i, `<meta name="description" content="${description}">`);
+    }
+
+    if (!html.includes('/js/seo-tracking.js')) {
+      html = html.replace(/<\/body>/i, '<script src="/js/seo-tracking.js" defer></script></body>');
+    }
+    await writeFile(abs, html, "utf8");
   }
 }
 const SITE = "https://cleangutterslighting.com";
@@ -963,7 +1009,8 @@ async function run() {
   }
   await write("sitemap.xml", sitemapXml());
   await write("robots.txt", robotsTxt());
-  console.log(`Built dist/ with ${count} generated pages plus sitemap.xml and robots.txt.`);
+  await postProcessHtmlTree(OUT);
+  console.log(`Built dist/ with ${count} generated pages plus sitemap.xml, redirects, tracking, and robots.txt.`);
 }
 
 run().catch((err) => {
