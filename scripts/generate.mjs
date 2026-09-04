@@ -128,6 +128,14 @@ const esc = (s) =>
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#39;");
 
+const truncateWords = (value, max = 150) => {
+  const text = String(value ?? "").trim();
+  if (text.length <= max) return text;
+  const slice = text.slice(0, max + 1);
+  const boundary = slice.lastIndexOf(" ");
+  return `${slice.slice(0, boundary > 0 ? boundary : max).replace(/[\s,;:—-]+$/g, "")}.`;
+};
+
 const interp = (tpl, ctx) =>
   String(tpl ?? "").replace(/{{\s*(\w+)\s*}}/g, (_, k) => ctx[k] ?? "");
 
@@ -439,14 +447,14 @@ ${services.map((s) => `<li><a href="/${s.slug === "permanent-outdoor-lighting" ?
 <div>
 <h4>Top Service Areas</h4>
 <ul style="list-style:none;display:grid;gap:0.4rem">
-${cities.slice(0, 8).map((c) => `<li><a href="/locations/${c.slug}">${esc(c.name)}, ${esc(c.state)}</a></li>`).join("")}
+${cities.slice(0, 8).map((c) => `<li><a href="/service-areas/${c.slug}">${esc(c.name)}, ${esc(c.state)}</a></li>`).join("")}
 <li><a href="/service-areas">View all</a></li>
 </ul>
 </div>
 <div>
 <h4>Company</h4>
 <ul style="list-style:none;display:grid;gap:0.4rem">
-<li><a href="/gutter-guards">Best Gutter Guards Near Me</a></li>
+<li><a href="/gutters">Best Gutter Guards Near Me</a></li>
 <li><a href="/reviews">Reviews</a></li>
 <li><a href="/faq">FAQ</a></li>
 <li><a href="/blog">Blog</a></li>
@@ -481,7 +489,7 @@ ${p.paragraphs.map((para) => `<p style="max-width:75ch;margin-bottom:0.9rem">${e
 <div class="benefit-grid" style="margin-top:1.5rem">
 ${p.features.map((f) => `<article class="benefit-card"><h3>${esc(interp(f.title, ctx))}</h3><p>${esc(interp(f.body, ctx))}</p></article>`).join("")}
 </div>
-<p style="max-width:75ch;margin-top:1.25rem;color:var(--brand-navy)"><strong>Recommended for ${esc(city.name)}:</strong> ${esc(interp(p.solution, ctx))} <a href="/gutter-guards" style="color:var(--brand-navy);font-weight:600;text-decoration:underline">LeafBlaster Pro Gutter Guard Installation in ${esc(city.name)} &rarr;</a></p>
+<p style="max-width:75ch;margin-top:1.25rem;color:var(--brand-navy)"><strong>Recommended for ${esc(city.name)}:</strong> ${esc(interp(p.solution, ctx))} <a href="/gutters" style="color:var(--brand-navy);font-weight:600;text-decoration:underline">LeafBlaster Pro Gutter Guard Installation in ${esc(city.name)} &rarr;</a></p>
 </div></section>`;
 }
 
@@ -549,7 +557,7 @@ function cityHub(city) {
 <div>
 <p class="eyebrow">Serving ${esc(city.name)}, ${esc(city.state)} since 2009</p>
 <h1>Gutter Guards, Seamless Gutters &amp; Permanent Lighting in ${esc(city.name)}, ${esc(city.state)}</h1>
-<p class="lead">${esc(city.climate)} We install the systems that stop the problem — <a href="/gutter-guards" style="color:inherit;text-decoration:underline">LeafBlaster Pro micro-mesh gutter guards</a>, oversized seamless gutters, permanent LED roofline lighting, and hand-cleaning done right.</p>
+<p class="lead">${esc(city.climate)} We install the systems that stop the problem — <a href="/gutters" style="color:inherit;text-decoration:underline">LeafBlaster Pro micro-mesh gutter guards</a>, oversized seamless gutters, permanent LED roofline lighting, and hand-cleaning done right.</p>
 <div class="badges">
 <span class="badge">Certified LeafBlaster Pro Installer</span>
 <span class="badge">Lifetime Workmanship Warranty</span>
@@ -625,13 +633,13 @@ function serviceCityPage(city, service) {
     : `${service.shortName} in ${city.name}, ${city.state} | ${BIZ_NAME}`;
   const title = rawTitle.length > 65 ? `${isGuards ? "Best Gutter Guards" : service.shortName} in ${city.name}, ${city.state}` : rawTitle;
   const description = isGuards
-    ? `Looking for the best gutter guards in ${city.name}, ${city.state}? ${BIZ_NAME} installs premium LeafBlaster Pro micro-mesh gutter guards with a lifetime warranty. Call ${PHONE}.`.slice(0, 160)
-    : `${service.tagline} Local ${city.name}, ${city.state} crews with lifetime workmanship warranty. Free written estimate — call ${PHONE}.`.slice(0, 160);
+    ? truncateWords(`LeafBlaster Pro micro-mesh gutter guards in ${city.name}, ${city.state}. Owner-installed with a transferable lifetime warranty. Free estimate: ${PHONE}.`)
+    : truncateWords(`${service.tagline} Serving ${city.name}, ${city.state}. Free written estimate: ${PHONE}.`);
   const ogImage = `${SITE}/${city.hero}`;
   const crumbs = [
     { name: "Home", href: "/", item: `${SITE}/` },
     { name: "Service Areas", href: "/service-areas", item: `${SITE}/service-areas` },
-    { name: `${city.name}, ${city.state}`, href: `/locations/${city.slug}`, item: `${SITE}/locations/${city.slug}` },
+    { name: `${city.name}, ${city.state}`, href: `/service-areas/${city.slug}`, item: `${SITE}/service-areas/${city.slug}` },
     { name: service.shortName, href: canonical, item: canonical },
   ];
   const ctx = { cityName: city.name, state: city.state, stateFull: city.stateFull };
@@ -661,7 +669,7 @@ function serviceCityPage(city, service) {
 <div class="badges">
 <span class="badge">Certified installer</span>
 <span class="badge">Lifetime workmanship warranty</span>
-<span class="badge">${AGG_RATING.value} &starf; from ${AGG_RATING.count}+ homeowners</span>
+<span class="badge">${AGG_RATING.value} &starf; from ${AGG_RATING.count} Google reviews</span>
 </div>
 <div class="cta-row">
 <a href="#quote" class="btn btn-primary">Get free estimate</a>
@@ -765,7 +773,7 @@ function locationsIndex() {
 <div class="service-grid">
 ${cities
   .map(
-    (c) => `<article class="service-card"><h3>${esc(c.name)}, ${esc(c.state)}</h3><p>${esc(c.zips.join(" &middot; "))}</p><a class="link" href="/locations/${c.slug}">Explore ${esc(c.name)} services &rarr;</a></article>`
+    (c) => `<article class="service-card"><h3>${esc(c.name)}, ${esc(c.state)}</h3><p>${esc(c.zips.join(" &middot; "))}</p><a class="link" href="/service-areas/${c.slug}">Explore ${esc(c.name)} services &rarr;</a></article>`
   )
   .join("")}
 </div>
@@ -803,7 +811,7 @@ function gutterGuardsHub() {
 <div class="badges">
 <span class="badge">LeafBlaster Pro certified</span>
 <span class="badge">Lifetime workmanship warranty</span>
-<span class="badge">${AGG_RATING.value} &starf; from ${AGG_RATING.count}+ homeowners</span>
+<span class="badge">${AGG_RATING.value} &starf; from ${AGG_RATING.count} Google reviews</span>
 </div>
 <div class="cta-row">
 <a href="#quote" class="btn btn-primary">Get free gutter guard estimate</a>
@@ -858,7 +866,7 @@ ${faqBlock(svc.faqs, ctx)}
 function blogGutterGuardsVsCleaning() {
   const canonical = `${SITE}/blog/gutter-guards-vs-cleaning-south-jersey`;
   const title = `Best Gutter Guards Near Me: Why South Jersey Upgrades`;
-  const description = `Best gutter guards near me? See why South Jersey homeowners upgrade from cleaning to LeafBlaster Pro micro-mesh gutter guards. Call ${PHONE}.`.slice(0, 160);
+  const description = truncateWords(`Best gutter guards near me? See why South Jersey homeowners upgrade from cleaning to LeafBlaster Pro micro-mesh guards. Call ${PHONE}.`);
   const ogImage = `${SITE}/hero-friendly-gutter-protection.jpg`;
   const crumbs = [
     { name: "Home", href: "/", item: `${SITE}/` },
@@ -891,7 +899,7 @@ function blogGutterGuardsVsCleaning() {
     `<article class="section"><div class="container" style="max-width:820px">
 <p class="eyebrow">Gutter guards &middot; Buyer's guide</p>
 <h1>Best Gutter Guards Near Me: Why South Jersey Homeowners Are Upgrading</h1>
-<p class="lead">Between heavy oak pollen in the spring, severe summer storms, and thick autumn leaves across Camden and Burlington counties, South Jersey homes demand serious exterior maintenance. For homeowners in Cherry Hill, Voorhees, Marlton, and surrounding areas, the choice comes down to two options: paying for recurring manual cleanings or installing permanent <a href="/gutter-guards">micro-mesh gutter guards</a>.</p>
+<p class="lead">Between heavy oak pollen in the spring, severe summer storms, and thick autumn leaves across Camden and Burlington counties, South Jersey homes demand serious exterior maintenance. For homeowners in Cherry Hill, Voorhees, Marlton, and surrounding areas, the choice comes down to two options: paying for recurring manual cleanings or installing permanent <a href="/gutters">micro-mesh gutter guards</a>.</p>
 <p>Here is an honest breakdown of costs, ladder safety risks, and long-term home protection.</p>
 
 <h2>The True Cost of Manual Gutter Cleaning</h2>
@@ -904,7 +912,7 @@ function blogGutterGuardsVsCleaning() {
 <p>If heavy pine needles or maple helicopters drop between visits, an unexpected downpour can still overflow clogged gutters, leading to fascia rot, landscape erosion, and basement seepage before the next scheduled visit.</p>
 
 <h2>Why LeafBlaster Pro Micro-Mesh Gutter Guards Win</h2>
-<p>Not all <a href="/gutter-guards">gutter guards</a> perform equally. Cheap plastic covers, slotted vinyl shields, and large-gap wire mesh often trap debris on top or let fine pine needles and roof grit slip directly into the channel.</p>
+<p>Not all <a href="/gutters">gutter guards</a> perform equally. Cheap plastic covers, slotted vinyl shields, and large-gap wire mesh often trap debris on top or let fine pine needles and roof grit slip directly into the channel.</p>
 
 <h3>1. Zero-Maintenance Filtration</h3>
 <p>Medical-grade stainless steel micro-mesh \u2014 like <strong>LeafBlaster Pro by GutterGlove</strong> \u2014 blocks everything down to roof grit, pine needles, and pests while accepting heavy rainfall loads without overflowing.</p>
@@ -916,7 +924,7 @@ function blogGutterGuardsVsCleaning() {
 <p>When gutters overflow in winter, water pools around foundations and freezes into destructive ice dams along the eaves. Micro-mesh guards ensure unrestricted flow directly to downspouts, preventing soffit rot and foundation cracking.</p>
 
 <h2>The Verdict: Long-Term ROI</h2>
-<p>While regular cleaning spreads costs out in recurring increments, professional micro-mesh <a href="/gutter-guards">gutter guard installation</a> pays for itself in roughly 4 to 6 years \u2014 all while providing permanent peace of mind, a lifetime warranty, and lasting curb appeal.</p>
+<p>While regular cleaning spreads costs out in recurring increments, professional micro-mesh <a href="/gutters">gutter guard installation</a> pays for itself in roughly 4 to 6 years \u2014 all while providing permanent peace of mind, a lifetime warranty, and lasting curb appeal.</p>
 
 <h2>Protect Your Home Today</h2>
 <p>Ready to retire your ladder? <strong>${esc(BIZ_NAME)}</strong> provides professional LeafBlaster Pro installation across South Jersey and Eastern PA.</p>
@@ -935,8 +943,7 @@ function sitemapXml() {
     urls.push({ loc, lastmod: today, priority: priority.toFixed(2), changefreq });
 
   push(SITE + "/", 1.0, "weekly");
-  push(SITE + "/gutter-guards", 1.0);
-  push(SITE + "/gutters", 0.85);
+  push(SITE + "/gutters", 1.0);
   push(SITE + "/lighting", 0.95);
   push(SITE + "/gutter-services", 0.9);
   push(SITE + "/services", 0.9);
@@ -958,7 +965,6 @@ function sitemapXml() {
   push(SITE + "/terms", 0.3);
 
   cities.forEach((c) => {
-    push(`${SITE}/locations/${c.slug}`, c.priority);
     services.forEach((s) => push(`${SITE}/locations/${c.slug}/${s.slug}`, Math.min(0.95, c.priority)));
   });
 
@@ -1001,13 +1007,9 @@ async function run() {
   let count = 0;
   await write("locations/index.html", locationsIndex());
   count++;
-  await write("gutter-guards/index.html", gutterGuardsHub());
-  count++;
   await write("blog/gutter-guards-vs-cleaning-south-jersey/index.html", blogGutterGuardsVsCleaning());
   count++;
   for (const city of cities) {
-    await write(`locations/${city.slug}/index.html`, cityHub(city));
-    count++;
     for (const service of services) {
       await write(`locations/${city.slug}/${service.slug}/index.html`, serviceCityPage(city, service));
       count++;
