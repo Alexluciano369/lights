@@ -74,6 +74,7 @@ async function postProcessHtmlTree(dir) {
     if (!entry.isFile() || !entry.name.endsWith(".html")) continue;
 
     let html = await readFile(abs, "utf8");
+    html = html.replaceAll("G-XXXXXXXXXX", "G-E7NG44429T");
     const rel = relative(OUT, abs).replaceAll("\\", "/");
     const cityMatch = rel.match(/^service-areas\/([^/]+)\.html$/);
 
