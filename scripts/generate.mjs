@@ -75,6 +75,8 @@ async function postProcessHtmlTree(dir) {
 
     let html = await readFile(abs, "utf8");
     html = html.replaceAll("G-XXXXXXXXXX", "G-E7NG44429T");
+    html = html.replaceAll('href="/gutter-guards"', 'href="/gutters"');
+    html = html.replaceAll('"url":"https://cleangutterslighting.com/gutter-guards"', '"url":"https://cleangutterslighting.com/gutters"');
     const rel = relative(OUT, abs).replaceAll("\\", "/");
     const cityMatch = rel.match(/^service-areas\/([^/]+)\.html$/);
 
@@ -86,6 +88,12 @@ async function postProcessHtmlTree(dir) {
       html = html.replace(/<meta name="description" content="[^"]*">/i, `<meta name="description" content="${description}">`);
       html = html.replace(/<meta property="og:title" content="[^"]*">/i, `<meta property="og:title" content="${title}">`);
       html = html.replace(/<meta property="og:description" content="[^"]*">/i, `<meta property="og:description" content="${description}">`);
+      if (!/<link[^>]+rel=["']icon["']/i.test(html)) {
+        html = html.replace(/<\/head>/i, '<link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"></head>');
+      }
+      if (!/<meta[^>]+property=["']og:image["']/i.test(html)) {
+        html = html.replace(/<\/head>/i, '<meta property="og:image" content="https://cleangutterslighting.com/hero-friendly-gutter-protection.webp"><meta property="og:image:alt" content="Owner-installed micro-mesh gutter protection on a local home"><meta name="twitter:card" content="summary_large_image"></head>');
+      }
     } else if (rel === "service-areas.html") {
       const title = "Gutter Service Areas | NJ, PA, DE & MD";
       const description = "Owner-installed gutter guards, cleaning, repair and permanent roofline lighting across South Jersey, Eastern PA, Delaware and Northeast Maryland.";
@@ -628,10 +636,9 @@ ${faqBlock(faqs, { cityName: city.name, state: city.state })}
 function serviceCityPage(city, service) {
   const canonical = `${SITE}/locations/${city.slug}/${service.slug}`;
   const isGuards = service.slug === "gutter-guards";
-  const rawTitle = isGuards
-    ? `Best Gutter Guards in ${city.name}, ${city.state} | ${BIZ_NAME}`
-    : `${service.shortName} in ${city.name}, ${city.state} | ${BIZ_NAME}`;
-  const title = rawTitle.length > 65 ? `${isGuards ? "Best Gutter Guards" : service.shortName} in ${city.name}, ${city.state}` : rawTitle;
+  const title = isGuards
+    ? `Best Gutter Guards | ${city.name}, ${city.state}`
+    : `${service.shortName} | ${city.name}, ${city.state}`;
   const description = isGuards
     ? truncateWords(`LeafBlaster Pro micro-mesh gutter guards in ${city.name}, ${city.state}. Owner-installed with a transferable lifetime warranty. Free estimate: ${PHONE}.`)
     : truncateWords(`${service.tagline} Serving ${city.name}, ${city.state}. Free written estimate: ${PHONE}.`);
