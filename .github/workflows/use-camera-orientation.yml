@@ -14,30 +14,26 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: python -m pip install Pillow
-      - name: Restore photos using camera orientation
+      - name: Restore gutter photo using camera orientation
         env:
           GUTTER_URL: "https://gwvckixiegkllthleuyt.supabase.co/storage/v1/object/sign/paid-ads-chat-files/5fafe1f0-cbab-4107-9564-6010b9644e1d/20685476-ff74-4a2e-99a4-7b88fe2f1c06/39b091ee-14e6-4b0b-9c1d-a412ece78042/e40f6521-9778-4c70-a30c-a6f34438e909.jpg?token=eyJraWQiOiIzMDE4YTQ0YS05ZGQ3LTQ1ZjQtOWFkMy1mY2IxMzg3MGFlZjUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwYWlkLWFkcy1jaGF0LWZpbGVzLzVmYWZlMWYwLWNiYWItNDEwNy05NTY0LTYwMTBiOTY0NGUxZC8yMDY4NTQ3Ni1mZjc0LTRhMmUtOTlhNC03Yjg4ZmUyZjFjMDYvMzliMDkxZWUtMTRlNi00YjBiLTljMWQtYTQxMmVjZTc4MDQyL2U0MGY2NTIxLTk3NzgtNGM3MC1hMzBjLWE2ZjM0NDM4ZTkwOS5qcGciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzg5MTY0MzE3LCJleHAiOjE3ODk3NjkxMTd9.BqJqzp3QE5zuJSXrbAe0ljzCzEKQuGxaoILLYS7Dn5w"
-          ALEX_URL: "https://gwvckixiegkllthleuyt.supabase.co/storage/v1/object/sign/paid-ads-chat-files/5fafe1f0-cbab-4107-9564-6010b9644e1d/20685476-ff74-4a2e-99a4-7b88fe2f1c06/39b091ee-14e6-4b0b-9c1d-a412ece78042/aa19fcd1-ff05-4e6f-b599-75a52b3fa37e.jpg?token=eyJraWQiOiIzMDE4YTQ0YS05ZGQ3LTQ1ZjQtOWFkMy1mY2IxMzg3MGFlZjUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwYWlkLWFkcy1jaGF0LWZpbGVzLzVmYWZlMWNiYWItNDEwNy05NTY0LTYwMTBiOTY0NGUxZC8yMDY4NTQ3Ni1mZjc0LTRhMmUtOTlhNC03Yjg4ZmUyZjFjMDYvMzliMDkxZWUtMTRlNi00YjBiLTljMWQtYTQxMmVjZTc4MDQyL2FhMTlmY2QxLWZmMDUtNGU2Zi1iNTk5LTc1YTUyYjNmYTM3ZS5qcGciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzg5MTY0MzIwLCJleHAiOjE3ODk3NjkxMjB9.ljpbCsih5vE-eC48Ox1XOL9AvgSxI5x2xjMvPFT-cEE"
         run: |
           curl -L "$GUTTER_URL" -o /tmp/gutter.jpg
-          curl -L "$ALEX_URL" -o /tmp/alex.jpg
           python - <<'PY'
           from PIL import Image, ImageOps
-          for src,stem in [('/tmp/gutter.jpg','gutter-guard-micro-mesh-installed'),('/tmp/alex.jpg','alex-owner-installing-gutter-guards')]:
-              im=ImageOps.exif_transpose(Image.open(src)).convert('RGB')
-              im.thumbnail((1600,1600),Image.Resampling.LANCZOS)
-              im.save(stem+'.jpg',quality=86,optimize=True,progressive=True)
-              im.save(stem+'.webp','WEBP',quality=82,method=6)
-          im=Image.open('gutter-guard-micro-mesh-installed.jpg').convert('RGB')
+          im=ImageOps.exif_transpose(Image.open('/tmp/gutter.jpg')).convert('RGB')
+          im.thumbnail((1600,1600),Image.Resampling.LANCZOS)
+          im.save('gutter-guard-micro-mesh-installed.jpg',quality=86,optimize=True,progressive=True)
+          im.save('gutter-guard-micro-mesh-installed.webp','WEBP',quality=82,method=6)
           w,h=im.size; crop_h=int(w/(1200/628)); top=max(0,(h-crop_h)//2)
           im.crop((0,top,w,top+crop_h)).resize((1200,628),Image.Resampling.LANCZOS).save('gutter-guard-micro-mesh-search-landscape.jpg',quality=88,optimize=True,progressive=True)
           side=min(w,h); top=max(0,(h-side)//2)
           im.crop((0,top,side,top+side)).resize((1200,1200),Image.Resampling.LANCZOS).save('gutter-guard-micro-mesh-search-square.jpg',quality=88,optimize=True,progressive=True)
           PY
-      - name: Commit camera-oriented photos
+      - name: Commit camera-oriented gutter photo
         run: |
           git config user.name "CleanGutters site updater"
           git config user.email "actions@users.noreply.github.com"
-          git add gutter-guard-micro-mesh-installed.* alex-owner-installing-gutter-guards.* gutter-guard-micro-mesh-search-*.jpg
-          git commit -m "Use camera-correct field photo orientation"
+          git add gutter-guard-micro-mesh-installed.* gutter-guard-micro-mesh-search-*.jpg
+          git commit -m "Use camera-correct gutter photo orientation"
           git push
