@@ -1,0 +1,40 @@
+name: Make ad image crops
+
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/make-ad-image-crops.yml]
+
+permissions:
+  contents: write
+
+jobs:
+  crop:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python -m pip install Pillow
+      - name: Build landscape and square versions
+        run: |
+          python - <<'PY'
+          from PIL import Image
+          im=Image.open('gutter-guard-micro-mesh-installed.jpg').convert('RGB')
+          w,h=im.size
+          # Center crop around the installed micro-mesh gutter run.
+          target_ratio=1200/628
+          crop_h=int(w/target_ratio)
+          top=max(0,(h-crop_h)//2)
+          landscape=im.crop((0,top,w,top+crop_h)).resize((1200,628),Image.Resampling.LANCZOS)
+          landscape.save('gutter-guard-micro-mesh-search-landscape.jpg',quality=88,optimize=True,progressive=True)
+          side=min(w,h)
+          top=max(0,(h-side)//2)
+          square=im.crop((0,top,side,top+side)).resize((1200,1200),Image.Resampling.LANCZOS)
+          square.save('gutter-guard-micro-mesh-search-square.jpg',quality=88,optimize=True,progressive=True)
+          PY
+      - name: Commit ad image crops
+        run: |
+          git config user.name "CleanGutters ad updater"
+          git config user.email "actions@users.noreply.github.com"
+          git add gutter-guard-micro-mesh-search-landscape.jpg gutter-guard-micro-mesh-search-square.jpg
+          git commit -m "Add gutter guard image assets for search ads"
+          git push
