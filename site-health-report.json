@@ -1,0 +1,3705 @@
+{
+  "summary": {
+    "pages_crawled": 137,
+    "links_checked": 1869,
+    "assets_checked": 1249
+  },
+  "broken_pages": [
+    {
+      "url": "https://cleangutterslighting.com/service-areas/lumberton-nj",
+      "status": 404,
+      "final_url": "https://cleangutterslighting.com/service-areas/lumberton-nj",
+      "redirected": false,
+      "title": "Page not found",
+      "description": "",
+      "canonical": "",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Page not found"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/hainesport-nj",
+      "status": 404,
+      "final_url": "https://cleangutterslighting.com/service-areas/hainesport-nj",
+      "redirected": false,
+      "title": "Page not found",
+      "description": "",
+      "canonical": "",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Page not found"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/cinnaminson-nj",
+      "status": 404,
+      "final_url": "https://cleangutterslighting.com/service-areas/cinnaminson-nj",
+      "redirected": false,
+      "title": "Page not found",
+      "description": "",
+      "canonical": "",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Page not found"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/maple-shade-nj",
+      "status": 404,
+      "final_url": "https://cleangutterslighting.com/service-areas/maple-shade-nj",
+      "redirected": false,
+      "title": "Page not found",
+      "description": "",
+      "canonical": "",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Page not found"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/oaklyn-nj",
+      "status": 404,
+      "final_url": "https://cleangutterslighting.com/service-areas/oaklyn-nj",
+      "redirected": false,
+      "title": "Page not found",
+      "description": "",
+      "canonical": "",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Page not found"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/audubon-nj",
+      "status": 404,
+      "final_url": "https://cleangutterslighting.com/service-areas/audubon-nj",
+      "redirected": false,
+      "title": "Page not found",
+      "description": "",
+      "canonical": "",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Page not found"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/haddon-township-nj",
+      "status": 404,
+      "final_url": "https://cleangutterslighting.com/service-areas/haddon-township-nj",
+      "redirected": false,
+      "title": "Page not found",
+      "description": "",
+      "canonical": "",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Page not found"
+      ]
+    }
+  ],
+  "broken_links": [
+    {
+      "source": "https://cleangutterslighting.com/",
+      "target": "sms:8568746640",
+      "tag": "a",
+      "status": 0,
+      "error": "No connection adapters were found for 'sms:8568746640'"
+    },
+    {
+      "source": "https://cleangutterslighting.com/",
+      "target": "https://www.facebook.com/profile.php?id=61583698254672",
+      "tag": "a",
+      "status": 0,
+      "error": "Zstandard data is incomplete"
+    },
+    {
+      "source": "https://cleangutterslighting.com/",
+      "target": "https://www.instagram.com/cleangutterslighting/",
+      "tag": "a",
+      "status": 0,
+      "error": "Zstandard data is incomplete"
+    },
+    {
+      "source": "https://cleangutterslighting.com/",
+      "target": "https://x.com/wasco_alex",
+      "tag": "a",
+      "status": 404,
+      "final_url": "https://x.com/wasco_alex"
+    },
+    {
+      "source": "https://cleangutterslighting.com/gutters",
+      "target": "sms:8568746640",
+      "tag": "a",
+      "status": 0,
+      "error": "No connection adapters were found for 'sms:8568746640'"
+    },
+    {
+      "source": "https://cleangutterslighting.com/gutters",
+      "target": "https://www.facebook.com/profile.php?id=61583698254672",
+      "tag": "a",
+      "status": 0,
+      "error": "Zstandard data is incomplete"
+    },
+    {
+      "source": "https://cleangutterslighting.com/gutters",
+      "target": "https://www.instagram.com/cleangutterslighting/",
+      "tag": "a",
+      "status": 0,
+      "error": "Zstandard data is incomplete"
+    },
+    {
+      "source": "https://cleangutterslighting.com/gutters",
+      "target": "https://x.com/wasco_alex",
+      "tag": "a",
+      "status": 404,
+      "final_url": "https://x.com/wasco_alex"
+    },
+    {
+      "source": "https://cleangutterslighting.com/lighting",
+      "target": "sms:8568746640",
+      "tag": "a",
+      "status": 0,
+      "error": "No connection adapters were found for 'sms:8568746640'"
+    },
+    {
+      "source": "https://cleangutterslighting.com/lighting",
+      "target": "https://www.facebook.com/profile.php?id=61583698254672",
+      "tag": "a",
+      "status": 0,
+      "error": "Zstandard data is incomplete"
+    },
+    {
+      "source": "https://cleangutterslighting.com/lighting",
+      "target": "https://www.instagram.com/cleangutterslighting/",
+      "tag": "a",
+      "status": 0,
+      "error": "Zstandard data is incomplete"
+    },
+    {
+      "source": "https://cleangutterslighting.com/lighting",
+      "target": "https://x.com/wasco_alex",
+      "tag": "a",
+      "status": 404,
+      "final_url": "https://x.com/wasco_alex"
+    },
+    {
+      "source": "https://cleangutterslighting.com/gutter-cleaning",
+      "target": "sms:8568746640",
+      "tag": "a",
+      "status": 0,
+      "error": "No connection adapters were found for 'sms:8568746640'"
+    },
+    {
+      "source": "https://cleangutterslighting.com/gutter-installation",
+      "target": "sms:8568746640",
+      "tag": "a",
+      "status": 0,
+      "error": "No connection adapters were found for 'sms:8568746640'"
+    },
+    {
+      "source": "https://cleangutterslighting.com/gutter-repair",
+      "target": "sms:8568746640",
+      "tag": "a",
+      "status": 0,
+      "error": "No connection adapters were found for 'sms:8568746640'"
+    },
+    {
+      "source": "https://cleangutterslighting.com/seamless-gutters",
+      "target": "sms:8568746640",
+      "tag": "a",
+      "status": 0,
+      "error": "No connection adapters were found for 'sms:8568746640'"
+    },
+    {
+      "source": "https://cleangutterslighting.com/downspout-services",
+      "target": "sms:8568746640",
+      "tag": "a",
+      "status": 0,
+      "error": "No connection adapters were found for 'sms:8568746640'"
+    },
+    {
+      "source": "https://cleangutterslighting.com/fascia-soffit-repair",
+      "target": "sms:8568746640",
+      "tag": "a",
+      "status": 0,
+      "error": "No connection adapters were found for 'sms:8568746640'"
+    },
+    {
+      "source": "https://cleangutterslighting.com/same-day-gutter-service",
+      "target": "sms:8568746640",
+      "tag": "a",
+      "status": 0,
+      "error": "No connection adapters were found for 'sms:8568746640'"
+    },
+    {
+      "source": "https://cleangutterslighting.com/reviews",
+      "target": "sms:8568746640",
+      "tag": "a",
+      "status": 0,
+      "error": "No connection adapters were found for 'sms:8568746640'"
+    },
+    {
+      "source": "https://cleangutterslighting.com/reviews",
+      "target": "https://www.facebook.com/profile.php?id=61583698254672",
+      "tag": "a",
+      "status": 0,
+      "error": "Zstandard data is incomplete"
+    },
+    {
+      "source": "https://cleangutterslighting.com/reviews",
+      "target": "https://www.instagram.com/cleangutterslighting/",
+      "tag": "a",
+      "status": 0,
+      "error": "Zstandard data is incomplete"
+    },
+    {
+      "source": "https://cleangutterslighting.com/reviews",
+      "target": "https://x.com/wasco_alex",
+      "tag": "a",
+      "status": 404,
+      "final_url": "https://x.com/wasco_alex"
+    },
+    {
+      "source": "https://cleangutterslighting.com/blog",
+      "target": "sms:8568746640",
+      "tag": "a",
+      "status": 0,
+      "error": "No connection adapters were found for 'sms:8568746640'"
+    },
+    {
+      "source": "https://cleangutterslighting.com/faq",
+      "target": "sms:8568746640",
+      "tag": "a",
+      "status": 0,
+      "error": "No connection adapters were found for 'sms:8568746640'"
+    },
+    {
+      "source": "https://cleangutterslighting.com/faq",
+      "target": "https://www.facebook.com/profile.php?id=61583698254672",
+      "tag": "a",
+      "status": 0,
+      "error": "Zstandard data is incomplete"
+    },
+    {
+      "source": "https://cleangutterslighting.com/faq",
+      "target": "https://www.instagram.com/cleangutterslighting/",
+      "tag": "a",
+      "status": 0,
+      "error": "Zstandard data is incomplete"
+    },
+    {
+      "source": "https://cleangutterslighting.com/faq",
+      "target": "https://x.com/wasco_alex",
+      "tag": "a",
+      "status": 404,
+      "final_url": "https://x.com/wasco_alex"
+    },
+    {
+      "source": "https://cleangutterslighting.com/service-areas/cherry-hill-nj",
+      "target": "sms:8568746640",
+      "tag": "a",
+      "status": 0,
+      "error": "No connection adapters were found for 'sms:8568746640'"
+    },
+    {
+      "source": "https://cleangutterslighting.com/service-areas/cherry-hill-nj",
+      "target": "https://www.facebook.com/profile.php?id=61583698254672",
+      "tag": "a",
+      "status": 0,
+      "error": "Zstandard data is incomplete"
+    },
+    {
+      "source": "https://cleangutterslighting.com/service-areas/cherry-hill-nj",
+      "target": "https://www.instagram.com/cleangutterslighting/",
+      "tag": "a",
+      "status": 0,
+      "error": "Zstandard data is incomplete"
+    },
+    {
+      "source": "https://cleangutterslighting.com/service-areas/cherry-hill-nj",
+      "target": "https://x.com/wasco_alex",
+      "tag": "a",
+      "status": 404,
+      "final_url": "https://x.com/wasco_alex"
+    },
+    {
+      "source": "https://cleangutterslighting.com/service-areas/mount-laurel-nj",
+      "target": "sms:8568746640",
+      "tag": "a",
+      "status": 0,
+      "error": "No connection adapters were found for 'sms:8568746640'"
+    },
+    {
+      "source": "https://cleangutterslighting.com/service-areas/mount-laurel-nj",
+      "target": "https://cleangutterslighting.com/service-areas/lumberton-nj",
+      "tag": "a",
+      "status": 404,
+      "final_url": "https://cleangutterslighting.com/service-areas/lumberton-nj"
+    },
+    {
+      "source": "https://cleangutterslighting.com/service-areas/mount-laurel-nj",
+      "target": "https://cleangutterslighting.com/service-areas/hainesport-nj",
+      "tag": "a",
+      "status": 404,
+      "final_url": "https://cleangutterslighting.com/service-areas/hainesport-nj"
+    },
+    {
+      "source": "https://cleangutterslighting.com/service-areas/mount-laurel-nj",
+      "target": "https://www.facebook.com/profile.php?id=61583698254672",
+      "tag": "a",
+      "status": 0,
+      "error": "Zstandard data is incomplete"
+    },
+    {
+      "source": "https://cleangutterslighting.com/service-areas/mount-laurel-nj",
+      "target": "https://www.instagram.com/cleangutterslighting/",
+      "tag": "a",
+      "status": 0,
+      "error": "Zstandard data is incomplete"
+    },
+    {
+      "source": "https://cleangutterslighting.com/service-areas/mount-laurel-nj",
+      "target": "https://x.com/wasco_alex",
+      "tag": "a",
+      "status": 404,
+      "final_url": "https://x.com/wasco_alex"
+    },
+    {
+      "source": "https://cleangutterslighting.com/service-areas/moorestown-nj",
+      "target": "sms:8568746640",
+      "tag": "a",
+      "status": 0,
+      "error": "No connection adapters were found for 'sms:8568746640'"
+    },
+    {
+      "source": "https://cleangutterslighting.com/service-areas/moorestown-nj",
+      "target": "https://cleangutterslighting.com/service-areas/cinnaminson-nj",
+      "tag": "a",
+      "status": 404,
+      "final_url": "https://cleangutterslighting.com/service-areas/cinnaminson-nj"
+    },
+    {
+      "source": "https://cleangutterslighting.com/service-areas/moorestown-nj",
+      "target": "https://cleangutterslighting.com/service-areas/maple-shade-nj",
+      "tag": "a",
+      "status": 404,
+      "final_url": "https://cleangutterslighting.com/service-areas/maple-shade-nj"
+    },
+    {
+      "source": "https://cleangutterslighting.com/service-areas/moorestown-nj",
+      "target": "https://www.facebook.com/profile.php?id=61583698254672",
+      "tag": "a",
+      "status": 0,
+      "error": "Zstandard data is incomplete"
+    },
+    {
+      "source": "https://cleangutterslighting.com/service-areas/moorestown-nj",
+      "target": "https://www.instagram.com/cleangutterslighting/",
+      "tag": "a",
+      "status": 0,
+      "error": "Zstandard data is incomplete"
+    },
+    {
+      "source": "https://cleangutterslighting.com/service-areas/moorestown-nj",
+      "target": "https://x.com/wasco_alex",
+      "tag": "a",
+      "status": 404,
+      "final_url": "https://x.com/wasco_alex"
+    },
+    {
+      "source": "https://cleangutterslighting.com/service-areas/collingswood-nj",
+      "target": "sms:8568746640",
+      "tag": "a",
+      "status": 0,
+      "error": "No connection adapters were found for 'sms:8568746640'"
+    },
+    {
+      "source": "https://cleangutterslighting.com/service-areas/collingswood-nj",
+      "target": "https://cleangutterslighting.com/service-areas/oaklyn-nj",
+      "tag": "a",
+      "status": 404,
+      "final_url": "https://cleangutterslighting.com/service-areas/oaklyn-nj"
+    },
+    {
+      "source": "https://cleangutterslighting.com/service-areas/collingswood-nj",
+      "target": "https://cleangutterslighting.com/service-areas/audubon-nj",
+      "tag": "a",
+      "status": 404,
+      "final_url": "https://cleangutterslighting.com/service-areas/audubon-nj"
+    },
+    {
+      "source": "https://cleangutterslighting.com/service-areas/collingswood-nj",
+      "target": "https://cleangutterslighting.com/service-areas/haddon-township-nj",
+      "tag": "a",
+      "status": 404,
+      "final_url": "https://cleangutterslighting.com/service-areas/haddon-township-nj"
+    },
+    {
+      "source": "https://cleangutterslighting.com/service-areas/collingswood-nj",
+      "target": "https://www.facebook.com/profile.php?id=61583698254672",
+      "tag": "a",
+      "status": 0,
+      "error": "Zstandard data is incomplete"
+    },
+    {
+      "source": "https://cleangutterslighting.com/service-areas/collingswood-nj",
+      "target": "https://www.instagram.com/cleangutterslighting/",
+      "tag": "a",
+      "status": 0,
+      "error": "Zstandard data is incomplete"
+    },
+    {
+      "source": "https://cleangutterslighting.com/service-areas/collingswood-nj",
+      "target": "https://x.com/wasco_alex",
+      "tag": "a",
+      "status": 404,
+      "final_url": "https://x.com/wasco_alex"
+    },
+    {
+      "source": "https://cleangutterslighting.com/gutter-services",
+      "target": "sms:8568746640",
+      "tag": "a",
+      "status": 0,
+      "error": "No connection adapters were found for 'sms:8568746640'"
+    },
+    {
+      "source": "https://cleangutterslighting.com/privacy",
+      "target": "sms:8568746640",
+      "tag": "a",
+      "status": 0,
+      "error": "No connection adapters were found for 'sms:8568746640'"
+    },
+    {
+      "source": "https://cleangutterslighting.com/privacy",
+      "target": "https://www.allaboutcookies.org",
+      "tag": "a",
+      "status": 403,
+      "final_url": "https://allaboutcookies.org/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/privacy",
+      "target": "https://www.facebook.com/profile.php?id=61583698254672",
+      "tag": "a",
+      "status": 0,
+      "error": "Zstandard data is incomplete"
+    },
+    {
+      "source": "https://cleangutterslighting.com/privacy",
+      "target": "https://www.instagram.com/cleangutterslighting/",
+      "tag": "a",
+      "status": 0,
+      "error": "Zstandard data is incomplete"
+    },
+    {
+      "source": "https://cleangutterslighting.com/privacy",
+      "target": "https://x.com/wasco_alex",
+      "tag": "a",
+      "status": 404,
+      "final_url": "https://x.com/wasco_alex"
+    },
+    {
+      "source": "https://cleangutterslighting.com/terms",
+      "target": "sms:8568746640",
+      "tag": "a",
+      "status": 0,
+      "error": "No connection adapters were found for 'sms:8568746640'"
+    },
+    {
+      "source": "https://cleangutterslighting.com/terms",
+      "target": "https://www.facebook.com/profile.php?id=61583698254672",
+      "tag": "a",
+      "status": 0,
+      "error": "Zstandard data is incomplete"
+    },
+    {
+      "source": "https://cleangutterslighting.com/terms",
+      "target": "https://www.instagram.com/cleangutterslighting/",
+      "tag": "a",
+      "status": 0,
+      "error": "Zstandard data is incomplete"
+    },
+    {
+      "source": "https://cleangutterslighting.com/terms",
+      "target": "https://x.com/wasco_alex",
+      "tag": "a",
+      "status": 404,
+      "final_url": "https://x.com/wasco_alex"
+    },
+    {
+      "source": "https://cleangutterslighting.com/services",
+      "target": "sms:8568746640",
+      "tag": "a",
+      "status": 0,
+      "error": "No connection adapters were found for 'sms:8568746640'"
+    },
+    {
+      "source": "https://cleangutterslighting.com/services",
+      "target": "https://www.facebook.com/profile.php?id=61583698254672",
+      "tag": "a",
+      "status": 0,
+      "error": "Zstandard data is incomplete"
+    },
+    {
+      "source": "https://cleangutterslighting.com/services",
+      "target": "https://www.instagram.com/cleangutterslighting/",
+      "tag": "a",
+      "status": 0,
+      "error": "Zstandard data is incomplete"
+    },
+    {
+      "source": "https://cleangutterslighting.com/services",
+      "target": "https://x.com/wasco_alex",
+      "tag": "a",
+      "status": 404,
+      "final_url": "https://x.com/wasco_alex"
+    },
+    {
+      "source": "https://cleangutterslighting.com/locations/cherry-hill-nj",
+      "target": "sms:8568746640",
+      "tag": "a",
+      "status": 0,
+      "error": "No connection adapters were found for 'sms:8568746640'"
+    },
+    {
+      "source": "https://cleangutterslighting.com/locations/cherry-hill-nj",
+      "target": "https://www.facebook.com/profile.php?id=61583698254672",
+      "tag": "a",
+      "status": 0,
+      "error": "Zstandard data is incomplete"
+    },
+    {
+      "source": "https://cleangutterslighting.com/locations/cherry-hill-nj",
+      "target": "https://www.instagram.com/cleangutterslighting/",
+      "tag": "a",
+      "status": 0,
+      "error": "Zstandard data is incomplete"
+    },
+    {
+      "source": "https://cleangutterslighting.com/locations/cherry-hill-nj",
+      "target": "https://x.com/wasco_alex",
+      "tag": "a",
+      "status": 404,
+      "final_url": "https://x.com/wasco_alex"
+    },
+    {
+      "source": "https://cleangutterslighting.com/locations/mount-laurel-nj",
+      "target": "sms:8568746640",
+      "tag": "a",
+      "status": 0,
+      "error": "No connection adapters were found for 'sms:8568746640'"
+    },
+    {
+      "source": "https://cleangutterslighting.com/locations/mount-laurel-nj",
+      "target": "https://cleangutterslighting.com/service-areas/lumberton-nj",
+      "tag": "a",
+      "status": 404,
+      "final_url": "https://cleangutterslighting.com/service-areas/lumberton-nj"
+    },
+    {
+      "source": "https://cleangutterslighting.com/locations/mount-laurel-nj",
+      "target": "https://cleangutterslighting.com/service-areas/hainesport-nj",
+      "tag": "a",
+      "status": 404,
+      "final_url": "https://cleangutterslighting.com/service-areas/hainesport-nj"
+    },
+    {
+      "source": "https://cleangutterslighting.com/locations/mount-laurel-nj",
+      "target": "https://www.facebook.com/profile.php?id=61583698254672",
+      "tag": "a",
+      "status": 0,
+      "error": "Zstandard data is incomplete"
+    },
+    {
+      "source": "https://cleangutterslighting.com/locations/mount-laurel-nj",
+      "target": "https://www.instagram.com/cleangutterslighting/",
+      "tag": "a",
+      "status": 0,
+      "error": "Zstandard data is incomplete"
+    },
+    {
+      "source": "https://cleangutterslighting.com/locations/mount-laurel-nj",
+      "target": "https://x.com/wasco_alex",
+      "tag": "a",
+      "status": 404,
+      "final_url": "https://x.com/wasco_alex"
+    },
+    {
+      "source": "https://cleangutterslighting.com/locations/moorestown-nj",
+      "target": "sms:8568746640",
+      "tag": "a",
+      "status": 0,
+      "error": "No connection adapters were found for 'sms:8568746640'"
+    },
+    {
+      "source": "https://cleangutterslighting.com/locations/moorestown-nj",
+      "target": "https://cleangutterslighting.com/service-areas/cinnaminson-nj",
+      "tag": "a",
+      "status": 404,
+      "final_url": "https://cleangutterslighting.com/service-areas/cinnaminson-nj"
+    },
+    {
+      "source": "https://cleangutterslighting.com/locations/moorestown-nj",
+      "target": "https://cleangutterslighting.com/service-areas/maple-shade-nj",
+      "tag": "a",
+      "status": 404,
+      "final_url": "https://cleangutterslighting.com/service-areas/maple-shade-nj"
+    },
+    {
+      "source": "https://cleangutterslighting.com/locations/moorestown-nj",
+      "target": "https://www.facebook.com/profile.php?id=61583698254672",
+      "tag": "a",
+      "status": 0,
+      "error": "Zstandard data is incomplete"
+    },
+    {
+      "source": "https://cleangutterslighting.com/locations/moorestown-nj",
+      "target": "https://www.instagram.com/cleangutterslighting/",
+      "tag": "a",
+      "status": 0,
+      "error": "Zstandard data is incomplete"
+    },
+    {
+      "source": "https://cleangutterslighting.com/locations/moorestown-nj",
+      "target": "https://x.com/wasco_alex",
+      "tag": "a",
+      "status": 404,
+      "final_url": "https://x.com/wasco_alex"
+    }
+  ],
+  "broken_assets": [
+    {
+      "source": "https://cleangutterslighting.com/",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/",
+      "target": "https://fonts.googleapis.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://fonts.googleapis.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/",
+      "target": "https://fonts.gstatic.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://fonts.gstatic.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/",
+      "target": "https://cpbexrtitabqgrcfucbm.supabase.co",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://cpbexrtitabqgrcfucbm.supabase.co/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/",
+      "target": "https://cpbexrtitabqgrcfucbm.supabase.co",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://cpbexrtitabqgrcfucbm.supabase.co/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/gutters",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/gutters",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/gutters",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/gutters",
+      "target": "https://fonts.googleapis.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://fonts.googleapis.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/gutters",
+      "target": "https://fonts.gstatic.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://fonts.gstatic.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/lighting",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/lighting",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/lighting",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/lighting",
+      "target": "https://fonts.googleapis.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://fonts.googleapis.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/lighting",
+      "target": "https://fonts.gstatic.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://fonts.gstatic.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/gutter-cleaning",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/gutter-cleaning",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/gutter-cleaning",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/gutter-cleaning",
+      "target": "https://fonts.googleapis.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://fonts.googleapis.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/gutter-cleaning",
+      "target": "https://fonts.gstatic.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://fonts.gstatic.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/gutter-installation",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/gutter-installation",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/gutter-installation",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/gutter-installation",
+      "target": "https://fonts.googleapis.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://fonts.googleapis.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/gutter-installation",
+      "target": "https://fonts.gstatic.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://fonts.gstatic.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/gutter-repair",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/gutter-repair",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/gutter-repair",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/gutter-repair",
+      "target": "https://fonts.googleapis.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://fonts.googleapis.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/gutter-repair",
+      "target": "https://fonts.gstatic.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://fonts.gstatic.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/seamless-gutters",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/seamless-gutters",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/seamless-gutters",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/seamless-gutters",
+      "target": "https://fonts.googleapis.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://fonts.googleapis.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/seamless-gutters",
+      "target": "https://fonts.gstatic.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://fonts.gstatic.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/downspout-services",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/downspout-services",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/downspout-services",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/downspout-services",
+      "target": "https://fonts.googleapis.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://fonts.googleapis.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/downspout-services",
+      "target": "https://fonts.gstatic.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://fonts.gstatic.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/fascia-soffit-repair",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/fascia-soffit-repair",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/fascia-soffit-repair",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/fascia-soffit-repair",
+      "target": "https://fonts.googleapis.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://fonts.googleapis.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/fascia-soffit-repair",
+      "target": "https://fonts.gstatic.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://fonts.gstatic.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/same-day-gutter-service",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/same-day-gutter-service",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/same-day-gutter-service",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/same-day-gutter-service",
+      "target": "https://fonts.googleapis.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://fonts.googleapis.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/same-day-gutter-service",
+      "target": "https://fonts.gstatic.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://fonts.gstatic.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/reviews",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/reviews",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/blog",
+      "target": "https://cleangutterslighting.com/4th-july-permanent-led-lighting-south-jersey-thumb.jpg",
+      "tag": "img",
+      "status": 404,
+      "final_url": "https://cleangutterslighting.com/4th-july-permanent-led-lighting-south-jersey-thumb.jpg"
+    },
+    {
+      "source": "https://cleangutterslighting.com/blog",
+      "target": "https://cleangutterslighting.com/summer-backyard-led-lighting-south-jersey-thumb.jpg",
+      "tag": "img",
+      "status": 404,
+      "final_url": "https://cleangutterslighting.com/summer-backyard-led-lighting-south-jersey-thumb.jpg"
+    },
+    {
+      "source": "https://cleangutterslighting.com/blog",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/blog",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/faq",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/faq",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/faq",
+      "target": "https://cpbexrtitabqgrcfucbm.supabase.co",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://cpbexrtitabqgrcfucbm.supabase.co/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/service-areas/cherry-hill-nj",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/service-areas/cherry-hill-nj",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/service-areas/cherry-hill-nj",
+      "target": "https://fonts.googleapis.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://fonts.googleapis.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/service-areas/cherry-hill-nj",
+      "target": "https://fonts.gstatic.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://fonts.gstatic.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/service-areas/cherry-hill-nj",
+      "target": "https://cpbexrtitabqgrcfucbm.supabase.co",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://cpbexrtitabqgrcfucbm.supabase.co/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/service-areas/cherry-hill-nj",
+      "target": "https://cpbexrtitabqgrcfucbm.supabase.co",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://cpbexrtitabqgrcfucbm.supabase.co/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/service-areas",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/service-areas",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/service-areas",
+      "target": "https://fonts.googleapis.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://fonts.googleapis.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/service-areas",
+      "target": "https://fonts.gstatic.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://fonts.gstatic.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/service-areas/mount-laurel-nj",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/service-areas/mount-laurel-nj",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/service-areas/mount-laurel-nj",
+      "target": "https://fonts.googleapis.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://fonts.googleapis.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/service-areas/mount-laurel-nj",
+      "target": "https://fonts.gstatic.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://fonts.gstatic.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/service-areas/mount-laurel-nj",
+      "target": "https://cpbexrtitabqgrcfucbm.supabase.co",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://cpbexrtitabqgrcfucbm.supabase.co/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/service-areas/mount-laurel-nj",
+      "target": "https://cpbexrtitabqgrcfucbm.supabase.co",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://cpbexrtitabqgrcfucbm.supabase.co/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/service-areas/moorestown-nj",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/service-areas/moorestown-nj",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/service-areas/moorestown-nj",
+      "target": "https://fonts.googleapis.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://fonts.googleapis.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/service-areas/moorestown-nj",
+      "target": "https://fonts.gstatic.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://fonts.gstatic.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/service-areas/moorestown-nj",
+      "target": "https://cpbexrtitabqgrcfucbm.supabase.co",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://cpbexrtitabqgrcfucbm.supabase.co/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/service-areas/moorestown-nj",
+      "target": "https://cpbexrtitabqgrcfucbm.supabase.co",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://cpbexrtitabqgrcfucbm.supabase.co/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/service-areas/collingswood-nj",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/service-areas/collingswood-nj",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/service-areas/collingswood-nj",
+      "target": "https://fonts.googleapis.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://fonts.googleapis.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/service-areas/collingswood-nj",
+      "target": "https://fonts.gstatic.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://fonts.gstatic.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/service-areas/collingswood-nj",
+      "target": "https://cpbexrtitabqgrcfucbm.supabase.co",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://cpbexrtitabqgrcfucbm.supabase.co/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/service-areas/collingswood-nj",
+      "target": "https://cpbexrtitabqgrcfucbm.supabase.co",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://cpbexrtitabqgrcfucbm.supabase.co/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/gutter-services",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/gutter-services",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/gutter-services",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/gutter-services",
+      "target": "https://fonts.googleapis.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://fonts.googleapis.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/gutter-services",
+      "target": "https://fonts.gstatic.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://fonts.gstatic.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/privacy",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/privacy",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/privacy",
+      "target": "https://cpbexrtitabqgrcfucbm.supabase.co",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://cpbexrtitabqgrcfucbm.supabase.co/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/terms",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/terms",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/terms",
+      "target": "https://cpbexrtitabqgrcfucbm.supabase.co",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://cpbexrtitabqgrcfucbm.supabase.co/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/gutter-guards-guide-south-jersey",
+      "target": "https://cleangutterslighting.com/favicon-32.png",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://cleangutterslighting.com/favicon-32.png"
+    },
+    {
+      "source": "https://cleangutterslighting.com/oelo-lighting-color-themes",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/oelo-lighting-color-themes",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/permanent-vs-traditional-lighting",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/permanent-vs-traditional-lighting",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/top-5-gutter-guard-mistakes-nj-homeowners",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/top-5-gutter-guard-mistakes-nj-homeowners",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/4th-july-led-lighting-nj",
+      "target": "https://cleangutterslighting.com/4th-july-permanent-led-lighting-south-jersey.jpg",
+      "tag": "img",
+      "status": 404,
+      "final_url": "https://cleangutterslighting.com/4th-july-permanent-led-lighting-south-jersey.jpg"
+    },
+    {
+      "source": "https://cleangutterslighting.com/4th-july-led-lighting-nj",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/4th-july-led-lighting-nj",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/july-gutter-guard-install-nj",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/july-gutter-guard-install-nj",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/summer-backyard-led-lighting",
+      "target": "https://cleangutterslighting.com/summer-backyard-led-lighting-south-jersey.jpg",
+      "tag": "img",
+      "status": 404,
+      "final_url": "https://cleangutterslighting.com/summer-backyard-led-lighting-south-jersey.jpg"
+    },
+    {
+      "source": "https://cleangutterslighting.com/summer-backyard-led-lighting",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/summer-backyard-led-lighting",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/services",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/services",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/services",
+      "target": "https://fonts.googleapis.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://fonts.googleapis.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/services",
+      "target": "https://fonts.gstatic.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://fonts.gstatic.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/locations/cherry-hill-nj",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/locations/cherry-hill-nj",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/locations/cherry-hill-nj",
+      "target": "https://fonts.googleapis.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://fonts.googleapis.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/locations/cherry-hill-nj",
+      "target": "https://fonts.gstatic.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://fonts.gstatic.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/locations/cherry-hill-nj",
+      "target": "https://cpbexrtitabqgrcfucbm.supabase.co",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://cpbexrtitabqgrcfucbm.supabase.co/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/locations/cherry-hill-nj",
+      "target": "https://cpbexrtitabqgrcfucbm.supabase.co",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://cpbexrtitabqgrcfucbm.supabase.co/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/locations/mount-laurel-nj",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/locations/mount-laurel-nj",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/locations/mount-laurel-nj",
+      "target": "https://fonts.googleapis.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://fonts.googleapis.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/locations/mount-laurel-nj",
+      "target": "https://fonts.gstatic.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://fonts.gstatic.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/locations/mount-laurel-nj",
+      "target": "https://cpbexrtitabqgrcfucbm.supabase.co",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://cpbexrtitabqgrcfucbm.supabase.co/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/locations/mount-laurel-nj",
+      "target": "https://cpbexrtitabqgrcfucbm.supabase.co",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://cpbexrtitabqgrcfucbm.supabase.co/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/locations/moorestown-nj",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/locations/moorestown-nj",
+      "target": "https://www.googletagmanager.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://www.googletagmanager.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/locations/moorestown-nj",
+      "target": "https://fonts.googleapis.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://fonts.googleapis.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/locations/moorestown-nj",
+      "target": "https://fonts.gstatic.com",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://fonts.gstatic.com/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/locations/moorestown-nj",
+      "target": "https://cpbexrtitabqgrcfucbm.supabase.co",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://cpbexrtitabqgrcfucbm.supabase.co/"
+    },
+    {
+      "source": "https://cleangutterslighting.com/locations/moorestown-nj",
+      "target": "https://cpbexrtitabqgrcfucbm.supabase.co",
+      "tag": "link",
+      "status": 404,
+      "final_url": "https://cpbexrtitabqgrcfucbm.supabase.co/"
+    }
+  ],
+  "redirected_internal_links": [
+    {
+      "source": "https://cleangutterslighting.com/blog/best-gutter-guards-south-jersey-guide",
+      "target": "https://cleangutterslighting.com/locations/cherry-hill-nj",
+      "tag": "a",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/cherry-hill-nj"
+    },
+    {
+      "source": "https://cleangutterslighting.com/blog/best-gutter-guards-south-jersey-guide",
+      "target": "https://cleangutterslighting.com/locations/voorhees-nj",
+      "tag": "a",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/voorhees-nj"
+    },
+    {
+      "source": "https://cleangutterslighting.com/blog/best-gutter-guards-south-jersey-guide",
+      "target": "https://cleangutterslighting.com/locations/mount-laurel-nj",
+      "tag": "a",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/mount-laurel-nj"
+    },
+    {
+      "source": "https://cleangutterslighting.com/blog/best-gutter-guards-south-jersey-guide",
+      "target": "https://cleangutterslighting.com/locations/marlton-nj",
+      "tag": "a",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/marlton-nj"
+    },
+    {
+      "source": "https://cleangutterslighting.com/blog/best-gutter-guards-south-jersey-guide",
+      "target": "https://cleangutterslighting.com/locations/moorestown-nj",
+      "tag": "a",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/moorestown-nj"
+    },
+    {
+      "source": "https://cleangutterslighting.com/blog/best-gutter-guards-south-jersey-guide",
+      "target": "https://cleangutterslighting.com/locations/haddonfield-nj",
+      "tag": "a",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/haddonfield-nj"
+    },
+    {
+      "source": "https://cleangutterslighting.com/blog/best-gutter-guards-south-jersey-guide",
+      "target": "https://cleangutterslighting.com/locations/medford-nj",
+      "tag": "a",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/medford-nj"
+    },
+    {
+      "source": "https://cleangutterslighting.com/blog/best-gutter-guards-south-jersey-guide",
+      "target": "https://cleangutterslighting.com/locations/philadelphia-pa",
+      "tag": "a",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/philadelphia-pa"
+    }
+  ],
+  "missing_titles": [],
+  "missing_descriptions": [
+    "https://cleangutterslighting.com/gutter-guards-guide-south-jersey"
+  ],
+  "bad_h1": [],
+  "missing_canonicals": [
+    "https://cleangutterslighting.com/gutter-guards-guide-south-jersey"
+  ],
+  "noindex_pages": [
+    "https://cleangutterslighting.com/privacy",
+    "https://cleangutterslighting.com/terms",
+    "https://cleangutterslighting.com/gutter-guards-guide-south-jersey"
+  ],
+  "duplicate_titles": {
+    "Gutter Guards Philadelphia, PA | Free Estimate": [
+      "https://cleangutterslighting.com/service-areas/philadelphia-pa",
+      "https://cleangutterslighting.com/locations/philadelphia-pa"
+    ],
+    "Gutter Guards Cherry Hill, NJ | Free Estimate": [
+      "https://cleangutterslighting.com/service-areas/cherry-hill-nj",
+      "https://cleangutterslighting.com/locations/cherry-hill-nj"
+    ],
+    "Gutter Guards Voorhees, NJ | Free Estimate": [
+      "https://cleangutterslighting.com/service-areas/voorhees-nj",
+      "https://cleangutterslighting.com/locations/voorhees-nj"
+    ],
+    "Gutter Guards Haddonfield, NJ | Free Estimate": [
+      "https://cleangutterslighting.com/service-areas/haddonfield-nj",
+      "https://cleangutterslighting.com/locations/haddonfield-nj"
+    ],
+    "Gutter Guards Mount Laurel, NJ | Free Estimate": [
+      "https://cleangutterslighting.com/service-areas/mount-laurel-nj",
+      "https://cleangutterslighting.com/locations/mount-laurel-nj"
+    ],
+    "Gutter Guards Marlton, NJ | Free Estimate": [
+      "https://cleangutterslighting.com/service-areas/marlton-nj",
+      "https://cleangutterslighting.com/locations/marlton-nj"
+    ],
+    "Gutter Guards Moorestown, NJ | Free Estimate": [
+      "https://cleangutterslighting.com/service-areas/moorestown-nj",
+      "https://cleangutterslighting.com/locations/moorestown-nj"
+    ],
+    "Gutter Guards Medford, NJ | Free Estimate": [
+      "https://cleangutterslighting.com/service-areas/medford-nj",
+      "https://cleangutterslighting.com/locations/medford-nj"
+    ],
+    "Page not found": [
+      "https://cleangutterslighting.com/service-areas/lumberton-nj",
+      "https://cleangutterslighting.com/service-areas/hainesport-nj",
+      "https://cleangutterslighting.com/service-areas/cinnaminson-nj",
+      "https://cleangutterslighting.com/service-areas/maple-shade-nj",
+      "https://cleangutterslighting.com/service-areas/oaklyn-nj",
+      "https://cleangutterslighting.com/service-areas/audubon-nj",
+      "https://cleangutterslighting.com/service-areas/haddon-township-nj"
+    ]
+  },
+  "duplicate_descriptions": {
+    "Owner-installed micro-mesh gutter guards in Philadelphia, PA. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.": [
+      "https://cleangutterslighting.com/service-areas/philadelphia-pa",
+      "https://cleangutterslighting.com/locations/philadelphia-pa"
+    ],
+    "Owner-installed micro-mesh gutter guards in Cherry Hill, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.": [
+      "https://cleangutterslighting.com/service-areas/cherry-hill-nj",
+      "https://cleangutterslighting.com/locations/cherry-hill-nj"
+    ],
+    "Owner-installed micro-mesh gutter guards in Voorhees, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.": [
+      "https://cleangutterslighting.com/service-areas/voorhees-nj",
+      "https://cleangutterslighting.com/locations/voorhees-nj"
+    ],
+    "Owner-installed micro-mesh gutter guards in Haddonfield, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.": [
+      "https://cleangutterslighting.com/service-areas/haddonfield-nj",
+      "https://cleangutterslighting.com/locations/haddonfield-nj"
+    ],
+    "Owner-installed micro-mesh gutter guards in Mount Laurel, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.": [
+      "https://cleangutterslighting.com/service-areas/mount-laurel-nj",
+      "https://cleangutterslighting.com/locations/mount-laurel-nj"
+    ],
+    "Owner-installed micro-mesh gutter guards in Marlton, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.": [
+      "https://cleangutterslighting.com/service-areas/marlton-nj",
+      "https://cleangutterslighting.com/locations/marlton-nj"
+    ],
+    "Owner-installed micro-mesh gutter guards in Moorestown, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.": [
+      "https://cleangutterslighting.com/service-areas/moorestown-nj",
+      "https://cleangutterslighting.com/locations/moorestown-nj"
+    ],
+    "Owner-installed micro-mesh gutter guards in Medford, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.": [
+      "https://cleangutterslighting.com/service-areas/medford-nj",
+      "https://cleangutterslighting.com/locations/medford-nj"
+    ]
+  },
+  "pages": [
+    {
+      "url": "https://cleangutterslighting.com/",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/",
+      "redirected": false,
+      "title": "CleanGutters Lighting | Gutter Guards & Roofline LEDs",
+      "description": "Owner-installed micro-mesh gutter guards since 2009. Permanent Oelo LED roofline lighting. Free estimates \u2014 South Jersey & PA.",
+      "canonical": "https://cleangutterslighting.com/",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Owner-Installed Gutter Guards & Permanent Roofline Lighting"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/gutters",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/gutters",
+      "redirected": false,
+      "title": "LeafBlaster Pro Gutter Guards | South Jersey Installer",
+      "description": "Owner-installed gutter guards for South Jersey homes. LeafBlaster Pro micro-mesh by GutterGlove \u2014 transferable lifetime warranty. Free estimate. 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/gutters",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "LeafBlaster Pro Micro-Mesh Gutter Guards for South Jersey Homes"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/lighting",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/lighting",
+      "redirected": false,
+      "title": "Permanent LED Roofline Lighting | Oelo Installer | NJ",
+      "description": "Certified Oelo permanent LED lighting installer in South Jersey. Year-round architectural lighting for holidays, security & curb appeal. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/lighting",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Permanent, Custom Oelo LED Roofline Lighting with Metal/Acrylic Framing"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/gutter-cleaning",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/gutter-cleaning",
+      "redirected": false,
+      "title": "Gutter Cleaning NJ, Eastern PA & Northern DE | CleanGutters",
+      "description": "Professional gutter cleaning across New Jersey, Eastern Pennsylvania and Northern Delaware. Hand clearing, downspout flushing, cleanup and a full gutter inspection. 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/gutter-cleaning",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Professional Gutter Cleaning & Inspection"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/gutter-installation",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/gutter-installation",
+      "redirected": false,
+      "title": "Gutter Installation NJ, Eastern PA & Northern DE | CleanGutters",
+      "description": "Seamless gutter installation across New Jersey, Eastern Pennsylvania and Northern Delaware. Custom 5-inch and 6-inch systems installed by the owner. 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/gutter-installation",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Seamless Gutters Built for Your Home"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/gutter-repair",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/gutter-repair",
+      "redirected": false,
+      "title": "Gutter Repair NJ, Eastern PA & Northern DE | CleanGutters",
+      "description": "Gutter repair across New Jersey, Eastern Pennsylvania and Northern Delaware. Fix leaks, sagging, pitch, seams, overflow and downspouts. Free inspection. 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/gutter-repair",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Repair That Fixes the Actual Problem"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/seamless-gutters",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/seamless-gutters",
+      "redirected": false,
+      "title": "Seamless Gutters South Jersey | Colors & Materials",
+      "description": "Seamless gutters in South Jersey: aluminum, copper, K-style & half-round. Compare types, materials & colors. On-site fabrication, same-day. 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/seamless-gutters",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Seamless Gutters in South Jersey"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/downspout-services",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/downspout-services",
+      "redirected": false,
+      "title": "Downspout Installation & Repair South Jersey | Drainage",
+      "description": "Downspout installation, replacement & extensions in South Jersey. Underground drainage tie-ins, splash blocks, oversized downspouts. Same-day. 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/downspout-services",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Downspout Installation & Repair in South Jersey"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/fascia-soffit-repair",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/fascia-soffit-repair",
+      "redirected": false,
+      "title": "Fascia & Soffit Repair South Jersey | Rotted Wood & Trim",
+      "description": "Fascia & soffit repair in South Jersey: rotted fascia replacement, soffit repair, aluminum wrap & capping, water-damage repair. Free estimates. 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/fascia-soffit-repair",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Fascia & Soffit Repair in South Jersey"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/same-day-gutter-service",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/same-day-gutter-service",
+      "redirected": false,
+      "title": "Same-Day Gutter Service South Jersey | Cleaning & Repair",
+      "description": "Same-day gutter service in South Jersey: fast cleaning, repair, installation & downspout work, often the same day you call. Free estimates. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/same-day-gutter-service",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Same-Day Gutter Service in South Jersey"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/reviews",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/reviews",
+      "redirected": false,
+      "title": "Reviews | 5-Star Gutter Guard Installer | South Jersey",
+      "description": "See why South Jersey homeowners choose CleanGutters Lighting for GutterGlove gutter guards and Oelo permanent LED lighting. Read verified reviews.",
+      "canonical": "https://cleangutterslighting.com/reviews",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Customer Reviews"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/blog",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/blog",
+      "redirected": false,
+      "title": "Gutter & Lighting Blog | Tips for South Jersey Homeowners",
+      "description": "Expert tips on gutter guards & permanent LED lighting for South Jersey & Eastern PA homeowners. Advice from CleanGutters Lighting \u2014 in business since 2009.",
+      "canonical": "https://cleangutterslighting.com/blog",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Home Improvement Insights"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/faq",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/faq",
+      "redirected": false,
+      "title": "FAQ: Gutter Guards & Permanent Outdoor Lighting | NJ",
+      "description": "Answers to common questions about gutter guard installation & permanent Oelo LED lighting. South Jersey & Eastern PA. Free estimate \u2014 call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/faq",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Frequently Asked Questions"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/philadelphia-pa",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/philadelphia-pa",
+      "redirected": false,
+      "title": "Gutter Guards Philadelphia, PA | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Philadelphia, PA. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/philadelphia-pa",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Philadelphia, PA"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/wilmington-de",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/wilmington-de",
+      "redirected": false,
+      "title": "Gutter Guards Wilmington, DE | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Wilmington, DE. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/wilmington-de",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Wilmington, DE"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/cherry-hill-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/cherry-hill-nj",
+      "redirected": false,
+      "title": "Gutter Guards Cherry Hill, NJ | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Cherry Hill, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/cherry-hill-nj",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards in Cherry Hill, NJ"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/bensalem-pa",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/bensalem-pa",
+      "redirected": false,
+      "title": "Gutter Guards Bensalem, PA | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Bensalem, PA. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/bensalem-pa",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Bensalem, PA"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/princeton-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/princeton-nj",
+      "redirected": false,
+      "title": "Gutter Guards Princeton, NJ | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Princeton, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/princeton-nj",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Princeton, NJ"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas",
+      "redirected": false,
+      "title": "Gutter Service Areas | NJ, PA, DE & MD",
+      "description": "Owner-installed gutter guards, cleaning, repair and permanent roofline lighting across South Jersey, Eastern PA, Delaware and Northeast Maryland.",
+      "canonical": "https://cleangutterslighting.com/service-areas",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Our Service Areas"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/west-chester-pa",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/west-chester-pa",
+      "redirected": false,
+      "title": "Gutter Guards West Chester, PA | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in West Chester, PA. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/west-chester-pa",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in West Chester, PA"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/voorhees-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/voorhees-nj",
+      "redirected": false,
+      "title": "Gutter Guards Voorhees, NJ | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Voorhees, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/voorhees-nj",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Voorhees, NJ"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/doylestown-pa",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/doylestown-pa",
+      "redirected": false,
+      "title": "Gutter Guards Doylestown, PA | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Doylestown, PA. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/doylestown-pa",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Doylestown, PA"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/king-of-prussia-pa",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/king-of-prussia-pa",
+      "redirected": false,
+      "title": "Gutter Guards King of Prussia, PA | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in King of Prussia, PA. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/king-of-prussia-pa",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Owner-Installed Gutter Guards in King of Prussia, PA"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/toms-river-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/toms-river-nj",
+      "redirected": false,
+      "title": "Gutter Guards Toms River, NJ | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Toms River, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/toms-river-nj",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Toms River, NJ"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/ocean-city-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/ocean-city-nj",
+      "redirected": false,
+      "title": "Gutter Guards Ocean City, NJ | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Ocean City, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/ocean-city-nj",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Ocean City, NJ"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/atlantic-city-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/atlantic-city-nj",
+      "redirected": false,
+      "title": "Gutter Guards Atlantic City, NJ | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Atlantic City, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/atlantic-city-nj",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Atlantic City, NJ"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/trenton-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/trenton-nj",
+      "redirected": false,
+      "title": "Gutter Guards Trenton, NJ | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Trenton, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/trenton-nj",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Trenton, NJ"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/newark-de",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/newark-de",
+      "redirected": false,
+      "title": "Gutter Guards Newark, DE | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Newark, DE. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/newark-de",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Newark, DE"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/bear-de",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/bear-de",
+      "redirected": false,
+      "title": "Gutter Guards Bear, DE | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Bear, DE. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/bear-de",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Bear, DE"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/haddonfield-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/haddonfield-nj",
+      "redirected": false,
+      "title": "Gutter Guards Haddonfield, NJ | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Haddonfield, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/haddonfield-nj",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Haddonfield, NJ"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/mount-laurel-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/mount-laurel-nj",
+      "redirected": false,
+      "title": "Gutter Guards Mount Laurel, NJ | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Mount Laurel, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/mount-laurel-nj",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards in Mount Laurel, NJ"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/marlton-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/marlton-nj",
+      "redirected": false,
+      "title": "Gutter Guards Marlton, NJ | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Marlton, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/marlton-nj",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Marlton, NJ"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/moorestown-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/moorestown-nj",
+      "redirected": false,
+      "title": "Gutter Guards Moorestown, NJ | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Moorestown, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/moorestown-nj",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards in Moorestown, NJ"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/collingswood-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/collingswood-nj",
+      "redirected": false,
+      "title": "Gutter Guards Collingswood, NJ | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Collingswood, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/collingswood-nj",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards in Collingswood, NJ"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/medford-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/medford-nj",
+      "redirected": false,
+      "title": "Gutter Guards Medford, NJ | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Medford, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/medford-nj",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards Built for Medford\u2019s Wooded Lots."
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/bristol-pa",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/bristol-pa",
+      "redirected": false,
+      "title": "Gutter Guards Bristol, PA | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Bristol, PA. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/bristol-pa",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Bristol, PA"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/freehold-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/freehold-nj",
+      "redirected": false,
+      "title": "Gutter Guards Freehold, NJ | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Freehold, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/freehold-nj",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Freehold, NJ"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/brick-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/brick-nj",
+      "redirected": false,
+      "title": "Gutter Guards Brick, NJ | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Brick, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/brick-nj",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Brick, NJ"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/wildwood-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/wildwood-nj",
+      "redirected": false,
+      "title": "Gutter Guards Wildwood, NJ | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Wildwood, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/wildwood-nj",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Wildwood, NJ"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/hammonton-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/hammonton-nj",
+      "redirected": false,
+      "title": "Gutter Guards Hammonton, NJ | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Hammonton, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/hammonton-nj",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Hammonton, NJ"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/sewell-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/sewell-nj",
+      "redirected": false,
+      "title": "Gutter Guards Sewell, NJ | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Sewell, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/sewell-nj",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Sewell, NJ"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/woodbury-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/woodbury-nj",
+      "redirected": false,
+      "title": "Gutter Guards Woodbury, NJ | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Woodbury, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/woodbury-nj",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Woodbury, NJ"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/gutter-services",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/gutter-services",
+      "redirected": false,
+      "title": "Gutter Services NJ, Eastern PA & Northern DE | CleanGutters Lighting",
+      "description": "Gutter cleaning, repair, replacement, downspouts, fascia and soffit across New Jersey, Eastern Pennsylvania and Northern Delaware. Free inspection and estimate. 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/gutter-services",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Complete Gutter Services \u2014 Cleaning, Repair, Replacement & More"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/privacy",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/privacy",
+      "redirected": false,
+      "title": "Privacy Policy | CleanGutters Lighting \u2014 Cherry Hill, NJ",
+      "description": "Privacy Policy for CleanGutters Lighting Learn how we collect, use, and protect your personal information when you use our website or request services.",
+      "canonical": "https://cleangutterslighting.com/privacy",
+      "robots": "noindex,follow",
+      "h1_count": 1,
+      "h1": [
+        "Privacy Policy"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/terms",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/terms",
+      "redirected": false,
+      "title": "Terms of Service | CleanGutters Lighting",
+      "description": "Terms of Service for CleanGutters Lighting Read the terms governing gutter guard installation and permanent outdoor lighting services in South Jersey.",
+      "canonical": "https://cleangutterslighting.com/terms",
+      "robots": "noindex,follow",
+      "h1_count": 1,
+      "h1": [
+        "Terms of Service"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/gutterglove-vs-leaffilter",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/gutterglove-vs-leaffilter",
+      "redirected": false,
+      "title": "GutterGlove vs LeafFilter Comparison | CleanGutters",
+      "description": "Detailed comparison of GutterGlove and LeafFilter gutter guard systems. Materials, costs, durability, and performance.",
+      "canonical": "https://cleangutterslighting.com/gutterglove-vs-leaffilter",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "GutterGlove vs LeafFilter: Complete Comparison"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/gutter-guards-prevent-foundation-damage",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/gutter-guards-prevent-foundation-damage",
+      "redirected": false,
+      "title": "Gutter Guards Prevent Foundation Damage | CleanGutters",
+      "description": "Learn how gutter guards prevent costly foundation damage caused by water infiltration and improper drainage.",
+      "canonical": "https://cleangutterslighting.com/gutter-guards-prevent-foundation-damage",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "How Gutter Guards Prevent Foundation Damage"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/gutter-maintenance-checklist-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/gutter-maintenance-checklist-nj",
+      "redirected": false,
+      "title": "Gutter Maintenance Checklist NJ | CleanGutters",
+      "description": "Complete seasonal gutter maintenance checklist for South Jersey homeowners to protect your home year-round.",
+      "canonical": "https://cleangutterslighting.com/gutter-maintenance-checklist-nj",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Maintenance Checklist for South Jersey Homeowners"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/hurricane-season-gutter-guards-nj-2026",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/hurricane-season-gutter-guards-nj-2026",
+      "redirected": false,
+      "title": "Hurricane Season Gutter Guards NJ 2026 | CleanGutters",
+      "description": "Why gutter guards are essential during hurricane season in South Jersey. Prevent water damage during major storms.",
+      "canonical": "https://cleangutterslighting.com/hurricane-season-gutter-guards-nj-2026",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Hurricane Season Gutter Guards: South Jersey 2026"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/pine-needles-gutters-micro-mesh-solution",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/pine-needles-gutters-micro-mesh-solution",
+      "redirected": false,
+      "title": "Pine Needles & Gutters: Micro-Mesh Fix | CleanGutters",
+      "description": "Why pine needles defeat standard gutter screens and how 0.008-inch stainless steel micro-mesh stops them. Damage prevention, installation tips, and maintenance advice.",
+      "canonical": "https://cleangutterslighting.com/pine-needles-gutters-micro-mesh-solution",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Pine Needle Gutter Problem: Micro-Mesh Solution"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/gutter-guard-installer-questions",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/gutter-guard-installer-questions",
+      "redirected": false,
+      "title": "Questions for Gutter Guard Installers | CleanGutters",
+      "description": "Essential questions to ask your gutter guard installer in South Jersey before hiring. Ensure quality installation and service.",
+      "canonical": "https://cleangutterslighting.com/gutter-guard-installer-questions",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Questions to Ask Gutter Guard Installer South Jersey"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/why-gutter-guards-essential-south-jersey",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/why-gutter-guards-essential-south-jersey",
+      "redirected": false,
+      "title": "Why Gutter Guards Are Essential | CleanGutters",
+      "description": "Learn why gutter guards are essential for South Jersey homeowners. Protect your home from water damage, reduce maintenance costs, and increase property value.",
+      "canonical": "https://cleangutterslighting.com/why-gutter-guards-essential-south-jersey",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Why Gutter Guards Are Essential in South Jersey"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/oelo-vs-gemstone-vs-trimlight",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/oelo-vs-gemstone-vs-trimlight",
+      "redirected": false,
+      "title": "Oelo vs Gemstone vs Trimlight: Cost & Features",
+      "description": "Compare Oelo, Gemstone and Trimlight permanent lighting costs, controls, installation and design for South Jersey homes. Free estimate: 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/oelo-vs-gemstone-vs-trimlight",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Oelo vs Gemstone vs Trimlight: Cost & Feature Comparison"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/blog/best-gutter-guards-south-jersey-guide",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/blog/best-gutter-guards-south-jersey-guide/",
+      "redirected": false,
+      "title": "Best Gutter Guards in South Jersey: 2026 Guide",
+      "description": "Compare the best gutter guards in South Jersey. Learn why LeafBlaster Pro micro-mesh outperforms screens and saves thousands over manual cleanings.",
+      "canonical": "https://cleangutterslighting.com/blog/best-gutter-guards-south-jersey-guide",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Best Gutter Guards for South Jersey Homes: Complete 2026 Guide"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/gutter-guards-guide-south-jersey",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/gutter-guards-guide-south-jersey",
+      "redirected": false,
+      "title": "Page Not Found | CleanGutters Lighting",
+      "description": "",
+      "canonical": "",
+      "robots": "noindex, nofollow",
+      "h1_count": 1,
+      "h1": [
+        "404"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/oelo-lighting-color-themes",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/oelo-lighting-color-themes",
+      "redirected": false,
+      "title": "Oelo Lighting Color Themes Guide | CleanGutters",
+      "description": "Complete guide to Oelo permanent LED lighting color themes for every season and holiday. Learn how to use the app to create custom color schemes for your South Jersey home year-round.",
+      "canonical": "https://cleangutterslighting.com/oelo-lighting-color-themes",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Oelo Permanent Lighting Color Themes Guide: Seasonal Decorating All Year Long"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/permanent-vs-traditional-lighting",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/permanent-vs-traditional-lighting",
+      "redirected": false,
+      "title": "Permanent LED vs Traditional Lighting | CleanGutters",
+      "description": "Compare permanent Oelo LED roofline lighting vs traditional landscape, porch, and holiday string lights. Cost, maintenance, curb appeal, and more for South Jersey homeowners.",
+      "canonical": "https://cleangutterslighting.com/permanent-vs-traditional-lighting",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Permanent LED Lighting vs. Traditional Outdoor Lighting: Which Is Right for Your South Jersey Home?"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/top-5-gutter-guard-mistakes-nj-homeowners",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/top-5-gutter-guard-mistakes-nj-homeowners",
+      "redirected": false,
+      "title": "Top 5 Gutter Guard Mistakes NJ | CleanGutters",
+      "description": "Avoid these 5 common gutter guard mistakes South Jersey homeowners make. Learn what to look for in a professional installer serving Cherry Hill & the Philly suburbs.",
+      "canonical": "https://cleangutterslighting.com/top-5-gutter-guard-mistakes-nj-homeowners",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Top 5 Gutter Guard Mistakes NJ Homeowners Make"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/recent-gutter-guard-projects",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/recent-gutter-guard-projects",
+      "redirected": false,
+      "title": "Recent Gutter Guard Projects | CleanGutters",
+      "description": "See recent micro-mesh gutter guard installations completed by CleanGutters Lighting in Yardley PA, West Deptford NJ, and Aberdeen MD.",
+      "canonical": "https://cleangutterslighting.com/recent-gutter-guard-projects",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Recent Gutter Guard Projects in Yardley, West Deptford & Aberdeen"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/4th-july-led-lighting-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/4th-july-led-lighting-nj",
+      "redirected": false,
+      "title": "4th of July LED Lighting Ideas | CleanGutters",
+      "description": "Make your Independence Day unforgettable with permanent LED roofline lighting. Red, white, and blue color schemes, backyard entertaining ideas, and patriotic lighting tips for South Jersey homeowners.",
+      "canonical": "https://cleangutterslighting.com/4th-july-led-lighting-nj",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "4th of July Outdoor Lighting Ideas: How Permanent LED Lights Transform Your Independence Day"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/oelo-vs-diy-professional-install",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/oelo-vs-diy-professional-install",
+      "redirected": false,
+      "title": "Oelo vs DIY: Professional Install Wins | CleanGutters",
+      "description": "Comparing Oelo permanent lighting DIY kits vs professional installation in South Jersey. Why hiring a certified installer saves money, time, and headaches.",
+      "canonical": "https://cleangutterslighting.com/oelo-vs-diy-professional-install",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Oelo vs DIY Permanent Lights: Why Professional Installation Wins"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/july-gutter-guard-install-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/july-gutter-guard-install-nj",
+      "redirected": false,
+      "title": "Why July Is Best for Gutter Guards | CleanGutters",
+      "description": "July is the ideal month to install micro-mesh gutter guards in South Jersey. Beat summer storm debris, avoid fall rush pricing, and protect your home before hurricane season.",
+      "canonical": "https://cleangutterslighting.com/july-gutter-guard-install-nj",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Why July Is the Best Time to Install Gutter Guards in South Jersey"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/summer-backyard-led-lighting",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/summer-backyard-led-lighting",
+      "redirected": false,
+      "title": "Summer Backyard LED Lighting NJ | CleanGutters",
+      "description": "Host unforgettable summer gatherings with permanent LED lighting. Color-changing roofline lights, patio ambiance, and backyard entertaining ideas for South Jersey homeowners.",
+      "canonical": "https://cleangutterslighting.com/summer-backyard-led-lighting",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Summer Backyard Entertaining: How Permanent LED Lighting Transforms Your Outdoor Space"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/gutter-guard-cost-cherry-hill-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/gutter-guard-cost-cherry-hill-nj",
+      "redirected": false,
+      "title": "Gutter Guard Cost Cherry Hill NJ | CleanGutters",
+      "description": "How much do gutter guards cost in Cherry Hill, NJ? See 2026 per-foot pricing, material options, and payback timelines from local installs.",
+      "canonical": "https://cleangutterslighting.com/gutter-guard-cost-cherry-hill-nj",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guard Cost in Cherry Hill, NJ 2026"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/best-time-gutter-guards-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/best-time-gutter-guards-nj",
+      "redirected": false,
+      "title": "Best Time to Install Gutter Guards | CleanGutters",
+      "description": "Learn the best season and timing to install gutter guards in South Jersey for maximum protection and cost savings.",
+      "canonical": "https://cleangutterslighting.com/best-time-gutter-guards-nj",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Best Time to Install Gutter Guards in South Jersey"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/gutter-cleaning-vs-guards-cost",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/gutter-cleaning-vs-guards-cost",
+      "redirected": false,
+      "title": "Gutter Cleaning Cost vs Guards | CleanGutters",
+      "description": "Spending $150-$300 per gutter cleaning? Compare 5, 10, and 20-year costs of repeated cleaning vs one-time guard installation for South Jersey homeowners.",
+      "canonical": "https://cleangutterslighting.com/gutter-cleaning-vs-guards-cost",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Cleaning Cost vs Gutter Guards Investment"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/prevent-ice-dams-gutter-guards",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/prevent-ice-dams-gutter-guards",
+      "redirected": false,
+      "title": "Prevent Ice Dams with Gutter Guards | CleanGutters",
+      "description": "Learn how gutter guards prevent destructive ice dams in South Jersey winters. Protect your roof and home from expensive water damage.",
+      "canonical": "https://cleangutterslighting.com/prevent-ice-dams-gutter-guards",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Prevent Ice Dams with Gutter Guards in South Jersey"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/services",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/services",
+      "redirected": false,
+      "title": "Gutter Services South Jersey | CleanGutters",
+      "description": "All home exterior services: GutterGlove gutter guards, Oelo permanent LED lighting, gutter cleaning, repair & replacement in South Jersey, PA & DE. Free estimates. 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/services",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guard & Permanent LED Lighting Installation Services | South Jersey & Eastern PA"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/permanent-lights-cost-south-jersey",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/permanent-lights-cost-south-jersey",
+      "redirected": false,
+      "title": "Permanent Lights Cost South Jersey | CleanGutters",
+      "description": "Permanent LED roofline lighting costs in South Jersey for 2026. Compare Oelo system pricing, installation fees, and long-term savings vs holiday lights.",
+      "canonical": "https://cleangutterslighting.com/permanent-lights-cost-south-jersey",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Permanent Lights Cost South Jersey 2026 Pricing Guide"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/led-outdoor-lighting-energy-savings-guide",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/led-outdoor-lighting-energy-savings-guide",
+      "redirected": false,
+      "title": "LED Outdoor Lighting Energy Savings | CleanGutters",
+      "description": "Complete guide to LED outdoor lighting energy savings. Learn how permanent LED systems reduce electricity costs compared to traditional lighting.",
+      "canonical": "https://cleangutterslighting.com/led-outdoor-lighting-energy-savings-guide",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "LED Outdoor Lighting Energy Savings Guide"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/outdoor-lighting-security-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/outdoor-lighting-security-nj",
+      "redirected": false,
+      "title": "Outdoor Lighting Security Benefits | CleanGutters",
+      "description": "Learn how permanent outdoor lighting improves home security and deters criminals in South Jersey.",
+      "canonical": "https://cleangutterslighting.com/outdoor-lighting-security-nj",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Outdoor Lighting Security Benefits for South Jersey Homes"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/permanent-lighting-home-value",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/permanent-lighting-home-value",
+      "redirected": false,
+      "title": "Permanent Lighting Increases Home Value | CleanGutters",
+      "description": "Learn how permanent outdoor lighting installations increase your home's market value and appeal to buyers.",
+      "canonical": "https://cleangutterslighting.com/permanent-lighting-home-value",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Permanent Outdoor Lighting Increases Home Value"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/pennsauken-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/pennsauken-nj",
+      "redirected": false,
+      "title": "Gutter Guards Pennsauken, NJ | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Pennsauken, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/pennsauken-nj",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Pennsauken, NJ"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/alloway-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/alloway-nj",
+      "redirected": false,
+      "title": "Gutter Guards Alloway, NJ | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Alloway, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/alloway-nj",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Alloway, NJ"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/beachwood-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/beachwood-nj",
+      "redirected": false,
+      "title": "Gutter Guards Beachwood, NJ | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Beachwood, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/beachwood-nj",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Beachwood, NJ"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/brigantine-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/brigantine-nj",
+      "redirected": false,
+      "title": "Gutter Guards Brigantine, NJ | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Brigantine, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/brigantine-nj",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Brigantine, NJ"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/burlington-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/burlington-nj",
+      "redirected": false,
+      "title": "Gutter Guards Burlington, NJ | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Burlington, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/burlington-nj",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Burlington, NJ"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/camden-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/camden-nj",
+      "redirected": false,
+      "title": "Gutter Guards Camden, NJ | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Camden, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/camden-nj",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Camden, NJ"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/cape-may-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/cape-may-nj",
+      "redirected": false,
+      "title": "Gutter Guards Cape May, NJ | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Cape May, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/cape-may-nj",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Cape May, NJ"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/cape-may-court-house-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/cape-may-court-house-nj",
+      "redirected": false,
+      "title": "Gutter Guards Cape May Court House, NJ | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Cape May Court House, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/cape-may-court-house-nj",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Cape May Court House, NJ"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/carneys-point-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/carneys-point-nj",
+      "redirected": false,
+      "title": "Gutter Guards Carneys Point, NJ | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Carneys Point, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/carneys-point-nj",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Carneys Point, NJ"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/egg-harbor-township-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/egg-harbor-township-nj",
+      "redirected": false,
+      "title": "Gutter Guards Egg Harbor Township, NJ | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Egg Harbor Township, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/egg-harbor-township-nj",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Egg Harbor Township, NJ"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/florence-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/florence-nj",
+      "redirected": false,
+      "title": "Gutter Guards Florence, NJ | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Florence, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/florence-nj",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Florence, NJ"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/glassboro-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/glassboro-nj",
+      "redirected": false,
+      "title": "Gutter Guards Glassboro, NJ | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Glassboro, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/glassboro-nj",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Glassboro, NJ"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/hamilton-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/hamilton-nj",
+      "redirected": false,
+      "title": "Gutter Guards Hamilton, NJ | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Hamilton, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/hamilton-nj",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Hamilton, NJ"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/howell-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/howell-nj",
+      "redirected": false,
+      "title": "Gutter Guards Howell, NJ | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Howell, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/howell-nj",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Howell, NJ"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/jackson-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/jackson-nj",
+      "redirected": false,
+      "title": "Gutter Guards Jackson, NJ | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Jackson, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/jackson-nj",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Jackson, NJ"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/lawrenceville-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/lawrenceville-nj",
+      "redirected": false,
+      "title": "Gutter Guards Lawrenceville, NJ | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Lawrenceville, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/lawrenceville-nj",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Lawrenceville, NJ"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/manchester-township-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/manchester-township-nj",
+      "redirected": false,
+      "title": "Gutter Guards Manchester Township, NJ | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Manchester Township, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/manchester-township-nj",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Manchester Township, NJ"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/mays-landing-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/mays-landing-nj",
+      "redirected": false,
+      "title": "Gutter Guards Mays Landing, NJ | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Mays Landing, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/mays-landing-nj",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Mays Landing, NJ"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/mount-ephraim-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/mount-ephraim-nj",
+      "redirected": false,
+      "title": "Gutter Guards Mount Ephraim, NJ | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Mount Ephraim, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/mount-ephraim-nj",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Mount Ephraim, NJ"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/mullica-hill-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/mullica-hill-nj",
+      "redirected": false,
+      "title": "Gutter Guards Mullica Hill, NJ | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Mullica Hill, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/mullica-hill-nj",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Mullica Hill, NJ"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/paulsboro-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/paulsboro-nj",
+      "redirected": false,
+      "title": "Gutter Guards Paulsboro, NJ | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Paulsboro, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/paulsboro-nj",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Paulsboro, NJ"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/pemberton-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/pemberton-nj",
+      "redirected": false,
+      "title": "Gutter Guards Pemberton, NJ | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Pemberton, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/pemberton-nj",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Pemberton, NJ"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/salem-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/salem-nj",
+      "redirected": false,
+      "title": "Gutter Guards Salem, NJ | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Salem, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/salem-nj",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Salem, NJ"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/west-deptford-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/west-deptford-nj",
+      "redirected": false,
+      "title": "Gutter Guards West Deptford, NJ | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in West Deptford, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/west-deptford-nj",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in West Deptford, NJ"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/willingboro-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/willingboro-nj",
+      "redirected": false,
+      "title": "Gutter Guards Willingboro, NJ | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Willingboro, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/willingboro-nj",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Willingboro, NJ"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/bryn-mawr-pa",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/bryn-mawr-pa",
+      "redirected": false,
+      "title": "Gutter Guards Bryn Mawr, PA | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Bryn Mawr, PA. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/bryn-mawr-pa",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Bryn Mawr, PA"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/chester-pa",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/chester-pa",
+      "redirected": false,
+      "title": "Gutter Guards Chester, PA | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Chester, PA. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/chester-pa",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Chester, PA"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/downingtown-pa",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/downingtown-pa",
+      "redirected": false,
+      "title": "Gutter Guards Downingtown, PA | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Downingtown, PA. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/downingtown-pa",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Downingtown, PA"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/exton-pa",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/exton-pa",
+      "redirected": false,
+      "title": "Gutter Guards Exton, PA | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Exton, PA. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/exton-pa",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Exton, PA"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/levittown-pa",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/levittown-pa",
+      "redirected": false,
+      "title": "Gutter Guards Levittown, PA | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Levittown, PA. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/levittown-pa",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Levittown, PA"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/media-pa",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/media-pa",
+      "redirected": false,
+      "title": "Gutter Guards Media, PA | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Media, PA. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/media-pa",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Media, PA"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/norristown-pa",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/norristown-pa",
+      "redirected": false,
+      "title": "Gutter Guards Norristown, PA | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Norristown, PA. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/norristown-pa",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Norristown, PA"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/springfield-pa",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/springfield-pa",
+      "redirected": false,
+      "title": "Gutter Guards Springfield, PA | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Springfield, PA. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/springfield-pa",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Springfield, PA"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/upper-darby-pa",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/upper-darby-pa",
+      "redirected": false,
+      "title": "Gutter Guards Upper Darby, PA | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Upper Darby, PA. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/upper-darby-pa",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Upper Darby, PA"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/willow-grove-pa",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/willow-grove-pa",
+      "redirected": false,
+      "title": "Gutter Guards Willow Grove, PA | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Willow Grove, PA. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/willow-grove-pa",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Willow Grove, PA"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/yardley-pa",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/yardley-pa",
+      "redirected": false,
+      "title": "Gutter Guards Yardley, PA | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Yardley, PA. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/yardley-pa",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Yardley, PA"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/middletown-de",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/middletown-de",
+      "redirected": false,
+      "title": "Gutter Guards Middletown, DE | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Middletown, DE. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/middletown-de",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Middletown, DE"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/new-castle-de",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/new-castle-de",
+      "redirected": false,
+      "title": "Gutter Guards New Castle, DE | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in New Castle, DE. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/new-castle-de",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in New Castle, DE"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/aberdeen-md",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/aberdeen-md",
+      "redirected": false,
+      "title": "Gutter Guards Aberdeen, MD | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Aberdeen, MD. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/aberdeen-md",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Aberdeen, MD"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/lumberton-nj",
+      "status": 404,
+      "final_url": "https://cleangutterslighting.com/service-areas/lumberton-nj",
+      "redirected": false,
+      "title": "Page not found",
+      "description": "",
+      "canonical": "",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Page not found"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/hainesport-nj",
+      "status": 404,
+      "final_url": "https://cleangutterslighting.com/service-areas/hainesport-nj",
+      "redirected": false,
+      "title": "Page not found",
+      "description": "",
+      "canonical": "",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Page not found"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/cinnaminson-nj",
+      "status": 404,
+      "final_url": "https://cleangutterslighting.com/service-areas/cinnaminson-nj",
+      "redirected": false,
+      "title": "Page not found",
+      "description": "",
+      "canonical": "",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Page not found"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/maple-shade-nj",
+      "status": 404,
+      "final_url": "https://cleangutterslighting.com/service-areas/maple-shade-nj",
+      "redirected": false,
+      "title": "Page not found",
+      "description": "",
+      "canonical": "",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Page not found"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/oaklyn-nj",
+      "status": 404,
+      "final_url": "https://cleangutterslighting.com/service-areas/oaklyn-nj",
+      "redirected": false,
+      "title": "Page not found",
+      "description": "",
+      "canonical": "",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Page not found"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/audubon-nj",
+      "status": 404,
+      "final_url": "https://cleangutterslighting.com/service-areas/audubon-nj",
+      "redirected": false,
+      "title": "Page not found",
+      "description": "",
+      "canonical": "",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Page not found"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/service-areas/haddon-township-nj",
+      "status": 404,
+      "final_url": "https://cleangutterslighting.com/service-areas/haddon-township-nj",
+      "redirected": false,
+      "title": "Page not found",
+      "description": "",
+      "canonical": "",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Page not found"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/best-gutter-guards-pine-needles-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/best-gutter-guards-pine-needles-nj",
+      "redirected": false,
+      "title": "Best Gutter Guards for Pine Needles | CleanGutters",
+      "description": "We rank micro-mesh, helmet, bottle brush, and foam gutter guards by pine needle performance. Side-by-side scoring for South Jersey properties with pine trees.",
+      "canonical": "https://cleangutterslighting.com/best-gutter-guards-pine-needles-nj",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Best Gutter Guards for Pine Needles in South Jersey"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/blog/gutter-guards-vs-cleaning-south-jersey",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/blog/gutter-guards-vs-cleaning-south-jersey/",
+      "redirected": false,
+      "title": "Best Gutter Guards Near Me: Why South Jersey Upgrades",
+      "description": "Best gutter guards near me? See why South Jersey homeowners upgrade from cleaning to LeafBlaster Pro micro-mesh guards. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/blog/gutter-guards-vs-cleaning-south-jersey",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Best Gutter Guards Near Me: Why South Jersey Homeowners Are Upgrading"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/locations/cherry-hill-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/cherry-hill-nj",
+      "redirected": true,
+      "title": "Gutter Guards Cherry Hill, NJ | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Cherry Hill, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/cherry-hill-nj",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards in Cherry Hill, NJ"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/locations/voorhees-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/voorhees-nj",
+      "redirected": true,
+      "title": "Gutter Guards Voorhees, NJ | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Voorhees, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/voorhees-nj",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Voorhees, NJ"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/locations/mount-laurel-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/mount-laurel-nj",
+      "redirected": true,
+      "title": "Gutter Guards Mount Laurel, NJ | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Mount Laurel, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/mount-laurel-nj",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards in Mount Laurel, NJ"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/locations/marlton-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/marlton-nj",
+      "redirected": true,
+      "title": "Gutter Guards Marlton, NJ | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Marlton, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/marlton-nj",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Marlton, NJ"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/locations/moorestown-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/moorestown-nj",
+      "redirected": true,
+      "title": "Gutter Guards Moorestown, NJ | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Moorestown, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/moorestown-nj",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards in Moorestown, NJ"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/locations/haddonfield-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/haddonfield-nj",
+      "redirected": true,
+      "title": "Gutter Guards Haddonfield, NJ | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Haddonfield, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/haddonfield-nj",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Haddonfield, NJ"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/locations/medford-nj",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/medford-nj",
+      "redirected": true,
+      "title": "Gutter Guards Medford, NJ | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Medford, NJ. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/medford-nj",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards Built for Medford\u2019s Wooded Lots."
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/locations/philadelphia-pa",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/service-areas/philadelphia-pa",
+      "redirected": true,
+      "title": "Gutter Guards Philadelphia, PA | Free Estimate",
+      "description": "Owner-installed micro-mesh gutter guards in Philadelphia, PA. Free estimate, gutter repair and permanent roofline lighting. Call 856-874-6640.",
+      "canonical": "https://cleangutterslighting.com/service-areas/philadelphia-pa",
+      "robots": "index,follow",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards & Permanent Lighting in Philadelphia, PA"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/ladder-safety-gutters-lighting",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/ladder-safety-gutters-lighting",
+      "redirected": false,
+      "title": "Ladder Safety: Gutter Guards & Lighting | CleanGutters",
+      "description": "Learn how gutter guards and permanent lighting eliminate dangerous ladder work for home maintenance and seasonal decoration.",
+      "canonical": "https://cleangutterslighting.com/ladder-safety-gutters-lighting",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Ladder Safety: Gutter Guards & Permanent Lighting"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/permanent-lights-vs-christmas-lights",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/permanent-lights-vs-christmas-lights",
+      "redirected": false,
+      "title": "Permanent vs Christmas Lights Cost | CleanGutters",
+      "description": "5-year cost comparison between permanent LED lighting and temporary Christmas lights. Complete financial analysis.",
+      "canonical": "https://cleangutterslighting.com/permanent-lights-vs-christmas-lights",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Permanent vs Christmas Lights: 5-Year Cost Comparison"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/outdoor-lighting-color-schemes",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/outdoor-lighting-color-schemes",
+      "redirected": false,
+      "title": "Outdoor Lighting Color Schemes | CleanGutters",
+      "description": "Guide to outdoor lighting color schemes for holidays, seasons, and special occasions. Create the perfect ambiance.",
+      "canonical": "https://cleangutterslighting.com/outdoor-lighting-color-schemes",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Outdoor Lighting Color Schemes for Every Occasion"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/gutter-guard-roi-south-jersey",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/gutter-guard-roi-south-jersey",
+      "redirected": false,
+      "title": "Gutter Guard ROI South Jersey | CleanGutters",
+      "description": "Do gutter guards increase home value? See our 10-year investment breakdown with year-by-year savings, break-even timeline, and property value data for South Jersey homes.",
+      "canonical": "https://cleangutterslighting.com/gutter-guard-roi-south-jersey",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guard ROI: South Jersey 10-Year Analysis"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/permanent-lighting-holiday-transform",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/permanent-lighting-holiday-transform",
+      "redirected": false,
+      "title": "Permanent Lighting Holiday Transform | CleanGutters",
+      "description": "Discover how permanent outdoor lighting systems can transform your holiday displays year-round. Learn why permanent lighting beats temporary holiday lights.",
+      "canonical": "https://cleangutterslighting.com/permanent-lighting-holiday-transform",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Permanent Outdoor Lighting: Transform Your Holidays"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/gutter-guards-mosquito-prevention",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/gutter-guards-mosquito-prevention",
+      "redirected": false,
+      "title": "Gutter Guards & Mosquito Prevention | CleanGutters",
+      "description": "Learn how gutter guards prevent mosquitoes by eliminating standing water breeding sites. Protect your family from mosquito-borne illness.",
+      "canonical": "https://cleangutterslighting.com/gutter-guards-mosquito-prevention",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Guards: Effective Mosquito Prevention for South Jersey"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/south-jersey-storm-season-gutter-prep",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/south-jersey-storm-season-gutter-prep",
+      "redirected": false,
+      "title": "Storm Season Gutter Prep South Jersey | CleanGutters",
+      "description": "Complete guide to storm season gutter preparation for South Jersey. Prevent water damage before summer storms hit.",
+      "canonical": "https://cleangutterslighting.com/south-jersey-storm-season-gutter-prep",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "South Jersey Storm Season Gutter Preparation"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/gutter-cleaning-cost-south-jersey-2026",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/gutter-cleaning-cost-south-jersey-2026",
+      "redirected": false,
+      "title": "Gutter Cleaning Cost South Jersey 2026 | CleanGutters",
+      "description": "2026 gutter cleaning pricing guide for South Jersey. Cost estimates, DIY vs professional analysis, and when to hire professionals.",
+      "canonical": "https://cleangutterslighting.com/gutter-cleaning-cost-south-jersey-2026",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "Gutter Cleaning Cost South Jersey 2026"
+      ]
+    },
+    {
+      "url": "https://cleangutterslighting.com/5-signs-gutters-need-guards",
+      "status": 200,
+      "final_url": "https://cleangutterslighting.com/5-signs-gutters-need-guards",
+      "redirected": false,
+      "title": "5 Signs Your Gutters Need Guards | CleanGutters",
+      "description": "Five warning signs your gutters need guards before summer storm season hits South Jersey. Protect your home now.",
+      "canonical": "https://cleangutterslighting.com/5-signs-gutters-need-guards",
+      "robots": "",
+      "h1_count": 1,
+      "h1": [
+        "5 Signs Your Gutters Need Guards Before Summer Storms"
+      ]
+    }
+  ]
+}
