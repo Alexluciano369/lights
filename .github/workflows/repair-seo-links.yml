@@ -1,0 +1,61 @@
+name: Repair SEO links and soft errors
+
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/repair-seo-links.yml]
+
+permissions:
+  contents: write
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Remove dead links and repair local navigation
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          replacements={
+            '/service-areas/lumberton-nj':'/service-areas/burlington-nj',
+            '/service-areas/hainesport-nj':'/service-areas/medford-nj',
+            '/service-areas/cinnaminson-nj':'/service-areas/burlington-nj',
+            '/service-areas/maple-shade-nj':'/service-areas/pennsauken-nj',
+            '/service-areas/oaklyn-nj':'/service-areas/haddonfield-nj',
+            '/service-areas/audubon-nj':'/service-areas/cherry-hill-nj',
+            '/service-areas/haddon-township-nj':'/service-areas/voorhees-nj',
+            '/locations/cherry-hill-nj':'/service-areas/cherry-hill-nj',
+            '/locations/mount-laurel-nj':'/service-areas/mount-laurel-nj',
+            '/locations/moorestown-nj':'/service-areas/moorestown-nj',
+            '/locations/philadelphia-pa':'/service-areas/philadelphia-pa',
+          }
+          for p in Path('.').rglob('*.html'):
+            s=p.read_text(errors='ignore')
+            old=s
+            for a,b in replacements.items(): s=s.replace(a,b)
+            s=s.replace('    "https://x.com/wasco_alex",\n','').replace('"https://x.com/wasco_alex",','')
+            s=re.sub(r'<a href="https://x\.com/wasco_alex"[^>]*>.*?</a>','',s,flags=re.S)
+            if s!=old: p.write_text(s)
+
+          p=Path('scripts/generate.mjs')
+          s=p.read_text()
+          s=s.replace('"gutter-guards-guide-south-jersey",','')
+          p.write_text(s)
+
+          p=Path('_redirects')
+          s=p.read_text()
+          line='/gutter-guards-guide-south-jersey /gutters 301!\n'
+          if line not in s: s=line+s
+          p.write_text(s)
+          PY
+      - name: Rebuild sitemap and save fixes
+        run: |
+          npm run build
+          git config user.name "CleanGutters site health"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          git commit -m "Repair dead links and remove soft-404 page"
+          git push
