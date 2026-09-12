@@ -1,0 +1,99 @@
+name: Full live-site health check
+
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/full-site-health-check.yml]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python -m pip install requests beautifulsoup4
+      - name: Crawl pages and validate links
+        run: |
+          python - <<'PY'
+          import json, time, requests
+          from bs4 import BeautifulSoup
+          from collections import deque, defaultdict
+          from urllib.parse import urljoin, urlparse, urldefrag
+
+          root='https://cleangutterslighting.com/'
+          host=urlparse(root).netloc
+          q=deque([root]); seen=set(); pages=[]; links=[]; assets=[]
+          session=requests.Session(); session.headers['User-Agent']='CleanGutters-Site-Health-Check/1.0'
+          while q and len(seen)<500:
+            url=urldefrag(q.popleft())[0]
+            if url in seen: continue
+            seen.add(url)
+            try:
+              r=session.get(url,timeout=20,allow_redirects=True)
+              ct=r.headers.get('content-type','')
+              item={'url':url,'status':r.status_code,'final_url':r.url,'redirected':r.url.rstrip('/')!=url.rstrip('/')}
+              if 'text/html' not in ct:
+                item['content_type']=ct; pages.append(item); continue
+              s=BeautifulSoup(r.text,'html.parser')
+              title=s.title.get_text(' ',strip=True) if s.title else ''
+              desc=s.select_one('meta[name="description"]')
+              canon=s.select_one('link[rel="canonical"]')
+              robots=s.select_one('meta[name="robots"]')
+              h1=s.find_all('h1')
+              item.update({'title':title,'description':desc.get('content','').strip() if desc else '',
+                'canonical':urljoin(r.url,canon.get('href')) if canon and canon.get('href') else '',
+                'robots':robots.get('content','') if robots else '', 'h1_count':len(h1),
+                'h1':[x.get_text(' ',strip=True) for x in h1]})
+              pages.append(item)
+              for tag,attr in [('a','href'),('img','src'),('script','src'),('link','href')]:
+                for el in s.find_all(tag):
+                  raw=el.get(attr)
+                  if not raw or raw.startswith(('mailto:','tel:','javascript:','#','data:')): continue
+                  dest=urldefrag(urljoin(r.url,raw))[0]
+                  rec={'source':url,'target':dest,'tag':tag}
+                  (links if tag=='a' else assets).append(rec)
+                  p=urlparse(dest)
+                  if tag=='a' and p.netloc==host and p.scheme in ('http','https') and dest not in seen:
+                    q.append(dest)
+            except Exception as e:
+              pages.append({'url':url,'status':0,'error':str(e)})
+          targets={x['target'] for x in links+assets}
+          checks={}
+          for i,t in enumerate(targets):
+            try:
+              r=session.head(t,timeout=15,allow_redirects=True)
+              if r.status_code in (403,405) or r.status_code>=500:
+                r=session.get(t,timeout=15,allow_redirects=True,stream=True)
+              checks[t]={'status':r.status_code,'final_url':r.url}
+            except Exception as e: checks[t]={'status':0,'error':str(e)}
+          title_map=defaultdict(list); desc_map=defaultdict(list)
+          for p in pages:
+            if p.get('title'): title_map[p['title']].append(p['url'])
+            if p.get('description'): desc_map[p['description']].append(p['url'])
+          report={
+            'summary':{'pages_crawled':len(pages),'links_checked':len(links),'assets_checked':len(assets)},
+            'broken_pages':[p for p in pages if p.get('status',0)>=400 or p.get('status')==0],
+            'broken_links':[dict(x,**checks.get(x['target'],{})) for x in links if checks.get(x['target'],{}).get('status',0)>=400 or checks.get(x['target'],{}).get('status')==0],
+            'broken_assets':[dict(x,**checks.get(x['target'],{})) for x in assets if checks.get(x['target'],{}).get('status',0)>=400 or checks.get(x['target'],{}).get('status')==0],
+            'redirected_internal_links':[dict(x,**checks.get(x['target'],{})) for x in links if urlparse(x['target']).netloc==host and checks.get(x['target'],{}).get('final_url','').rstrip('/')!=x['target'].rstrip('/')],
+            'missing_titles':[p['url'] for p in pages if p.get('status')==200 and not p.get('title')],
+            'missing_descriptions':[p['url'] for p in pages if p.get('status')==200 and not p.get('description')],
+            'bad_h1':[{'url':p['url'],'count':p.get('h1_count')} for p in pages if p.get('status')==200 and p.get('h1_count')!=1],
+            'missing_canonicals':[p['url'] for p in pages if p.get('status')==200 and not p.get('canonical')],
+            'noindex_pages':[p['url'] for p in pages if 'noindex' in p.get('robots','').lower()],
+            'duplicate_titles':{k:v for k,v in title_map.items() if len(v)>1},
+            'duplicate_descriptions':{k:v for k,v in desc_map.items() if len(v)>1},
+            'pages':pages
+          }
+          open('site-health-report.json','w').write(json.dumps(report,indent=2))
+          PY
+      - name: Save health report
+        run: |
+          git config user.name "CleanGutters site health"
+          git config user.email "actions@users.noreply.github.com"
+          git add site-health-report.json
+          git commit -m "Update full live-site health report" || exit 0
+          git push
