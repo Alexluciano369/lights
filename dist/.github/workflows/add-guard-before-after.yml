@@ -1,0 +1,49 @@
+name: Add guard before and after photos
+on:
+  workflow_dispatch:
+    inputs:
+      before_url:
+        description: Before photo URL
+        required: true
+      after_url:
+        description: After photo URL
+        required: true
+permissions:
+  contents: write
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install pillow
+      - name: Download and prepare upright photos
+        env:
+          BEFORE_URL: ${{ inputs.before_url }}
+          AFTER_URL: ${{ inputs.after_url }}
+        run: |
+          python - <<'PY'
+          import os, urllib.request
+          from PIL import Image, ImageOps, ImageEnhance
+          os.makedirs('assets', exist_ok=True)
+          for label, url in [('before', os.environ['BEFORE_URL']), ('after', os.environ['AFTER_URL'])]:
+              source = f'/tmp/{label}.jpg'
+              urllib.request.urlretrieve(url, source)
+              im = ImageOps.exif_transpose(Image.open(source)).convert('RGB')
+              if im.width > im.height:
+                  im = im.rotate(-90, expand=True)
+              im = ImageOps.autocontrast(im, cutoff=0.5)
+              im = ImageEnhance.Sharpness(im).enhance(1.12)
+              im.thumbnail((1200, 1600), Image.Resampling.LANCZOS)
+              im.save(f'assets/gutter-guard-{label}-real-job.jpg', quality=86, optimize=True, progressive=True)
+              im.save(f'assets/gutter-guard-{label}-real-job.webp', quality=82, method=6)
+          PY
+      - name: Commit prepared photos
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/gutter-guard-before-real-job.* assets/gutter-guard-after-real-job.*
+          git commit -m 'Add real gutter guard before and after photos'
+          git push
