@@ -298,17 +298,16 @@ function faqSchema(faqs, ctx) {
 const jsonLd = (obj) => `<script type="application/ld+json">${JSON.stringify(obj)}</script>`;
 
 // Single source of truth for the site's Content-Security-Policy.
-// Every host listed here was taken from an exhaustive sweep of the resources the
-// site actually loads (analytics, fonts, stock imagery, the YouTube embed, the
-// lead database and the lead email relay). Nothing else may load.
+// Google hosts follow https://developers.google.com/tag-platform/security/guides/csp
+// (Google Analytics + Google Ads conversion sections).
 const CSP =
   "default-src 'self'; " +
-  "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://ccleangutters.agents.runlobster.com https://bolt.new https://app.trysoro.com; " +
+  "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://ccleangutters.agents.runlobster.com https://bolt.new https://app.trysoro.com https://www.googleadservices.com https://www.google.com https://googleads.g.doubleclick.net; " +
   "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://app.trysoro.com; " +
-  "img-src 'self' data: blob: https://images.pexels.com https://cleangutterslighting-prod.netlify.app https://gwvckixiegkllthleuyt.supabase.co https://www.google-analytics.com https://www.googletagmanager.com https://img.youtube.com https://i.ytimg.com https://app.trysoro.com; " +
+  "img-src 'self' data: blob: https://images.pexels.com https://cleangutterslighting-prod.netlify.app https://gwvckixiegkllthleuyt.supabase.co https://www.google-analytics.com https://www.googletagmanager.com https://img.youtube.com https://i.ytimg.com https://app.trysoro.com https://*.google-analytics.com https://*.g.doubleclick.net https://googleads.g.doubleclick.net https://www.googleadservices.com https://pagead2.googlesyndication.com https://www.google.com https://*.google.com; " +
   "font-src 'self' data: https://fonts.gstatic.com https://app.trysoro.com; " +
-  "connect-src 'self' https://cpbexrtitabqgrcfucbm.supabase.co https://formsubmit.co https://www.googletagmanager.com https://www.google-analytics.com https://analytics.google.com https://ccleangutters.agents.runlobster.com https://app.trysoro.com; " +
-  "frame-src https://www.youtube.com https://www.youtube-nocookie.com https://app.trysoro.com; " +
+  "connect-src 'self' https://cpbexrtitabqgrcfucbm.supabase.co https://formsubmit.co https://www.googletagmanager.com https://www.google-analytics.com https://analytics.google.com https://ccleangutters.agents.runlobster.com https://app.trysoro.com https://*.google-analytics.com https://*.analytics.google.com https://*.g.doubleclick.net https://googleads.g.doubleclick.net https://ad.doubleclick.net https://www.googleadservices.com https://pagead2.googlesyndication.com https://www.google.com https://*.google.com; " +
+  "frame-src https://www.youtube.com https://www.youtube-nocookie.com https://app.trysoro.com https://www.googletagmanager.com; " +
   "object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests";
 
 function head({ title, description, canonical, ogImage, jsonLdBlocks, geo }) {

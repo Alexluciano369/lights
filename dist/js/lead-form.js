@@ -48,12 +48,12 @@
         .then(function (accepted) {
           if (accepted) {
             if (status) { status.className = "form-status ok"; status.textContent = "Thanks! We received your request and will reach out shortly."; }
-            form.reset();
             try {
-              if (typeof gtag === "function") {
-                gtag("event", "generate_lead", { event_category: "lead", event_label: payload.service || "unknown" });
+              if (typeof window.cgLead === "function") {
+                window.cgLead(form, { event_category: "lead", event_label: payload.service || "unknown", form_name: "service_page_form" });
               }
             } catch (e) {}
+            form.reset();
           } else {
             throw new Error("Not accepted");
           }
