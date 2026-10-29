@@ -173,3 +173,7 @@ p { color: var(--ink-soft); }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
 }
+.ryze-article h2 { margin-top: 2rem; }
+.ryze-article table { display: block; overflow-x: auto; border-collapse: collapse; width: 100%; margin: 1.5rem 0; }
+.ryze-article th, .ryze-article td { border: 1px solid #d6dde6; padding: 0.5rem 0.75rem; text-align: left; vertical-align: top; }
+.ryze-article th { background: #f3f6f9; }

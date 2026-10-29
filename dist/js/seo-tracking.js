@@ -36,19 +36,4 @@
       });
     }
   });
-
-  var thankYou = document.getElementById("thankYouMessage");
-  if (thankYou && typeof MutationObserver === "function") {
-    var sent = false;
-    new MutationObserver(function () {
-      if (!sent && window.getComputedStyle(thankYou).display !== "none") {
-        sent = true;
-        sendEvent("generate_lead", {
-          event_category: "lead",
-          method: "website_form",
-          page_location: window.location.href
-        });
-      }
-    }).observe(thankYou, { attributes: true, attributeFilter: ["style", "class"] });
-  }
 })();
