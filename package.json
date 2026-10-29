@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "npx serve .",
+    "dev": "node scripts/generate.mjs && cp serve.json dist/serve.json && npx serve dist",
     "build": "node scripts/generate.mjs"
   }
 }

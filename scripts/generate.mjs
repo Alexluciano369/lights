@@ -298,7 +298,7 @@ const CSP =
   "default-src 'self'; " +
   "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://ccleangutters.agents.runlobster.com https://bolt.new https://app.trysoro.com; " +
   "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://app.trysoro.com; " +
-  "img-src 'self' data: blob: https://images.pexels.com https://cleangutterslighting-prod.netlify.app https://www.google-analytics.com https://www.googletagmanager.com https://img.youtube.com https://i.ytimg.com https://app.trysoro.com; " +
+  "img-src 'self' data: blob: https://images.pexels.com https://cleangutterslighting-prod.netlify.app https://gwvckixiegkllthleuyt.supabase.co https://www.google-analytics.com https://www.googletagmanager.com https://img.youtube.com https://i.ytimg.com https://app.trysoro.com; " +
   "font-src 'self' data: https://fonts.gstatic.com https://app.trysoro.com; " +
   "connect-src 'self' https://cpbexrtitabqgrcfucbm.supabase.co https://formsubmit.co https://www.googletagmanager.com https://www.google-analytics.com https://analytics.google.com https://ccleangutters.agents.runlobster.com https://app.trysoro.com; " +
   "frame-src https://www.youtube.com https://www.youtube-nocookie.com https://app.trysoro.com; " +
@@ -943,7 +943,94 @@ function blogGutterGuardsVsCleaning() {
   return html;
 }
 
-function sitemapXml() {
+// Ryze publishes article JSON into content/blog via GitHub. Only slugs listed here are rendered as pages.
+const RYZE_ARTICLE_SLUGS = [
+  "permanent-roofline-lighting-installers-ranked-by-craftsmanship",
+  "best-low-maintenance-gutter-guards-for-elderly-homeowners",
+];
+
+async function loadRyzeArticles() {
+  const articles = [];
+  for (const slug of RYZE_ARTICLE_SLUGS) {
+    const file = resolve(ROOT, "content/blog", `${slug}.json`);
+    if (!existsSync(file)) throw new Error(`Ryze article source missing: content/blog/${slug}.json`);
+    const a = JSON.parse(await readFile(file, "utf8"));
+    for (const key of ["slug", "title", "meta_title", "meta_description", "body_html", "published_at"]) {
+      if (typeof a[key] !== "string" || !a[key].trim()) throw new Error(`Ryze article ${slug}: missing ${key}`);
+    }
+    if (a.slug !== slug) throw new Error(`Ryze article ${slug}: slug field is "${a.slug}"`);
+    if (a.status !== "published") throw new Error(`Ryze article ${slug}: status is "${a.status}"`);
+    const scripts = a.body_html.match(/<script\b[^>]*>/gi) || [];
+    if (scripts.some((tag) => !/type="application\/ld\+json"/i.test(tag))) throw new Error(`Ryze article ${slug}: executable script in body`);
+    if (/\son\w+\s*=|javascript:|<iframe|<object|<embed/i.test(a.body_html)) throw new Error(`Ryze article ${slug}: unsafe markup in body`);
+    if (/<h1[\s>]/i.test(a.body_html)) throw new Error(`Ryze article ${slug}: body contains its own h1`);
+    articles.push(a);
+  }
+  return articles;
+}
+
+const longDate = (iso) =>
+  new Date(iso).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "America/New_York" });
+
+function ryzeArticlePage(a) {
+  const canonical = `${SITE}/blog/${a.slug}`;
+  const ogImage = a.image?.url || `${SITE}/hero-friendly-gutter-protection.jpg`;
+  const crumbs = [
+    { name: "Home", href: "/", item: `${SITE}/` },
+    { name: "Blog", href: "/blog", item: `${SITE}/blog` },
+    { name: a.title, href: `/blog/${a.slug}`, item: canonical },
+  ];
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: a.title,
+    description: a.meta_description,
+    mainEntityOfPage: { "@type": "WebPage", "@id": canonical },
+    url: canonical,
+    image: ogImage,
+    datePublished: a.published_at,
+    dateModified: a.updated_at || a.published_at,
+    author: { "@type": "Organization", name: BIZ_NAME, url: SITE },
+    publisher: { "@type": "Organization", name: BIZ_NAME, logo: { "@type": "ImageObject", url: SITE + "/logo.png" } },
+    ...(a.primary_keyword ? { keywords: a.primary_keyword } : {}),
+  };
+  const jsonLdBlocks = [jsonLd(articleSchema), jsonLd(breadcrumbSchema(crumbs.map((c) => ({ name: c.name, item: c.item }))))];
+  return (
+    head({ title: a.meta_title, description: a.meta_description, canonical, ogImage, jsonLdBlocks }).replace(
+      '<meta property="og:type" content="website">',
+      `<meta property="og:type" content="article">\n<meta property="article:published_time" content="${esc(a.published_at)}">\n<meta property="article:modified_time" content="${esc(a.updated_at || a.published_at)}">`
+    ) +
+    header() +
+    breadcrumbs(crumbs.map((c) => ({ name: c.name, href: c.href }))) +
+    `<main id="main"><article class="section"><div class="container" style="max-width:820px">
+<h1>${esc(a.title)}</h1>
+<p class="eyebrow">Published <time datetime="${esc(a.published_at)}">${esc(longDate(a.published_at))}</time></p>
+${a.image?.url ? `<img src="${esc(a.image.url)}" alt="${esc(a.image.alt || a.title)}" style="width:100%;height:auto;border-radius:12px;margin:1rem 0 1.5rem">` : ""}
+<div class="ryze-article">${a.body_html}</div>
+<p style="margin-top:2rem"><a href="/blog">&larr; Back to all articles</a></p>
+</div></article></main>` +
+    footer()
+  );
+}
+
+function notFoundPage() {
+  const title = `Page Not Found | ${BIZ_NAME}`;
+  const description = "The page you requested could not be found.";
+  return (
+    head({ title, description, canonical: `${SITE}/404`, ogImage: `${SITE}/hero-friendly-gutter-protection.jpg`, jsonLdBlocks: [] })
+      .replace(/<link rel="canonical"[^>]*>/, '<meta name="robots" content="noindex">') +
+    header() +
+    `<main id="main" class="section"><div class="container" style="max-width:720px;text-align:center">
+<p class="eyebrow">404</p>
+<h1>Page not found</h1>
+<p>That page doesn't exist or may have moved.</p>
+<p style="margin-top:1.5rem"><a href="/" class="btn btn-primary">Go to homepage</a> <a href="/blog" class="btn">Browse the blog</a></p>
+</div></main>` +
+    footer()
+  );
+}
+
+function sitemapXml(ryzeArticles) {
   const today = new Date().toISOString().slice(0, 10);
   const urls = [];
   const push = (loc, priority, changefreq = "weekly") =>
@@ -966,6 +1053,9 @@ function sitemapXml() {
   push(SITE + "/blog", 0.7);
   push(SITE + "/blog/gutter-guards-vs-cleaning-south-jersey", 0.8, "monthly");
   push(SITE + "/blog/best-gutter-guards-south-jersey-guide", 0.9, "monthly");
+  ryzeArticles.forEach((a) =>
+    urls.push({ loc: `${SITE}/blog/${a.slug}`, lastmod: (a.updated_at || a.published_at).slice(0, 10), priority: "0.80", changefreq: "monthly" })
+  );
   push(SITE + "/service-areas", 0.85);
   push(SITE + "/locations", 0.9);
 
@@ -1009,7 +1099,13 @@ async function run() {
   await mkdir(OUT, { recursive: true });
   await copyStaticAssets();
 
+  const ryzeArticles = await loadRyzeArticles();
   let count = 0;
+  for (const a of ryzeArticles) {
+    await write(`blog/${a.slug}.html`, ryzeArticlePage(a));
+    count++;
+  }
+  await write("404.html", notFoundPage());
   await write("locations/index.html", locationsIndex());
   count++;
   await write("blog/gutter-guards-vs-cleaning-south-jersey/index.html", blogGutterGuardsVsCleaning());
@@ -1020,7 +1116,7 @@ async function run() {
       count++;
     }
   }
-  await write("sitemap.xml", sitemapXml());
+  await write("sitemap.xml", sitemapXml(ryzeArticles));
   await write("robots.txt", robotsTxt());
   await postProcessHtmlTree(OUT);
   console.log(`Built dist/ with ${count} generated pages plus sitemap.xml, redirects, tracking, and robots.txt.`);
