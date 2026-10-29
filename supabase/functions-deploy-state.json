@@ -1,13 +1,13 @@
 {
   "projectId": "59887107",
   "functions": {
-    "resend-diagnostic": {
-      "hasChanged": false,
-      "hash": "3b1e032a18ae873ae0e6f7119d3a7670d038068eaa07db6a8b375d64fdff6b67"
-    },
     "submit-lead": {
       "hasChanged": false,
       "hash": "d17574492d55b161ac1950c619bfcdd90f183c83779b495d7d8480a3b52bd4f6"
+    },
+    "resend-domain-check": {
+      "hasChanged": false,
+      "hash": "d5a3626da919ba413d6e956a0146e3ad6c6bf281b02fef96fc2658b1f7681e03"
     }
   }
 }
