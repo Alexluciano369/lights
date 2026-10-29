@@ -2,8 +2,8 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/gutter-protection", "destination": "/gutter-guards", "type": 301 },
-    { "source": "/gutter-protection/", "destination": "/gutter-guards", "type": 301 },
+    { "source": "/gutter-protection", "destination": "/gutters", "type": 301 },
+    { "source": "/gutter-protection/", "destination": "/gutters", "type": 301 },
     { "source": "/.env", "destination": "/", "type": 301 },
     { "source": "/.env/:rest*", "destination": "/", "type": 301 }
   ]

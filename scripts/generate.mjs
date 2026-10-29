@@ -153,6 +153,13 @@ async function write(rel, content) {
   await writeFile(abs, content, "utf8");
 }
 
+// Netlify answers /a/b from a/b.html directly; a/b/index.html would add a trailing-slash redirect.
+async function writePage(path, content) {
+  await rm(resolve(OUT, path, "index.html"), { force: true });
+  await write(`${path}.html`, content);
+  return `/${path}.html /${path} 301!`;
+}
+
 function localBusinessSchema(city, canonical) {
   const openingHoursSpecification = HOURS.map((h) => ({
     "@type": "OpeningHoursSpecification",
@@ -1030,53 +1037,41 @@ function notFoundPage() {
   );
 }
 
-function sitemapXml(ryzeArticles) {
-  const today = new Date().toISOString().slice(0, 10);
-  const urls = [];
-  const push = (loc, priority, changefreq = "weekly") =>
-    urls.push({ loc, lastmod: today, priority: priority.toFixed(2), changefreq });
+async function listHtml(dir, out = []) {
+  for (const entry of await readdir(dir, { withFileTypes: true })) {
+    const abs = join(dir, entry.name);
+    if (entry.isDirectory()) await listHtml(abs, out);
+    else if (entry.isFile() && entry.name.endsWith(".html")) out.push(abs);
+  }
+  return out;
+}
 
-  push(SITE + "/", 1.0, "weekly");
-  push(SITE + "/gutters", 1.0);
-  push(SITE + "/lighting", 0.95);
-  push(SITE + "/gutter-services", 0.9);
-  push(SITE + "/services", 0.9);
-  push(SITE + "/gutter-cleaning", 0.9);
-  push(SITE + "/gutter-installation", 0.9);
-  push(SITE + "/gutter-repair", 0.85);
-  push(SITE + "/downspout-services", 0.85);
-  push(SITE + "/fascia-soffit-repair", 0.8);
-  push(SITE + "/seamless-gutters", 0.9);
-  push(SITE + "/same-day-gutter-service", 0.8);
-  push(SITE + "/reviews", 0.85);
-  push(SITE + "/faq", 0.8);
-  push(SITE + "/blog", 0.7);
-  push(SITE + "/blog/gutter-guards-vs-cleaning-south-jersey", 0.8, "monthly");
-  push(SITE + "/blog/best-gutter-guards-south-jersey-guide", 0.9, "monthly");
-  ryzeArticles.forEach((a) =>
-    urls.push({ loc: `${SITE}/blog/${a.slug}`, lastmod: (a.updated_at || a.published_at).slice(0, 10), priority: "0.80", changefreq: "monthly" })
+async function sitemapXml() {
+  const redirected = new Set(
+    (await readFile(join(OUT, "_redirects"), "utf8"))
+      .split("\n")
+      .map((line) => line.trim().split(/\s+/)[0])
+      .filter((from) => from && !from.startsWith("#"))
+      .map((from) => from.replace(/\/+$/, "") || "/")
   );
-  push(SITE + "/service-areas", 0.85);
-  push(SITE + "/locations", 0.9);
-
-  cities.forEach((c) => {
-    services.forEach((s) => push(`${SITE}/locations/${c.slug}/${s.slug}`, Math.min(0.95, c.priority)));
-  });
-
-  const existingCityFiles = [
-    "aberdeen-md","alloway-nj","atlantic-city-nj","beachwood-nj","bear-de","bensalem-pa","brick-nj","brigantine-nj","bristol-pa","bryn-mawr-pa","burlington-nj","camden-nj","cape-may-court-house-nj","cape-may-nj","carneys-point-nj","cherry-hill-nj","chester-pa","collingswood-nj","downingtown-pa","doylestown-pa","egg-harbor-township-nj","exton-pa","florence-nj","freehold-nj","glassboro-nj","haddonfield-nj","hamilton-nj","hammonton-nj","howell-nj","jackson-nj","king-of-prussia-pa","lawrenceville-nj","levittown-pa","manchester-township-nj","marlton-nj","mays-landing-nj","medford-nj","media-pa","middletown-de","moorestown-nj","mount-ephraim-nj","mount-laurel-nj","mullica-hill-nj","new-castle-de","newark-de","norristown-pa","ocean-city-nj","paulsboro-nj","pemberton-nj","pennsauken-nj","philadelphia-pa","princeton-nj","salem-nj","sewell-nj","springfield-pa","toms-river-nj","trenton-nj","upper-darby-pa","voorhees-nj","west-chester-pa","west-deptford-nj","wildwood-nj","willingboro-nj","willow-grove-pa","wilmington-de","woodbury-nj","yardley-pa",
-  ];
-  existingCityFiles.forEach((slug) => push(`${SITE}/service-areas/${slug}`, 0.75));
-
-  const blogSlugs = [
-    "4th-july-led-lighting-nj","5-signs-gutters-need-guards","best-gutter-guards-pine-needles-nj","best-time-gutter-guards-nj","gutter-cleaning-cost-south-jersey-2026","gutter-cleaning-vs-guards-cost","gutter-guard-cost-cherry-hill-nj","gutter-guard-installer-questions","gutter-guard-roi-south-jersey","gutter-guards-mosquito-prevention","gutter-guards-prevent-foundation-damage","gutter-maintenance-checklist-nj","gutterglove-vs-leaffilter","hurricane-season-gutter-guards-nj-2026","july-gutter-guard-install-nj","ladder-safety-gutters-lighting","led-outdoor-lighting-energy-savings-guide","oelo-lighting-color-themes","oelo-vs-diy-professional-install","oelo-vs-gemstone-vs-trimlight","outdoor-lighting-color-schemes","outdoor-lighting-security-nj","permanent-lighting-holiday-transform","permanent-lighting-home-value","permanent-lights-cost-south-jersey","permanent-lights-vs-christmas-lights","permanent-vs-traditional-lighting","pine-needles-gutters-micro-mesh-solution","prevent-ice-dams-gutter-guards","recent-gutter-guard-projects","smart-home-lighting-guide","south-jersey-storm-season-gutter-prep","summer-backyard-led-lighting","top-5-gutter-guard-mistakes-nj-homeowners","why-gutter-guards-essential-south-jersey",
-  ];
-  blogSlugs.forEach((slug) => push(`${SITE}/${slug}`, 0.55, "monthly"));
-
+  const urls = [];
+  for (const abs of await listHtml(OUT)) {
+    const rel = relative(OUT, abs).replaceAll("\\", "/");
+    if (rel === "404.html" || (rel.endsWith("/index.html") && rel !== "index.html")) continue;
+    const path = rel === "index.html" ? "/" : "/" + rel.slice(0, -".html".length);
+    if (redirected.has(path)) continue;
+    const html = await readFile(abs, "utf8");
+    const head = html.split(/<\/head>/i)[0];
+    if (/<meta[^>]+name=["']robots["'][^>]+noindex/i.test(head)) continue;
+    const canonicals = [...head.matchAll(/<link[^>]+rel=["']canonical["'][^>]*href=["']([^"']+)["']/gi)].map((m) => m[1]);
+    const loc = SITE + path;
+    if (canonicals.length !== 1 || canonicals[0] !== loc) continue;
+    const modified = html.match(/"dateModified"\s*:\s*"(\d{4}-\d{2}-\d{2})/) || html.match(/"datePublished"\s*:\s*"(\d{4}-\d{2}-\d{2})/);
+    urls.push({ loc, lastmod: modified ? modified[1] : null });
+  }
+  urls.sort((a, b) => (a.loc === SITE + "/" ? -1 : b.loc === SITE + "/" ? 1 : a.loc.localeCompare(b.loc)));
   const body = urls
-    .map(
-      (u) => `<url><loc>${u.loc}</loc><lastmod>${u.lastmod}</lastmod><changefreq>${u.changefreq}</changefreq><priority>${u.priority}</priority></url>`
-    )
+    .map((u) => `<url><loc>${u.loc}</loc>${u.lastmod ? `<lastmod>${u.lastmod}</lastmod>` : ""}</url>`)
     .join("\n");
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -1106,19 +1101,23 @@ async function run() {
     count++;
   }
   await write("404.html", notFoundPage());
-  await write("locations/index.html", locationsIndex());
+  const htmlRedirects = [];
+  htmlRedirects.push(await writePage("locations", locationsIndex()));
   count++;
-  await write("blog/gutter-guards-vs-cleaning-south-jersey/index.html", blogGutterGuardsVsCleaning());
+  htmlRedirects.push(await writePage("blog/gutter-guards-vs-cleaning-south-jersey", blogGutterGuardsVsCleaning()));
   count++;
   for (const city of cities) {
     for (const service of services) {
-      await write(`locations/${city.slug}/${service.slug}/index.html`, serviceCityPage(city, service));
+      htmlRedirects.push(await writePage(`locations/${city.slug}/${service.slug}`, serviceCityPage(city, service)));
       count++;
     }
   }
-  await write("sitemap.xml", sitemapXml(ryzeArticles));
+  const redirectsFile = join(OUT, "_redirects");
+  const redirects = (await readFile(redirectsFile, "utf8")).replace(/\s*$/, "\n");
+  await writeFile(redirectsFile, redirects + htmlRedirects.join("\n") + "\n", "utf8");
   await write("robots.txt", robotsTxt());
   await postProcessHtmlTree(OUT);
+  await write("sitemap.xml", await sitemapXml());
   console.log(`Built dist/ with ${count} generated pages plus sitemap.xml, redirects, tracking, and robots.txt.`);
 }
 

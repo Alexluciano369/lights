@@ -30,7 +30,9 @@
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
-    });
+    })
+      .then(function (res) { return res.ok ? res.json() : null; })
+      .then(function (body) { return !!body && (body.success === true || body.success === "true"); });
   }
 
   var forms = document.querySelectorAll("form[data-lead-form]");
@@ -63,7 +65,7 @@
       Promise.allSettled([submitLead(payload), emailNotify(payload)])
         .then(function (results) {
           var dbOk = results[0].status === "fulfilled" && results[0].value && results[0].value.ok;
-          var mailOk = results[1].status === "fulfilled" && results[1].value && results[1].value.ok;
+          var mailOk = results[1].status === "fulfilled" && results[1].value === true;
           if (dbOk || mailOk) {
             if (status) { status.className = "form-status ok"; status.textContent = "Thanks! We received your request and will reach out shortly."; }
             form.reset();
