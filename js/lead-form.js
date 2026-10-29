@@ -8,37 +8,21 @@
     });
   }
 
-  var SUPA_URL = "https://cpbexrtitabqgrcfucbm.supabase.co";
-  var SUPA_ANON =
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNwYmV4cnRpdGFicWdyY2Z1Y2JtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjI2MTk3NjIsImV4cCI6MjA3ODE5NTc2Mn0.tXTGwH7fN8HrA3dQLaHsldetmc4LWXEtCX1GGHhscEM";
-
   function submitLead(payload) {
-    return fetch(SUPA_URL + "/rest/v1/leads", {
-      method: "POST",
-      headers: {
-        apikey: SUPA_ANON,
-        Authorization: "Bearer " + SUPA_ANON,
-        "Content-Type": "application/json",
-        Prefer: "return=minimal",
-      },
-      body: JSON.stringify(payload),
-    });
-  }
-
-  function emailNotify(payload) {
-    return fetch("https://formsubmit.co/ajax/cleangutters2008@gmail.com", {
+    return fetch("https://cpbexrtitabqgrcfucbm.supabase.co/functions/v1/submit-lead", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
     })
-      .then(function (res) { return res.ok ? res.json() : null; })
-      .then(function (body) { return !!body && (body.success === true || body.success === "true"); });
+      .then(function (res) { return res.json().then(function (body) { return res.ok && !!body && body.success === true; }); });
   }
 
   var forms = document.querySelectorAll("form[data-lead-form]");
   forms.forEach(function (form) {
     form.addEventListener("submit", function (event) {
       event.preventDefault();
+      if (form.dataset.sending === "1") return;
+      form.dataset.sending = "1";
       var status = form.querySelector(".form-status");
       var button = form.querySelector('button[type="submit"]');
       var originalLabel = button ? button.textContent : "";
@@ -58,15 +42,11 @@
         service: cap(data.service || form.dataset.service, 100),
         message: cap(data.message, 5000),
         page_url: cap(window.location.href, 2000),
-        referrer: cap(document.referrer, 2000),
-        user_agent: cap(navigator.userAgent, 500),
       };
 
-      Promise.allSettled([submitLead(payload), emailNotify(payload)])
-        .then(function (results) {
-          var dbOk = results[0].status === "fulfilled" && results[0].value && results[0].value.ok;
-          var mailOk = results[1].status === "fulfilled" && results[1].value === true;
-          if (dbOk || mailOk) {
+      submitLead(payload)
+        .then(function (accepted) {
+          if (accepted) {
             if (status) { status.className = "form-status ok"; status.textContent = "Thanks! We received your request and will reach out shortly."; }
             form.reset();
             try {
@@ -75,13 +55,14 @@
               }
             } catch (e) {}
           } else {
-            throw new Error("Both channels failed");
+            throw new Error("Not accepted");
           }
         })
         .catch(function () {
           if (status) { status.className = "form-status err"; status.textContent = "Sorry, that didn't go through. Please call 856-874-6640 or try again."; }
         })
         .finally(function () {
+          form.dataset.sending = "";
           if (button) { button.disabled = false; button.textContent = originalLabel; }
         });
     });
