@@ -352,7 +352,7 @@ function header() {
   return `<header class="site-header">
 <div class="bar">
 <a href="/" class="brand" aria-label="${esc(BIZ_NAME)} home">
-<picture><source srcset="/logo.webp" type="image/webp"><img src="/logo2.png" alt="${esc(BIZ_NAME)} logo" width="40" height="40"></picture>
+<picture><source srcset="/logo.webp" type="image/webp"><img src="/logo2.png" alt="${esc(BIZ_NAME)} logo" width="52" height="40"></picture>
 <span class="brand-name"><span class="clean">CleanGutters</span> <span class="lighting">Lighting</span></span>
 </a>
 <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">Menu</button>
