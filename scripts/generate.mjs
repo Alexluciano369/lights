@@ -116,7 +116,7 @@ const FOUNDING_DATE = "2009";
 const BIZ_NAME = "CleanGutters Lighting";
 const BIZ_ADDR = { city: "Cherry Hill", region: "NJ", postal: "08002", country: "US" };
 const BIZ_GEO = { lat: 39.9346, lng: -75.0307 };
-const AGG_RATING = { value: "5.0", count: "36" };
+const AGG_RATING = { value: "5.0", count: "45" };
 const SOCIAL_PROFILES = [
   "https://www.facebook.com/profile.php?id=61583698254672",
   "https://www.instagram.com/cleangutterslighting/",

@@ -47,7 +47,7 @@
       submitLead(payload)
         .then(function (accepted) {
           if (accepted) {
-            if (status) { status.className = "form-status ok"; status.textContent = "Thanks! We received your request and will reach out shortly."; }
+            if (status) { status.className = "form-status ok"; status.textContent = "Thank you—Alex will text or call you within 5 minutes."; }
             try {
               if (typeof window.cgLead === "function") {
                 window.cgLead(form, { event_category: "lead", event_label: payload.service || "unknown", form_name: "service_page_form" });
